@@ -81,6 +81,45 @@ input::placeholder, textarea::placeholder {
     color: #365A74;
 }
 
+.page-title {
+    padding: 2rem 0;
+    position: relative;
+}
+
+.page-title small {
+    display: inline-block;
+    margin-left: 0.625rem;
+}
+
+.page-title small:before {
+    content: '/';
+    margin-right: 0.875rem;
+}
+
+.page-title small.d-block {
+    margin-left: 0;
+}
+
+.page-title small.d-block:before {
+    content: none;
+}
+
+.page-title small.d-block, .page-title .breadcrumb {
+    margin-left: 1.875rem;
+}
+
+.page-title h1, .page-title h2, .page-title h3, .page-title h4, .page-title h5, .page-title h6 {
+    margin: 0;
+}
+
+.page-header-content {
+    position: relative;
+}
+
+.page-header-content[class*=border-bottom-]+.breadcrumb-line {
+    border-top: 0;
+}
+
 .card {
     border: 0;
     margin: 15px 0;
@@ -104,11 +143,6 @@ input::placeholder, textarea::placeholder {
 .card .card-subtitle {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.card .card-body {
-    padding: 0;
-    height: auto;
 }
 
 .card .card-block {
@@ -356,6 +390,59 @@ input::placeholder, textarea::placeholder {
     border-bottom: 1px solid #dee7ef;
 }
 
+.dt-buttons {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.dt-buttons button {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: .5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #333;
+    text-align: inherit;
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.dt-buttons button:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.dt-buttons button:before {
+    font-size: 1rem;
+    margin-right: 10px;
+    font-family: icomoon!important;
+}
+
+.buttons-copy:before {
+    content: "\ea35";
+}
+
+.buttons-csv:before {
+    content: "\ea32";
+}
+
+.buttons-excel:before {
+    content: "\ef39";
+}
+
+.buttons-pdf:before {
+    content: "\ef36";
+}
+
+.buttons-print:before {
+    content: "\eab7";
+}
+
 /* Footer Wave */
 
 .waveWrapper {
@@ -463,3 +550,127 @@ input::placeholder, textarea::placeholder {
 }
 
 /* End-Footer Wave */
+
+.form-group-select {
+    position: relative;
+    overflow: hidden;
+}
+.form-group-select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.form-group-select select::-ms-expand {
+  display: none;
+}
+
+.form-group-select .select-icon {
+    content: "";
+    font-family: icomoon;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 1rem;
+    margin-top: -.12502rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.rdb_custom [type="radio"]:checked,
+.rdb_custom [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.rdb_custom [type="radio"]:checked + label,
+.rdb_custom [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+.rdb_custom [type="radio"]:checked + label:before,
+.rdb_custom [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: .125rem solid #455a64;
+    transition: border-color ease-in-out .15s;
+    border-radius: 100%;
+    background: #fff;
+}
+.rdb_custom [type="radio"]:checked + label:after,
+.rdb_custom [type="radio"]:not(:checked) + label:after {
+    content: '';
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: .3125rem solid;
+    border-color: inherit;
+    width: 0;
+    height: 0;
+    border-radius: 100px;
+    opacity: 0;
+    background: #455a64;
+    transition: all ease-in-out .15s;
+}
+.rdb_custom [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.rdb_custom [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+.ckb_custom input[type=checkbox] + label {
+  display: block;
+  cursor: pointer;
+}
+
+.ckb_custom input[type=checkbox] {
+  display: none;
+}
+
+.ckb_custom input[type=checkbox] + label:before {
+    content: "";
+    font-family: icomoon;
+    font-size: 1rem;
+    border: .125rem solid #455a64;
+    border-radius: .125rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.7em;
+    transition: .2s;
+}
+
+.ckb_custom input[type=checkbox] + label:active:before {
+    transform: scale(0);
+}
+
+.ckb_custom input[type=checkbox]:checked + label:before {
+    color: #fff;
+}
+
+.ckb_custom input[type=checkbox]:disabled + label:before {
+    transform: scale(1);
+    border-color: #ccc;
+}
+
+.ckb_custom input[type=checkbox]:checked:disabled + label:before {
+    transform: scale(1);
+}
+

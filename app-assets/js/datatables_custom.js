@@ -38,13 +38,92 @@ var DatatableDataSources = function() {
 
 
         // HTML sourced data
-        $('.datatable-html').dataTable({
-            columnDefs: [{ 
-                orderable: false,
-                width: 100,
-                targets: [ 5 ]
-            }]
+        let v_table = $('.datatable-html').DataTable({
+            pageLength: 20,
+            columnDefs: [
+                { 
+                    orderable: false,
+                    targets: [ 0 ],
+                },
+                { 
+                    orderable: false,
+                    targets: [ 8 ],
+                },
+            ],
+            dom: '<"datatable-header"fl><"datatable-scroll"Bt><"datatable-footer"ip>',
+            buttons: [
+                { 
+                    extend: 'copy', 
+                    text: 'Sao chép bảng',
+                    exportOptions: {
+                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+                    }
+                },
+                { 
+                    extend: 'csv', 
+                    text: 'Xuất file Csv',
+                    exportOptions: {
+                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+                    }
+                },
+                { 
+                    extend: 'excel', 
+                    text: 'Xuất file Excel',
+                    exportOptions: {
+                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+                    }
+                },
+                { 
+                    extend: 'pdf', 
+                    text: 'Xuất file Pdf',
+                    exportOptions: {
+                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+                    }
+                },
+                { 
+                    extend: 'print', 
+                    text: 'In bảng',
+                    exportOptions: {
+                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+                    }
+                },
+            ],
+            "language": {
+                "decimal":        "",
+                "emptyTable":     "Không có dữ liệu trong bảng",
+                "info":           "Hiển thị _START_ - _END_ trên _TOTAL_ bản ghi",
+                "infoEmpty":      "Không có bản ghi nào",
+                "infoFiltered":   "(filtered from _MAX_ total entries)",
+                "infoPostFix":    "",
+                "thousands":      ",",
+                "lengthMenu":     "Hiển thị danh sách _MENU_ bản ghi",
+                "loadingRecords": "Đang tải...",
+                "processing":     "Đang xử lý...",
+                "search":         "",
+                "searchPlaceholder": 'Nhập từ khóa...',
+                "zeroRecords":    "Không tìm thấy hồ sơ phù hợp",
+                "paginate": {
+                    "first":      "Đầu",
+                    "last":       "Cuối",
+                    "next":       "Trang Sau",
+                    "previous":   "Trang Trước"
+                },
+                "aria": {
+                    "sortAscending":  ": kích hoạt để sắp xếp cột tăng dần",
+                    "sortDescending": ": kích hoạt để sắp xếp cột giảm dần"
+                },
+                "buttons": {
+                    "copyTitle": 'Đã thêm vào clipboard',
+                    "copyKeys": 'Nhấn ctrl hoặc <i>\u2318</i> + C để sao chép dữ liệu từ bảng vào khay nhớ tạm của bạn. Để hủy, bấm vào tin nhắn này hoặc nhấn Esc.',
+                    "copySuccess": {
+                        _: 'Sao chép %d dòng ',
+                        1: 'Sao chép 1 dòng '
+                    }
+                }
+            }
         });
+        v_table.buttons().container()
+        .appendTo( $('.dropdown-menu-action') );
 
 
         // AJAX sourced data
@@ -121,7 +200,7 @@ var DatatableDataSources = function() {
                 targets: [0, 2]
             }]
         });
-        
+
         // Location alert
         $('.datatable-generated tbody').on('click', 'a', function () {
             var data = table.row($(this).parents('tr')).data();
