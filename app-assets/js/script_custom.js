@@ -94,8 +94,11 @@ $(function(){
         });
     }
 
+    $('.noti-list').perfectScrollbar();
 
+    $('.dropdown-scrollable').perfectScrollbar();
 
+$('.nav-group-sub').perfectScrollbar();
 
 
 
