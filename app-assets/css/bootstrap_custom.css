@@ -3072,6 +3072,19 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	padding: 0;
 }
 
+.breadcrumb>i {
+    margin: 0 5px;
+}
+
+.breadcrumb a {
+    color: #212529;
+}
+
+.breadcrumb .breadcrumb-active {
+    color: #1C3FAA;
+    font-weight: 500;
+}
+
 .breadcrumb-item {
 	padding: 0.625rem 0;
 	color: inherit;
