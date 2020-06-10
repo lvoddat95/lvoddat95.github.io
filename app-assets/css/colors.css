@@ -4226,3 +4226,38 @@
 .bg-light-alpha {
 	background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* CUSTOM COLOR */
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #a0aec0;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #a0aec0;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #a0aec0;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: #a0aec0;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a0aec0;
+}
+
+.color {
+    color: #1c3faa;
+}
+
+.color2 {
+    color: #365A74;
+}
+
+.bg-color{
+	background-color: #1C3FAA;
+}

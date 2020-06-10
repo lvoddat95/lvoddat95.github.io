@@ -1,121 +1,230 @@
-(function(window, document, $) {
-    'use strict';
-    $(document).ready( function(){
+   // Card actions
+// -------------------------
 
-
-        $("#input-chk-all").click(function(){
-            $('.input-chk').not(this).prop('checked', this.checked);
+// Reload card (uses BlockUI extension)
+var _cardActionReload = function() {
+    $('.card [data-action=reload]:not(.disabled)').on('click', function (e) {
+        e.preventDefault();
+        var $target = $(this),
+            block = $target.closest('.card');
+        
+        // Block card
+        $(block).block({ 
+            message: '<i class="icon-spinner2 spinner"></i>',
+            overlayCSS: {
+                backgroundColor: '#fff',
+                opacity: 0.8,
+                cursor: 'wait',
+                'box-shadow': '0 0 0 1px #ddd'
+            },
+            css: {
+                border: 0,
+                padding: 0,
+                backgroundColor: 'none'
+            }
         });
-        $.extend( $.validator.messages, {
-            required: "Thông tin bắt buộc.",
-            remote: "Hãy sửa cho đúng.",
-            email: "Vui lòng nhập địa chỉ email hợp lệ.",
-            url: "Vui lòng nhập URL hợp lệ.",
-            date: "Vui lòng nhập một ngàyhợp lệ.",
-            dateISO: "Vui lòng nhập ngày (ISO).",
-            number: "Vui lòng nhập số.",
-            digits: "Vui lòng nhập chữ số.",
-            creditcard: "Vui lòng nhập số thẻ tín dụng.",
-            equalTo: "Vui lòng nhập thêm lần nữa.",
-            extension: "Phần mở rộng không đúng.",
-            maxlength: $.validator.format( "Vui lòng nhập từ {0} kí tự trở xuống." ),
-            minlength: $.validator.format( "Vui lòng nhập từ {0} kí tự trở lên." ),
-            rangelength: $.validator.format( "Vui lòng nhập từ {0} đến {1} kí tự." ),
-            range: $.validator.format( "Vui lòng nhập từ {0} đến {1}." ),
-            max: $.validator.format( "Vui lòng nhập từ {0} trở xuống." ),
-            min: $.validator.format( "Vui lòng nhập từ {0} trở lên." )
-        } );
-        /********************************
-        *           Customizer          *
-        ********************************/
-        var body = $('body'),
-        default_bg_color = $('.app-sidebar').attr('data-background-color'),
-        default_bg_image = $('.app-sidebar').attr('data-image');
 
-        $('.cz-bg-color span[data-bg-color="'+default_bg_color+'"]').addClass('selected');
-        $('.cz-bg-image img[src$="'+default_bg_image+'"]').addClass('selected');
+        // For demo purposes
+        window.setTimeout(function () {
+            $(block).unblock();
+        }, 2000); 
+    });
+};
 
-        // Customizer toggle & close button click events  [Remove customizer code from production]
-        $('.customizer-toggle').on('click',function(){
-            $('.customizer').toggleClass('open');
-        });
-        $('.customizer-close').on('click',function(){
-            $('.customizer').removeClass('open');
-        });
-        if($('.customizer-content').length > 0){
-            $('.customizer-content').perfectScrollbar({
-                theme:"dark"
+// Collapse card
+var _cardActionCollapse = function() {
+    var $cardCollapsedClass = $('.card-collapsed');
+
+    // Hide if collapsed by default
+    $cardCollapsedClass.children('.card-header').nextAll().hide();
+
+    // Rotate icon if collapsed by default
+    $cardCollapsedClass.find('[data-action=collapse]').addClass('rotate-180');
+
+    // Collapse on click
+    $('.card [data-action=collapse]:not(.disabled)').on('click', function (e) {
+        var $target = $(this),
+            slidingSpeed = 150;
+
+        e.preventDefault();
+        $target.parents('.card').toggleClass('card-collapsed');
+        $target.toggleClass('rotate-180');
+        $target.closest('.card').children('.card-header').nextAll().slideToggle(slidingSpeed);
+    });
+};
+
+// Remove card
+var _cardActionRemove = function() {
+    $('.card [data-action=remove]').on('click', function (e) {
+        e.preventDefault();
+        var $target = $(this),
+            slidingSpeed = 150;
+
+        // If not disabled
+        if(!$target.hasClass('disabled')) {
+            $target.closest('.card').slideUp({
+                duration: slidingSpeed,
+                start: function() {
+                    $target.addClass('d-block');
+                },
+                complete: function() {
+                    $target.remove();
+                }
             });
         }
+    });
+};
 
-        // Change Sidebar Background Color
-        $('.cz-bg-color span').on('click',function(){
-            var $this = $(this),
-            bgColor = $this.attr('data-bg-color');
+// Card fullscreen mode
+var _cardActionFullscreen = function() {
+    $('.card [data-action=fullscreen]').on('click', function (e) {
+        e.preventDefault();
 
-            $this.closest('.cz-bg-color').find('span.selected').removeClass('selected');
-            $this.addClass('selected');
+        // Define vars
+        var $target = $(this),
+            cardFullscreen = $target.closest('.card'),
+            overflowHiddenClass = 'overflow-hidden',
+            collapsedClass = 'collapsed-in-fullscreen',
+            fullscreenAttr = 'data-fullscreen';
 
-            $('.app-sidebar').attr('data-background-color', bgColor);
-            if(bgColor == 'white'){
-                $('.logo-img img').attr('src','assets/img/logo-dark.png');
+        // Toggle classes on card
+        cardFullscreen.toggleClass('fixed-top h-100 rounded-0');
+
+        // Configure
+        if (!cardFullscreen.hasClass('fixed-top')) {
+            $target.removeAttr(fullscreenAttr);
+            cardFullscreen.children('.' + collapsedClass).removeClass('show');
+            $('body').removeClass(overflowHiddenClass);
+            $target.siblings('[data-action=move], [data-action=remove], [data-action=collapse]').removeClass('d-none');
+        }
+        else {
+            $target.attr(fullscreenAttr, 'active');
+            cardFullscreen.removeAttr('style').children('.collapse:not(.show)').addClass('show ' + collapsedClass);
+            $('body').addClass(overflowHiddenClass);
+            $target.siblings('[data-action=move], [data-action=remove], [data-action=collapse]').addClass('d-none');
+        }
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+$(function(){
+    _cardActionReload();
+    _cardActionCollapse();
+    _cardActionRemove();
+    _cardActionFullscreen();
+
+    $("#input-chk-all").click(function () {
+        $('.input-chk').not(this).prop('checked', this.checked);
+    });
+
+    
+
+    if ($('.collapse-group').length > 0) {
+        $('.cls_ckb').each(function (index) {
+            var v_check = $(this).parent().next().hasClass('collapsed');
+            if (v_check) {
+                $(this).attr('checked', false);
+                $(this).closest('.c-item').removeClass('open');
+            } else {
+                $(this).attr('checked', true);
+                $(this).closest('.c-item').addClass('open');
             }
-            else{
-                if($('.logo-img img').attr('src') == 'assets/img/logo-dark.png'){
-                    $('.logo-img img').attr('src','assets/img/logo.png');
+            $(this).change(function () {
+                $(this).parent().next().trigger("click");
+                var v_check = $(this).parent().next().hasClass('collapsed');
+                if (v_check) {
+                    $(this).closest('.c-item').removeClass('open');
+                } else {
+                    $(this).closest('.c-item').addClass('open');
+                }
+            });
+        });
+    }
+
+    if ($().datepicker) {
+        $('.datepicker').datepicker({
+            language: "vi",
+            todayBtn: "linked",
+        });
+    }
+    $('[data-popup="popover"]').popover();
+
+    $('.input-money').toArray().forEach(function (field) {
+        new Cleave(field, {
+            numeral: true,
+            numeralThousandsGroupStyle: 'thousand',
+        });
+    });
+
+    $('.input-date').toArray().forEach(function (field) {
+        new Cleave(field, {
+            date: true,
+            delimiter: '/',
+            datePattern: ['d', 'm', 'Y'],
+            copyDelimiter: true,
+        });
+    });
+
+    $('.input-time').toArray().forEach(function (field) {
+        new Cleave(field, {
+            time: true,
+            timePattern: ['h', 'm'],
+            copyDelimiter: true,
+        });
+    });
+
+    $('.input-float').toArray().forEach(function (field) {
+        new Cleave(field, {
+            numericOnly: true,
+            delimiter: '.',
+            blocks: [2, 4],
+            copyDelimiter: true,
+        });
+    });
+    $('.input-number').toArray().forEach(function (field) {
+        new Cleave(field, {
+            numericOnly: true,
+        });
+    });
+    $('.input-phone').toArray().forEach(function (field) {
+        new Cleave(field, {
+            phone: true,
+            phoneRegionCode: 'VN',
+        });
+    });
+    
+    if ($('.lich-thanh-toan').length > 0) {
+        $('.lich-thanh-toan').repeater({
+            show: function () {
+                $(this).slideDown();
+            },
+            hide: function (deleteElement) {
+                if(confirm('Xoa dong nay ?')) {
+                    $(this).slideUp(deleteElement);
                 }
             }
         });
-
-        // Change Background Image
-        $('.cz-bg-image img').on('click',function(){
-            var $this = $(this),
-            src = $this.attr('src');
-
-            $('.sidebar-background').css('background-image', 'url(' + src + ')');
-            $this.closest('.cz-bg-image').find('.selected').removeClass('selected');
-            $this.addClass('selected');
-        });
-
-        $('.cz-bg-image-display').on('click',function(){
-            var $this = $(this);
-            if($this.prop('checked') === true){
-                $('.sidebar-background').css('display','block');
-            }
-            else{
-                $('.sidebar-background').css('display','none');
-            }
-        });
+    }
 
 
-        $('.cz-compact-menu').on('click',function(){
-            $('.nav-toggle').trigger('click');
-            if($(this).prop('checked') === true){
-                $('.app-sidebar').trigger('mouseleave');
-                $('.user-settings-wrap').addClass('d-none');
-            }
-            else{
-                $('.user-settings-wrap').removeClass('d-none');
-            }
-        });
 
-        $('.cz-sidebar-width').on('change',function(){
-            var $this = $(this),
-            width_val = this.value,
-            wrapper = $('.wrapper');
 
-            if(width_val === 'small'){
-                $(wrapper).removeClass('sidebar-lg').addClass('sidebar-sm');
-            }
-            else if(width_val === 'large'){
-                $(wrapper).removeClass('sidebar-sm').addClass('sidebar-lg');
-            }
-            else{
-                $(wrapper).removeClass('sidebar-sm sidebar-lg');
-            }
 
-        });
 
+});
+
+
+var on_change_dkbs = function() {
+    var v_sum = 0;
+    $('.dkbs > input:checked').each(function(i,obj) {
     });
-})(window, document, jQuery);
-
+}

@@ -1292,7 +1292,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 
 .bootstrap-switch-info {
     color: #fff;
-    background-color: #00BCD4;
+    background-color: #1c3faa;
 }
 
 /*rtl:begin:ignore*/
@@ -1423,6 +1423,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
     display: block;
     padding-left: 0.875rem;
     padding-right: 2.375rem;
+    height: 21px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -3200,7 +3201,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
     top: 2.375rem;
     width: 50%;
     height: 2px;
-    background-color: #00BCD4;
+    background-color: #1c3faa;
     z-index: 9;
 }
 
@@ -3227,9 +3228,9 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 
 .wizard>.steps>ul>li.current .number {
     font-size: 0;
-    border-color: #00BCD4;
+    border-color: #1c3faa;
     background-color: #fff;
-    color: #00BCD4;
+    color: #1c3faa;
 }
 
 .wizard>.steps>ul>li.current .number:after {
@@ -3258,8 +3259,8 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 
 .wizard>.steps>ul>li.done .number {
     font-size: 0;
-    background-color: #00BCD4;
-    border-color: #00BCD4;
+    background-color: #1c3faa;
+    border-color: #1c3faa;
     color: #fff;
 }
 
@@ -3304,7 +3305,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
         content: '';
     }
     .wizard>.steps>ul>li:last-child:after {
-        background-color: #00BCD4;
+        background-color: #1c3faa;
     }
 }
 
@@ -3313,7 +3314,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
         width: 100%;
     }
     .wizard>.steps>ul>li.current:after {
-        background-color: #00BCD4;
+        background-color: #1c3faa;
     }
 }
 
@@ -9173,8 +9174,8 @@ body:not(.swal2-no-backdrop) .swal2-container.swal2-shown {
 }
 
 .noui-slider-solid.noui-slider-info .noUi-handle {
-    background-color: #00BCD4;
-    border-color: #00BCD4;
+    background-color: #1c3faa;
+    border-color: #1c3faa;
 }
 
 .noui-slider-primary .noUi-connect {
@@ -9194,7 +9195,7 @@ body:not(.swal2-no-backdrop) .swal2-container.swal2-shown {
 }
 
 .noui-slider-info .noUi-connect {
-    background-color: #00BCD4;
+    background-color: #1c3faa;
 }
 
 .noUi-tooltip {
@@ -10886,8 +10887,8 @@ body:not(.swal2-no-backdrop) .swal2-container.swal2-shown {
 }
 
 .ui-slider-info .ui-slider-range, .ui-slider-solid.ui-slider-info .ui-slider-handle {
-    background-color: #00BCD4;
-    border-color: #00BCD4;
+    background-color: #1c3faa;
+    border-color: #1c3faa;
 }
 
 .ui-spinner {
@@ -16167,10 +16168,6 @@ textarea#HandsontableCopyPaste {
     padding-top: 0;
 }
 
-.card>.dataTables_wrapper .table-bordered {
-    border: 0;
-}
-
 .card>.dataTables_wrapper .table-bordered>thead>tr>td:first-child, .card>.dataTables_wrapper .table-bordered>thead>tr>th:first-child, .card>.dataTables_wrapper .table-bordered>tbody>tr>td:first-child, .card>.dataTables_wrapper .table-bordered>tbody>tr>th:first-child, .card>.dataTables_wrapper .table-bordered>tfoot>tr>td:first-child, .card>.dataTables_wrapper .table-bordered>tfoot>tr>th:first-child {
     border-left: 0;
 }
@@ -18197,7 +18194,6 @@ textarea#HandsontableCopyPaste {
 .card-header .header-elements {
     padding-top: 0.9375rem;
 }
-
 .page-header-content .header-elements {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
