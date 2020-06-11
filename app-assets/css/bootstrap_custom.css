@@ -4203,3 +4203,53 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 .datepicker .datepicker-switch:hover,.datepicker .next:hover,.datepicker .prev:hover,.datepicker tfoot tr th:hover{background:#e9ecef}
 .datepicker .next.disabled,.datepicker .prev.disabled{visibility:hidden}
 .datepicker .cw{font-size:10px;width:12px;padding:0 2px 0 5px;vertical-align:middle}
+
+
+.form-size-sm{
+	font-size: 12px;
+}
+.btn-sm, .btn-group-sm>.btn {
+    padding: 2px 5px;
+    line-height: 14px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+.form-size-sm .form-control,
+.form-control.input-sm{
+    font-size: 12px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+.form-size-sm label {
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+.form-size-sm .btn{
+	padding: 0 5px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 3px;
+}
+
+.form-size-lg .form-control,
+.form-control.input-lg{
+	height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.form-size-sm .table th, 
+.form-size-sm .table td {
+    padding: 5px;
+}
+
+.form-size-sm .form-group-select select{
+	padding-right: 10px;;
+}
+.form-size-sm .form-group-select .select-icon{
+	top: -1px;
+	right: 0;
+}

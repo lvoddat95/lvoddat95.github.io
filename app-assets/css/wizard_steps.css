@@ -68,8 +68,9 @@
 }
 
 .page-content .wizard>.steps>ul>li.current>a {
-    color: #333333;
+    color: #1c3fa9;
     cursor: default;
+    font-weight: 500;
 }
 
 .page-content .wizard>.steps>ul>li.current .step {

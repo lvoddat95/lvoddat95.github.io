@@ -22,7 +22,7 @@ body {
 }
 
 .page-title {
-    padding: 2rem 0;
+    padding: 0 0 2rem;
     position: relative;
 }
 
@@ -72,11 +72,11 @@ body {
 
 .sidebar-main-toggle {
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: -15px;
+    right: 0;
     font-size: 20px;
-    z-index: 1;
-    color: #1c3faa;
+    z-index: 5;
+    color: #ff9b07 !important;
 }
 
 .sidebar-main-toggle>i {
@@ -84,8 +84,7 @@ body {
 }
 
 .sidebar-xs .sidebar-main-toggle>i:before {
-    content: "\ec9d";
-    color: #ccc;
+    content: "\e970";
 }
 
 .sidebar .logo {
@@ -143,9 +142,7 @@ body {
 }
 
 .header-top {
-    padding: 20px 0;
-    border-bottom: 1px solid #dee7ef;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .header-search {
@@ -531,6 +528,7 @@ body {
 }
 
 .form-group-select .select-icon {
+    pointer-events: none;
     content: "";
     font-family: icomoon;
     display: inline-block;
@@ -819,6 +817,7 @@ input[type=checkbox]:not(.switch) {
     cursor: pointer;
     outline: none;
     border: 1px solid #ddd;
+    background: #fff;
 }
 
 input[type=checkbox]:not(.switch):before {

@@ -5,21 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description"
-        content="Convex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords"
-        content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
+    <meta name="author" content="VNI">
     <title>VNI</title>
-    <link rel="apple-touch-icon" sizes="60x60" href="app-assets/images/ico/apple-icon-60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="app-assets/images/ico/apple-icon-76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="app-assets/images/ico/apple-icon-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="app-assets/images/ico/apple-icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="app-assets/images/ico/favicon-32.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/png" sizes="32x32" href="app-assets/images/ico//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="app-assets/images/ico//favicon-16x16.png">
+    <link rel="manifest" href="app-assets/images/ico/site.webmanifest">
     <!-- init Font -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -43,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="sidebar-xs">
     <div class="page-content">
         <div class="sidebar sidebar-main sidebar-expand-md">
             <!-- Sidebar content -->
@@ -54,6 +46,9 @@
                         <div class="logo-img"><img src="app-assets/images/logo/logo2.png" alt="Convex Logo"></div>
                         <span class="text align-middle" style="font-weight: 900;">VNI</span>
                     </a>
+                    <a href="#" class="sidebar-main-toggle">
+                        <i class="linearicons-toggle-on"></i>
+                    </a>
                 </div>
                 <!-- End-Logo -->
 
@@ -61,11 +56,26 @@
                 <div class="card card-sidebar-mobile">
                     <ul class="nav nav-sidebar" data-nav-type="accordion">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="index.html" class="nav-link">
                                 <i class="linearicons-home"></i>
                                 <span class="menu-title">Bảng điều khiển</span>
                             </a>
                             
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="javascript:;" class="nav-link">
+                                <i class="linearicons-layers"></i>
+                                <span class="menu-title"> Pages Template</span>
+                            </a>
+                            <ul class="nav nav-group-sub" data-submenu-title="Pages Template">
+                                <li><a href="index2.html" class="nav-link"><div class="menu-title">Màn hình danh sách</div></a></li>
+                                <li><a href="nhap_don1.html" class="nav-link"><div class="menu-title">Màn hình nhập đơn</div></a></li>
+                                <li><a href="nhap_don2.html" class="nav-link"><div class="menu-title">Màn hình chi tiết đơn</div></a></li>
+                                <li><a href="login.html" class="nav-link"><div class="menu-title">Trang Login</div></a></li>
+                                <!-- <li><a href="account.html" class="nav-link"><div class="menu-title">Trang tài khoản</div></a></li> -->
+                                <li><a href="404.html" class="nav-link"><div class="menu-title">Trang 404</div></a></li>
+                                <!-- <li><a href="faq.html" class="nav-link"><div class="menu-title">Trang FAQ</div></a></li> -->
+                            </ul>
                         </li>
                         <li class="nav-item nav-item-submenu nav-item-open">
                             <a href="javascript:;" class="nav-link active">
@@ -284,9 +294,6 @@
             <!-- End-Sidebar content -->
         </div>
         <div class="content-wrapper">
-            <a href="#" class="sidebar-main-toggle">
-                <i class="linearicons-radio-button"></i>
-            </a>
             <div class="content">
                 <div class="header-top d-flex justify-content-between">
                     <div class="breadcrumb">
@@ -554,23 +561,7 @@
                                                                 </div>
                                                                 
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label>Tài liệu: <span class="text-danger">*</span></label>
-                                                                    <div class="input-group file-caption-main">
-                                                                        <button class="btn btn-light btn-file mr-3">
-                                                                            <i class="icon-upload7 mr-2"></i> 
-                                                                            <span class="hidden-xs">Tải lên tài liệu</span>
-                                                                            <input type="file" class="file-input-preview">
-                                                                        </button>
-
-                                                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form3">
-                                                                            <i class="icon-stack2 mr-2"></i> 
-                                                                            <span class="hidden-xs">Tài liệu tham khảo</span>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
 
 
@@ -2774,7 +2765,7 @@
                                                                                                 <th>VAT</th>
                                                                                                 <th>COM (%)</th>
                                                                                                 <th>COM</th>
-                                                                                                <th>Định mức</th>
+                                                                                                <th style="max-width: 280px;">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
@@ -3067,13 +3058,15 @@
                                                                                     <table class="table table-bordered table-size12" style="margin-bottom: 0;">
                                                                                         <thead class="thead-light">
                                                                                             <tr>
-                                                                                                <th width="20%">Quyền lợi</th>
-                                                                                                <th width="15%">Số tiền bảo hiểm</th>
-                                                                                                <th width="8%">Tỷ lệ phí</th>
-                                                                                                <th width="15%">Phí chưa VAT</th>
-                                                                                                <th width="8%">VAT</th>
-                                                                                                <th width="15%">Tiền VAT</th>
-                                                                                                <th width="15%">Phí BH có VAT</th>
+                                                                                                <th width="25%">Quyền lợi</th>
+                                                                                                <th width="10%">Số tiền bảo hiểm</th>
+                                                                                                <th width="5%">Phí (%)</th>
+                                                                                                <th width="10%">Phí BH (có VAT)</th>
+                                                                                                <th width="5%">VAT (%)</th>
+                                                                                                <th width="10%">VAT</th>
+                                                                                                <th width="5%">COM (%)</th>
+                                                                                                <th width="10%">COM</th>
+                                                                                                <th  style="max-width: 280px;" width="20%">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
@@ -3098,6 +3091,27 @@
                                                                                                 <td>
                                                                                                     <input class="form-control text-right" type="text" id="C_PHI_BH1" name="C_PHI_BH1" value="0" >
                                                                                                 </td>
+                                                                                                <td><input class="form-control text-right input-float" type="text" placeholder="0.0"></td>
+                                                                                                <td><input class="form-control text-right input-money" type="text" placeholder="0"></td>
+                                                                                                <td>
+                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                        <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
+                                                                                                            title="Xe cơ giới khác">Xe cơ giới khác</option>
+                                                                                                        <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
+                                                                                                            title="Biển xanh, biển đỏ, biển nước ngoài">Biển xanh, biển đỏ, biển nước ngoài</option>
+                                                                                                        <option id="506CE15B-BC49-4F11-899A-7E950EC8A456" value="506CE15B-BC49-4F11-899A-7E950EC8A456"
+                                                                                                            title="Xe taxi, đầu kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe>15 tuổi kể từ ngày SX">Xe taxi, đầu
+                                                                                                            kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe&gt;15 tuổi kể từ ngày SX</option>
+                                                                                                        <option id="9A3B6724-5296-4AC1-A93F-D86E5E3439FB" value="9A3B6724-5296-4AC1-A93F-D86E5E3439FB"
+                                                                                                            title="Xe taxi, đầu kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe>10 tuổi kể từ ngày SX">Xe taxi, đầu
+                                                                                                            kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe&gt;10 tuổi kể từ ngày SX</option>
+                                                                                                        <option id="98BDBF21-0466-4BA7-8464-7455F86D7E81" value="98BDBF21-0466-4BA7-8464-7455F86D7E81"
+                                                                                                            title="Xe cơ giới khai thác qua Ngân hàng, show room">Xe cơ giới khai thác qua Ngân hàng, show room</option>
+                                                                                                        <option id="27292D06-61D1-4EE9-8417-AEF6FADD987B" value="27292D06-61D1-4EE9-8417-AEF6FADD987B" title="Xe tải">Xe tải
+                                                                                                        </option>
+                                                                                                    
+                                                                                                    </select>
+                                                                                                </td>
                                                                                             </tr>
                                                                                             
                                                                                             <tr>
@@ -3121,6 +3135,27 @@
                                                                                                 <td>
                                                                                                     <input class="form-control text-right" type="text" id="C_PHI_BH2" name="C_PHI_BH2" value="0" >
                                                                                                 </td>
+                                                                                                <td><input class="form-control text-right input-float" type="text" placeholder="0.0"></td>
+                                                                                                <td><input class="form-control text-right input-money" type="text" placeholder="0"></td>
+                                                                                                <td>
+                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                        <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
+                                                                                                            title="Xe cơ giới khác">Xe cơ giới khác</option>
+                                                                                                        <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
+                                                                                                            title="Biển xanh, biển đỏ, biển nước ngoài">Biển xanh, biển đỏ, biển nước ngoài</option>
+                                                                                                        <option id="506CE15B-BC49-4F11-899A-7E950EC8A456" value="506CE15B-BC49-4F11-899A-7E950EC8A456"
+                                                                                                            title="Xe taxi, đầu kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe>15 tuổi kể từ ngày SX">Xe taxi, đầu
+                                                                                                            kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe&gt;15 tuổi kể từ ngày SX</option>
+                                                                                                        <option id="9A3B6724-5296-4AC1-A93F-D86E5E3439FB" value="9A3B6724-5296-4AC1-A93F-D86E5E3439FB"
+                                                                                                            title="Xe taxi, đầu kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe>10 tuổi kể từ ngày SX">Xe taxi, đầu
+                                                                                                            kéo, vận tải hành khách theo tuyến cố định liên tỉnh, xe&gt;10 tuổi kể từ ngày SX</option>
+                                                                                                        <option id="98BDBF21-0466-4BA7-8464-7455F86D7E81" value="98BDBF21-0466-4BA7-8464-7455F86D7E81"
+                                                                                                            title="Xe cơ giới khai thác qua Ngân hàng, show room">Xe cơ giới khai thác qua Ngân hàng, show room</option>
+                                                                                                        <option id="27292D06-61D1-4EE9-8417-AEF6FADD987B" value="27292D06-61D1-4EE9-8417-AEF6FADD987B" title="Xe tải">Xe tải
+                                                                                                        </option>
+                                                                                                    
+                                                                                                    </select>
+                                                                                                </td>
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td><b>Tổng cộng: </b></td>
@@ -3130,6 +3165,9 @@
                                                                                                 <td align="right"></td>
                                                                                                 <td align="right"><b>0</b></td>
                                                                                                 <td align="right"><b>0</b></td>
+                                                                                                <td align="right"><b>0</b></td>
+                                                                                                <td align="right"><b>0</b></td>
+                                                                                                <td></td>
                                                                                             </tr>
                                                                                         
                                                                                         </tbody>
@@ -3391,11 +3429,11 @@
                                                                             <td><input class="form-control input-money" type="text" placeholder="Nhập..."></td>
                                                                             <td><input class="form-control input-money" type="text" placeholder="Nhập..."></td>
                                                                             <td><input class="form-control input-money" type="text" placeholder="Nhập..."></td>
-                                                                            <td><input data-repeater-delete class="btn btn-sm bg-danger" type="button" value="- Xóa"/></td>
+                                                                            <td><input data-repeater-delete class="btn bg-danger" type="button" value="- Xóa"/></td>
                                                                         </tr>
                                                                     </tbody>
                                                                     <tfoot>
-                                                                        <th colspan="7" class="text-center"><input class="btn btn-sm bg-success" data-repeater-create type="button" value="+ Thêm"/></th>
+                                                                        <th colspan="7" class="text-center"><input class="btn bg-success" data-repeater-create type="button" value="+ Thêm"/></th>
                                                                     </tfoot>
                                                                 </table>
                                                             </div>
@@ -3415,7 +3453,25 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Tài liệu đính kèm: <span class="text-danger">*</span></label>
+                                                                    <div class="input-group file-caption-main">
+                                                                        <button class="btn btn-light btn-file mr-3">
+                                                                            <i class="icon-upload7 mr-2"></i> 
+                                                                            <span class="hidden-xs">Tải lên tài liệu</span>
+                                                                            <input type="file" class="file-input-preview">
+                                                                        </button>
+
+                                                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form3">
+                                                                            <i class="icon-stack2 mr-2"></i> 
+                                                                            <span class="hidden-xs">Tài liệu tham khảo</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </fieldset>
                                                 </form>
                                             </div>

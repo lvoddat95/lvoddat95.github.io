@@ -27,7 +27,7 @@ var DatatableDataSources = function() {
         // Setting datatable defaults
         $.extend( $.fn.dataTable.defaults, {
             autoWidth: false,
-            dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
+            dom: '<"datatable-header"l><"datatable-scroll"t><"datatable-footer"ip>',
             language: {
                 search: '<span>Filter:</span> _INPUT_',
                 searchPlaceholder: 'Type to filter...',
@@ -44,11 +44,7 @@ var DatatableDataSources = function() {
                 { 
                     orderable: false,
                     targets: [ 0 ],
-                },
-                { 
-                    orderable: false,
-                    targets: [ 8 ],
-                },
+                }
             ],
             dom: '<"datatable-header"fl><"datatable-scroll"Bt><"datatable-footer"ip>',
             buttons: [
