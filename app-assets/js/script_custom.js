@@ -94,7 +94,7 @@ $(function(){
         });
     }
 
-    $('.noti-list').perfectScrollbar();
+    $('.media-list').perfectScrollbar();
 
     $('.dropdown-scrollable').perfectScrollbar();
 
