@@ -74,29 +74,29 @@
                     pointHoverBorderWidth: 2,
                     pointRadius: 4,
                 }, 
-                // {
-                //     label: "My Second dataset",
-                //     data: [28, 48, 40, 19, 86, 27, 90],
-                //     fill: false,
-                //     borderDash: [5, 5],
-                //     borderColor: "#FF9149",
-                //     pointBorderColor: "#FF9149",
-                //     pointBackgroundColor: "#FFF",
-                //     pointBorderWidth: 2,
-                //     pointHoverBorderWidth: 2,
-                //     pointRadius: 4,
-                // }, {
-                //     label: "My Third dataset - No bezier",
-                //     data: [45, 25, 16, 36, 67, 18, 76],
-                //     lineTension: 0,
-                //     fill: false,
-                //     borderColor: "#FF4961",
-                //     pointBorderColor: "#FF4961",
-                //     pointBackgroundColor: "#FFF",
-                //     pointBorderWidth: 2,
-                //     pointHoverBorderWidth: 2,
-                //     pointRadius: 4,
-                // }
+                {
+                    label: "Tái bảo hiểm",
+                    data: [28, 48, 40, 19, 86, 27, 90],
+                    fill: false,
+                    borderDash: [5, 5],
+                    borderColor: "#FF9149",
+                    pointBorderColor: "#FF9149",
+                    pointBackgroundColor: "#FFF",
+                    pointBorderWidth: 1,
+                    pointHoverBorderWidth: 1,
+                    pointRadius: 4,
+                }, {
+                    label: "Bồi thường",
+                    data: [45, 25, 16, 36, 67, 18, 76],
+                    lineTension: 0,
+                    fill: false,
+                    borderColor: "#FF4961",
+                    pointBorderColor: "#FF4961",
+                    pointBackgroundColor: "#FFF",
+                    pointBorderWidth: 2,
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 4,
+                }
                 ]
             };
 
