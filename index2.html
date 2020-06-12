@@ -302,10 +302,17 @@
                         <span class="breadcrumb-item active">F02 - Bảo hiểm ô tô</span>
                     </div>
                     <div>
-                        <a href="nhap_don1.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-plus2"></i></b> Thêm mới đơn</a>
+                        <a href="nhap_don1.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-plus2"></i></b> Thêm</a>
+                        <a href="nhap_don1.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-check"></i></b> Trình duyệt</a>
+                        <a href="nhap_don1.html" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-trash"></i></b> Xóa</a>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="icon-stack2"></i> Chọn</button>
-                            <div class="dropdown-menu dropdown-menu-action dropdown-menu-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="icon-printer2"></i> IN</button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item" data-popup="tooltip" title="" data-placement="right" data-original-title="In thông báo thu phí"><i class="icon-file-text2"></i> In TB thu phí</a>
+                                <a href="#" class="dropdown-item" data-popup="tooltip" title="" data-placement="right" data-original-title="In thông báo hoa hồng"><i class="icon-cash3"></i> In TB HH</a>
+                                <a href="#" class="dropdown-item" data-popup="tooltip" title="" data-placement="right" data-original-title="In phiếu thanh toán hoa hồng"><i class="icon-credit-card"></i> In phiếu TT HH</a>
+                                <a href="#" class="dropdown-item" data-popup="tooltip" title="" data-placement="right" data-original-title="In mẫu in"><i class="icon-stack"></i> In mẫu in</a>
+                                <a href="#" class="dropdown-item" data-popup="tooltip" title="" data-placement="right" data-original-title="In tờ trình"><i class="icon-certificate"></i> In tờ trình</a>
                             </div>
                         </div>
                     </div>
@@ -314,15 +321,15 @@
                     <div class="col-lg-12">
                         <div class="card">
 							<div class="card-header header-elements-sm-inline">
-								<h5 class="card-title">Biểu đồ doanh thu</h5>
+                                <h5 class="card-title">Biểu đồ doanh thu</h5>
 								<div class="header-elements">
-									<a class="text-default daterange-ranges font-weight-semibold cursor-pointer dropdown-toggle">
+									<a class="text-default daterange-ranges font-weight-semibold cursor-pointer dropdown-toggle mr-2">
 										<i class="icon-calendar3 mr-2"></i>
 										<span></span>
-									</a>
+                                    </a>
+                                    <a class="list-icons-item" data-action="remove"></a>
 			                	</div>
-							</div>
-
+                            </div>
 							<div class="card-body d-md-flex align-items-md-center justify-content-md-between flex-md-wrap">
 								<div class="d-flex align-items-center mb-3 mb-md-0">
 									<div id="tickets-status"></div>
@@ -340,6 +347,14 @@
 										<h5 class="font-weight-semibold mb-0">1,132 (đơn)</h5>
 										<span class="text-muted">Bồi thường</span>
 									</div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mb-3 mb-sm-0">
+									<div id="campaign-status-pie"></div>
+									<div class="ml-3">
+										<h5 class="font-weight-semibold mb-0">2,458 <span class="text-danger font-size-sm font-weight-normal"><i class="icon-arrow-down12"></i> (-4.9%)</span></h5>
+										<span class="badge badge-mark border-danger mr-1"></span> <span class="text-muted">Tháng 6</span>
+									</div>
 								</div>
 
 								<div class="d-flex align-items-center mb-3 mb-md-0">
@@ -355,6 +370,149 @@
 								<div>
 									<a href="#" class="btn bg-teal-400"><i class="icon-statistics mr-2"></i> In báo cáo</a>
 								</div>
+                            </div>
+                        </div>
+
+                        <div class="card card-search">
+                            <div class="card-header header-elements-sm-inline">
+                                <h5 class="card-title">
+                                    <i style="width: 36px; height: 36px; line-height: 36px;" class="icon-search4 d-flex-inline align-items-center justify-content-center rounded-round bg-color mr-2"></i> 
+                                    Tìm kiếm đơn bảo hiểm
+                                </h5>
+                                <div class="header-elements">
+                                    <div class="list-icons">
+                                        <a class="list-icons-item" data-action="collapse"></a>
+                                        <a class="list-icons-item" data-action="remove"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label><b>Số đơn:</b></label>
+                                            <div class="input-group input-border-2">
+                                                <span class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="icon-profile "></i></span>
+                                                </span>
+                                                <input type="text" class="form-control" name="" placeholder="Nhập số đơn...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label><b>Ngày cấp từ:</b></label>
+                                            <div class="input-group input-border-2">
+                                                <span class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="icon-calendar "></i></span>
+                                                </span>
+                                                <input type="text" class="form-control datepicker" name="" placeholder="dd/mm/yyyy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label><b>Đến ngày:</b></label>
+                                            <div class="input-group input-border-2">
+                                                <span class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="icon-calendar "></i></span>
+                                                </span>
+                                                <input type="text" class="form-control datepicker" name="" placeholder="dd/mm/yyyy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group ">
+                                            <label><b>Trạng thái:</b> </label>
+                                            <div class="form-group-select">
+                                                <div class="input-group input-border-2">
+                                                    <span class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="icon-checkmark-circle2 "></i></span>
+                                                    </span>
+                                                    <select class="form-control" name="">
+                                                        <option value="opt1">Mới thêm (20)</option>
+                                                        <option value="opt2">Từ chối (18)</option>
+                                                        <option value="opt3">Chấp nhận (30)</option>
+                                                        <option value="opt4">TBH Từ chối (28)</option>
+                                                    </select>
+                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group ">
+                                            <label><b>Phòng ban:</b> </label>
+                                            <div class="form-group-select">
+                                                <div class="input-group input-border-2">
+                                                    <span class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="icon-city "></i></span>
+                                                    </span>
+                                                    <select class="form-control" name="">
+                                                        <option value="">--- Chọn ---</option>
+                                                        <option value="opt1">Phòng KD 1</option>
+                                                        <option value="opt2">Phòng KD 2</option>
+                                                        <option value="opt3">Phòng KD 3</option>
+                                                        <option value="opt4">Phòng KD 4</option>
+                                                        <option value="opt5">Phòng KD 5</option>
+                                                    </select>
+                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="form-group ">
+                                            <label><b>Cán bộ:</b> </label>
+                                            <div class="form-group-select">
+                                                <div class="input-group input-border-2">
+                                                    <span class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="icon-user-tie "></i></span>
+                                                    </span>
+                                                    <select class="form-control" name="">
+                                                        <option value="">--- Chọn ---</option>
+                                                        <option value="opt1">Lê Văn A</option>
+                                                        <option value="opt2">Lê Văn B</option>
+                                                        <option value="opt3">Lê Văn C</option>
+                                                        <option value="opt4">Lê Văn D</option>
+                                                        <option value="opt5">Lê Văn E</option>
+                                                    </select>
+                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 ">
+                                        <div class="form-group ">
+                                            <label><b>Khách hàng:</b> </label>
+                                            <div class="form-group-select">
+                                                <div class="input-group input-border-2">
+                                                    <span class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="icon-user "></i></span>
+                                                    </span>
+                                                    <select class="form-control" name="">
+                                                        <option value="">--- Chọn ---</option>
+                                                        <option value="opt1">Lê Văn A</option>
+                                                        <option value="opt2">Lê Văn B</option>
+                                                        <option value="opt3">Lê Văn C</option>
+                                                        <option value="opt4">Lê Văn D</option>
+                                                        <option value="opt5">Lê Văn E</option>
+                                                    </select>
+                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="">&nbsp;</label>
+                                        <div>
+                                            <button type="submit" style="letter-spacing: 1px;" class="btn text-uppercase w-100 bg-orange"><i class="icon-search4 mr-2"></i> Tìm kiếm </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         <!-- Danh sách đơn -->
@@ -390,6 +548,7 @@
                                             <th>Cán bộ khai thác</th>
                                             <th>Cán bộ cấp đơn</th>
                                             <th>Trạng thái</th>
+                                            <th class="text-center">#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -401,9 +560,20 @@
                                             <td>Đặng Văn Lịch</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
-        
+        	
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>61802227/F02.BB19/0102676</td>
                                             <td>27/05/2020</td>
@@ -412,7 +582,18 @@
                                             <td>Bùi Thị Nhung</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-dark">Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003638/F02.BB19/0102394</td>
@@ -422,7 +603,18 @@
                                             <td>Đỗ Thùy Dương</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-info">Chờ duyệt</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>042000910/F02.AD19/0099350</td>
@@ -432,7 +624,18 @@
                                             <td>Tô Thị Hoàng Yến</td>
                                             <td>Tô Thị Hoàng Yến</td>
                                             <td><span class="badge badge-primary">Chấp nhận</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003638/F02.BB19/0102393</td>
@@ -442,7 +645,18 @@
                                             <td>Đỗ Thùy Dương</td>
                                             <td>Tô Thị Hoàng Yến</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
         
                                         <tr>
@@ -453,7 +667,18 @@
                                             <td>Nguyễn Đức Cường</td>
                                             <td>Nguyễn Đức Cường</td>
                                             <td><span class="badge badge-primary">Chấp nhận</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003645/F02.BB19/0102671</td>
@@ -463,7 +688,18 @@
                                             <td>Đặng Văn Lịch</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003627/F02.AD20/0062252</td>
@@ -473,7 +709,18 @@
                                             <td>Lê Vi Linh</td>
                                             <td>Lê Vi Linh</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000318/E02.12</td>
@@ -483,7 +730,18 @@
                                             <td>Ngô Thị Hà Trang</td>
                                             <td>Ngô Thị Hà Trang</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003639/F02.AD20/0062459</td>
@@ -493,7 +751,18 @@
                                             <td>Đặng Văn Lịch</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003637/F02.AD20/0062458</td>
@@ -503,7 +772,18 @@
                                             <td>Đặng Văn Lịch</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003602/F02.BB19/0102388</td>
@@ -513,7 +793,18 @@
                                             <td>Bùi Thị Nhung</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-primary">Chấp nhận</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003585/F02.BB19/0102389</td>
@@ -523,7 +814,18 @@
                                             <td>Đặng Văn Lịch</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000357/E02</td>
@@ -533,7 +835,18 @@
                                             <td>Bùi Thị Nhung</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-primary">Chấp nhận</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000028/C01</td>
@@ -543,7 +856,18 @@
                                             <td>Nguyễn Ngọc Cường</td>
                                             <td>Trương Thị Bích Liên</td>
                                             <td><span class="badge badge-dark">Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000024/C01</td>
@@ -553,7 +877,18 @@
                                             <td>Nguyễn Ngọc Cường</td>
                                             <td>Trương Thị Bích Liên</td>
                                             <td><span class="badge badge-info">Chờ duyệt</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000030/C01</td>
@@ -563,7 +898,18 @@
                                             <td> Nguyễn Ngọc Cường</td>
                                             <td>Trương Thị Bích Liên</td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000031/C01 </td>
@@ -573,7 +919,18 @@
                                             <td>	Đỗ Thùy Dương	</td>
                                             <td>Đỗ Thùy Dương	</td>
                                             <td><span class="badge badge-info">Chờ duyệt</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003248/F02.BB19/0082666</td>
@@ -583,7 +940,18 @@
                                             <td>Lê Vi Linh</td>
                                             <td>Bùi Thị Nhung	 </td>
                                             <td><span class="badge badge-info">Chờ duyệt</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003380/F02.BB19/0102290 </td>
@@ -593,7 +961,18 @@
                                             <td>	Đặng Văn Lịch	</td>
                                             <td>Bùi Thị Nhung	  </td>
                                             <td><span class="badge badge-dark">Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003248/F02.BB19/0082665</td>
@@ -603,7 +982,18 @@
                                             <td>Vũ Văn Đạt</td>
                                             <td>Bùi Thị Nhung</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>	162003369/F02.BB19/0102314</td>
@@ -613,7 +1003,18 @@
                                             <td>Phạm Duy Tùng	</td>
                                             <td>Nguyễn Đức Cường</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003457/F02.BB19/0102368 </td>
@@ -623,7 +1024,18 @@
                                             <td>  	Đặng Văn Lịch	</td>
                                             <td>Bùi Thị Nhung	  </td>
                                             <td><span class="badge badge-danger ">TBH Từ chối</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000022/C01 	</td>
@@ -633,44 +1045,56 @@
                                             <td>	Nguyễn Ngọc Cường	</td>
                                             <td>Trương Thị Bích Liên	</td>
                                             <td><span class="badge badge-success">Mới thêm</span></td>
-                                            
+                                            <td class="text-center">
+												<div class="list-icons">
+													<div class="dropdown">
+														<a href="#" class="list-icons-item dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-gear"></i></a>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="#" data-toggle="modal" data-target="#modal_form1" class="dropdown-item"><i class="icon-file-stats"></i> Xem lịch sử tổn thất</a>
+															<!-- <a href="#" data-toggle="modal" data-target="#modal_form2"  class="dropdown-item"><i class="icon-map5"></i> Xem vị trí gđ online</a> -->
+															
+														</div>
+													</div>
+												</div>
+											</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div class="d-flex align-items-center">
-                                        Hiển thị 
-                                        <div class="form-group form-size-sm mr-2 ml-2 mb-0">
-                                            <div class="form-group-select">
-                                                <select class="form-control" name="so_ban_ghi">
-                                                    <option value="20">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="70">75</option>
-                                                    <option value="100">100</option>
-                                                    <option value="125">125</option>
-                                                    <option value="150">150</option>
-                                                    <option value="200">200</option>
-                                                    <option value="250">250</option>
-                                                    <option value="300">300</option>
-                                                    <option value="400">400</option>
-                                                    <option value="500">500</option>
-                                                    <option value="1000">1000</option>
-                                                </select>
-                                                <span class="select-icon"><i class="icon-arrow-down22"></i></span>
-                                            </div>
-                                        </div>
-                                        trên 264 bản ghi
-                                    </div>
-                                    <ul class="pagination pagination-flat ">
-                                        <li class="page-item"><a href="#" class="page-link">← &nbsp; Trước</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                        <li class="page-item disabled"><a href="#" class="page-link">3</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">Sau &nbsp; →</a></li>
-                                    </ul>
-                                </div>
                             </div>
+                            <div class="card-footer bg-white d-sm-flex justify-content-sm-between align-items-sm-center">
+								<div class="d-flex align-items-center">
+                                    Hiển thị 
+                                    <div class="form-group mr-2 ml-2 mb-0">
+                                        <div class="form-group-select">
+                                            <select class="form-control" name="so_ban_ghi">
+                                                <option value="20">25</option>
+                                                <option value="50">50</option>
+                                                <option value="70">75</option>
+                                                <option value="100">100</option>
+                                                <option value="125">125</option>
+                                                <option value="150">150</option>
+                                                <option value="200">200</option>
+                                                <option value="250">250</option>
+                                                <option value="300">300</option>
+                                                <option value="400">400</option>
+                                                <option value="500">500</option>
+                                                <option value="1000">1000</option>
+                                            </select>
+                                            <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                        </div>
+                                    </div>
+                                    trên 264 bản ghi
+                                </div>
+
+								<ul class="pagination pagination-flat ">
+                                    <li class="page-item"><a href="#" class="page-link">← &nbsp; Trước</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item disabled"><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">Sau &nbsp; →</a></li>
+                                </ul>
+							</div>
                         </div>
                         <!-- End - Danh Sách Đơn -->
                         
@@ -693,18 +1117,281 @@
         </div>
     </div>
 
+    <!-- Modal form1 -->
+    <div id="modal_form1" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase font-weight-semibold color">Lịch sử tổn thất</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+
+								<ul class="nav nav-tabs nav-tabs-solid nav-justified rounded bg-light">
+									<li class="nav-item"><a href="#modal_tab1" class="nav-link rounded-left active" data-toggle="tab">Tổn thất theo số đơn BH</a></li>
+									<li class="nav-item"><a href="#modal_tab2" class="nav-link" data-toggle="tab">Tổn thất theo khách hàng</a></li>
+									<li class="nav-item"><a href="#modal_tab3" class="nav-link" data-toggle="tab">Tổn thất theo biển kiểm soát</a></li>
+									<li class="nav-item"><a href="#modal_tab4" class="nav-link rounded-right" data-toggle="tab">Tổn thất theo số HĐ</a></li>
+								</ul>
+
+								<div class="tab-content">
+									<div class="tab-pane fade active show" id="modal_tab1">
+                                        <table class="table table-size12 table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th width="1%">#</th>
+                                                    <th width="18%">Số hồ sơ BT</th>
+                                                    <th width="18%">Số đơn BH</th>
+                                                    <th width="11%">Ngày tổn thất</th>
+                                                    <th width="11%">Ngày thông báo</th>
+                                                    <th width="13%">Tổng phí BH</th>
+                                                    <th width="13%">Số tiền dự phòng đã duyệt</th>
+                                                    <th width="13%">Số tiền thanh toán đã duyệt</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center"> 1 </td>
+                                                    <td>BT011000269.F02 </td>
+                                                    <td>010900978.E01.BB068501 </td>
+                                                    <td> 10/06/2010 </td>
+                                                    <td>11/06/2010 </td>
+                                                    <td align="right;" style="text-align: right;">4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">2,090,000 </td>
+                                                    <td align="right;" style="text-align: right;">1,900,000 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex mt-2" style="font-size: 12px;font-weight: 500;"> 
+                                        	<p class="mr-3">Tổng phí BH: <span class="text-indigo-400"> 4,001,818</span></p>
+											<p class="mr-3">Tổng Dự phòng: <span class="text-indigo-400"> 2,090,000</span></p>
+											<p class="mr-3">Tổng Bồi thường: <span class="text-indigo-400"> 1,900,000</span></p>
+											<p class="mr-3">Tỷ lệ bồi thường/doanh thu: <span class="text-indigo-400">47.48 % </span></p>
+										</div>
+										<div class="modal-chart">
+											<div class="chart-container text-center">
+												<div class="d-inline-block" 
+												data-size="350"
+												data-color="#3F51B5, #FF9800"
+												data-columns='["Bồi thường",47.5],["Doanh thu",52.5]'
+												id="c3-pie-chart"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="modal_tab2">
+                                        <table class="table table-size12 table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th width="2%">#</th>
+                                                    <th width="9%">Số hồ sơ BT</th>
+                                                    <th width="13%">Số đơn BH</th>
+                                                    <th width="15%">Loại hình BH</th>
+                                                    <th width="10%">Ngày tổn thất</th>
+                                                    <th width="10%">Ngày thông báo</th>
+                                                    <th width="10%">Tổng phí BH</th>
+                                                    <th width="10%">Số tiền dự phòng đã duyệt</th>
+                                                    <th width="10%">Số tiền thanh toán đã duyệt</th>
+                                                    <th width="10%">Ngày thu phí</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center"> 1 </td>
+                                                    <td>BT011000269.F02 </td>
+                                                    <td>010900978.E01.BB068501 </td>
+                                                    <td> F02 - Bảo hiểm ô tô </td>
+                                                    <td>10/06/2010 </td>
+                                                    <td>11/06/2010 </td>
+                                                    <td align="right;" style="text-align: right;"> 4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">2,090,000 </td>
+                                                    <td align="right;" style="text-align: right;">1,900,000 </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex mt-2" style="font-size: 12px;font-weight: 500;"> 
+                                        	<p class="mr-3">Tổng phí BH: <span class="text-indigo-400"> 4,001,818</span></p>
+											<p class="mr-3">Tổng Dự phòng: <span class="text-indigo-400"> 2,090,000</span></p>
+											<p class="mr-3">Tổng Bồi thường: <span class="text-indigo-400"> 1,900,000</span></p>
+											<p class="mr-3">Tỷ lệ bồi thường/doanh thu: <span class="text-indigo-400">47.48 % </span></p>
+										</div>
+										<div class="modal-chart">
+											<div class="chart-container text-center">
+												<div class="d-inline-block" 
+												data-size="350"
+												data-color="#3F51B5, #FF9800"
+												data-columns='["Bồi thường",47.5],["Doanh thu",52.5]'
+												id="c3-pie-chart2"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="modal_tab3">
+                                        <table class="table table-size12 table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th width="2%">#</th>
+                                                    <th width="10%">Số hồ sơ BT</th>
+                                                    <th width="15%">Số đơn BH</th>
+                                                    <th width="10%">Ngày tổn thất</th>
+                                                    <th width="10%">Ngày thông báo</th>
+                                                    <th width="13%">Tổng phí BH</th>
+                                                    <th width="13%">Số tiền dự phòng đã duyệt</th>
+                                                    <th width="13%">Số tiền thanh toán đã duyệt</th>
+                                                    <th width="13%">Ngày thu phí</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                               
+                                                <tr>
+                                                    <td align="center">1</td>
+                                                    <td>BT041101077.F02</td>
+                                                    <td>041001229.BB051844</td>
+                                                    <td>19/06/2011 </td>
+                                                    <td>28/06/2011 </td>
+                                                    <td align="right;" style="text-align: right;">4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">6,000,000 </td>
+                                                    <td align="right;" style="text-align: right;">4,900,000 </td>
+                                                    <td>24/06/2010 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"> 2 </td>
+                                                    <td>BT041400643.F02 </td>
+                                                    <td> 041301003.BB108467 </td>
+                                                    <td>05/07/2014 </td>
+                                                    <td>07/07/2014 </td>
+                                                    <td align="right;" style="text-align: right;">4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">2,000,000 </td>
+                                                    <td align="right;" style="text-align: right;">1,722,500 </td>
+                                                    <td>11/07/2013 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">3 </td>
+                                                    <td> BT041300174.F02 </td>
+                                                    <td>041200824.BB107296 </td>
+                                                    <td>20/02/2013 </td>
+                                                    <td>21/02/2013 </td>
+                                                    <td align="right;" style="text-align: right;">4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">5,500,000 </td>
+                                                    <td align="right;" style="text-align: right;"> 5,000,000 </td>
+                                                    <td> 02/07/2012 </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"> 4 </td>
+                                                    <td>BT011000269.F02 </td>
+                                                    <td> 010900978.E01.BB068501 </td>
+                                                    <td>10/06/2010 </td>
+                                                    <td>11/06/2010 </td>
+                                                    <td align="right;" style="text-align: right;">4,001,818 </td>
+                                                    <td align="right;" style="text-align: right;">2,090,000 </td>
+                                                    <td align="right;" style="text-align: right;">1,900,000 </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex mt-2" style="font-size: 12px;font-weight: 500;"> 
+                                        	<p class="mr-3">Tổng phí BH: <span class="text-indigo-400"> 28,187,908</span></p>
+											<p class="mr-3">Tổng Dự phòng: <span class="text-indigo-400"> 15,590,000 </span></p>
+											<p class="mr-3">Tổng Bồi thường: <span class="text-indigo-400"> 13,522,500</span></p>
+											<p class="mr-3">Tỷ lệ bồi thường/doanh thu: <span class="text-indigo-400">47.97 % </span></p>
+										</div>
+										<div class="modal-chart">
+											<div class="chart-container text-center">
+												<div class="d-inline-block" 
+												data-size="350"
+												data-color="#3F51B5, #FF9800"
+												data-columns='["Bồi thường",48.0],["Doanh thu",52.0]'
+												id="c3-pie-chart3"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="modal_tab4">
+                                        <table class="table table-size12 table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th width="2%">#</th>
+                                                    <th width="9%">Số hồ sơ BT</th>
+                                                    <th width="13%">Số đơn BH</th>
+                                                    <th width="15%">Loại hình BH</th>
+                                                    <th width="10%">Ngày tổn thất</th>
+                                                    <th width="10%">Ngày thông báo</th>
+                                                    <th width="10%">Tổng phí BH</th>
+                                                    <th width="10%">Số tiền dự phòng đã duyệt</th>
+                                                    <th width="10%">Số tiền thanh toán đã duyệt</th>
+                                                    <th width="10%">Ngày thu phí</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr> </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="d-flex mt-2" style="font-size: 12px;font-weight: 500;"> 
+                                        	<p class="mr-3">Tổng phí BH: <span class="text-indigo-400"> 4,001,818</span></p>
+											<p class="mr-3">Tổng Dự phòng: <span class="text-indigo-400"> 0</span></p>
+											<p class="mr-3">Tổng Bồi thường: <span class="text-indigo-400"> 0</span></p>
+											<p class="mr-3">Tỷ lệ bồi thường/doanh thu: <span class="text-indigo-400">0% </span></p>
+										</div>
+										<div class="modal-chart">
+											<div class="chart-container text-center">
+												<div class="d-inline-block" 
+												data-size="350"
+												data-color="#FF9800"
+												data-columns='["Doanh thu",100]'
+                                                class="c3-pie-chart"
+                                                id="c3-pie-chart4"
+                                                ></div>
+											</div>
+										</div>
+									</div>
+								</div>
+				
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- / Modal form1 -->
+
+    <!-- Modal form2 -->
+    <div id="modal_form2" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase font-weight-semibold color">Vị trí giám định viên online</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-sm bg-color">Chọn</button>
+                        <button type="button" class="btn btn-sm btn-light" data-dismiss="modal">Đóng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- / Modal form2 -->
+
 
     <!-- CORE JS-->
     <script src="app-assets/vendors/js/jquery-3.3.1.min.js"></script>
     <script src="app-assets/vendors/js/popper/popper.min.js"></script>
     <script src="app-assets/vendors/js/bootstrap/bootstrap.min.js"></script>
-    <script src="app-assets/vendors/js/blockui.min.js"></script>
+    <script src="app-assets/vendors/js/jquery_ui/blockui.min.js"></script>
     <script src="app-assets/vendors/js/jquery.matchHeight-min.js"></script>
     <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="app-assets/vendors/js/moment/moment-with-locales.js"></script>
+
     <!-- /CORE JS-->
 
     <!-- JS Trang-->
     <script src="app-assets/vendors/js/select2.min.js"></script>
+    <script src="app-assets/vendors/js/daterangepicker.js"></script>
     <script src="app-assets/vendors/js/datatable/datatables.min.js"></script>
     <script src="app-assets/vendors/js/datatable/dataTables.buttons.min.js"></script>
     <script src="app-assets/vendors/js/datatable/buttons.flash.min.js"></script>
@@ -716,11 +1403,16 @@
     <!-- /JS Trang-->
     
     <!-- Custom JS Trang-->
-    <script src="app-assets/js/datatables_custom.js"></script>
+    <script src="app-assets/vendors/js/chart/d3.min.js"></script>
+    <script src="app-assets/vendors/js/chart/d3_tooltip.js"></script>
+    <script src="app-assets/vendors/js/chart/c3.min.js"></script>
     <!-- /Custom JS Trang-->
     
     <!-- Custom JS-->
     <script src="app-assets/js/app.js"></script>
+    <script src="app-assets/js/datatables_custom.js"></script>
+    <script src="app-assets/js/donuts.js"></script>
+    <script src="app-assets/js/c3/c3_bars_pies.js"></script>
     <script src="app-assets/js/script_custom.js"></script>
     <!-- /Custom JS-->
     

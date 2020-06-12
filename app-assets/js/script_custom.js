@@ -5,6 +5,17 @@ $(function(){
         $('.input-chk').not(this).prop('checked', this.checked);
     });
 
+
+    $(document).on('click', function() {
+        $('.card-search').removeClass('overlay');
+    });
+    
+    
+    $(".card-search").children().on('click', function (e) {
+        $(this).parent().addClass('overlay');
+        e.stopPropagation();
+    });
+    
     
 
     if ($('.collapse-group').length > 0) {

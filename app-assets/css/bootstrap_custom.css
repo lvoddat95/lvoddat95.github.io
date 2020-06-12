@@ -364,7 +364,7 @@ a.text-default:hover, a.text-default:focus {
 	content: '';
 	position: absolute;
 	top: 0.31252rem;
-	left: 0.1875rem;
+	left: 0.375rem;
 	bottom: -0.43752rem;
 	width: 0;
 	border-left: 1px solid #607D8B;
@@ -478,7 +478,7 @@ pre {
 	white-space: pre-wrap;
 	/*rtl:ignore*/
 	text-align: left;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 /* ------------------------------------------------------------------------------
@@ -730,7 +730,7 @@ select[multiple], select[size] {
 
 select[multiple] option, select[size] option {
 	padding: 0.5rem 1rem;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 select[multiple] option+option, select[size] option+option {
@@ -1019,7 +1019,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 
 .btn-float {
 	padding: 1rem;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .btn-float.btn-link {
@@ -1104,8 +1104,8 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 
 .btn-labeled-left>b {
 	left: -1px;
-	border-top-left-radius: 0.1875rem;
-	border-bottom-left-radius: 0.1875rem;
+	border-top-left-radius: 0.375rem;
+	border-bottom-left-radius: 0.375rem;
 }
 
 .btn-labeled-left.btn-lg {
@@ -1132,8 +1132,8 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 
 .btn-labeled-right>b {
 	right: -1px;
-	border-top-right-radius: 0.1875rem;
-	border-bottom-right-radius: 0.1875rem;
+	border-top-right-radius: 0.375rem;
+	border-bottom-right-radius: 0.375rem;
 }
 
 /* ------------------------------------------------------------------------------
@@ -1157,6 +1157,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	text-overflow: ellipsis;
 	cursor: pointer;
 	margin-bottom: 0;
+	border-radius: 6px;
 	transition: background-color ease-in-out 0.15s, color ease-in-out 0.15s;
 }
 
@@ -1471,6 +1472,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 .input-group-text i {
 	display: block;
 	top: 0;
+    color: var(--gray);
 }
 
 /* ------------------------------------------------------------------------------
@@ -1899,27 +1901,27 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 }
 
 .nav-pills-toolbar .nav-item:first-child .nav-link {
-	border-top-left-radius: 0.1875rem;
-	border-bottom-left-radius: 0.1875rem;
+	border-top-left-radius: 0.375rem;
+	border-bottom-left-radius: 0.375rem;
 }
 
 .nav-pills-toolbar .nav-item:last-child .nav-link {
-	border-top-right-radius: 0.1875rem;
-	border-bottom-right-radius: 0.1875rem;
+	border-top-right-radius: 0.375rem;
+	border-bottom-right-radius: 0.375rem;
 }
 
 .nav-pills-toolbar.flex-column .nav-item:first-child .nav-link {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	border-top-left-radius: 0.1875rem;
-	border-top-right-radius: 0.1875rem;
+	border-top-left-radius: 0.375rem;
+	border-top-right-radius: 0.375rem;
 }
 
 .nav-pills-toolbar.flex-column .nav-item:last-child .nav-link {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	border-bottom-right-radius: 0.1875rem;
-	border-bottom-left-radius: 0.1875rem;
+	border-bottom-right-radius: 0.375rem;
+	border-bottom-left-radius: 0.375rem;
 }
 
 .nav-pills-toolbar.flex-column .nav-item+.nav-item {
@@ -2606,6 +2608,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
     font-size: 0.875rem;
 	padding: 0.5rem;
 	border: 0;
+	border-radius: 6px;;
 	box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
 }
 .dropdown .dropdown-menu.show {    
@@ -2623,10 +2626,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     visibility: hidden;
-    -webkit-transform-origin: 0 0 0;
-	transform-origin: 0 0 0;
-	-webkit-transition: .2S all;
-	transition: .2S all;
+	transition: none;
 }
 .dropdown-user .navbar-nav-link, .dropdown-user .navbar-nav-link>span {
 	padding-top: 0.4375rem;
@@ -2641,7 +2641,6 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 }
 .dropdown-bg .dropdown-item{
 	color: #fff !important;
-	border-radius: 6px;
 }
 .dropdown-bg .dropdown-item:hover{
 	background-color: rgba(255, 255, 255, .1);
@@ -2938,7 +2937,7 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 }
 
 .card-body .card-img {
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .card-img-actions {
@@ -3198,7 +3197,7 @@ a.breadcrumb-item:hover, a.breadcrumb-elements-item:hover, a.breadcrumb-item:foc
 
 .breadcrumb-line-component {
 	border: 1px solid transparent;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .page-header .breadcrumb-line-component {
@@ -3268,7 +3267,7 @@ a.breadcrumb-item:hover, a.breadcrumb-elements-item:hover, a.breadcrumb-item:foc
 	background-color: transparent;
 	border-color: transparent;
 	margin-left: 2px;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .pagination-flat .page-link:hover, .pagination-flat .page-link:focus {
@@ -3281,7 +3280,7 @@ a.breadcrumb-item:hover, a.breadcrumb-elements-item:hover, a.breadcrumb-item:foc
 
 .pagination-separated .page-link {
 	margin-left: 0.625rem;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .pagination-separated.pagination-rounded .page-link {
@@ -3289,12 +3288,12 @@ a.breadcrumb-item:hover, a.breadcrumb-elements-item:hover, a.breadcrumb-item:foc
 }
 
 .pagination-pager .page-item {
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .pagination-pager .page-link {
 	margin-left: 1.25rem;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .pagination-pager.pagination-rounded .page-link {
@@ -3685,7 +3684,7 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 	border: 1px solid rgba(0, 0, 0, 0.125);
 	padding: 0.5rem 0;
 	background-clip: padding-box;
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .list-group-item {
@@ -3817,13 +3816,13 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 
 .list-group-bordered .list-group-item:first-child {
 	border-top-width: 0;
-	border-top-left-radius: 0.1875rem;
-	border-top-right-radius: 0.1875rem;
+	border-top-left-radius: 0.375rem;
+	border-top-right-radius: 0.375rem;
 }
 
 .list-group-bordered .list-group-item:last-child {
-	border-bottom-right-radius: 0.1875rem;
-	border-bottom-left-radius: 0.1875rem;
+	border-bottom-right-radius: 0.375rem;
+	border-bottom-left-radius: 0.375rem;
 }
 
 .list-group-bordered[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .list-group-item {
@@ -3832,7 +3831,7 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 }
 
 .list-group[class*=bg-]:not(.bg-light):not(.bg-transparent):not(.bg-white) {
-	border-radius: 0.1875rem;
+	border-radius: 0.375rem;
 }
 
 .list-group[class*=bg-]:not(.bg-light):not(.bg-transparent):not(.bg-white) .list-group-item-action:not(.active):not(.disabled) {
@@ -4039,8 +4038,8 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 .modal-header {
 	padding: .75rem 1.25rem;
 	position: relative;
-	border-top-left-radius: 0.1875rem;
-	border-top-right-radius: 0.1875rem;
+	border-top-left-radius: 0.375rem;
+	border-top-right-radius: 0.375rem;
 }
 .modal-footer {
 	padding: .75rem 1.25rem;
@@ -4204,6 +4203,40 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
 .datepicker .next.disabled,.datepicker .prev.disabled{visibility:hidden}
 .datepicker .cw{font-size:10px;width:12px;padding:0 2px 0 5px;vertical-align:middle}
 
+label{
+	margin-bottom: 2px;
+}
+.input-group>.form-control:not(:last-child), 
+.input-group>.custom-select:not(:last-child){
+	border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+.rounded {
+    border-radius: 0.375rem !important;
+}
+.rounded-left {
+    border-top-left-radius: 0.375rem !important;
+    border-bottom-left-radius: 0.375rem !important;
+}
+.rounded-right {
+    border-top-right-radius: 0.375rem !important;
+    border-bottom-right-radius: 0.375rem !important;
+}
+.input-border-2 .input-group-prepend{
+	margin-right: -2px;
+}
+.input-border-2 .input-group-text,
+.input-border-2 .form-control{
+	border-width: 2px;
+}
+
+
+
+
+
+.input-group-prepend {
+    margin-right: -2px;
+}
 
 .form-size-sm{
 	font-size: 12px;

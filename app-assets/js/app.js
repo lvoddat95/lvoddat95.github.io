@@ -468,6 +468,47 @@ var App = function () {
         });
     };
 
+    var _componentDaterange = function() {
+        if (!$().daterangepicker) {
+            console.warn('Warning - daterangepicker.js is not loaded.');
+            return;
+        }
+        // Initialize
+        $('.daterange-ranges').daterangepicker(
+            {
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                minDate: '01/01/2010',
+                maxDate:  '01/01/2020',
+                dateLimit: { days: 6000 },
+                ranges: {
+                    'Hôm nay': [moment(), moment()],
+                    'Hôm qua': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    '7 ngày trước': [moment().subtract(6, 'days'), moment()],
+                    'Tháng trước': [moment().subtract(29, 'days'), moment()],
+                    'Tháng này': [moment().startOf('month'), moment().endOf('month')],
+                    'Tháng sau': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                opens: $('html').attr('dir') == 'rtl' ? 'right' : 'left',
+                applyClass: 'btn bg-color btn-block',
+                cancelClass: 'btn btn-light btn-block',
+                locale: {
+                    format: 'DD/MM/YYYY',
+                    direction: $('html').attr('dir') == 'rtl' ? 'rtl' : 'ltr',
+                    applyLabel: 'Chọn',
+                    cancelLabel: 'Xóa',
+                    startLabel: 'Ngày bắt đầu',
+                    endLabel: 'Ngày kết thúc',
+                    customRangeLabel: 'Tùy chỉnh',
+                }
+            },
+            function(start, end) {
+                $('.daterange-ranges span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+            }
+        );
+        $('.daterange-ranges span').html(moment().subtract(29, 'days').format('DD/MM/YYYY') + ' - ' + moment().format('DD/MM/YYYY'));
+    };
+
 
     //
     // Return objects assigned to module
@@ -516,6 +557,7 @@ var App = function () {
         initComponents: function() {
             _componentTooltip();
             _componentPopover();
+            _componentDaterange();
         },
 
         // Initialize all card actions
