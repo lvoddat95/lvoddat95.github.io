@@ -32,6 +32,7 @@
     <!-- custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/chartist.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/style_custom.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/responsive.css">
     <!-- /custom stylesheet -->
 
 </head>
@@ -323,53 +324,58 @@
 							<div class="card-header header-elements-sm-inline">
                                 <h5 class="card-title">Biểu đồ doanh thu</h5>
 								<div class="header-elements">
-									<a class="text-default daterange-ranges font-weight-semibold cursor-pointer dropdown-toggle mr-2">
-										<i class="icon-calendar3 mr-2"></i>
-										<span></span>
-                                    </a>
-                                    <a class="list-icons-item" data-action="remove"></a>
+                                    <div class="list-icons">
+                                        <a class="text-default daterange-ranges font-weight-semibold cursor-pointer dropdown-toggle mr-2">
+                                            <i class="icon-calendar3 mr-2"></i>
+                                            <span></span>
+                                        </a>
+                                        <a class="list-icons-item" data-action="collapse"></a>
+                                        <a class="list-icons-item" data-action="remove"></a>
+                                    </div>
 			                	</div>
                             </div>
-							<div class="card-body d-md-flex align-items-md-center justify-content-md-between flex-md-wrap">
-								<div class="d-flex align-items-center mb-3 mb-md-0">
-									<div id="tickets-status"></div>
-									<div class="ml-3">
-										<h5 class="font-weight-semibold mb-0">14,327 (đơn)<span class="text-success font-size-sm font-weight-normal"><i class="icon-arrow-up12"></i> (+2.9%)</span></h5>
-										<span class="badge badge-mark border-success mr-1"></span> <span class="text-muted">Đơn bảo hiểm mới</span>
-									</div>
-								</div>
+							<div class="card-body ">
+                                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="d-flex align-items-center mb-3 mb-md-0">
+                                        <div id="tickets-status"></div>
+                                        <div class="ml-3">
+                                            <h5 class="font-weight-semibold mb-0">14,327 (đơn)<span class="text-success font-size-sm font-weight-normal"><i class="icon-arrow-up12"></i> (+2.9%)</span></h5>
+                                            <span class="badge badge-mark border-success mr-1"></span> <span class="text-muted">Đơn bảo hiểm mới</span>
+                                        </div>
+                                    </div>
 
-								<div class="d-flex align-items-center mb-3 mb-md-0">
-									<a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon">
-										<i class="icon-alarm-add"></i>
-									</a>
-									<div class="ml-3">
-										<h5 class="font-weight-semibold mb-0">1,132 (đơn)</h5>
-										<span class="text-muted">Bồi thường</span>
-									</div>
+                                    <div class="d-flex align-items-center mb-3 mb-md-0">
+                                        <a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon">
+                                            <i class="icon-alarm-add"></i>
+                                        </a>
+                                        <div class="ml-3">
+                                            <h5 class="font-weight-semibold mb-0">1,132 (đơn)</h5>
+                                            <span class="text-muted">Bồi thường</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center mb-3 mb-sm-0">
+                                        <div id="campaign-status-pie"></div>
+                                        <div class="ml-3">
+                                            <h5 class="font-weight-semibold mb-0">2,458 <span class="text-danger font-size-sm font-weight-normal"><i class="icon-arrow-down12"></i> (-4.9%)</span></h5>
+                                            <span class="badge badge-mark border-danger mr-1"></span> <span class="text-muted">Tháng 6</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-3 mb-md-0">
+                                        <a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon">
+                                            <i class="icon-spinner11"></i>
+                                        </a>
+                                        <div class="ml-3">
+                                            <h5 class="font-weight-semibold mb-0">1,625 (đơn)</h5>
+                                            <span class="text-muted">Tái bảo hiểm</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <a href="#" class="btn bg-teal-400"><i class="icon-statistics mr-2"></i> In báo cáo</a>
+                                    </div>
                                 </div>
-                                
-                                <div class="d-flex align-items-center mb-3 mb-sm-0">
-									<div id="campaign-status-pie"></div>
-									<div class="ml-3">
-										<h5 class="font-weight-semibold mb-0">2,458 <span class="text-danger font-size-sm font-weight-normal"><i class="icon-arrow-down12"></i> (-4.9%)</span></h5>
-										<span class="badge badge-mark border-danger mr-1"></span> <span class="text-muted">Tháng 6</span>
-									</div>
-								</div>
-
-								<div class="d-flex align-items-center mb-3 mb-md-0">
-									<a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon">
-										<i class="icon-spinner11"></i>
-									</a>
-									<div class="ml-3">
-										<h5 class="font-weight-semibold mb-0">1,625 (đơn)</h5>
-										<span class="text-muted">Tái bảo hiểm</span>
-									</div>
-								</div>
-
-								<div>
-									<a href="#" class="btn bg-teal-400"><i class="icon-statistics mr-2"></i> In báo cáo</a>
-								</div>
                             </div>
                         </div>
 
@@ -429,7 +435,7 @@
                                                     <span class="input-group-prepend">
                                                         <span class="input-group-text"><i class="icon-checkmark-circle2 "></i></span>
                                                     </span>
-                                                    <select class="form-control" name="">
+                                                    <select class="form-control form-control-select" name="">
                                                         <option value="opt1">Mới thêm (20)</option>
                                                         <option value="opt2">Từ chối (18)</option>
                                                         <option value="opt3">Chấp nhận (30)</option>
@@ -450,7 +456,7 @@
                                                     <span class="input-group-prepend">
                                                         <span class="input-group-text"><i class="icon-city "></i></span>
                                                     </span>
-                                                    <select class="form-control" name="">
+                                                    <select class="form-control form-control-select" name="">
                                                         <option value="">--- Chọn ---</option>
                                                         <option value="opt1">Phòng KD 1</option>
                                                         <option value="opt2">Phòng KD 2</option>
@@ -471,7 +477,7 @@
                                                     <span class="input-group-prepend">
                                                         <span class="input-group-text"><i class="icon-user-tie "></i></span>
                                                     </span>
-                                                    <select class="form-control" name="">
+                                                    <select class="form-control form-control-select" name="">
                                                         <option value="">--- Chọn ---</option>
                                                         <option value="opt1">Lê Văn A</option>
                                                         <option value="opt2">Lê Văn B</option>
@@ -492,7 +498,7 @@
                                                     <span class="input-group-prepend">
                                                         <span class="input-group-text"><i class="icon-user "></i></span>
                                                     </span>
-                                                    <select class="form-control" name="">
+                                                    <select class="form-control form-control-select" name="">
                                                         <option value="">--- Chọn ---</option>
                                                         <option value="opt1">Lê Văn A</option>
                                                         <option value="opt2">Lê Văn B</option>
@@ -1114,6 +1120,70 @@
         </div>
         <div class="waveWrapperInner bgBottom">
             <div class="wave waveBottom"></div>
+        </div>
+    </div>
+    <div class="chat-box">
+        <div class="chat close">
+            <div class="chat-header">
+                <div class="cb-pic">
+                    <img class="img-fluid" src="app-assets/images/icon-user.png" alt="avatar">
+                </div>
+                <div class="cb-name">
+                    <div class="title mb-1">Lê Văn Đạt</div>
+                    <span class="time">Hôm nay 09:56 AM </span>
+                </div>
+                <div class="cb-toggle">
+                    <i class="cb-toggle-close linearicons-cross2"></i>
+                </div>
+            </div>
+            <div class="chat-body">
+                <div class="messages" id="chat">
+                    <div class="flex-1">
+                        <div class="time"> Hôm nay 09:56 AM </div>
+                        <div class="message-content host">
+                            Chào bạn! Có chuyện gì thế? 👋
+                        </div>
+                        <div class="message-content guest">
+                            Bạn đến từ đâu?
+                        </div>
+                        <div class="message-content host">
+                            Một nơi rất xa! 🤣
+                        </div>
+                        <div class="message-content guest">
+                            Uh, vấn đề của bạn này là gì? 🤔
+                        </div>
+                        <div class="message-content guest">
+                            Uh, he's from space, he came here to steal a necklace from a wizard.
+                        </div>
+                        <div class="message-content guest">
+                            <div class="typing typing-1"></div>
+                            <div class="typing typing-2"></div>
+                            <div class="typing typing-3"></div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="input">
+                    <textarea maxlength="1024" placeholder="Nhập tin nhắn…" rows="1" data-emojiable="true" class="message-input--input"></textarea>
+                    
+                </div>
+                <div class="d-flex flex-row align-self-end">
+                    <div class="action ml-1 mr-1">
+                        <input class="" type="file" name="" id="" accept="image/*">
+                        <i class="icon-attachment"></i>
+                    </div>
+                    <div class="action action-send" href="">
+                        <input class="" type="submit" name="" id="">
+                        <i class="icon-paperplane"></i>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <div id="chat-circle" class="d-flex align-items-center justify-content-center">
+            <i class="icon-bubble9"></i>
         </div>
     </div>
 

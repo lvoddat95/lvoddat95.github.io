@@ -109,8 +109,19 @@ $(function(){
 
     $('.dropdown-scrollable').perfectScrollbar();
 
-$('.nav-group-sub').perfectScrollbar();
+    $('.nav-group-sub').perfectScrollbar();
 
+    if( $('.chat-box').length > 0 ){
+        
+        $("#chat-circle").click(function() {    
+            $(".chat").addClass('open');
+        })
+        
+        $(".cb-toggle-close").click(function() {
+            $(".chat").removeClass('open');
+
+        })
+    }
 
 
 });

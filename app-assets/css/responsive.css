@@ -1,0 +1,110 @@
+
+
+@media only screen and (max-width: 1366px) {
+    body {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .sidebar {
+        width: 240px;
+    }
+
+    .nav-sidebar .nav-link{
+        padding: 12px 20px; 
+    }
+    .nav-group-sub .nav-link {
+        padding: 6px 25px;
+    }
+    .nav-sidebar .nav-link i {
+        margin-right: 7px;
+        font-size: 16px;
+    }
+    .nav-sidebar .nav-item>a.active:after{
+        top: -7px;
+    }
+
+    .nav-item-submenu>.nav-link>span:after {
+        font-size: 10px;
+    }
+    .nav-group-sub .nav-link {
+        font-size: inherit;
+    }
+    .sup-box {
+        max-width: 100%;
+        margin-right: 20px;
+    }
+    .sup-down {
+        right: 10px;
+    }
+    .dropdown-menu{
+        font-size: 12px;
+    }
+
+
+    .about-opacity-icon i {
+        font-size: 90px;
+    }
+    .about-box h5 {
+        font-size: 16px;
+    }
+
+    .table th, .table td {
+        padding: 5px;
+    }
+
+    .select2-selection--single {
+        padding: 6.5px 0;
+        border-radius: 4px;
+    }
+    .select2-selection--single .select2-selection__arrow:after{
+        margin-top: -0.4rem;
+    }
+    .select2-selection--single .select2-selection__rendered {
+        padding-left: 10px;
+        padding-right: 30px;
+        height: 17px;
+    }
+    .page-content .wizard>.steps {
+        margin: -20px 0 10px;
+    }
+    .page-content .wizard>.steps>ul>li a {
+        position: relative;
+        padding-top: 45px;
+    }
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .button-switch .lbl-off, 
+    .button-switch .lbl-on{
+        font-size: 90%;
+        top: 0.5px;
+    }
+    .button-switch .lbl-off {
+        right: 14px;
+    }
+    .table-size12{
+        table-layout: fixed;
+    }
+    .c-body thead tr th:last-child{
+        max-width: 200px;
+    }
+
+
+
+    .form-control {
+        height: 32px;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+    .btn {
+        padding: 5px 10px;
+        font-size: inherit;
+        line-height: inherit;
+        border-radius: 4px;
+    }
+
+
+
+}
