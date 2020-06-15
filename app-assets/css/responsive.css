@@ -99,7 +99,8 @@
         border-radius: 4px;
     }
     .btn {
-        padding: 5px 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         font-size: inherit;
         line-height: inherit;
         border-radius: 4px;
