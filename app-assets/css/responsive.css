@@ -125,5 +125,11 @@
         padding: 6px 10px;
         border-radius: 4px;
     }
+    .btn-labeled-left {
+        padding-left: 40px;
+    }
+    .btn-labeled-right {
+        padding-right: 40px;
+    }
 
 }
