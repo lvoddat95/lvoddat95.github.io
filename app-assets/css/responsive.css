@@ -91,7 +91,10 @@
         max-width: 200px;
     }
 
-
+    input[type=checkbox]:not(.switch) {
+        width: 15px;
+        height: 15px;
+    }
 
     .form-control {
         height: 32px;

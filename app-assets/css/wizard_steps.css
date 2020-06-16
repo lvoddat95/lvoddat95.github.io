@@ -70,7 +70,7 @@
 .page-content .wizard>.steps>ul>li.current>a {
     color: #1c3fa9;
     cursor: default;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .page-content .wizard>.steps>ul>li.current .step {
