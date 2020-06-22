@@ -7,15 +7,30 @@ $(function(){
 
 
     $(document).on('click', function() {
-        $('.card-search').removeClass('overlay');
+        if ($('.card-search').length > 0) {
+            $('.card-search').removeClass('overlay');
+        }
     });
     
     
     $(".card-search").children().on('click', function (e) {
-        $(this).parent().addClass('overlay');
         e.stopPropagation();
+        if ($(this).parent().hasClass('card-collapsed')) return false;
+
+        $(this).parent().addClass('overlay');
     });
     
+    if ($('.side-box').length > 0) {
+        $(".side-box").on('click','.side-btn', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            $(this).parent().toggleClass('open');
+        });
+        $(".side-btn-close").click(function (e) {
+            e.preventDefault();
+            $(this).closest('.side-box').removeClass('open');
+        });
+    }
     
 
     if ($('.collapse-group').length > 0) {
@@ -74,9 +89,9 @@ $(function(){
 
     $('.input-float').toArray().forEach(function (field) {
         new Cleave(field, {
-            numericOnly: true,
-            delimiter: '.',
             blocks: [2, 4],
+            numeral: true,
+            delimiter: '',
             copyDelimiter: true,
         });
     });
@@ -123,9 +138,19 @@ $(function(){
         })
     }
 
+    
+    $(".go-top").click(function () {
+        $("html, body").animate({scrollTop: 0}, 500);
+    });
 
 });
 
+var _xoa_dong = function(p_this) {
+    var r =confirm("Xoa doi tuong nay!");
+    if (r == true) {
+        $(p_this).closest('tr').remove();
+    }
+}
 
 var on_change_dkbs = function() {
     var v_sum = 0;

@@ -5758,3 +5758,15 @@ input::placeholder, textarea::placeholder {
 .bg-color {
 	background-color: #1C3FAA;
 }
+.bg-color2 {
+	background-color: #F1F5F8;
+}
+
+.input-group-text,
+.form-control,
+.table-bordered,
+.table-bordered th, 
+.table-bordered td,
+.table .thead-light th{
+	border-color: #e2e8f0;
+}

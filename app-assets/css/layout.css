@@ -254,6 +254,7 @@ body {
 .nav-sidebar .nav-link i {
     margin-right: 15px;
     font-size: 20px;
+    font-weight: 400;
 }
 
 .nav-sidebar .nav-link.active i {
@@ -578,9 +579,7 @@ body {
         display: block;
         padding-bottom: 1px;
     }
-    .sidebar-xs .sidebar-main .nav-sidebar>.nav-item>.nav-link>span {
-        font-size: 0;
-    }
+    .sidebar-xs .sidebar-main .nav-sidebar>.nav-item>.nav-link>span,
     .sidebar-xs .sidebar-main .nav-sidebar>.nav-item>.nav-link>span::after{
         display: none;
     }
@@ -816,7 +815,6 @@ body {
     }
     .sidebar-expand-md:not(.sidebar-component) {
         position: static;
-        transition: none;
     }
 }
 

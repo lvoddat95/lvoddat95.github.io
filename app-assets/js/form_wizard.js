@@ -144,7 +144,7 @@ var FormWizard = function() {
                 next: "Tiếp theo <i class='icon-arrow-right14' />",
                 previous: "<i class='icon-arrow-left13' /> Quay lại",
                 loading: "Loading ...",
-                finish: 'Kết thúc'
+                finish: '<i class="icon-floppy-disk" /> Cập nhập'
             },
             transitionEffect: 'fade',
             autoFocus: true,
@@ -170,9 +170,12 @@ var FormWizard = function() {
             //     form.validate().settings.ignore = ':disabled';
             //     return form.valid();
             // },
-            // onFinished: function (event, currentIndex) {
-            //     alert('Submitted!');
-            // }
+            onFinished: function (event, currentIndex) {
+                if ($('#modal_form').length == 0 ) return;
+                var v_tr = $('#ban_chao_list tbody tr').length + 1;
+                $('#ban_chao_list tbody').append('<tr> <td class="text-center">'+v_tr+'</td><td>71C05150</td><td>Xe khác</td><td>2019</td><td>1,690,000</td><td>166,000</td> <td>1,856,000</td> <td align="center"><a href="javascript:;" title="Xem chi tiết" class="btn bg-primary btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-eye"></i></b> Xem</a> <a href="javascript:;" title="Xóa đối tượng" onclick="_xoa_dong(this);" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-trash"></i></b> Xóa</a></td> </tr>');
+                $('#modal_form').modal('hide');
+            }
         });
 
 
@@ -232,6 +235,10 @@ var FormWizard = function() {
             width: '100%',
         });
 
+        
+        // dropdownParent issues
+        // https://github.com/select2/select2-bootstrap-theme/issues/41
+
         // Trigger value change when selection is made
         $select.on('change', function() {
             $(this).trigger('blur');
@@ -244,6 +251,7 @@ var FormWizard = function() {
             }
         });
     };
+
 
     var _componentCustom = function() {
         

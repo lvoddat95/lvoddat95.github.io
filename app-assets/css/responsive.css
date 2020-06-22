@@ -54,16 +54,17 @@
     }
 
     .select2-selection--single {
-        padding: 6.5px 0;
+        padding: 4px 0;
         border-radius: 4px;
     }
     .select2-selection--single .select2-selection__arrow:after{
         margin-top: -0.4rem;
+        font-size: 14px;
     }
     .select2-selection--single .select2-selection__rendered {
         padding-left: 10px;
         padding-right: 30px;
-        height: 17px;
+        height: 18px;
     }
     .page-content .wizard>.steps {
         margin: -20px 0 10px;
@@ -90,26 +91,34 @@
     .c-body thead tr th:last-child{
         max-width: 200px;
     }
-
+    .form-group-select .select-icon{
+        top: 4px;
+    }
     input[type=checkbox]:not(.switch) {
         width: 15px;
         height: 15px;
     }
-
+    [class*=" icon-"], [class^=icon-]{
+        font-size: inherit;
+    }
     .form-control {
-        height: 32px;
-        padding: 5px 10px;
+        height: 28px;
+        line-height: 18px;
+        padding: 4px 10px;
         border-radius: 4px;
+        font-size: 12px;
     }
     .btn {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 3.5px;
+        padding-bottom: 3.5px;
         font-size: inherit;
-        line-height: inherit;
         border-radius: 4px;
     }
     .btn-labeled>b{
         padding: 7px;
+    }
+    .btn-labeled>b>i {
+        font-size: 14px;
     }
     .btn-labeled-left>b {
         border-top-left-radius: 4px;
