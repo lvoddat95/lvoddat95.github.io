@@ -108,16 +108,19 @@ $(function(){
     });
     
     if ($('.lich-thanh-toan').length > 0) {
-        $('.lich-thanh-toan').repeater({
-            show: function () {
-                $(this).slideDown();
-            },
-            hide: function (deleteElement) {
-                if(confirm('Xoa dong nay ?')) {
-                    $(this).slideUp(deleteElement);
+        $('.lich-thanh-toan').each(function( index ) {
+            $(this).repeater({
+                show: function () {
+                    $(this).slideDown();
+                },
+                hide: function (deleteElement) {
+                    if(confirm('Xoa dong nay ?')) {
+                        $(this).slideUp(deleteElement);
+                    }
                 }
-            }
+            });
         });
+
     }
 
     $('.media-list').perfectScrollbar();
@@ -139,11 +142,27 @@ $(function(){
     }
 
     
+
+    
     $(".go-top").click(function () {
         $("html, body").animate({scrollTop: 0}, 500);
     });
 
 });
+
+var on_change_hinh_thuc_khai_thac = function(p_this){
+    console.log(p_this.value);
+    if(p_this.value == 'tai-bh'){
+        $('#tai-bh').slideDown();
+        $('#dong-bh').slideUp();
+    }else if(p_this.value == 'dong-bh'){
+        $('#tai-bh').slideUp();
+        $('#dong-bh').slideDown();
+    }else{
+        $('#tai-bh, #dong-bh').slideUp();
+    }
+    
+}
 
 var _xoa_dong = function(p_this) {
     var r =confirm("Xoa doi tuong nay!");

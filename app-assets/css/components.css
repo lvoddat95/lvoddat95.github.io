@@ -3187,7 +3187,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 .wizard>.steps>ul>li a {
     position: relative;
     padding-top: 35px;
-    margin: 15px 0 30px;
+    margin: 30px 0 ;
     display: block;
     outline: 0;
     color: #999;
@@ -3197,7 +3197,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
     content: '';
     display: block;
     position: absolute;
-    top: 30px;
+    top: 45px;
     width: 50%;
     height: 2px;
     background-color: #1c3faa;
@@ -18496,21 +18496,6 @@ textarea#HandsontableCopyPaste {
  *
  * ---------------------------------------------------------------------------- */
 
-.font-size-lg {
-    font-size: 0.875rem;
-}
-
-.font-size-base {
-    font-size: 0.8125rem;
-}
-
-.font-size-sm {
-    font-size: 0.75rem;
-}
-
-.font-size-xs {
-    font-size: 0.6875rem;
-}
 
 .line-height-lg {
     line-height: 1.4286;
