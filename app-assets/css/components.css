@@ -3436,6 +3436,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 
 .wizard>.actions>ul>li.disabled>a {
     color: #718096;
+    cursor: no-drop;
 }
 
 .wizard>.actions>ul>li.disabled>a:hover {
