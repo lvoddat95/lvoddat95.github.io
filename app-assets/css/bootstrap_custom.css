@@ -965,6 +965,14 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	font-weight: 500;
 	background-color: rgba(0,0,0,.1);
 }
+
+.btn-lg, .btn-group-lg>.btn {
+	height: 36px;
+}
+.btn-sm, .btn-group-sm>.btn {
+	height: 20px;
+}
+
 .btn-primary{
     color: #fff;
     background-color: #047bf8;
@@ -4592,6 +4600,21 @@ label {
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 12px;
+}
+
+.form-control-lg{
+	height: 36px;
+}
+
+.form-control-sm{
+	height: 20px;
+}
+
+.form-control-feedback{
+    top: 50%;
+    padding: 0 20px;
+    line-height: normal;
+    transform: translateY(-50%);
 }
 
 .form-group{
