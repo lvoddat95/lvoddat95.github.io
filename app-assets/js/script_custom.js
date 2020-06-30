@@ -5,6 +5,9 @@ $(function(){
         $('.input-chk').not(this).prop('checked', this.checked);
     });
 
+    $(".btn-act-toggle").click(function () {
+        $(this).parents('.quick-action').toggleClass('toggle');
+    });
 
     $(document).on('click', function() {
         if ($('.card-search').length > 0) {
@@ -123,7 +126,6 @@ $(function(){
 
     }
 
-    $('.media-list').perfectScrollbar();
 
     $('.dropdown-scrollable').perfectScrollbar();
 
@@ -164,6 +166,18 @@ var on_change_hinh_thuc_khai_thac = function(p_this){
     
 }
 
+var on_change_kenh_khai_thac = function(p_this){
+    console.log(p_this.value)
+    if(p_this.value == 'daili'){
+        $('#moigioi').hide();
+    }else if(p_this.value == 'moigioi'){
+        $('#daili').hide();
+        $('#moigioi').show();
+    }else{
+        $('#daili, #moigioi').show();
+    }
+}
+
 var _xoa_dong = function(p_this) {
     var r =confirm("Xoa doi tuong nay!");
     if (r == true) {
@@ -175,4 +189,12 @@ var on_change_dkbs = function() {
     var v_sum = 0;
     $('.dkbs > input:checked').each(function(i,obj) {
     });
+}
+
+
+var list_view = function(p_this){
+    $(p_this).closest('.f-right').removeClass('grid').addClass('list');
+}
+var grid_view = function(p_this){
+    $(p_this).closest('.f-right').removeClass('list').addClass('grid');
 }

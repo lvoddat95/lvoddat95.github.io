@@ -460,12 +460,14 @@
 
                 <div class="page-title">
                     <div>
-                        <h4 class="font-weight-semibold"><i class="icon-stats-growth mr-2"></i></i>Bàn chào bảo hiểm xe cơ giới</h4>
+                        <h4 class="font-weight-semibold"><i class="icon-bookmark mr-2"></i></i>Bàn chào bảo hiểm xe cơ giới</h4>
                     </div>
                     <div>
-                        <a href="nhap_don1.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-plus"></i></b> Tạo mới đơn BH</a>
-                        <a href="nhap_don1.html" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-locked"></i></b> Đóng bản chào</a>
-                        <a href="index2.html" class="btn bg-slate-300"><i class="icon-arrow-left52 mr-2"></i> Quay lại</a>
+                        
+                        <a href="ban_chao.html" class="btn btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-locked"></i></b> Đóng bản chào</a>
+                        <a href="ban_chao.html" class="btn btn-labeled btn-labeled-left mr-2"><b><i class="icon-files-empty"></i></b> Lưu & Copy</a>
+                        <a href="ban_chao.html" class="btn bg-primary btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-plus"></i></b> Lưu</a>
+
                     </div>
                 </div>
 
@@ -473,7 +475,148 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header header-elements-sm-inline">
-                                <h5 class="card-title">Danh sách đối tượng bảo hiểm</h5>
+                                <h5 class="card-title font-size-s">Thông tin chung</h5>
+								<div class="header-elements">
+                                    <div class="list-icons">
+                                        <a class="list-icons-item" data-action="collapse"></a>
+                                    </div>
+			                	</div>
+                            </div>
+                            <div class="card-body">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+                                                <label>Hình thức khai thác: <span class="text-danger">*</span></label>
+                                                <div class="form-group-select">
+                                                    <select class="form-control required" name="hinh_thuc_khai_thac">
+                                                        <option value="">--- Chọn hình thức khai thác ---</option>
+                                                        <option value="opt1" selected>Trực tiếp</option>
+                                                        <option value="opt7">Đại lí</option>
+                                                        <option value="opt8">Môi giới</option>
+                                                    </select>
+                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+                                                <label>Số đơn bảo hiểm: <span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control required" name="so_don_bao_hiem" placeholder="Nhập số đơn bảo hiểm..." value="012000005/F02">
+                                                    <span class="input-group-append">
+                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form1">Chọn số hợp đồng <i class="icon-profile ml-2"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+                                                <label>Số GCNBH: <span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control required" name="so_gcnbh" placeholder="Nhập số GCNBH..." value="039648">
+                                                    <span class="input-group-append">
+                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form2">Lấy từ EBAOHIEM <i class="icon-profile ml-2"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Người được bảo hiểm: <span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <input style="max-width: 180px;" type="text" class="form-control required" name="ma_kh" placeholder="Nhập mã khách hàng..." value="0100006090">
+                                                    <input type="text" class="form-control required" name="ten_kh" placeholder="Nhập tên khách hàng..." value="BẢO HIỂM VIETINBANK (VBI)">
+                                                    <span class="input-group-append">
+                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form2">Chọn từ danh mục <i class="icon-user-plus ml-2"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Số điện thoại (chủ xe): <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control required input-phone" name="sdt_chu_xe" placeholder="Nhập số điện thoại..." value="1234567891">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Địa chỉ (chủ xe): </label>
+                                                <input type="text" class="form-control required" name="dia_chi_cx" placeholder="Nhập địa chỉ chủ xe..." value="Tầng 10,11 tòa nhà 126 Đội Cấn, quận Ba Đình">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+          
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Ngày cấp: <span class="text-danger">*</span></label>
+                                                <input id='test' type="text" name="ngay_cap" class="form-control input-date" placeholder="dd/mm/yyyy" value="05/06/2020">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Loại tiền: <span class="text-danger">*</span></label>
+                                                <select class="form-control required form-control-select2" name="loai_tien">
+                                                    <option id="" value="" name="">--- Chọn Loại tiền ---</option>
+                                                    <option id="EUR" name="EUR" value="EUR">EUR</option>
+                                                    <option id="VND" name="VND" value="VND" selected>VND</option>
+                                                    <option id="CHF" name="CHF" value="CHF">CHF</option>
+                                                    <option id="USD" name="USD" value="USD">USD</option>
+                                                    <option id="CNY(RMB)" name="CNY(RMB)" value="CNY(RMB)">CNY(RMB)</option>
+                                                    <option id="GBP" name="GBP" value="GBP">GBP</option>
+                                                    <option id="JPY" name="JPY" value="JPY">JPY</option>
+                                                    <option id="RM(MYR)" name="RM(MYR)" value="RM(MYR)">RM(MYR)</option>
+                                                    <option id="NGOAITE" name="NGOAITE" value="NGOAITE">NGOAITE</option>
+                                                    <option id="AUD" name="AUD" value="AUD">AUD</option>
+                                                    <option id="SGD" name="SGD" value="SGD">SGD</option>
+                                                    <option id="CAD" name="CAD" value="CAD">CAD</option>
+                                                    <option id="KRW" name="KRW" value="KRW">KRW</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Tỉ giá thực tế: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control required input-float" name="ti_gia" placeholder="" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Thời hạn bảo hiểm: <span class="text-danger">*</span></label>
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex">
+                                                        <span style="width: 100px;">Từ</span>
+                                                        <input type="text" class="form-control mr-2 input-time" placeholder="Nhập giờ..." value="00:00">
+                                                        <input type="text" class="form-control datepicker input-date" placeholder="Nhập ngày..." value="03/10/2019">
+                                                    </div>
+                                                    <div class="col-md-6 d-flex">
+                                                        <span style="width: 100px;">Đến</span>
+                                                        <input type="text" class="form-control mr-2 input-time" placeholder="Nhập giờ..." value="00:00">
+                                                        <input type="text" class="form-control datepicker input-date" placeholder="Nhập ngày..." value="03/10/2019">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header header-elements-sm-inline">
+                                <h5 class="card-title font-size-s">Danh sách đối tượng bảo hiểm</h5>
 								<div class="header-elements">
                                     <div class="list-icons">
                                         <a class="list-icons-item" data-action="collapse"></a>
@@ -491,7 +634,7 @@
                                             <th>Phí bảo hiểm</th>
                                             <th>VAT</th>
                                             <th>Tổng phí thanh toán</th>
-                                            <th width="15%" class="text-center">#</th>
+                                            <th width="320px" class="text-center">#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -504,6 +647,7 @@
                                            <td>43,700</td>
                                            <td>480,700</td>
                                            <td align="center">
+                                                <a href="nhap_don1.html" data-popup="tooltip" data-placement="top" data-original-title="Tạo mới đơn bảo hiểm" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-plus"></i></b> Tạo mới</a>
                                                 <a href="javascript:;" data-toggle="modal" data-target="#modal_form" title="Xem chi tiết" class="btn bg-primary btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-eye"></i></b> Xem </a>
                                                 <a href="javascript:;" title="Xóa đối tượng" onclick="_xoa_dong(this);" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-trash"></i></b> Xóa</a>
                                            </td>
@@ -517,6 +661,7 @@
                                             <td>166,000</td>
                                             <td>1,856,000</td>
                                             <td align="center">
+                                                <a href="nhap_don1.html" data-popup="tooltip" data-placement="top" data-original-title="Tạo mới đơn bảo hiểm" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-plus"></i></b> Tạo mới</a>
                                                 <a href="javascript:;" data-toggle="modal" data-target="#modal_form" title="Xem chi tiết" class="btn bg-primary btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-eye"></i></b> Xem</a>
                                                 <a href="javascript:;" title="Xóa đối tượng" onclick="_xoa_dong(this);" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-trash"></i></b> Xóa</a>
                                             </td>
@@ -530,6 +675,7 @@
                                             <td>93,300</td>
                                             <td>1,276,300</td>
                                             <td align="center">
+                                                <a href="nhap_don1.html" data-popup="tooltip" data-placement="top" data-original-title="Tạo mới đơn bảo hiểm" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-plus"></i></b> Tạo mới</a>
                                                 <a href="javascript:;" data-toggle="modal" data-target="#modal_form" title="Xem chi tiết" class="btn bg-primary btn-labeled btn-labeled-left mr-2"><b><i class="icon-file-eye"></i></b> Xem</a>
                                                 <a href="javascript:;" title="Xóa đối tượng" onclick="_xoa_dong(this);" class="btn bg-danger-300 btn-labeled btn-labeled-left mr-2"><b><i class="icon-trash"></i></b> Xóa</a>
                                             </td>
@@ -553,18 +699,6 @@
             </div>
         </div>
     </div>
-    <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner bgTop gradient-color">
-            <div class="wave waveTop"></div>
-        </div>
-        <div class="waveWrapperInner bgMiddle">
-            <div class="wave waveMiddle"></div>
-        </div>
-        <div class="waveWrapperInner bgBottom">
-            <div class="wave waveBottom"></div>
-        </div>
-    </div>
-
 
     <!-- Modal  -->
     <div id="modal_form" class="modal fade" >
@@ -583,141 +717,7 @@
                                     <div class="card-content">
                                         <div class="card-body">
                                             <form action="#" class="steps-validation wizard-notification">
-                                                <!-- Bước 1 -->
-                                                <h6>Thông tin chung</h6>
-                                                <fieldset>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group ">
-                                                                <label>Hình thức khai thác: <span class="text-danger">*</span></label>
-                                                                <div class="form-group-select">
-                                                                    <select class="form-control required" name="hinh_thuc_khai_thac">
-                                                                        <option value="">--- Chọn hình thức khai thác ---</option>
-                                                                        <option value="opt1">Trực tiếp</option>
-                                                                        <option value="opt7">Đại lí</option>
-                                                                        <option value="opt8">Môi giới</option>
-                                                                    </select>
-                                                                    <span class="select-icon"><i class="icon-arrow-down22"></i></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group ">
-                                                                <label>Số đơn bảo hiểm: <span class="text-danger">*</span></label>
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control required" name="so_don_bao_hiem" placeholder="Nhập số đơn bảo hiểm...">
-                                                                    <span class="input-group-append">
-                                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form1">Chọn số hợp đồng <i class="icon-profile ml-2"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group ">
-                                                                <label>Số GCNBH: <span class="text-danger">*</span></label>
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control required" name="so_gcnbh" placeholder="Nhập số GCNBH..." value="">
-                                                                    <span class="input-group-append">
-                                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form2">Lấy từ EBAOHIEM <i class="icon-profile ml-2"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label>Người được bảo hiểm: <span class="text-danger">*</span></label>
-                                                                <div class="input-group">
-                                                                    <input style="max-width: 180px;" type="text" class="form-control required" name="ma_kh" placeholder="Nhập mã khách hàng..." value="">
-                                                                    <input type="text" class="form-control required" name="ten_kh" placeholder="Nhập tên khách hàng..." value="">
-                                                                    <span class="input-group-append">
-                                                                        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#modal_form2">Chọn từ danh mục <i class="icon-user-plus ml-2"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label>Số điện thoại (chủ xe): <span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control required input-phone" name="sdt_chu_xe" placeholder="Nhập số điện thoại...">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="form-group">
-                                                                <label>Địa chỉ (chủ xe): </label>
-                                                                <input type="text" class="form-control required" name="dia_chi_cx" placeholder="Nhập địa chỉ chủ xe...">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                          
-
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label>Ngày cấp: <span class="text-danger">*</span></label>
-                                                                <input id='test' type="text" name="ngay_cap" class="form-control input-date" placeholder="dd/mm/yyyy">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label>Loại tiền: <span class="text-danger">*</span></label>
-                                                                <select class="form-control required form-control-select2" name="loai_tien">
-                                                                    <option id="" value="" name="">--- Chọn Loại tiền ---</option>
-                                                                    <option id="EUR" name="EUR" value="EUR">EUR</option>
-                                                                    <option id="VND" name="VND" value="VND">VND</option>
-                                                                    <option id="CHF" name="CHF" value="CHF">CHF</option>
-                                                                    <option id="USD" name="USD" value="USD">USD</option>
-                                                                    <option id="CNY(RMB)" name="CNY(RMB)" value="CNY(RMB)">CNY(RMB)</option>
-                                                                    <option id="GBP" name="GBP" value="GBP">GBP</option>
-                                                                    <option id="JPY" name="JPY" value="JPY">JPY</option>
-                                                                    <option id="RM(MYR)" name="RM(MYR)" value="RM(MYR)">RM(MYR)</option>
-                                                                    <option id="NGOAITE" name="NGOAITE" value="NGOAITE">NGOAITE</option>
-                                                                    <option id="AUD" name="AUD" value="AUD">AUD</option>
-                                                                    <option id="SGD" name="SGD" value="SGD">SGD</option>
-                                                                    <option id="CAD" name="CAD" value="CAD">CAD</option>
-                                                                    <option id="KRW" name="KRW" value="KRW">KRW</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label>Tỉ giá thực tế: <span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control required input-float" name="ti_gia" placeholder="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label>Thời hạn bảo hiểm: <span class="text-danger">*</span></label>
-                                                                <div class="row">
-                                                                    <div class="col-md-6 d-flex">
-                                                                        <span style="width: 100px;">Từ</span>
-                                                                        <input type="text" class="form-control mr-2 input-time" placeholder="Nhập giờ...">
-                                                                        <input type="text" class="form-control datepicker input-date" placeholder="Nhập ngày...">
-                                                                    </div>
-                                                                    <div class="col-md-6 d-flex">
-                                                                        <span style="width: 100px;">Đến</span>
-                                                                        <input type="text" class="form-control mr-2 input-time" placeholder="Nhập giờ...">
-                                                                        <input type="text" class="form-control datepicker input-date" placeholder="Nhập ngày...">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                        
-                                                    </div>
-
-
-
-                                                    
-                                                </fieldset>
+                                                
                                                 
                                                 <!-- Step 2 -->
                                                 <h6>Đối tượng bảo hiểm</h6>

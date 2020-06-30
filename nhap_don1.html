@@ -464,8 +464,9 @@
                         <span class="text-muted d-block font-size-xs">Nhập thông tin theo từng bước. Vui lòng nhập đầy đủ thông tin vào trường bắt buộc có dấu <code>*</code>.</span>
                     </div>
                     <div>
-                        <a href="javascript:;" class="btn bg-primary w100 mr-2"><i class="icon-floppy-disk mr-1"></i> Lưu</a>
-                        <a href="index2.html" class="btn "><i class="icon-arrow-left52 mr-1"></i> Quay lại</a>
+                        <a href="" class="btn mr-1"><i class="icon-arrow-left52 mr-1"></i> Quay lại</a>
+                        <a href="javascript:;" class="btn mr-1"><i class="icon-files-empty mr-1"></i> Lưu & Copy</a>
+                        <a href="javascript:;" class="btn bg-primary"><i class="icon-floppy-disk mr-1"></i> Lưu</a>
                     </div>
                 </div>
 
@@ -483,7 +484,21 @@
                                                     <h6>Thông tin chung</h6>
                                                     <fieldset>
                                                         <div class="row">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group ">
+                                                                    <label>Kênh khai thác: <span class="text-danger">*</span></label>
+                                                                    <div class="form-group-select">
+                                                                        <select class="form-control required" name="kenh_khai_thac" onchange="on_change_kenh_khai_thac(this);">
+                                                                            <option value="">--- Chọn kênh khai thác ---</option>
+                                                                            <option value="daili">Đại lí</option>
+                                                                            <option value="moigioi">Môi giới</option>
+                                                                            <option value="tructiep">Trực tiếp</option>
+                                                                        </select>
+                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
                                                                 <div class="form-group ">
                                                                     <label>Hình thức khai thác: <span class="text-danger">*</span></label>
                                                                     <div class="form-group-select">
@@ -497,7 +512,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group ">
                                                                     <label>Số đơn bảo hiểm: <span class="text-danger">*</span></label>
                                                                     <div class="input-group">
@@ -508,7 +523,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group ">
                                                                     <label>Số GCNBH: <span class="text-danger">*</span></label>
                                                                     <div class="input-group">
@@ -2675,7 +2690,7 @@
                                                     <!-- Step 3 -->
                                                     <h6>Trung gian bảo hiểm</h6>
                                                     <fieldset>
-                                                        <div class="row">
+                                                        <div class="row" id="daili">
                                                             <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <label>Đại lý: <span class="text-danger">*</span></label>
@@ -2702,7 +2717,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="row">
+                                                        <div class="row" id="moigioi">
                                                             <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <label>Môi giới: <span class="text-danger">*</span></label>
@@ -3806,7 +3821,7 @@
 
                                                                         <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form3">
                                                                             <i class="icon-stack2 mr-2"></i> 
-                                                                            <span class="hidden-xs">Tài liệu tham khảo</span>
+                                                                            <span class="hidden-xs">Danh sách tài liệu</span>
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -3826,20 +3841,77 @@
             </div>
         </div>
     </div>
-    <div class="waveWrapper waveAnimation">
-        <div class="waveWrapperInner bgTop gradient-color">
-            <div class="wave waveTop"></div>
+    <div class="chat-box">
+        <div class="chat close">
+            <div class="chat-header">
+                <div class="cb-pic">
+                    <img class="img-fluid" src="app-assets/images/icon-user.png" alt="avatar">
+                </div>
+                <div class="cb-name">
+                    <div class="title mb-1">Lê Văn Đạt</div>
+                    <span class="time">Hôm nay 09:56 AM </span>
+                </div>
+                <div class="cb-toggle">
+                    <i class="cb-toggle-close linearicons-cross2"></i>
+                </div>
+            </div>
+            <div class="chat-body">
+                <div class="messages" id="chat">
+                    <div class="flex-1">
+                        <div class="time"> Hôm nay 09:56 AM </div>
+                        <div class="message-content host">
+                            Chào bạn! Có chuyện gì thế? 👋
+                        </div>
+                        <div class="message-content guest">
+                            Bạn đến từ đâu?
+                        </div>
+                        <div class="message-content host">
+                            Một nơi rất xa! 🤣
+                        </div>
+                        <div class="message-content guest">
+                            Uh, vấn đề của bạn này là gì? 🤔
+                        </div>
+                        <div class="message-content guest">
+                            Uh, he's from space, he came here to steal a necklace from a wizard.
+                        </div>
+                        <div class="message-content guest">
+                            <div class="typing typing-1"></div>
+                            <div class="typing typing-2"></div>
+                            <div class="typing typing-3"></div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="input">
+                    <textarea maxlength="1024" placeholder="Nhập tin nhắn…" rows="1" data-emojiable="true" class="message-input--input"></textarea>
+                    
+                </div>
+                <div class="d-flex flex-row align-self-end">
+                    <div class="action ml-1 mr-1">
+                        <input class="" type="file" name="" id="" accept="image/*">
+                        <i class="icon-attachment"></i>
+                    </div>
+                    <div class="action action-send" href="">
+                        <input class="" type="submit" name="" id="">
+                        <i class="icon-paperplane"></i>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
-        <div class="waveWrapperInner bgMiddle">
-            <div class="wave waveMiddle"></div>
-        </div>
-        <div class="waveWrapperInner bgBottom">
-            <div class="wave waveBottom"></div>
+        <div id="chat-circle" class="d-flex align-items-center justify-content-center">
+            <i class="icon-bubbles5 position-relative"><span class="badge">5</span></i>
         </div>
     </div>
 
-    <div class="quick-action d-flex flex-column align-items-center">
+    <div class="quick-action">
+        <a href="javascript:;" class="btn-act btn-act-toggle open" data-trigger="hover" data-popup="tooltip" data-placement="right" data-original-title="Mở ra"><i class="icon-move-left"></i></a>
         <ul class="list-unstyled mb-0">
+            <li class="btn-act-view">
+                <a href="javascript:;" class="btn-act btn-act-toggle" data-trigger="hover" data-popup="tooltip" data-placement="right" data-original-title="Thu vào"><i class="icon-move-right"></i></a>
+            </li>
             <li><a href="javascript:;" class="btn-act" data-trigger="hover" data-popup="tooltip" data-placement="right" data-original-title="Trình duyệt đơn"><i class="icon-file-check2"></i></a></li>
             <li><a href="javascript:;" class="btn-act" data-trigger="hover" data-popup="tooltip" data-placement="right" data-original-title="Đóng đơn"><i class="icon-file-locked2"></i></a></li>
             <li><a href="javascript:;" class="btn-act act-space"><i class="icon-menu"></i></a></li>
@@ -3989,18 +4061,442 @@
     <div id="modal_form3" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-uppercase font-weight-semibold color">DANH SÁCH TÀI LIỆU THAM KHẢO</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="file-manager">
+                    <div class="f-left">
+                        <div class="f-left-wrapper">
+                            <ul class="nav nav-file nav-sidebar">
+                                <li class="nav-item-header"><span>Danh sách files</span></li>
+                                <li class="nav-item nav-item-submenu nav-item-open">
+                                    <a href="#" class="nav-link"><i class="icon-folder-open3"></i><span>Tất cả</span></a> 
+                                    <ul class="nav nav-group-sub">
+                                        <li class="nav-item"> <a href="#" class="nav-link"><i class="icon-file-text2"></i><span>Tài liệu</span></a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link"><i class="icon-file-picture"></i><span>Hình ảnh</span></a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link"><i class="icon-file-video"></i><span>Video</span></a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link"><i class="icon-file-music"></i><span>Âm thanh</span></a> </li>
+                                        <li class="nav-item"> <a href="#" class="nav-link"><i class="icon-file-zip"></i><span>File nén</span></a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f-right grid">
+                        <div class="file-header d-flex justify-content-between">
+                            <div class="file-view">
+                                <button class="btn btn-light btn-sm" onclick="list_view(this)" title="List"><i class="icon-list2"></i></button>
+                                <button class="btn btn-light btn-sm" onclick="grid_view(this)" title="Grid"><i class="icon-grid2"></i></button>
+                            </div>
+                            <div class="file-search">
+                                <input type="text" name="" class="form-control form-control-sm" placeholder="Tìm kiếm...">
+                                <button type="submit"><i class="icon-search4"></i></button>
+                            </div>
+                        </div>
+                        <ul class="list-files scrollbar-light">
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-txt"></span>
+                                    <div class="file-info">
+                                        <span class="name">Text.txt</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">13 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/image2.jpg) " class="file-icon"></span>
+                                    <div class="file-info">
+                                        <span class="name">preview-15.jpg</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">1.2 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-audio"></span>
+                                    <div class="file-info">
+                                        <span class="name">Celine Dion - Ashes.mp4</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">1.2 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/image.png) " class="file-icon file-txt"></span>
+                                    <div class="file-info">
+                                        <span class="name">preview-11.jpg</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">1.2 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/image.png)" class="file-icon file-image"></span>
+                                    <div class="file-info">
+                                        <span class="name">preview.png</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">1.1 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/image3.jpg)" class="file-icon file-image"></span>
+                                    <div class="file-info">
+                                        <span class="name">Copy preview-11.jpg</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">890.50 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/excel.png)" class="file-icon file-excel"></span>
+                                    <div class="file-info">
+                                        <span class="name">Excel Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">520.12 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/excel.png)" class="file-icon file-excel"></span>
+                                    <div class="file-info">
+                                        <span class="name">Copy Excel Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">520.12 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/pdf.png)" class="file-icon file-pdf"></span>
+                                    <div class="file-info">
+                                        <span class="name">PDF Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">120.12 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/arc.png)" class="file-icon file-arc"></span>
+                                    <div class="file-info">
+                                        <span class="name">ZIP Archive</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">20.05 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span style="background-image: url(app-assets/images/files/pp.png)" class="file-icon file-pp"></span>
+                                    <div class="file-info">
+                                        <span class="name">PPTX Sample File</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">245.05 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-audio"></span>
+                                    <div class="file-info">
+                                        <span class="name">Secret.mp4</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">5.2 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-audio"></span>
+                                    <div class="file-info">
+                                        <span class="name">Martin Clo - MM.mp4</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">4.1 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-word"></span>
+                                    <div class="file-info">
+                                        <span class="name">Word Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">1.1 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-word"></span>
+                                    <div class="file-info">
+                                        <span class="name">Copy Word Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">19.98 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-txt"></span>
+                                    <div class="file-info">
+                                        <span class="name">Text Sample.txt</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">53 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-video"></span>
+                                    <div class="file-info">
+                                        <span class="name">Video Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">119 MB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-csv"></span>
+                                    <div class="file-info">
+                                        <span class="name">CSV Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">89.21 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-word"></span>
+                                    <div class="file-info">
+                                        <span class="name">Copy Word Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">19.98 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-word"></span>
+                                    <div class="file-info">
+                                        <span class="name">Copy Word Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">19.98 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="file-wrapper">
+                                    <span class="file-icon file-xps"></span>
+                                    <div class="file-info">
+                                        <span class="name">XPX Sample</span>
+                                        <span class="date">6/29/2020 3:53 AM</span>
+                                        <span class="type">TXT File</span>
+                                        <span class="size">9.98 KB</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" aria-expanded="true"><i class="icon-more2"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#" class="dropdown-item"><i class="text-primary icon-file-text2"></i> Chi tiết</a>
+                                            <a href="#" class="dropdown-item"><i class="text-success icon-compose"></i> Chỉnh sửa</a>
+                                            <a href="#" class="dropdown-item"><i class="text-danger icon-trash"></i> Xóa file</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            
+                        </ul>
+
+                    </div>
                 </div>
-                <form action="#">
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-sm bg-color">Chọn</button>
-                        <button type="button" class="btn btn-sm btn-light" data-dismiss="modal">Đóng</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
