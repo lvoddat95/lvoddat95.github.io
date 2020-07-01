@@ -138,7 +138,6 @@ body {
     flex: 0 0 auto;
     width: 16.875rem;
 }
-
 .sidebar:not(.sidebar-component) {
     position: fixed;
     top: 0;
@@ -164,7 +163,7 @@ body {
 
 .sidebar:not(.sidebar-component) .sidebar-content {
     position: fixed;
-    top: 3.12503rem;
+    top: 40px;
     bottom: 0;
     width: inherit;
     overflow-y: scroll;
@@ -507,7 +506,20 @@ body {
 .sidebar .card:last-child .nav-sidebar-bordered>.nav-item:last-child, .sidebar .card:last-child .nav-sidebar-bordered>.nav-item-header:last-child {
     border-bottom: 0;
 }
-
+.sidebar-mobile-main-toggle{
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 4px;
+}
+.header-top.sticky .sidebar-mobile-main-toggle{
+    color: #fff;
+    background: rgba(255, 255, 255, .25);
+}
 .sidebar-mobile-toggler {
     display: -ms-flexbox;
     display: flex;
@@ -515,31 +527,24 @@ body {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    color: #fff;
+    background: #3160d8;
+    padding: 5px 10px;
+}
+.sidebar-mobile-main .sidebar-mobile-main-toggle{
+    color: #fff;
+    background: rgba(255, 255, 255, .25);
 }
 
-.sidebar-mobile-toggler a {
-    padding: 0.875rem 1.25rem;
-    transition: all ease-in-out 0.15s;
+.sidebar.sidebar-fullscreen {
+    width: 100%;
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .sidebar-mobile-toggler a {
-        transition: none;
-    }
-}
-
-.navbar-lg:first-child~.page-content .sidebar-mobile-toggler a {
-    padding: 1rem 1.25rem;
-}
-
-.navbar-sm:first-child~.page-content .sidebar-mobile-toggler a {
-    padding: 0.75rem 1.25rem;
-}
-
+.sidebar-fullscreen .sidebar-mobile-expand i:first-child,
 .sidebar-mobile-expand i:last-child:not(:first-child) {
     display: none;
+}
+.sidebar-fullscreen .sidebar-mobile-expand i:last-child:not(:first-child) {
+    display: inline-block;
 }
 
 .sidebar-component {

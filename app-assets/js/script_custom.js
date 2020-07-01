@@ -1,6 +1,35 @@
 
 $(function(){
 
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+            $(".sticky-mobile").addClass("sticky");
+        }else{
+            $(".sticky-mobile").removeClass("sticky");
+        }
+    });
+
+    $(window).bind("resize", function () {
+
+        var v_windowH = $(this).outerHeight();
+        var v_windowW = $(this).outerWidth();
+
+        if (v_windowW < 1200) {
+            $('body').addClass('sidebar-xs');
+            
+        } else {
+            $('body').removeClass('sidebar-xs');
+        }
+
+        if (v_windowH < 50){
+            $(".sticky-mobile").addClass("sticky");
+        }else {
+            $(".sticky-mobile").removeClass("sticky");
+        }
+    }).trigger('resize');
+    
+
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
     });

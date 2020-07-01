@@ -39,6 +39,15 @@
 <body>
     <div class="page-content home-page">
         <div class="sidebar sidebar-main sidebar-expand-md">
+            <!-- Mobile Top -->
+            <div class="sidebar-mobile-toggler">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				<span>MENU</span>
+            </div>
+            <!-- Mobile Top -->
+            
             <!-- Sidebar content -->
             <div class="sidebar-content">
                 <!-- Logo -->
@@ -294,10 +303,16 @@
                 <!-- End-BOX -->
             </div>
             <!-- End-Sidebar content -->
+
+            <!-- Mobile Bottom -->
+            <!-- Mobile Bottom -->
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <div class="header-top">
+                <div class="header-top sticky-mobile">
+                    <button class="d-md-none sidebar-mobile-main-toggle" type="button">
+                        <i class="icon-paragraph-justify3"></i>
+                    </button>
                     <div class="top-left">
                         <div class="breadcrumb">
                             <a href="index.html" class="breadcrumb-item"><i class="icon-home5 mr-1"></i>Trang chủ</a>
@@ -310,7 +325,7 @@
                                 <input type="text" placeholder="Tìm kiếm...">
                                 <a href="#" class="btn-search"><i class="linearicons-magnifier"></i></a>
                             </li>
-                            <li>
+                            <li class="d-sm-none d-md-block">
                                 <a href="#" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Trợ giúp">
                                     <i class="icon-help"></i>
                                 </a>
@@ -461,7 +476,7 @@
                 <div class="row">
                     <div class="col-lg-12 ">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="col-xl-4 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="card bg-white">
                                     <div class="card-body">
                                         <div class="card-block pt-2 pb-0">
@@ -480,7 +495,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="col-xl-4 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="card bg-white">
                                     <div class="card-body">
                                         <div class="card-block pt-2 pb-0">
@@ -500,7 +515,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="col-xl-4 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="card bg-white">
                                     <div class="card-body">
                                         <div class="card-block pt-2 pb-0">
@@ -528,7 +543,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-theme-10">
                                                     <div class="about-opacity-icon"> 
                                                         <i class="linearicons-shield-check" aria-hidden="true"></i> 
@@ -539,7 +554,7 @@
                                                     <h5 class="mb-0 font-size-s">Bảo lãnh</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-theme-9">
                                                     <div class="about-opacity-icon"> <i class="linearicons-bag-dollar" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -548,7 +563,7 @@
                                                     <h5 class="mb-0 font-size-s">Bồi thường</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-blue-400">
                                                     <div class="about-opacity-icon"> <i class="linearicons-repeat-one3" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -558,7 +573,7 @@
                                                 </div>
                                             </div>
         
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-pink-500">
                                                     <div class="about-opacity-icon"> <i class="linearicons-calculator2" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -568,7 +583,7 @@
                                                 </div>
                                             </div>
         
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-theme-11">
                                                     <div class="about-opacity-icon"> <i class="linearicons-papers" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -577,7 +592,7 @@
                                                     <h5 class="mb-0 font-size-s">Ấn Chỉ</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-teal-600">
                                                     <div class="about-opacity-icon"> <i class="linearicons-chart-growth" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -586,7 +601,7 @@
                                                     <h5 class="mb-0 font-size-s">Báo cáo</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-indigo-700">
                                                     <div class="about-opacity-icon"> <i class="linearicons-archive2" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -595,7 +610,7 @@
                                                     <h5 class="mb-0 font-size-s">Danh mục dùng chung</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-purple-600">
                                                     <div class="about-opacity-icon"> <i class="linearicons-users2" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">
@@ -604,7 +619,7 @@
                                                     <h5 class="mb-0 font-size-s">Quản trị người dùng</h5>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-md-4 col-sm-4 col-6">
                                                 <div class="about-box bg-theme-16">
                                                     <div class="about-opacity-icon"> <i class="linearicons-register" aria-hidden="true"></i> </div>
                                                     <div class="about-main-icon">

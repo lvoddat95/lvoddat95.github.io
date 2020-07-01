@@ -1,6 +1,139 @@
+@media only screen and (max-width: 1199px) {
+    .about-opacity-icon i{
+        font-size: 70px;
+    }
 
 
-@media only screen and (max-width: 1366px) {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width: 1199px) {
+    .lineChartWidget{
+        display: none;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 767px) {
+    .content-wrapper{
+        border-radius: 0px;
+        padding-top: 60px;
+    }
+    .header-top{
+        margin: 0;
+        padding: 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .header-top.sticky{
+        padding: 10px 15px;
+    }
+    .sticky-mobile.sticky{
+        background: #1C3FAA;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    }
+    .header-search{
+        display: none;
+    }
+    .breadcrumb{
+        display: none;
+    }
+    .content {
+        padding: 0 15px 15px;
+    }
+    .header-top.sticky .top-right > ul > li > a i{
+        color: #fff;
+    }
+
+    .header-top.sticky .dropdown-user img{
+        border: 2px solid #fff;
+    }
+
+
+    .logo {
+        display: none;
+    }
+    .sidebar{
+        padding: 0;
+        background: #fff;
+    }
+    .sidebar-main .nav-sidebar .nav-link{
+        color: #2d3748;
+    }
+    .sidebar .sidebar-content{
+        padding: 20px 10px;
+    }
+    .sidebar-main .nav-sidebar .nav-item.nav-item-open{
+        background-color: #f5f5f5;
+    }
+    .sidebar-main .nav-group-sub .nav-link{
+        background: #fff;
+    }
+    .sidebar-main .nav-group-sub .nav-link,
+    .sidebar-main .nav-sidebar .nav-item:hover .nav-link:not(.active),
+    .sidebar-xs .sidebar-main .nav-sidebar .nav-item:hover .nav-link:not(.active){
+        background-color:transparent !important;
+    }
+    .sidebar-main .nav-item-submenu>.nav-link {
+        padding-right: 25px;
+    }
+    .sidebar-main .nav-group-sub .nav-link {
+        padding: 5px 25px;
+        margin: 5px 0px;
+    }
+    
+
+
+}
+
+@media only screen and (max-width: 567px) {
+    .about-box {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .about-main-icon {
+        padding-bottom: 8px;
+    }
+    .about-box .about-main-icon i {
+        font-size: 26px;
+        transform: translateY(0);
+    }
+    .about-opacity-icon{
+        display: none;
+    }
+    .about-box h5{
+        font-size: 12px;
+    }
+    #footer{
+        display: block !important;
+        text-align: center;
+    }
+    #footer > span:last-child a{
+        display: block !important;
+    }
 
 }
