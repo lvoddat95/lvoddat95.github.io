@@ -194,7 +194,7 @@ var App = function () {
 
         $('.sidebar-mobile-main-close').on('click', function(e) {
             e.preventDefault();
-            $('.page-content').removeClass('sidebar-mobile-main');
+            $('body').removeClass('sidebar-mobile-main');
             $('.overlay').remove();
         });
 

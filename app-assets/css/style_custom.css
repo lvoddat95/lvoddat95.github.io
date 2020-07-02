@@ -12,7 +12,9 @@ body {
     background: #1C3FAA;
     z-index: 9;
 }
-
+.sec-report{
+    position: relative;
+}
 .waveWrapper{
     display: none;
 }
