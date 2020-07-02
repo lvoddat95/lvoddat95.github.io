@@ -43,7 +43,7 @@
         background: transparent;
     }
     .content-wrapper{
-        height: calc(100vh - 85px);
+        height: calc(100vh - 65px);
         border-radius: 0px;
     }
     .content-wrapper::before {

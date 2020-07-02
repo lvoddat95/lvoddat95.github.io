@@ -515,7 +515,7 @@ body {
     text-align: center;
     border-radius: 4px;
     border: none;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .2);
 }
 .header-top.sticky .sidebar-mobile-main-toggle{
     color: #fff;
