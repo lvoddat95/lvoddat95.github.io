@@ -94,12 +94,12 @@ a.sidebar-main-toggle:hover{
     line-height: 20px;
 }
 
-.sidebar .logo-img {
+.logo-img {
     display: inline-block;
     margin-right: 10px;
 }
 
-.sidebar .logo-img img {
+.logo-img img {
     width: 50px;
     -webkit-transition: all ease-in-out 0.25s;
     -ms-transition: all ease-in-out 0.25s;
@@ -109,7 +109,7 @@ a.sidebar-main-toggle:hover{
     width: 30px;
 }
 
-.sidebar .logo .logo-text {
+.logo-text {
     display: block;
     color: #fff;
 }

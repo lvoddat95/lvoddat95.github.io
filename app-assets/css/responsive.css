@@ -121,6 +121,16 @@
     .logo {
         display: none;
     }
+    .logo-mobile .logo-img {
+        margin-right: 0;
+    }
+    .logo-mobile .logo-text {
+        color: #fff !important;
+        font-size: 22px;
+    }
+    .logo-mobile .logo-img img{
+        width: 30px;
+    }
     .sidebar{
         padding: 0;
         background: #fff;
