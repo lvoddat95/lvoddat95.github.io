@@ -38,6 +38,9 @@
     [class*=" icon-"], [class^=icon-]{
         font-size: 12px;
     }
+    .page-content{
+        display: block;
+    }
     .content-wrapper{
         border-radius: 0px;
         padding: 60px 0;
