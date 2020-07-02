@@ -209,12 +209,34 @@
     .media .media-right > i{
         font-size: 20px;
     }
+    .media .card-title {
+        font-size: 12px;
+    }
+    .media-list .media > div:first-child{
+        display: none;
+    }
+    .media-list .media .font-size-xxs{
+        font-size: inherit;
+    }
+    .media-list .media:not(:first-child){
+        margin-top: 10px;
+    }
     #footer{
         display: block !important;
         text-align: center;
     }
     #footer > span:last-child a{
         display: block !important;
+    }
+    .sup-box {
+        max-width: 100%;
+        margin-top: 30px !important;
+    }
+    .sup-down a {
+        width: 80px;
+        height: 26px;
+        line-height: 24px;
+        margin: 5px;
     }
 
 }
