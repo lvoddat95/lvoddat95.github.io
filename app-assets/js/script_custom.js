@@ -174,8 +174,6 @@ $(function(){
     $('.dropdown-scrollable').perfectScrollbar();
 
     $('.nav-group-sub').perfectScrollbar();
-    $('.sec-report > .row').perfectScrollbar();
-
 
     if( $('.chat-box').length > 0 ){
         

@@ -86,12 +86,49 @@
         flex: 1;
     }
     #footer {
+        position: relative;
         display: block !important;
         text-align: center;
         margin-top: auto;
+        color: #fff;
+        margin: auto -15px 0;
+        padding: 10px 15px 7px !important;
+    }
+    #footer::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        background: #1C3FAA;
+        z-index: 1;
+        opacity: .2;
+        border-top-left-radius: 0;
+        border-top-right-radius: 30px;
+    }
+    #footer:after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        background: url(../images/dash-bg.png) no-repeat center center;
+        background-size: cover;
+        background-position: center center;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 30px;
     }
     #footer > span{
         display: block;
+        position: relative;
+        z-index: 1;
+    }
+    #footer > span:first-child a{
+        color: #fff;
     }
     #footer > span:last-child *{
         display: inline-block !important;
@@ -269,7 +306,7 @@
     .sec-report > .row > div{
         display: inline-block;
         max-width: 100%;
-        width: 65%;
+        width: 60%;
     }
     .sec-report .card{
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
