@@ -132,7 +132,7 @@
         display: none;
     }
     .sidebar-main .nav-item-submenu>.nav-link>span:after{
-        right: 0;
+        right: 5px;
     }
     .nav-item-open > .nav-group-sub {
         padding-bottom: 10px;
@@ -152,6 +152,18 @@
     .sidebar-main .nav-group-sub .nav-link {
         padding: 2px 28px;
         margin: 2px 0px;
+    }
+    .overlay{
+        -webkit-transition-duration: 500ms;
+        -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(2, 3, 16, 0.3);
+        z-index: 11;
     }
     
 
@@ -197,6 +209,7 @@
         overflow-y: hidden;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
+        margin-right: 0;
     }
     .sec-report > .row > div{
         display: inline-block;

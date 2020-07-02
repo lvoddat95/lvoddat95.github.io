@@ -60,6 +60,7 @@ var App = function () {
             e.preventDefault();
 
             $('body').toggleClass('sidebar-xs').removeClass('sidebar-mobile-main');
+           
             revertBottomMenus();
         });
     };
@@ -183,14 +184,27 @@ var App = function () {
     var _sidebarMobileMainToggle = function() {
         $('.sidebar-mobile-main-toggle').on('click', function(e) {
             e.preventDefault();
-            $('body').toggleClass('sidebar-mobile-main').removeClass('sidebar-mobile-secondary sidebar-mobile-right');
-
+            $('body').toggleClass('sidebar-mobile-main').removeClass('sidebar-mobile-secondary sidebar-mobile-right').prepend('<div class="overlay"></div>');
+            
             if($('.sidebar-main').hasClass('sidebar-fullscreen')) {
                 $('.sidebar-main').removeClass('sidebar-fullscreen');
             }
         });
-    };
 
+        $('.sidebar-mobile-main-close').on('click', function(e) {
+            e.preventDefault();
+            $('body').removeClass('sidebar-mobile-main');
+            $('.overlay').remove();
+        });
+
+       
+
+    };
+    $('body').on('click', '.overlay', function(e) {
+        e.preventDefault();
+        $('body').removeClass('sidebar-mobile-main');
+        $(this).remove();
+    });
     // Toggle secondary sidebar on mobile
     var _sidebarMobileSecondaryToggle = function() {
         $('.sidebar-mobile-secondary-toggle').on('click', function (e) {
