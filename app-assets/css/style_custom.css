@@ -10,7 +10,7 @@ body {
 .page-content {
     position: relative;
     background: #1C3FAA;
-    z-index: 1;
+    z-index: 9;
 }
 
 .waveWrapper{

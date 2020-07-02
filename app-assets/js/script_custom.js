@@ -30,12 +30,7 @@ $(function() {
 
 
 $(function(){
-    $('.overlay').click(function() {
-        alert('asd')
-        // e.preventDefault();
-        // $('body').removeClass('sidebar-mobile-main');
-        // $(this).remove();
-    });
+
     $(window).bind("resize", function () {
 
         var v_windowH = $(this).outerHeight();

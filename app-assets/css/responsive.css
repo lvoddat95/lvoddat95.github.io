@@ -59,8 +59,8 @@
     .content {
         position: relative;
         z-index: 1;
-        height: calc(100vh - 40px);
-        padding: 0 15px 15px;
+        height: 100vh;
+        padding: 0 15px 65px;
     }
     #footer {
         display: block !important;
@@ -179,7 +179,7 @@
         top: 0;
         left: 0;
         background-color: rgba(2, 3, 16, 0.3);
-        z-index: 11;
+        z-index: 9;
     }
     
 
@@ -208,8 +208,7 @@
          -khtml-user-select: none; /* Konqueror HTML */
            -moz-user-select: none; /* Old versions of Firefox */
             -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                      supported by Chrome, Edge, Opera and Firefox */
+                user-select: none; /* Non-prefixed version, currently*/
     }
     .about-main-icon {
         padding-bottom: 5px;

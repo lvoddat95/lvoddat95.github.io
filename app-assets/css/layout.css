@@ -132,7 +132,7 @@ body {
     top: 0;
     bottom: 0;
     box-sizing: content-box;
-    z-index: 1040;
+    z-index: 10;
     transition: all ease-in-out 0.15s;
 }
 
