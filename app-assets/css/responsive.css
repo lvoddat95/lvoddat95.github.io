@@ -43,7 +43,6 @@
         background: transparent;
     }
     .content-wrapper{
-        height: calc(100vh - 65px);
         border-radius: 0px;
     }
     .content-wrapper::before {
@@ -61,15 +60,7 @@
         position: relative;
         z-index: 1;
         padding: 0 15px;
-    }
-    #footer {
-        display: block !important;
-        text-align: center;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 15px;
-        padding: 0 15px!important;
+        height: 100vh;
     }
     #footer > span{
         display: block;
