@@ -356,6 +356,7 @@ a.sidebar-main-toggle:hover{
 .dropdown-alert > .dropdown-toggle {
     position: relative;
 }
+.mess .badge,
 .dropdown-alert .badge {
     position: absolute;
     padding: 0;
@@ -2581,4 +2582,45 @@ hr{
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
+}
+
+.mobile-bottom {
+    min-height: 55px;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #E1E1E1;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.mobile-bottom > .item{
+    letter-spacing: 0;
+    text-align: center;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    -ms-display: flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    position: relative;
+}
+.mobile-bottom .icon{
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.mobile-bottom .icon .badge{
+    top: -2px;
+    font-size: 9px;
 }
