@@ -44,6 +44,7 @@
     }
     .content-wrapper{
         border-radius: 0px;
+        height: 100vh;
     }
     .content-wrapper::before {
         position: absolute;
@@ -60,11 +61,12 @@
         position: relative;
         z-index: 1;
         padding: 0 15px;
-        height: 100vh;
         -ms-display: flex;
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
+        -ms-flex: 1;
+        flex: 1;
     }
     #footer {
         display: block !important;
