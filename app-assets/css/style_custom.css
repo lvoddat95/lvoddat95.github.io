@@ -738,11 +738,11 @@ a.sidebar-main-toggle:hover{
     border-radius: 4px;
 }
 .select2-selection--single .select2-selection__arrow:after{
-    margin-top: -0.4rem;
+    margin-top: -7px;
 }
 .select2-selection--single .select2-selection__rendered {
-    padding-left: 10px;
-    padding-right: 30px;
+    padding-left: 4px;
+    padding-right: 14px;
     height: 18px;
 }
 
@@ -840,6 +840,7 @@ a.sidebar-main-toggle:hover{
 .ckb_custom input[type=checkbox]:checked:disabled+label:before {
     transform: scale(1);
 }
+
 .button-switch {
     font-weight: 400;
     color: #fff;
@@ -895,6 +896,14 @@ a.sidebar-main-toggle:hover{
 .button-switch .switch:before, .button-switch .switch:after {
     content: "";
     position: absolute;
+    font-family: icomoon!important;
+    border-radius: 50%;
+    background: #fff;
+    color: #bdc3c7;
+    font-weight: 600;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
 }
 
 .button-switch .switch:before {
@@ -918,14 +927,13 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch .switch:after {
-    top: 3.5px;
+    content: "\ed6a";
+    top: 4px;
     left: 4px;
+    font-size: 7px;
     cursor: pointer;
     box-shadow: 0 0.0625em 0.375em 0 #666;
-    border-radius: 50%;
-    background: #fefefe;
-    height: 16px;
-    width: 16px;
+    text-align: center;
     transform: none;
     -webkit-transition: -webkit-transform 0.25s ease-out 0.1s;
     transition:
@@ -938,13 +946,16 @@ a.sidebar-main-toggle:hover{
 .button-switch .switch:checked:after {
     -webkit-transform: translate(36px, 0);
     transform: translate(36px, 0);
+    content: '\ed6e';
+    color: #4caf50
 }
 
 .button-switch.no-label .switch:checked:after {
     -webkit-transform: translate(21px, 0);
     transform: translate(21px, 0);
+    content: '\ed6e';
+    color: #4caf50
 }
-
 .button-switch .switch:checked~.lbl-off {
     opacity: 0;
 }
