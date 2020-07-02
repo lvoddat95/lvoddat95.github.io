@@ -16,19 +16,13 @@ body {
     flex: 1;
 }
 
-.content-wrapper {
+.page-content {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex: 1;
-    flex: 1;
 }
 
 .content {
     padding: 15px;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
 }
 
 .content::after {

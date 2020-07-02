@@ -35,6 +35,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+    [class*=" icon-"], [class^=icon-]{
+        font-size: 12px;
+    }
     .content-wrapper{
         border-radius: 0px;
         padding-top: 60px;
