@@ -141,7 +141,7 @@ a.sidebar-main-toggle:hover{
     top: 0;
     left: 100%;
     width: 16.875rem;
-    /* display: none; */
+    display: none;
     padding: 7px 15px;
     transform: none;
     margin: 0;
@@ -150,7 +150,7 @@ a.sidebar-main-toggle:hover{
     height: auto;
 }
 .sidebar-xs .sidebar-main .nav-sidebar>.nav-item:hover>.nav-link[data-menu-title]:before{
-display: block !important;
+    display: block !important;
 }
 
 .page-title {
