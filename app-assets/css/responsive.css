@@ -59,7 +59,7 @@
     .content {
         position: relative;
         z-index: 1;
-        height: 100vh;
+        height: calc(100vh - 40px);
         padding: 0 15px 15px;
     }
     #footer {
