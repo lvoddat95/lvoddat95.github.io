@@ -44,7 +44,7 @@
             <div class="sidebar-content">
                 <!-- Logo -->
                 <div class="logo clearfix">
-                    <a href="#" class="sidebar-main-toggle mr-2">
+                    <a href="#" class="sidebar-main-toggle">
                         <i class="linearicons-toggle-on"></i>
                     </a>
                     <a href="index.html" class="logo-text float-left">
@@ -58,11 +58,10 @@
                 <div class="card card-sidebar-mobile">
                     <ul class="nav nav-sidebar" data-nav-type="accordion">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">
+                            <a href="index.html" class="nav-link active" data-menu-title="Bảng điều khiển">
                                 <i class="linearicons-home"></i>
                                 <span class="menu-title">Bảng điều khiển</span>
                             </a>
-                            
                         </li>
                         <li class="nav-item nav-item-submenu">
                             <a href="javascript:;" class="nav-link">
@@ -79,15 +78,15 @@
                                 <!-- <li><a href="faq.html" class="nav-link"><div class="menu-title">Trang FAQ</div></a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-item nav-item-submenu nav-item-open">
-                            <a href="javascript:;" class="nav-link active">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="javascript:;" class="nav-link">
                                 <i class="linearicons-car"></i>
                                 <span class="menu-title"> Bảo hiểm xe cơ giới</span>
                             </a>
     
                             <ul class="nav nav-group-sub" data-submenu-title="Bảo hiểm xe cơ giới">
-                                <li><a href="nhap_don2.html" class="nav-link"><div class="menu-title">F01 - Bảo hiểm xe máy</div></a></li>
-                                <li class="active"><a href="nhap_don1.html" class="nav-link"><div class="menu-title">F02 - Bảo hiểm ô tô</div></a></li>
+                                <li><a href="index2.html" class="nav-link"><div class="menu-title">F01 - Bảo hiểm xe máy</div></a></li>
+                                <li class="active"><a href="index2.html" class="nav-link"><div class="menu-title">F02 - Bảo hiểm ô tô</div></a></li>
                             </ul>
                         </li>
                         <li class="nav-item nav-item-submenu">
@@ -256,7 +255,6 @@
                                 <li><a href="" class="nav-link"><div class="menu-title">I01 - Bảo hiểm dầu khí</div></a></li>
                             </ul>
                         </li>
-    
                         <li class="nav-item nav-item-submenu">
                             <a href="javascript:;" class="nav-link">
                                 <i class="linearicons-repeat-one3"></i>
@@ -275,6 +273,8 @@
                                 <li><a href="" class="nav-link"><div class="menu-title">J11 - Nhận tái cố định nhóm bảo hiểm dầu khí</div></a></li>
                             </ul>
                         </li>
+                        
+                        
                     </ul>
                 </div>
                 <!-- End-Main navigation -->
@@ -297,11 +297,22 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
+
+                <!-- Header -->
                 <div class="header-top">
+                    <button class="d-md-none sidebar-mobile-main-toggle" type="button">
+                        <i class="linearicons-text-align-left font-size-m font-weight-bold"></i>
+                    </button>
                     <div class="top-left">
                         <div class="breadcrumb">
-                            <a href="index.html" class="breadcrumb-item"><i class="icon-grid5 mr-1"></i>Ứng dụng</a>
-                            <span class="breadcrumb-item active">F02 - Bảo hiểm ô tô</span>
+                            <a href="index.html" class="breadcrumb-item"><i class="icon-home5 mr-1"></i>Trang chủ</a>
+                            <span class="breadcrumb-item active">Ứng dụng</span>
+                        </div>
+                        <div class="d-md-none logo-mobile">
+                            <a href="index.html" class="logo-text">
+                                <div class="logo-img"><img src="app-assets/images/logo/logo2.png" alt="Convex Logo"></div>
+                                <span class="text align-middle" style="font-weight: 900;">VNI</span>
+                            </a>
                         </div>
                     </div>
                     <div class="top-right">
@@ -310,13 +321,13 @@
                                 <input type="text" placeholder="Tìm kiếm...">
                                 <a href="#" class="btn-search"><i class="linearicons-magnifier"></i></a>
                             </li>
-                            <li>
-                                <a href="#" data-popup="tooltip" data-trigger="hover" data-placement="bottom" data-original-title="Trợ giúp">
+                            <li class="d-none d-sm-block">
+                                <a href="#" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Trợ giúp">
                                     <i class="icon-help"></i>
                                 </a>
                             </li>
                             <li class="dropdown-alert dropdown">
-                                <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" data-popup="tooltip" data-trigger="hover" data-placement="bottom" data-original-title="Thông báo">
+                                <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Thông báo">
                                     <i class="icon-bubbles4"></i>
                                     <span class="badge ">9</span>
                                 </a>
@@ -342,7 +353,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted font-size-xxs">VNI HCM gửi chứng từ báo mất ấn chỉ tháng 04/2020 </span>
+                                                    <span class="text-muted">VNI HCM gửi chứng từ báo mất ấn chỉ tháng 04/2020 </span>
                                                 </div>
                                             </li>
                 
@@ -360,7 +371,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted font-size-xxs">Danh bạ điện thoại toàn hệ thống VNI tính đến ngày
+                                                    <span class="text-muted">Danh bạ điện thoại toàn hệ thống VNI tính đến ngày
                                                         19/4/2020</span>
                                                 </div>
                                             </li>
@@ -379,7 +390,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted font-size-xxs">BH bắt buộc TNDS xe máy &amp; bảo hiểm tai nạn con người
+                                                    <span class="text-muted">BH bắt buộc TNDS xe máy &amp; bảo hiểm tai nạn con người
                                                         theo ...</span>
                                                 </div>
                                             </li>
@@ -398,7 +409,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted font-size-xxs">Nhằm quảng bá thương hiệu, hình ảnh VNI một các đồng bộ,
+                                                    <span class="text-muted">Nhằm quảng bá thương hiệu, hình ảnh VNI một các đồng bộ,
                                                         Tổng công ty...</span>
                                                 </div>
                                             </li>
@@ -417,7 +428,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted font-size-xxs">Đơn bảo hiểm bảo hiểm 032002397/F02 phát sinh
+                                                    <span class="text-muted">Đơn bảo hiểm bảo hiểm 032002397/F02 phát sinh
                                                         ngày...</span>
                                                 </div>
                                             </li>
@@ -457,11 +468,13 @@
 
                     </div>
                 </div>
+                <!-- /Header -->
+
                 <div class="page-title">
-                    <div>
+                    <div class="p-title">
                         <h1 class="font-weight-semibold font-size-m"><i class="icon-cube3 mr-2"></i>Danh sách đơn bảo hiểm</h1>
                     </div>
-                    <div>
+                    <div class="p-button">
                         <a href="nhap_don1.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-1"><b><i class="icon-plus2"></i></b> Thêm đơn</a>
                         <a href="ban_chao.html" class="btn bg-teal-400 btn-labeled btn-labeled-left mr-1"><b><i class="icon-plus2"></i></b> Tạo bản chào</a>
           
@@ -481,13 +494,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-							<div class="card-header header-elements-sm-inline">
+							<div class="card-header header-elements-inline">
                                 <p class="card-title font-size-s">Biểu đồ doanh thu</p>
 								<div class="header-elements">
                                     <div class="list-icons">
                                         <a class="text-default daterange-ranges font-weight-semibold cursor-pointer dropdown-toggle mr-2">
                                             <i class="icon-calendar3 mr-2"></i>
-                                            <span></span>
+                                            <span class="select-date"></span>
                                         </a>
                                         <a class="list-icons-item" data-action="collapse"></a>
                                         <a class="list-icons-item" data-action="remove"></a>
@@ -495,7 +508,7 @@
 			                	</div>
                             </div>
 							<div class="card-body ">
-                                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="bieu-do d-flex align-items-start justify-content-between flex-wrap">
                                     <div class="d-flex align-items-center mb-3 mb-md-0">
                                         <div id="tickets-status"></div>
                                         <div class="ml-3">
@@ -540,7 +553,7 @@
                         </div>
 
                         <div class="card card-search">
-                            <div class="card-header header-elements-sm-inline">
+                            <div class="card-header header-elements-inline">
                                 <p class="card-title font-size-s">
                                     <i style="width: 26px;height: 26px;line-height: 26px;font-size: 12px;" class="icon-search4 d-flex-inline align-items-center justify-content-center rounded-round bg-color mr-2"></i> 
                                     Tìm kiếm đơn bảo hiểm
@@ -548,13 +561,12 @@
                                 <div class="header-elements">
                                     <div class="list-icons">
                                         <a class="list-icons-item" data-action="collapse"></a>
-                                        <a class="list-icons-item" data-action="remove"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <div class="form-group">
                                             <label class="font-weight-semibold">Số đơn:</label>
                                             <div class="input-group">
@@ -565,29 +577,29 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <div class="form-group">
                                             <label class="font-weight-semibold">Ngày cấp từ:</label>
                                             <div class="input-group">
                                                 <span class="input-group-prepend">
                                                     <span class="input-group-text"><i class="icon-calendar "></i></span>
                                                 </span>
-                                                <input type="text" class="form-control datepicker" name="" placeholder="dd/mm/yyyy">
+                                                <input type="text" class="form-control datepicker input-date" name="" placeholder="dd/mm/yyyy">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <div class="form-group">
                                             <label class="font-weight-semibold">Đến ngày:</label>
                                             <div class="input-group">
                                                 <span class="input-group-prepend">
                                                     <span class="input-group-text"><i class="icon-calendar "></i></span>
                                                 </span>
-                                                <input type="text" class="form-control datepicker" name="" placeholder="dd/mm/yyyy">
+                                                <input type="text" class="form-control datepicker input-date" name="" placeholder="dd/mm/yyyy">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <div class="form-group ">
                                             <label class="font-weight-semibold">Trạng thái:</label>
                                             <div class="form-group-select">
@@ -606,9 +618,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <div class="form-group ">
                                             <label class="font-weight-semibold">Phòng ban:</label>
                                             <div class="form-group-select">
@@ -629,7 +639,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 ">
+                                    <div class="col-md-3 col-sm-4 col-6 ">
                                         <div class="form-group ">
                                             <label class="font-weight-semibold">Cán bộ:</label>
                                             <div class="form-group-select">
@@ -650,7 +660,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 ">
+                                    <div class="col-md-3 col-sm-4 col-6 ">
                                         <div class="form-group ">
                                             <label class="font-weight-semibold">Khách hàng:</label>
                                             <div class="form-group-select">
@@ -671,7 +681,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <label for="">&nbsp;</label>
                                         <div>
                                             <button type="submit" style="letter-spacing: 1px;" class="btn text-uppercase w-100 bg-orange"><i class="icon-search4 mr-2"></i> Tìm kiếm </button>
@@ -694,7 +704,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <table class="table-ins table table-light table-hover">
+                                <table class="table-ins table table-light table-hover table-responsive">
                                     <colgroup>
                                         <col width="auto">
                                         <col width="auto">
@@ -1266,6 +1276,15 @@
                         
                     </div>
                 </div>
+
+                <!-- Footer -->
+                <div id="footer" class="d-flex align-items-center justify-content-between pt-3 pb-1">
+                    <span> Bản quyền © 2020. <a href="#">Tổng công ty Cổ phần Bảo hiểm Hàng không</a> </span>
+                    <span>
+                        <a class="d-flex align-items-center text-pink-400" href="https://www.bhhk.com.vn" target="_blank" ><i class="linearicons-network mr-1"></i> www.bhhk.com.vn</a>
+                    </span>
+                </div>
+                <!-- /Footer -->
             </div>
         </div>
 
@@ -1293,7 +1312,7 @@
 
                             <div class="tab-content">
                                 <div class="tab-pane fade active show" id="modal_tab1">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered ">
                                         <thead class="thead-light">
                                             <tr>
                                                 <th width="1%">#</th>
@@ -1547,6 +1566,9 @@
     <!-- JS Trang-->
     <script src="app-assets/vendors/js/select2.min.js"></script>
     <script src="app-assets/vendors/js/daterangepicker.js"></script>
+    <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.js"></script>
+    <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.vi.min.js"></script>
+    <script src="app-assets/vendors/js/cleave.min.js"></script>
     <script src="app-assets/vendors/js/datatable/datatables.min.js"></script>
     <script src="app-assets/vendors/js/datatable/dataTables.buttons.min.js"></script>
     <script src="app-assets/vendors/js/datatable/buttons.flash.min.js"></script>
@@ -1561,6 +1583,7 @@
     <script src="app-assets/vendors/js/chart/d3.min.js"></script>
     <script src="app-assets/vendors/js/chart/d3_tooltip.js"></script>
     <script src="app-assets/vendors/js/chart/c3.min.js"></script>
+    <script src="app-assets/js/cleave-phone.vn.js"></script>
     <!-- /Custom JS Trang-->
     
     <!-- Custom JS-->

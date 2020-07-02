@@ -34,7 +34,23 @@
 
 }
 
+@media only screen and (max-width: 991px) {
+    .page-title{
+        display: block;
+    }
+    .page-title > *:first-child{
+        margin-bottom: 5px;
+    }
+    .bieu-do{
+        margin: 0 -5px;
+    }
+    .bieu-do > div{
+        padding: 0 5px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
+    
     [class*=" icon-"], [class^=icon-]{
         font-size: 12px;
     }
@@ -71,6 +87,7 @@
         background: url(../images/dash-bg.png) no-repeat center center;
         background-size: cover;
         background-position: center center;
+        background-attachment: fixed;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
     }
@@ -238,7 +255,7 @@
         padding: 2px 28px;
         margin: 2px 0px;
     }
-    .overlay{
+    .sb-overlay{
         -webkit-transition-duration: 500ms;
         -o-transition-duration: 500ms;
         transition-duration: 500ms;
@@ -250,8 +267,33 @@
         background-color: rgba(2, 3, 16, 0.3);
         z-index: 9;
     }
-    
-
+    .page-title {
+        background: #fff;
+        padding: 10px 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .page-title > *:first-child {
+        margin-bottom: 10px;
+    }
+    .page-title > *:first-child *{
+        font-size: 13px;
+    }
+    .page-title > *:first-child i{
+        margin-right: 5px !important;
+    }
+    .page-title .p-button{
+        margin: -2.5px;
+    }
+    .page-title .p-button > *{
+        margin: 2.5px !important;
+    }
+    .bieu-do > div{
+        width: 50%;
+    }
+    .card-header .card-title {
+        font-size: 12px;
+    }
 
 }
 
@@ -344,5 +386,15 @@
     }
     .dropdown-item{
         display: block;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .bieu-do > div {
+        width: 100%;
+    }
+    .header-elements .select-date{
+        display: none;
     }
 }
