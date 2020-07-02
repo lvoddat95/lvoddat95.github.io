@@ -16,13 +16,6 @@ body {
     flex: 1;
 }
 
-.page-content {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-}
-
 .content-wrapper {
     display: -ms-flexbox;
     display: flex;
