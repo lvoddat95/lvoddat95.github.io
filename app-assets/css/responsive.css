@@ -61,6 +61,15 @@
         z-index: 1;
         padding: 0 15px;
         height: 100vh;
+        -ms-display: flex;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    #footer {
+        display: block !important;
+        text-align: center;
+        margin-top: auto;
     }
     #footer > span{
         display: block;
