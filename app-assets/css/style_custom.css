@@ -10,6 +10,7 @@ body {
 .page-content {
     position: relative;
     background: #1C3FAA;
+    z-index: 1;
 }
 
 .waveWrapper{
@@ -2579,4 +2580,3 @@ hr{
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
-
