@@ -39,7 +39,6 @@
         font-size: 12px;
     }
     .content-wrapper{
-        height: 100vh;
         border-radius: 0px;
         padding: 60px 0;
     }
@@ -51,6 +50,12 @@
         right: 0;
         bottom: 15px;
         padding: 0 !important;
+    }
+    #footer > span{
+        display: block;
+    }
+    #footer > span:last-child *{
+        display: inline-block !important;
     }
     .header-top{
         margin: 0;

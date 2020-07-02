@@ -17,8 +17,12 @@ body {
 }
 
 .content-wrapper {
-    float: left;
-    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1;
+    flex: 1;
     position: relative;
     background-color: #F1F5F8;
     border-top-left-radius: 30px;
@@ -126,6 +130,29 @@ a.sidebar-main-toggle:hover{
 .sidebar-xs .sidebar .logo .logo-text .text {
     display: none;
 }
+
+.sidebar-xs .sidebar-main .nav-sidebar>.nav-item>.nav-link[data-menu-title]:before{
+    content: attr(data-menu-title);
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+    background: #516BBE;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 16.875rem;
+    /* display: none; */
+    padding: 7px 15px;
+    transform: none;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 4px;
+    height: auto;
+}
+.sidebar-xs .sidebar-main .nav-sidebar>.nav-item:hover>.nav-link[data-menu-title]:before{
+display: block !important;
+}
+
 .page-title {
     position: relative;
     padding: 0 0 1rem;

@@ -19,6 +19,8 @@ body {
 .page-content {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .content {
