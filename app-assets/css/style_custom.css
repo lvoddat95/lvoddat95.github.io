@@ -15,17 +15,8 @@ body {
 .sec-report{
     position: relative;
 }
-.waveWrapper{
-    display: none;
-}
 
 .content-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex: 1;
-    flex: 1;
     position: relative;
     background-color: #F1F5F8;
     border-top-left-radius: 30px;
