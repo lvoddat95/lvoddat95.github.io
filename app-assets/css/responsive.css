@@ -156,7 +156,8 @@
         display: inline-block !important;
     }
     .header-top{
-        margin: 10px 0;
+        padding: 10px 0;
+        margin: 0;
     }
     .header-top.sticky {
         margin: 0;
