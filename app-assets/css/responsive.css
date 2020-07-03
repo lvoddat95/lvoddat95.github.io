@@ -59,6 +59,10 @@
     [class*=" icon-"], [class^=icon-]{
         font-size: 12px;
     }
+    .mobile-bottom {
+        -ms-display: flex;
+        display: flex;
+    }
     .page-content{
         display: block;
         background: transparent;
@@ -170,6 +174,7 @@
         padding: 10px 15px;
         background: url(../images/dash-bg.png) no-repeat center center;
         background-color: #1C3FAA;
+        background-size: cover;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
         -webkit-transition: top 0.25s ease-in-out;
         transition: top 0.25s ease-in-out;
@@ -192,8 +197,7 @@
         border: 2px solid #fff;
     }
 
-    .top-right > ul > li > a,
-    .sidebar-mobile-main-toggle{
+    .top-right > ul > li > a{
         color: #fff;
     }
     .top-left{
@@ -212,67 +216,9 @@
     .logo-mobile .logo-img img{
         width: 30px;
     }
-    .sidebar{
-        padding: 0;
-        background: #fff;
-    }
-    .sidebar-main .nav-sidebar{
-        padding: 0;
-    }
-    .sidebar-main .nav-sidebar .nav-link{
-        color: #2d3748;
-    }
-    .sidebar .sidebar-content{
-        padding: 20px 10px;
-    }
-    .sidebar-main .nav-sidebar .nav-item.nav-item-open{
-        background-color: #f5f5f5;
-        border-radius: 4px;
-    }
-    .sidebar-main .nav-group-sub .nav-link{
-        background: #fff;
-    }
-    .sidebar-main .nav-group-sub .nav-link,
-    .sidebar-main .nav-sidebar .nav-item:hover .nav-link:not(.active),
-    .sidebar-xs .sidebar-main .nav-sidebar .nav-item:hover .nav-link:not(.active){
-        background-color:transparent !important;
-    }
-    .sidebar-main .nav-sidebar .nav-link>span:before{
-        display: none;
-    }
-    .sidebar-main .nav-item-submenu>.nav-link>span:after{
-        right: 10px;
-    }
-    .nav-item-open > .nav-group-sub {
-        padding-bottom: 10px;
-    }
-    .sidebar-main .nav-sidebar .nav-link{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        padding: 6px 10px;
-    }
-    
-    .sidebar-main .nav-item-submenu>.nav-link {
-        padding-right: 20px;
-    }
-    .sidebar-main .nav-group-sub .nav-link {
-        padding: 2px 28px;
-        margin: 2px 0px;
-    }
-    .sb-overlay{
-        -webkit-transition-duration: 500ms;
-        -o-transition-duration: 500ms;
-        transition-duration: 500ms;
-        width: 100%;
-        position: fixed;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(2, 3, 16, 0.3);
-        z-index: 9;
+    .sup-box{
+        max-width: 100%;
+        margin: 30px 0 0 !important;
     }
     .page-title {
         background: #fff;
@@ -300,10 +246,6 @@
     }
     .card-header .card-title {
         font-size: 12px;
-    }
-    .sidebar-main .nav-sidebar .nav-item>a.active:before,
-    .sidebar-main .nav-sidebar .nav-item>a.active:after{
-        display: none;
     }
     
 
