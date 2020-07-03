@@ -35,7 +35,9 @@
     .table-res colgroup col{
         display: block;
     }
-
+    .wizard>.content>.body{
+        padding: 0;
+    }
 
 }
 
@@ -52,6 +54,7 @@
     .bieu-do > div{
         padding: 0 5px;
     }
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -153,7 +156,7 @@
         display: inline-block !important;
     }
     .header-top{
-        padding: 10px;
+        padding: 10px 0;
         margin: 0px;
         height: 50px;
     }
@@ -193,9 +196,6 @@
 
     .top-right > ul > li > a{
         color: #fff;
-    }
-    .top-left{
-        margin-left: 35px;
     }
     .logo {
         display: none;
@@ -375,4 +375,31 @@
     .card-search [class^=col-]:last-child > label{
         display: none;
     }
+    .input-don .input-group-append > .btn {
+        font-size: inherit;
+        max-width: 80px;
+        font-size: 0;
+    }
+    .input-don .input-group-append > .btn > i{
+        margin: 0 !important;
+    }
+    .wizard>.steps>ul>li a {
+        padding-top: 30px;
+        margin: 20px 0;
+    }
+    .wizard>.steps>ul>li:before, 
+    .wizard>.steps>ul>li:after {
+        top: 35px;
+    }
+
+
+
+
+
+
+
+
+
+
+    
 }
