@@ -299,6 +299,10 @@
     .card-header .card-title {
         font-size: 12px;
     }
+    .sidebar-main .nav-sidebar .nav-item>a.active:before,
+    .sidebar-main .nav-sidebar .nav-item>a.active:after{
+        display: none;
+    }
     
 
 }
