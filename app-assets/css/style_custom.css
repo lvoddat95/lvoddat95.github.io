@@ -2576,10 +2576,10 @@ hr{
 }
 
 .mobile-bottom {
-    min-height: 55px;
+    min-height: 50px;
     position: fixed;
     z-index: 999;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     right: 0;
     background: #FFFFFF;
@@ -2589,6 +2589,11 @@ hr{
     border-top: 1px solid #E1E1E1;
     padding-left: 4px;
     padding-right: 4px;
+    -webkit-transition: bottom 0.25s ease-in-out;
+    transition: bottom 0.25s ease-in-out;
+}
+.mobile-bottom.show{
+    bottom: 0;
 }
 .mobile-bottom > .item{
     letter-spacing: 0;

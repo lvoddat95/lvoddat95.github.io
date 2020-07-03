@@ -218,6 +218,7 @@ $(function(){
     var $window       = $(window);
     var lastScrollTop = 0;
     var $header       = $('.header-top');
+    var $footer       = $('.mobile-bottom');
     var headerHeight  = $header.outerHeight();
 
     $(window).scroll(function() {
@@ -226,15 +227,22 @@ $(function(){
         if ( windowTop >= headerHeight ) {
             $header.addClass( 'sticky' );
         } else {
-            $header.removeClass( 'sticky' );
-            $header.removeClass( 'show' );
+            $header.removeClass( 'sticky' ).removeClass( 'show' );
+            $footer.removeClass( 'show' );
         }
         if ( $header.hasClass( 'sticky' ) ) {
             if ( windowTop < lastScrollTop ) {
                 $header.addClass( 'show' );
+                $footer.addClass( 'show' );
             } else {
                 $header.removeClass( 'show' );
+                $footer.removeClass( 'show' );
             }
+        }
+        if ( windowTop < lastScrollTop ) {
+            $footer.addClass( 'show' );
+        } else {
+            $footer.removeClass( 'show' );
         }
         lastScrollTop = windowTop;
     } );
