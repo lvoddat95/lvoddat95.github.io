@@ -160,8 +160,8 @@
         display: inline-block !important;
     }
     .header-top{
-        padding: 10px 0;
-        margin: 0;
+        padding: 10px;
+        margin: 10px;
     }
     .header-top.sticky {
         margin: 0;
