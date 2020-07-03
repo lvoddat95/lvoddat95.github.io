@@ -99,7 +99,7 @@
     left: 0;
     bottom: 0;
     width: inherit;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     transition: left ease-in-out 0.15s, right ease-in-out 0.15s;
 }
