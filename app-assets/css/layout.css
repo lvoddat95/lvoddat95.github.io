@@ -402,6 +402,8 @@
     }
     .nav-item-open > .nav-group-sub {
         padding-bottom: 10px;
+        -ms-touch-action: unset;
+        touch-action: unset;
     }
     .sidebar li.nav-item-open {
         background-color: #f5f5f5;
