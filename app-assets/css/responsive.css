@@ -193,7 +193,9 @@
     .header-top .dropdown-user img{
         border: 2px solid #fff;
     }
-
+    .top-left{
+        margin-left: 30px;
+    }
     .top-right > ul > li > a{
         color: #fff;
     }
@@ -240,6 +242,9 @@
     }
     .card-header .card-title {
         font-size: 12px;
+    }
+    .modal-title{
+        font-size: 14px;
     }
     
 
@@ -341,9 +346,6 @@
     }
     .form-group-select .select-icon i{
         font-size: 1rem;
-    }
-    .form-group-select select {
-        padding-right: 15px;
     }
     .form-control{
         font-size: inherit;
