@@ -154,9 +154,8 @@
     }
     .header-top{
         padding: 10px;
-        margin: 10px;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        margin: 0px;
+        height: 50px;
     }
     .header-top.sticky {
         margin: 0;

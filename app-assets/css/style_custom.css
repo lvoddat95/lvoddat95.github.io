@@ -278,6 +278,8 @@ a.sidebar-main-toggle:hover{
 .header-top {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-align-items: center;
     align-items: center;
     -ms-flex-pack: justify;
