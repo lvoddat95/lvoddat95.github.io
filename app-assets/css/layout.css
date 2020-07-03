@@ -402,8 +402,9 @@
     }
     .nav-item-open > .nav-group-sub {
         padding-bottom: 10px;
-        -ms-touch-action: unset;
-        touch-action: unset;
+        -ms-touch-action: auto;
+        touch-action: auto;
+        overflow: visible !important;
     }
     .sidebar li.nav-item-open {
         background-color: #f5f5f5;
