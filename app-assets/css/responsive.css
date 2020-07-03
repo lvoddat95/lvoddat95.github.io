@@ -26,10 +26,15 @@
     .lineChartWidget{
         display: none;
     }
-
-
-
-
+    .table-hover tbody tr:hover{
+        background: transparent;
+    }
+    .table-res colgroup{
+        display: block;
+    }
+    .table-res colgroup col{
+        display: block;
+    }
 
 
 }
@@ -294,6 +299,7 @@
     .card-header .card-title {
         font-size: 12px;
     }
+    
 
 }
 
@@ -387,6 +393,25 @@
     .dropdown-item{
         display: block;
     }
+    .form-group-select .select-icon{
+        top: 4px;
+    }
+    .form-group-select select {
+        padding-right: 15px;
+    }
+    .form-control{
+        font-size: inherit;
+    }
+    .card-list-footer > div:first-child{
+        padding: 10px 0;
+        -ms-justify-content: center;
+        justify-content: center;
+    }
+    .pagination {
+        -ms-justify-content: center;
+        justify-content: center;
+    }
+
 }
 
 
@@ -395,6 +420,17 @@
         width: 100%;
     }
     .header-elements .select-date{
+        display: none;
+    }
+    .daterange-ranges .mr-2{
+        margin-right: 0px !important;
+    }
+    .card-search [class^=col-]{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .card-search [class^=col-]:last-child > label{
         display: none;
     }
 }

@@ -1,49 +1,20 @@
 
-$(function() {
-    var $window       = $(window);
-    var lastScrollTop = 0;
-    var $header       = $('.header-top');
-    var headerHeight  = $header.outerHeight();
-
-    $window.scroll(function() {
-        var windowTop  = $window.scrollTop();
-
-        if ( windowTop >= headerHeight ) {
-            $header.addClass( 'sticky' );
-        } else {
-            $header.removeClass( 'sticky' );
-            $header.removeClass( 'show' );
-        }
-
-        if ( $header.hasClass( 'sticky' ) ) {
-            console.log(windowTop);
-            if ( windowTop < lastScrollTop ) {
-                $header.addClass( 'show' );
-            } else {
-                $header.removeClass( 'show' );
-            }
-        }
-        lastScrollTop = windowTop;
-        
-    } );
-});
-
-
 $(function(){
 
-    $(window).bind("resize", function () {
-
-        var v_windowH = $(this).outerHeight();
-        var v_windowW = $(this).outerWidth();
-
-        // if (v_windowW < 1200) {
-        //     $('body').addClass('sidebar-xs');
+    if ($('.table-res').length > 0) {
+        var opt = {
+            customToggle: ["<span class='iconPlus bg-success'></span>","<span class='iconMinus bg-danger'></span>"],
+            customToggleAll: ["<span class='iconPlus bg-success'></span>","<span class='iconMinus bg-danger'></span>"],
+            iconsOnLeft:true,
+            useZebra: true,
+            useTransitions: false,
+            useObserver: true,
+            showToggle: true,
+            showToggleAll: true,
             
-        // } else {
-        //     $('body').removeClass('sidebar-xs');
-        // }
-    }).trigger('resize');
-    
+        };
+        $(".table-res").tableShrinker(opt);
+    }
 
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
@@ -242,3 +213,29 @@ var list_view = function(p_this){
 var grid_view = function(p_this){
     $(p_this).closest('.f-right').removeClass('list').addClass('grid');
 }
+
+$(function(){
+    var $window       = $(window);
+    var lastScrollTop = 0;
+    var $header       = $('.header-top');
+    var headerHeight  = $header.outerHeight();
+
+    $(window).scroll(function() {
+        var windowTop  = $window.scrollTop();
+
+        if ( windowTop >= headerHeight ) {
+            $header.addClass( 'sticky' );
+        } else {
+            $header.removeClass( 'sticky' );
+            $header.removeClass( 'show' );
+        }
+        if ( $header.hasClass( 'sticky' ) ) {
+            if ( windowTop < lastScrollTop ) {
+                $header.addClass( 'show' );
+            } else {
+                $header.removeClass( 'show' );
+            }
+        }
+        lastScrollTop = windowTop;
+    } );
+})

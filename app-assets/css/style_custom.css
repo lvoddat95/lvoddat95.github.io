@@ -111,7 +111,7 @@ a.sidebar-main-toggle:hover{
 
 .logo-text {
     display: block;
-    color: #fff;
+    color: #fff !important;
 }
 
 .sidebar .logo .logo-text .text {
@@ -2630,4 +2630,50 @@ hr{
 .mobile-bottom .icon .badge{
     top: -2px;
     font-size: 9px;
+}
+
+.table-res .jsmartable-collapse{
+    position: absolute;
+}
+
+.table-res .jsmartable-collapse ~ *{
+    margin-left: 20px;
+}
+.table-res .iconPlus,
+.table-res .iconMinus{
+    font-style: normal;
+    font-weight: 400;
+    width: 16px;
+    height: 16px;
+    line-height: 12px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 3px #444;
+}
+
+.table-res .iconPlus:before{
+    content: "+";
+
+}
+.table-res .iconMinus:before {
+    content: "−";
+}
+.table th > *,
+.table td> *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.table-res tr.collapsed,
+.table-res tr.collapsed ~ tr.shrink-wrapper { 
+    background-color: #f5f5f5 !important;
+}
+
+.table-res tr.collapsed ~ tr ~tr.blank-row {
+    height: 5px;
+}
+.table-res tr.shrink-wrapper>td div.shrinked-row>div>div:nth-child(odd) {
+    width: 25%;
+    font-weight: 500;
 }
