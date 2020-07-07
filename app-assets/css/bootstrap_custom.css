@@ -264,6 +264,10 @@ a.list-icons-item {
 	transition: all ease-in-out 0.15s;
 }
 
+.card-collapsed a.list-icons-item:after{
+	-webkit-transform: rotate(180deg); transform: rotate(180deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
 	a.list-icons-item {
 		transition: none;
@@ -3036,11 +3040,11 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	}
 }
 
-[data-action] {
+[data-action].list-icons-item {
 	cursor: pointer;
 }
 
-[data-action]:after {
+[data-action].list-icons-item:after {
 	font-family: "icomoon";
 	font-size: 1rem;
 	min-width: 1rem;
@@ -3051,36 +3055,36 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[data-action="collapse"]:after {
+[data-action="collapse"].list-icons-item:after {
 	content: "";
 }
 
-[data-action="reload"]:after {
+[data-action="reload"].list-icons-item:after {
 	content: "";
 }
 
-[data-action="remove"]:after {
+[data-action="remove"].list-icons-item:after {
 	content: "";
 	font-size: 0.8125rem;
 }
 
-[data-action="move"] {
+[data-action="move"].list-icons-item {
 	cursor: default;
 }
 
-[data-action="move"]:after {
+[data-action="move"].list-icons-item:after {
 	content: "";
 }
 
-[data-action="fullscreen"]:after {
+[data-action="fullscreen"].list-icons-item:after {
 	content: "";
 }
 
-[data-action="fullscreen"][data-fullscreen="active"]:after {
+[data-action="fullscreen"][data-fullscreen="active"].list-icons-item:after {
 	content: "";
 }
 
-[data-action="modal"]:after {
+[data-action="modal"].list-icons-item:after {
 	content: "";
 }
 

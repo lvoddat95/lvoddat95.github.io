@@ -33,6 +33,12 @@ body {
 }
 
 .content {
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding: 15px;
 }
 
@@ -49,6 +55,12 @@ body {
     background-color: #F1F5F8;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+}
+
+#footer{
+    margin-top: auto;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
 }
 
 .sidebar-xs .sidebar {
@@ -2338,6 +2350,8 @@ hr{
 }
 .nav-file .nav-group-sub{
     margin-left: 25px;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .file-header{

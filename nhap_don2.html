@@ -305,7 +305,7 @@
 
         </div>
         <div class="content-wrapper">
-            
+           
             <div class="content">
                 
                 <div class="mobile-bottom" >
@@ -542,18 +542,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <!-- Form wzard with step validation section start -->
-                        <section id="validation">
+                        <section>
                             <div class="row">
                                 <div class="col-md-12">
                                     <form action="#" class="">
                                         <!-- Bước 1 -->
                                         <div class="card border-left-3 card-collapsed">
-                                            <div class="card-header header-elements-inline">
-                                                <h5 class="card-title font-size-s"><i class="icon-pen2 mr-2"></i>Thông tin chung</h5>
+                                            <div class="card-header header-elements-inline" data-action="collapse">
+                                                <h5 class="card-title font-size-s" ><i class="icon-pen2 mr-2"></i>Thông tin chung</h5>
                                                 <div class="header-elements">
                                                     <div class="list-icons">
                                                         <a class="list-icons-item rotate-180" data-action="collapse"></a>
-                                                        
                                                         <a class="list-icons-item" data-fullscreen="remove"></a>
                                                         <a class="list-icons-item" data-action="fullscreen"></a>
                                                     </div>
@@ -809,7 +808,7 @@
 
                                         <!-- Bước 2 -->
                                         <div class="card border-left-3 card-collapsed">
-                                            <div class="card-header header-elements-inline">
+                                            <div class="card-header header-elements-inline" data-action="collapse">
                                                 <h5 class="card-title font-size-s"><i class="icon-profile mr-2"></i>Đối tượng bảo hiểm</h5>
                                                 <div class="header-elements">
                                                     <div class="list-icons">
@@ -823,7 +822,6 @@
                                             <div class="card-body">
                                                 <div class="card-block">
                                                     <fieldset>
-                                            
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
@@ -1177,7 +1175,7 @@
 
                                         <!-- Bước 3 -->
                                         <div class="card border-left-3 card-collapsed">
-                                            <div class="card-header header-elements-inline">
+                                            <div class="card-header header-elements-inline" data-action="collapse">
                                                 <h5 class="card-title font-size-s"><i class="icon-repo-forked mr-2"></i>Trung gian bảo hiểm</h5>
                                                 <div class="header-elements">
                                                     <div class="list-icons">
@@ -1561,7 +1559,7 @@
 
                                         <!-- Bước 4 -->
                                         <div class="card border-left-3 ">
-                                            <div class="card-header header-elements-inline">
+                                            <div class="card-header header-elements-inline" data-action="collapse">
                                                 <h5 class="card-title font-size-s"><i class="icon-feed mr-2"></i>Phạm vi bảo hiểm</h5>
                                                 <div class="header-elements">
                                                     <div class="list-icons">
@@ -1576,11 +1574,9 @@
                                                     <fieldset>
                                                         <div class="row">
                                                             <div class="col-md-12">
-                                                                <div class="collapse-group">
-                                                                    <div class="p-title">
-                                                                        <a data-toggle="collapse" class="text-default" href="#collapsible-item-nested-parent1">Phạm vi bảo hiểm:</a>
-                                                                    </div>
-                                                                    <div id="collapsible-item-nested-parent1" class="p-body collapse show">
+                                                                <div id="" class="collapse-group">
+                                                                    <div class="p-title">Phạm vi bảo hiểm:</div>
+                                                                    <div class="p-body collapse show">
                                                                         <div class="c-item">
                                                                             <div class="c-title">
                                                                                 <span class="button-switch no-label">
@@ -1588,39 +1584,35 @@
                                                                                     <label for="ckbchild1" class="lbl-off"></label>
                                                                                     <label for="ckbchild1" class="lbl-on"></label>
                                                                                 </span>
-                                                                                <a data-toggle="collapse" class="collapsed" href="#collapsible-item-nested-child1">Vật chất xe</a>
+                                                                                <a data-toggle="collapse" class="collapsed" href="#collapsible-item1">Vật chất xe</a>
                                                                             </div>
                                 
-                                                                            <div id="collapsible-item-nested-child1" class="collapse">
+                                                                            <div id="collapsible-item1" class="collapse">
                                                                                 <div class="c-body">
                                                                                     
-                                                                                    <table class="table table-bordered table-res">
-                                                                                        <colgroup>
-                                                                                            <col width="20%">
-                                                                                            <col width="10%">
-                                                                                            <col width="5%">
-                                                                                            <col width="10%">
-                                                                                            <col width="5%">
-                                                                                            <col width="10%">
-                                                                                            <col width="5%">
-                                                                                            <col width="10%">
-                                                                                            <col width="20%">
-                                                                                        </colgroup>
+                                                                                    <table class="table table-bordered datatable"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
                                                                                         <thead class="thead-light">
                                                                                             <tr>
-                                                                                                <th>Phạm vi bảo hiểm</th>
-                                                                                                <th>Số tiền bảo hiểm</th>
-                                                                                                <th class="shrink-lg">Phí (%)</th>
-                                                                                                <th class="shrink-lg">Phí BH (có VAT)</th>
-                                                                                                <th class="shrink-lg">VAT (%)</th>
-                                                                                                <th class="shrink-lg">VAT</th>
-                                                                                                <th class="shrink-lg">COM (%)</th>
-                                                                                                <th class="shrink-lg">COM</th>
-                                                                                                <th class="shrink-lg">Định mức</th>
+                                                                                                <th width="1%" class="not-desktop"></th>
+                                                                                                <th width="20%">Phạm vi bảo hiểm</th>
+                                                                                                <th width="10%">Số tiền bảo hiểm</th>
+                                                                                                <th width="5%" class="desktop">Phí (%)</th>
+                                                                                                <th width="10%" class="desktop">Phí BH (có VAT)</th>
+                                                                                                <th width="5%" class="desktop">VAT (%)</th>
+                                                                                                <th width="10%" class="desktop">VAT</th>
+                                                                                                <th width="5%" class="desktop">COM (%)</th>
+                                                                                                <th width="10%" class="desktop">COM</th>
+                                                                                                <th width="20%" class="desktop">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b>I. Vật chất xe </b></td>
                                                                                                 <td><input class="form-control text-right input-money" type="text" placeholder="0"></td>
                                                                                                 <td><input class="form-control text-right input-float" type="text" placeholder="0" value="0.99"></td>
@@ -1651,24 +1643,32 @@
                                                                                             </tr>
                                                                                         </tbody>
                                                                                     </table>
-                                                                                    <table class="table table-bordered table-res" style="margin-top: -1px;">
+                                                                                    <table class="table table-bordered datatable"
+                                                                                        style="margin-top: -1px;"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
                                                                                         <thead>
                                                                                             <tr>
+                                                                                                <th width="1%" class="not-desktop"></th>
                                                                                                 <th width="20%">
                                                                                                     <b>II. Điều khoản sửa đổi bổ sung</b>
                                                                                                 </th>
-                                                                                                <th width="10%" class="shrink-lg"></th>
-                                                                                                <th width="5%"></th>
-                                                                                                <th width="10%" class="shrink-lg"></th>
-                                                                                                <th width="5%" class="shrink-lg"></th>
-                                                                                                <th width="10%" class="shrink-lg"></th>
-                                                                                                <th width="5%" class="shrink-lg"></th>
-                                                                                                <th width="10%" class="shrink-lg"></th>
-                                                                                                <th width="20%" class="shrink-lg"></th>
+                                                                                                <th width="10%" class="desktop "></th>
+                                                                                                <th width="5%" desktop-10></th>
+                                                                                                <th width="10%" class="desktop "></th>
+                                                                                                <th width="5%" class="desktop "></th>
+                                                                                                <th width="10%" class="desktop "></th>
+                                                                                                <th width="5%" class="desktop "></th>
+                                                                                                <th width="10%" class="desktop "></th>
+                                                                                                <th width="20%" class="desktop "></th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS01">
@@ -1685,6 +1685,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS02">
@@ -1701,6 +1702,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td >
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS03">
@@ -1717,6 +1719,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS04">
@@ -1733,6 +1736,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS05">
@@ -1749,6 +1753,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS06">
@@ -1765,6 +1770,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS07">
@@ -1781,6 +1787,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS08">
@@ -1797,6 +1804,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS09">
@@ -1813,6 +1821,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS10">
@@ -1829,6 +1838,7 @@
                                                                                                 <td align="right"></td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
                                                                                                         <input class="mr-1" type="checkbox" onchange="on_change_dkbs(this)" name="" id="BS11">
@@ -1847,6 +1857,7 @@
                                                                                             <tr>
                                                                                                 <td></td>
                                                                                                 <td></td>
+                                                                                                <td></td>
                                                                                                 <td align="right"><input class="form-control text-danger text-right" type="text" disabled value="0.04"></td>
                                                                                                 <td align="right"><input class="form-control text-danger text-right" type="text" disabled value="0"></td>
                                                                                                 <td align="right"></td>
@@ -1857,21 +1868,43 @@
                                                                                             </tr>
                                                                                         </tbody>
                                                                                     </table>
-                                                                                    <table class="table table-bordered table-size12" style="margin-top: -1px;">
+                                                                                    <table class="table table-bordered datatable table-total" style="margin-top: -1px;"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="1%" class="not-desktop"></th>
+                                                                                                <th width="20%"><b>Tổng cộng: </b></th>
+                                                                                                <th width="10%">Số tiền bảo hiểm</th>
+                                                                                                <th width="5%" class="desktop">Phí (%)</th>
+                                                                                                <th width="10%" class="desktop">Phí BH (có VAT)</th>
+                                                                                                <th width="5%" class="desktop">VAT (%)</th>
+                                                                                                <th width="10%" class="desktop">VAT</th>
+                                                                                                <th width="5%" class="desktop">COM (%)</th>
+                                                                                                <th width="10%" class="desktop">COM</th>
+                                                                                                <th width="20%" class="desktop"></th>
+                                                                                            </tr>
+                                                                                        </thead>
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td width="20%" class="shrink-lg"><b>Tổng cộng: </b></td>
-                                                                                                <td width="10%" align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0.99"></td>
-                                                                                                <td width="10%"align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="10"></td>
-                                                                                                <td width="10%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="10.0"></td>
-                                                                                                <td width="10%"align="right" class="shrink-lg"></td>
-                                                                                                <td width="20%" align="right" class="shrink-lg"></td>
+                                                                                                <td></td>
+                                                                                                <td></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="0.99"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="10"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="10.0"></td>
+                                                                                                <td align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td align="right"></td>
                                                                                             </tr>
                                                                                         </tbody>
                                                                                     </table>
+                                                                                    
+                                                                                    
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1882,26 +1915,33 @@
                                                                                     <label for="ckbchild2" class="lbl-off"></label>
                                                                                     <label for="ckbchild2" class="lbl-on"></label>
                                                                                 </span>
-                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item-nested-child2">TNDS tự nguyện</a>
+                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item2">TNDS tự nguyện</a>
                                                                             </div>
-                                                                            <div id="collapsible-item-nested-child2" class="collapse">
+                                                                            <div id="collapsible-item2" class="collapse">
                                                                                 <div class="c-body">
-                                                                                    <table class="table table-bordered table-size12" style="margin-bottom: 0;">
+                                                                                    <table class="table table-bordered datatable" style="margin-bottom: 0;"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
                                                                                         <thead class="thead-light">
                                                                                             <tr>
+                                                                                                <th width="1%" class="not-desktop"></th>
                                                                                                 <th width="15%">Quyền lợi</th>
                                                                                                 <th width="15%">Số tiền bảo hiểm</th>
-                                                                                                <th width="5%">Phí (%)</th>
-                                                                                                <th width="10%">Phí BH (có VAT)</th>
-                                                                                                <th width="5%">VAT (%)</th>
-                                                                                                <th width="10%">VAT</th>
-                                                                                                <th width="5%">COM (%)</th>
-                                                                                                <th width="10%">COM</th>
-                                                                                                <th  style="max-width: 280px;" width="20%">Định mức</th>
+                                                                                                <th width="5%" class="desktop">Phí (%)</th>
+                                                                                                <th width="10%" class="desktop">Phí BH (có VAT)</th>
+                                                                                                <th width="5%" class="desktop">VAT (%)</th>
+                                                                                                <th width="10%" class="desktop">VAT</th>
+                                                                                                <th width="5%" class="desktop">COM (%)</th>
+                                                                                                <th width="10%" class="desktop">COM</th>
+                                                                                                <th  style="max-width: 280px;" width="20%" class="desktop">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b>TNDS tự nguyện về người</b></td>
                                                                                                 <td>
                                                                                                     <input class="form-control text-right input-money" style="display: inline-block; width: calc(100% - 65px);"  type="text"  value="0" >
@@ -1945,8 +1985,9 @@
                                                                                             </tr>
                                                                                             
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b>TNDS tự nguyện về tài sản</b></td>
-                                                                                                <td class="control">
+                                                                                                <td>
                                                                                                     <div class="d-flex">
                                                                                                         <input class="form-control text-right input-money" style="display: inline-block; width: calc(100% - 65px);" type="text" value="0">
                                                                                                         <span style="width: 62px;"> (/vụ)</span>
@@ -1989,6 +2030,7 @@
                                                                                                 </td>
                                                                                             </tr>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b>Tổng cộng: </b></td>
                                                                                                 <td align="right"><b>0</b></td>
                                                                                                 <td align="right"><b>0</b></td>
@@ -2013,9 +2055,9 @@
                                                                                     <label for="ckbchild3" class="lbl-off"></label>
                                                                                     <label for="ckbchild3" class="lbl-on"></label>
                                                                                 </span>
-                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item-nested-child3">Tai nạn lái, phụ xe và người ngồi trên xe</a>
+                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item3">Tai nạn lái, phụ xe và người ngồi trên xe</a>
                                                                             </div>
-                                                                            <div id="collapsible-item-nested-child3" class="collapse">
+                                                                            <div id="collapsible-item3" class="collapse">
                                                                                 <div class="c-body">
                                                                                     <div class="row">
                                                                                         <div class="col-md-2">
@@ -2025,22 +2067,29 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <table class="table table-bordered table-size12">
+                                                                                    <table class="table table-bordered datatable"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
                                                                                         <thead class="thead-light">
                                                                                             <tr>
+                                                                                                <th width="1%" class="not-desktop"></th>
                                                                                                 <th width="15%">Quyền lợi</th>
                                                                                                 <th width="15%">Số tiền bảo hiểm</th>
-                                                                                                <th width="5%">Phí (%)</th>
-                                                                                                <th width="10%">Phí BH (có VAT)</th>
-                                                                                                <th width="5%">VAT (%)</th>
-                                                                                                <th width="10%">VAT</th>
-                                                                                                <th width="5%">COM (%)</th>
-                                                                                                <th width="10%">COM</th>
-                                                                                                <th  style="max-width: 280px;" width="20%">Định mức</th>
+                                                                                                <th width="5%" class="desktop">Phí (%)</th>
+                                                                                                <th width="10%" class="desktop">Phí BH (có VAT)</th>
+                                                                                                <th width="5%" class="desktop">VAT (%)</th>
+                                                                                                <th width="10%" class="desktop">VAT</th>
+                                                                                                <th width="5%" class="desktop">COM (%)</th>
+                                                                                                <th width="10%" class="desktop">COM</th>
+                                                                                                <th  style="max-width: 280px;" width="20%" class="desktop">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b>Tai nạn lái, phụ xe và người ngồi trên xe </b></td>
                                                                                                 <td>
                                                                                                     <input class="form-control text-right" style="display: inline-block; width: calc(100% - 65px);" type="text" value="0" >
@@ -2095,9 +2144,9 @@
                                                                                     <label for="ckbchild4" class="lbl-off"></label>
                                                                                     <label for="ckbchild4" class="lbl-on"></label>
                                                                                 </span>
-                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item-nested-child4">TNDS bắt buộc</a>
+                                                                                <a class="collapsed " data-toggle="collapse" href="#collapsible-item4">TNDS bắt buộc</a>
                                                                             </div>
-                                                                            <div id="collapsible-item-nested-child4" class="collapse">
+                                                                            <div id="collapsible-item4" class="collapse">
                                                                                 <div class="c-body">
                                                                                     <div class="row mb-3">
                                                                                         <div class="col-md-4">
@@ -2118,22 +2167,29 @@
                                                                                             <input type="text" class="form-control" placeholder="Nhập số giấy chứng nhận...">
                                                                                         </div>
                                                                                     </div>
-                                                                                    <table class="table table-bordered table-size12">
+                                                                                    <table class="table table-bordered datatable"
+                                                                                        data-paging="false"
+                                                                                        data-info="false"
+                                                                                        data-ordering="false"
+                                                                                        data-searching="false"
+                                                                                    >
                                                                                         <thead class="thead-light">
                                                                                             <tr>
+                                                                                                <th width="1%" class="not-desktop"></th>
                                                                                                 <th width="10%">Quyền lợi</th>
                                                                                                 <th width="20%">Số tiền bảo hiểm</th>
-                                                                                                <th width="5%">Phí (%)</th>
-                                                                                                <th width="10%">Phí BH (có VAT)</th>
-                                                                                                <th width="5%">VAT (%)</th>
-                                                                                                <th width="10%">VAT</th>
-                                                                                                <th width="5%">COM (%)</th>
-                                                                                                <th width="10%">COM</th>
-                                                                                                <th  style="max-width: 280px;" width="20%">Định mức</th>
+                                                                                                <th width="5%" class="desktop">Phí (%)</th>
+                                                                                                <th width="10%" class="desktop">Phí BH (có VAT)</th>
+                                                                                                <th width="5%" class="desktop">VAT (%)</th>
+                                                                                                <th width="10%" class="desktop">VAT</th>
+                                                                                                <th width="5%" class="desktop">COM (%)</th>
+                                                                                                <th width="10%" class="desktop">COM</th>
+                                                                                                <th  style="max-width: 280px;" width="20%" class="desktop">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
+                                                                                                <td></td>
                                                                                                 <td><b style="text-transform: uppercase;">TNDS bắt buộc </b></td>
                                                                                                 <td>
                                                                                                     <b>TNDS về người: 100tr/người/vụ</b>
@@ -2226,10 +2282,6 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <table class="table table-bordered" style="margin: auto;">
-                                                                    <colgroup>
-                                                                        <col width="70%">
-                                                                        <col width="30%">
-                                                                    </colgroup>
                                                                     <thead class="thead-light">
                                                                         <tr>
                                                                             <th width="70%">Quyền lợi</th>
@@ -2279,25 +2331,24 @@
                                                                 </table>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <table class="table table-bordered lich-thanh-toan">
-                                                                    <colgroup>
-                                                                        <col width="10%">
-                                                                        <col width="20%">
-                                                                        <col width="25%">
-                                                                        <col width="25%">
-                                                                        <col width="25%">
-                                                                        <col width="auto">
-                                                                    </colgroup>
+                                                                <table class="table table-bordered lich-thanh-toan datatable"
+                                                                    data-paging="false"
+                                                                    data-info="false"
+                                                                    data-ordering="false"
+                                                                    data-searching="false"
+                                                                >
                                                                     <thead class="thead-light">
-                                                                        <th><b>Lần</b></th>
-                                                                        <th><b>Ngày thanh toán</b></th>
-                                                                        <th><b>Phí BH(có VAT)</b></th>
-                                                                        <th><b>Thành tiền VAT</b></th>
-                                                                        <th><b>Phí BH(chưa VAT) </b></th>
-                                                                        <th></th>
+                                                                        <th width="1%" class="not-desktop"></th>
+                                                                        <th width="10%"><b>Lần</b></th>
+                                                                        <th width="20%"><b>Ngày thanh toán</b></th>
+                                                                        <th width="25%" class="desktop"><b>Phí BH(có VAT)</b></th>
+                                                                        <th width="25%" class="desktop"><b>Thành tiền VAT</b></th>
+                                                                        <th width="25%" class="desktop"><b>Phí BH(chưa VAT) </b></th>
+                                                                        <th width="5%"></th>
                                                                     </thead>
                                                                     <tbody data-repeater-list="so-lan-thanh-toan">
                                                                         <tr data-repeater-item style="display: none;">
+                                                                            <td></td>
                                                                             <td><input class="form-control input-number" type="text" value="" ></td>
                                                                             <td><input class="form-control datepicker input-date" type="text" placeholder="dd/mm/yyyy"></td>
                                                                             <td><input class="form-control input-money" type="text" placeholder="Nhập..."></td>
@@ -2306,6 +2357,7 @@
                                                                             <td><input data-repeater-delete class="btn bg-danger" type="button" value="- Xóa"/></td>
                                                                         </tr>
                                                                         <tr data-repeater-item>
+                                                                            <td></td>
                                                                             <td><input class="form-control" type="text" value="1"></td>
                                                                             <td><input class="form-control datepicker input-date" type="text" placeholder="dd/mm/yyyy" value="16/06/2020"></td>
                                                                             <td><input class="form-control input-money" type="text" placeholder="Nhập..." value="893,400"></td>
@@ -2340,13 +2392,13 @@
                                                                 <div class="form-group">
                                                                     <label>Tài liệu đính kèm: <span class="text-danger">*</span></label>
                                                                     <div class="input-group file-caption-main">
-                                                                        <button class="btn btn-light btn-file mr-3">
+                                                                        <button class="btn btn-light btn-file mr-3 mb-1">
                                                                             <i class="icon-upload7 mr-2"></i> 
                                                                             <span class="hidden-xs">Tải lên tài liệu</span>
                                                                             <input type="file" class="file-input-preview">
                                                                         </button>
 
-                                                                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal_form3">
+                                                                        <button type="button" class="btn btn-light mb-1" data-toggle="modal" data-target="#modal_form3">
                                                                             <i class="icon-stack2 mr-2"></i> 
                                                                             <span class="hidden-xs">Danh sách tài liệu</span>
                                                                         </button>
@@ -2365,7 +2417,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-end">
-                                                    <div class="d-flex">
+                                                    <div class="d-flex-sm p-button">
                                                         <a href="nhap_don1.html" class="btn mr-1"><i class="icon-file-locked mr-1"></i>Đóng đơn</a>
                                                         <a href="nhap_don1.html" class="btn mr-1"><i class="icon-file-check mr-1"></i>Trình duyệt</a>
                                                         <a href="javascript:;" class="btn mr-1"><i class="icon-files-empty mr-1"></i> Lưu & Copy</a>
@@ -3068,9 +3120,9 @@
     <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.js"></script>
     <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.vi.min.js"></script>
     <script src="app-assets/vendors/js/cleave.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/datatables.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/dataTables.responsive.min.js"></script>
     <script src="app-assets/vendors/js/jquery.repeater.min.js"></script>
-    <script src="app-assets/vendors/js/jquery.table-shrinker.js"></script>
-    <script src="app-assets/vendors/js/jsmartable.js"></script>
 
     <!-- /JS Trang-->
     
@@ -3079,6 +3131,7 @@
     <script src="app-assets/js/form_wizard.js"></script>
     <script src="app-assets/js/popover.js"></script>
     <script src="app-assets/js/cleave-phone.vn.js"></script>
+    <script src="app-assets/js/datatables_custom.js"></script>
     <!-- /Custom JS Trang-->
     
     <!-- Custom JS-->

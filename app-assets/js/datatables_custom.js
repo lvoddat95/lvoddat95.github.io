@@ -64,11 +64,19 @@ var DatatableDataSources = function() {
             }
         });
 
-        var table = $('.datatable').DataTable( {
+        var v_datatable = $('.datatable').DataTable( {
+            autoWidth: false,
             responsive: {
                 details: {
                     type: 'column'
-                }
+                },
+                breakpoints: [
+                    {name: 'desktop', width: Infinity},
+                    {name: 'tablet-l', width: 1200},
+                    {name: 'tablet-p', width: 992},
+                    {name: 'mobile-l', width: 576},
+                    {name: 'mobile-p', width: 320}
+                ]
             },
             columnDefs: [
                 {
@@ -80,10 +88,17 @@ var DatatableDataSources = function() {
             "lengthMenu": [
                 [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
                 [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
-            ],
+            ]
+        });
+          
+        $( ".collapse" ).on("shown.bs.collapse", function() {
+            $.each($.fn.dataTable.tables(true), function(){
+                $(this).DataTable().columns.adjust().draw();
+            });
+            v_datatable;
         });
 
-        var table = $('.datatable-right').DataTable( {
+        var table_right = $('.datatable-right').DataTable( {
             responsive: {
                 details: {
                     type: 'column',
@@ -150,7 +165,7 @@ var DatatableDataSources = function() {
 
 
     };
-
+    
     // Select2 for length menu styling
     var _componentSelect2 = function() {
         if (!$().select2) {
@@ -165,6 +180,41 @@ var DatatableDataSources = function() {
             width: 'auto'
         });
     };
+
+    function hideEmptyColumns(selector) {
+        var emptyColumnsIndexes = []; // store index of empty columns here
+        // check each column separately for empty cells
+        $(selector).find('th').each(function(i) {
+            // get all cells for current column
+            var cells = $(this).parents('table').find('tr td:nth-child(' + (i + 1) + ')');
+            var emptyCells = 0;
+     
+            cells.each(function(cell) {
+                // increase emptyCells if current cell is empty, trim string to remove possible spaces in cell
+                if ($(this).html().trim() === '') {
+                    emptyCells++;
+                }
+            });
+     
+            // if all cells are empty push current column to emptyColumns
+            if (emptyCells === $(cells).length) {
+                emptyColumnsIndexes.push($(this).index());
+            }
+        });
+     
+        // only make changes if there are columns to hide
+        if (emptyColumnsIndexes.length > 0) {
+            /* add class never to all empty columns
+                never is a special class of the Responsive extension:
+                Columns with class never will never be visible, regardless of the browser width, and the data will not be shown in a child row
+            */
+            $((selector).DataTable().columns(emptyColumnsIndexes).header()).addClass('never');
+            // Recalculate the column breakpoints based on the class information of the column header cells, class never will now be available to Responsive extension
+            $(selector).DataTable().columns.adjust().responsive.rebuild();
+            // immediatly call recalc to have Responsive extension updae the display for the cahnge in classes
+            $(selector).DataTable().columns.adjust().responsive.recalc();
+        }
+    }
 
 
     //

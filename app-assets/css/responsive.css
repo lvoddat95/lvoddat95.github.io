@@ -1,8 +1,18 @@
-@media only screen and (max-width: 1199px) {
-    .about-opacity-icon i{
-        font-size: 70px;
+@media only screen and (max-width: 1217px) {
+    .dataTable thead th[desktop-10]{
+        width: 10%;
     }
+    
+}
+@media only screen and (max-width: 1009px) {
+    .dataTable thead th[tablet-10]{
+        width: 10%;
+    }
+}
 
+
+@media only screen and (max-width: 1199px) {
+ 
 
 
 
@@ -23,6 +33,10 @@
 
 }
 @media only screen and (max-width: 1199px) {
+    .about-opacity-icon i{
+        font-size: 70px;
+    }
+
     .lineChartWidget{
         display: none;
     }
@@ -239,10 +253,10 @@
     .page-title > *:first-child i{
         margin-right: 5px !important;
     }
-    .page-title .p-button{
+    .p-button{
         margin: -2.5px;
     }
-    .page-title .p-button > *{
+    .p-button > *{
         margin: 2.5px !important;
     }
     .bieu-do > div{

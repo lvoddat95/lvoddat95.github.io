@@ -375,7 +375,7 @@ var App = function () {
         $cardCollapsedClass.children('.card-header').nextAll().hide();
 
         // Rotate icon if collapsed by default
-        $cardCollapsedClass.find('[data-action=collapse]').addClass('rotate-180');
+        $cardCollapsedClass.find('[data-action=collapse]');
 
         // Collapse on click
         $('.card [data-action=collapse]:not(.disabled)').on('click', function (e) {
@@ -384,7 +384,6 @@ var App = function () {
 
             e.preventDefault();
             $target.parents('.card').toggleClass('card-collapsed');
-            $target.toggleClass('rotate-180');
             $target.closest('.card').children('.card-header').nextAll().slideToggle(slidingSpeed);
         });
     };
