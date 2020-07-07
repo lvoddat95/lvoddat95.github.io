@@ -2048,7 +2048,13 @@ hr{
     display: block;
     border-color: transparent #F44336 transparent transparent;
 }
+.event.done .timeline-datetime{
+    color: #4caf50;
+}
 
+.event.active .timeline-datetime{
+    color: #F44336;
+}
 
 .ribbon-custom {
     display: block;
@@ -2087,12 +2093,20 @@ hr{
     border-radius: 5px 0 0 5px;
 }
 .timeline-custom {
-    border-left: 4px solid #4daf51;
     padding: 0;
     margin-left: 60px;
     position: relative;
     list-style: none;
 }
+.timeline-custom:before{
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: -5px;
+    border-left: 5px solid #4daf51;
+    height: calc(100% + 50px);
+}
+
 
 .timeline-custom .event {
     position: relative;
