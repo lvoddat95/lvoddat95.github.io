@@ -16802,9 +16802,10 @@ textarea#HandsontableCopyPaste {
 }
 
 .dtr-inline.collapsed tbody tr td:first-child:before, .dtr-inline.collapsed tbody tr th:first-child:before, .dtr-column tbody tr td.control:before, .dtr-column tbody tr th.control:before {
-    content: "";
+    content: "\ed5e";
     font-family: "icomoon";
     display: inline-block;
+    color: #4CAF50;
     font-size: 1rem;
     width: 1rem;
     line-height: 1;
@@ -16816,7 +16817,8 @@ textarea#HandsontableCopyPaste {
 }
 
 .dataTable.dtr-inline.collapsed tbody tr.parent td:first-child:before, .dataTable.dtr-inline.collapsed tbody tr.parent th:first-child:before, .dataTable.dtr-column tbody tr.parent td.control:before, .dataTable.dtr-column tbody tr.parent th.control:before {
-    content: "";
+    content: "\ed5f";
+    color: #D32929;
 }
 
 .dtr-inline.collapsed tbody tr.child td:before {
