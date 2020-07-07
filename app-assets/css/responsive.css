@@ -295,6 +295,10 @@
     .collapse-group .c-body {
         padding: 15px 10px 10px;
     }
+
+    .timeline-custom .event{
+        min-height: 70px;
+    }
     
 
 
