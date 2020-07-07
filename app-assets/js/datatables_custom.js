@@ -40,7 +40,7 @@ var DatatableDataSources = function() {
                 lengthMenu:     "Hiển thị danh sách _MENU_ bản ghi",
                 loadingRecords: "Đang tải...",
                 processing:     "Đang xử lý...",
-                search:         "Tìm kiếm nhanh: ",
+                search:         "",
                 searchPlaceholder: 'Nhập từ khóa...',
                 zeroRecords:    "Không tìm thấy hồ sơ phù hợp",
                 paginate: {
@@ -70,6 +70,33 @@ var DatatableDataSources = function() {
                     type: 'column'
                 }
             },
+            columnDefs: [
+                {
+                    className: 'control not-desktop text-center',
+                    orderable: false,
+                    targets:   0
+                },
+            ],
+            "lengthMenu": [
+                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
+                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
+            ],
+        });
+
+        var table = $('.datatable-right').DataTable( {
+            responsive: {
+                details: {
+                    type: 'column',
+                    target: -1
+                }
+            },
+            columnDefs: [
+                {
+                    className: 'control not-desktop text-center',
+                    orderable: false,
+                    targets: -1
+                },
+            ],
             "lengthMenu": [
                 [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
                 [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
