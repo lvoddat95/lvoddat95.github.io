@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
     <!-- core stylesheet -->
 
     <!-- custom stylesheet -->
@@ -733,7 +734,13 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <table class="table-ins table table-light table-hover table-res">
+                                <table class="table-list table table-bordered table-hover datatable" 
+                                    data-paging="true"
+                                    data-info="true"
+                                    data-ordering="true"
+                                    data-searching="true"
+                                    data-page-length="20"
+                                >
                                     <colgroup>
                                         <col width="auto">
                                         <col width="auto">
@@ -745,19 +752,21 @@
                                     </colgroup>
                                     <thead class="thead-light">
                                         <tr>
-                                            <th class="text-center"><input type="checkbox" id="input-chk-all"></th>
-                                            <th class="shrinkable">Số đơn</th>
-                                            <th class="shrink-sm">Ngày cấp</th>
-                                            <th class="shrink-lg">Loại hình</th>
-                                            <th class="shrink-xs">Tên khách hàng</td>
-                                            <th class="shrink-md">Cán bộ khai thác</th>
-                                            <th class="shrink-md">Cán bộ cấp đơn</th>
-                                            <th class="">Trạng thái</th>
-                                            <th class="shrink-md">#</th>
+                                            <th class="not-desktop" data-orderable="false" data-class-name="control text-center"></th>
+                                            <th data-orderable="false" class="text-center all"><input type="checkbox" id="input-chk-all"></th>
+                                            <th class="all">Số đơn</th>
+                                            <th class="min-tablet">Ngày cấp</th>
+                                            <th class="desktop">Loại hình</th>
+                                            <th class="min-tablet">Tên khách hàng</td>
+                                            <th class="desktop">Cán bộ khai thác</th>
+                                            <th class="desktop">Cán bộ cấp đơn</th>
+                                            <th class="all">Trạng thái</th>
+                                            <th class="text-center min-tablet" data-orderable="false">#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>042000910/F02.AD19/0099350</td>
                                             <td>26/05/2020</td>
                                             <td>F02</td>
@@ -780,6 +789,7 @@
                                         </tr>
         	
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>61802227/F02.BB19/0102676</td>
                                             <td>27/05/2020</td>
                                             <td>F02</td>
@@ -801,6 +811,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003638/F02.BB19/0102394</td>
                                             <td>22/05/2020</td>
                                             <td>F02</td>
@@ -822,6 +833,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>042000910/F02.AD19/0099350</td>
                                             <td>25/05/2020</td>
                                             <td>F02</td>
@@ -843,6 +855,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003638/F02.BB19/0102393</td>
                                             <td>25/05/2020</td>
                                             <td>E01</td>
@@ -865,6 +878,7 @@
                                         </tr>
         
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003644/F02.AD19/0142538</td>
                                             <td>16/05/2020</td>
                                             <td>F02</td>
@@ -886,6 +900,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003645/F02.BB19/0102671</td>
                                             <td>26/05/2020</td>
                                             <td>F02</td>
@@ -907,6 +922,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003627/F02.AD20/0062252</td>
                                             <td>18/05/2020</td>
                                             <td>F02</td>
@@ -928,6 +944,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000318/E02.12</td>
                                             <td>26/05/2020</td>
                                             <td>E02</td>
@@ -949,6 +966,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003639/F02.AD20/0062459</td>
                                             <td>16/05/2020</td>
                                             <td>F02</td>
@@ -970,6 +988,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003637/F02.AD20/0062458</td>
                                             <td>16/05/2020</td>
                                             <td>F02</td>
@@ -991,6 +1010,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003602/F02.BB19/0102388</td>
                                             <td>26/05/2020</td>
                                             <td>F02</td>
@@ -1012,6 +1032,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003585/F02.BB19/0102389</td>
                                             <td>26/05/2020</td>
                                             <td>F02</td>
@@ -1033,6 +1054,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000357/E02</td>
                                             <td>24/05/2020</td>
                                             <td>E02</td>
@@ -1054,6 +1076,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000028/C01</td>
                                             <td>20/05/2020</td>
                                             <td>C01</td>
@@ -1075,6 +1098,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000024/C01</td>
                                             <td>22/05/2020 </td>
                                             <td>C01</td>
@@ -1096,6 +1120,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000030/C01</td>
                                             <td> 22/05/2020</td>
                                             <td> C01 </td>
@@ -1117,6 +1142,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000031/C01 </td>
                                             <td>	22/04/2020 </td>
                                             <td>	C01 </td>
@@ -1138,6 +1164,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003248/F02.BB19/0082666</td>
                                             <td>20/05/2020</td>
                                             <td>F02</td>
@@ -1159,6 +1186,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003380/F02.BB19/0102290 </td>
                                             <td>	21/05/2020 </td>
                                             <td>	F02 	</td>
@@ -1180,6 +1208,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003248/F02.BB19/0082665</td>
                                             <td>20/05/2020 </td>
                                             <td>F02</td>
@@ -1201,6 +1230,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>	162003369/F02.BB19/0102314</td>
                                             <td> 	21/05/2020 </td>
                                             <td>	F02 	</td>
@@ -1222,6 +1252,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162003457/F02.BB19/0102368 </td>
                                             <td>	22/05/2020 	</td>
                                             <td>F02 	</td>
@@ -1243,6 +1274,7 @@
 											</td>
                                         </tr>
                                         <tr>
+                                            <td></td>
                                             <td align="center"><input type="checkbox" class="input-chk"></td><td>162000022/C01 	</td>
                                             <td>13/05/2020 </td>
                                             <td>	C01 	</td>
@@ -1266,40 +1298,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="card-footer card-list-footer d-sm-flex justify-content-sm-between align-items-sm-center">
-								<div class="d-flex align-items-center">
-                                    Hiển thị 
-                                    <div class="form-group mr-2 ml-2 mb-0">
-                                        <div class="form-group-select">
-                                            <select class="form-control" name="so_ban_ghi">
-                                                <option value="20">25</option>
-                                                <option value="50">50</option>
-                                                <option value="70">75</option>
-                                                <option value="100">100</option>
-                                                <option value="125">125</option>
-                                                <option value="150">150</option>
-                                                <option value="200">200</option>
-                                                <option value="250">250</option>
-                                                <option value="300">300</option>
-                                                <option value="400">400</option>
-                                                <option value="500">500</option>
-                                                <option value="1000">1000</option>
-                                            </select>
-                                            <span class="select-icon"><i class="icon-arrow-down22"></i></span>
-                                        </div>
-                                    </div>
-                                    trên 264 bản ghi
-                                </div>
-
-								<ul class="pagination pagination-flat ">
-                                    <li class="page-item"><a href="#" class="page-link">← &nbsp; Trước</a></li>
-                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                    <li class="page-item disabled"><a href="#" class="page-link">3</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">Sau &nbsp; →</a></li>
-                                </ul>
-							</div>
                         </div>
                         <!-- End - Danh Sách Đơn -->
                         
@@ -1341,21 +1339,28 @@
 
                             <div class="tab-content">
                                 <div class="tab-pane fade active show" id="modal_tab1">
-                                    <table class="table table-bordered ">
+                                    <table class="table table-bordered datatable" 
+                                        data-paging="false"
+                                        data-info="false"
+                                        data-ordering="false"
+                                        data-searching="false"
+                                    >
                                         <thead class="thead-light">
                                             <tr>
-                                                <th width="1%">#</th>
-                                                <th width="18%">Số hồ sơ BT</th>
-                                                <th width="18%">Số đơn BH</th>
-                                                <th width="11%">Ngày tổn thất</th>
-                                                <th width="11%">Ngày thông báo</th>
-                                                <th width="13%">Tổng phí BH</th>
-                                                <th width="13%">Số tiền dự phòng đã duyệt</th>
-                                                <th width="13%">Số tiền thanh toán đã duyệt</th>
+                                                <th width="1%" class="not-desktop" data-orderable="false" data-class-name="control text-center"></th>
+                                                <th width="1%" class="desktop">#</th>
+                                                <th width="18%" class="all">Số hồ sơ BT</th>
+                                                <th width="18%" class="tablet-p">Số đơn BH</th>
+                                                <th width="11%" class="desktop">Ngày tổn thất</th>
+                                                <th width="11%" class="desktop">Ngày thông báo</th>
+                                                <th width="13%" class="all">Tổng phí BH</th>
+                                                <th width="13%" class="min-tablet">Số tiền dự phòng đã duyệt</th>
+                                                <th width="13%" class="min-tablet">Số tiền thanh toán đã duyệt</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td></td>
                                                 <td align="center"> 1 </td>
                                                 <td>BT011000269.F02 </td>
                                                 <td>010900978.E01.BB068501 </td>
@@ -1376,7 +1381,7 @@
                                     <div class="modal-chart">
                                         <div class="chart-container text-center">
                                             <div class="d-inline-block" 
-                                            data-size="350"
+                                            data-size="250"
                                             data-color="#3F51B5, #FF9800"
                                             data-columns='["Bồi thường",47.5],["Doanh thu",52.5]'
                                             id="c3-pie-chart"></div>
@@ -1385,19 +1390,19 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="modal_tab2">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered table-res">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th width="2%">#</th>
-                                                <th width="9%">Số hồ sơ BT</th>
+                                                <th width="2%" class="shrink-md">#</th>
+                                                <th width="9%" class="shrink-xs">Số hồ sơ BT</th>
                                                 <th width="13%">Số đơn BH</th>
-                                                <th width="15%">Loại hình BH</th>
-                                                <th width="10%">Ngày tổn thất</th>
-                                                <th width="10%">Ngày thông báo</th>
+                                                <th width="15%" class="shrink-md">Loại hình BH</th>
+                                                <th width="10%" class="shrink-md">Ngày tổn thất</th>
+                                                <th width="10%" class="shrink-md">Ngày thông báo</th>
                                                 <th width="10%">Tổng phí BH</th>
-                                                <th width="10%">Số tiền dự phòng đã duyệt</th>
-                                                <th width="10%">Số tiền thanh toán đã duyệt</th>
-                                                <th width="10%">Ngày thu phí</th>
+                                                <th width="10%" class="shrink-sm">Số tiền dự phòng đã duyệt</th>
+                                                <th width="10%" class="shrink-sm">Số tiền thanh toán đã duyệt</th>
+                                                <th width="10%" class="shrink-md">Ngày thu phí</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1433,18 +1438,18 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="modal_tab3">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered table-res">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th width="2%">#</th>
-                                                <th width="10%">Số hồ sơ BT</th>
+                                                <th width="2%" class="shrink-md">#</th>
+                                                <th width="10%" class="shrink-xs">Số hồ sơ BT</th>
                                                 <th width="15%">Số đơn BH</th>
-                                                <th width="10%">Ngày tổn thất</th>
-                                                <th width="10%">Ngày thông báo</th>
+                                                <th width="10%" class="shrink-md">Ngày tổn thất</th>
+                                                <th width="10%" class="shrink-md">Ngày thông báo</th>
                                                 <th width="13%">Tổng phí BH</th>
-                                                <th width="13%">Số tiền dự phòng đã duyệt</th>
-                                                <th width="13%">Số tiền thanh toán đã duyệt</th>
-                                                <th width="13%">Ngày thu phí</th>
+                                                <th width="13%" class="shrink-sm">Số tiền dự phòng đã duyệt</th>
+                                                <th width="13%" class="shrink-sm">Số tiền thanh toán đã duyệt</th>
+                                                <th width="13%" class="shrink-md">Ngày thu phí</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1513,19 +1518,19 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="modal_tab4">
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered table-res">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th width="2%">#</th>
-                                                <th width="9%">Số hồ sơ BT</th>
+                                                <th width="2%" class="shrink-md">#</th>
+                                                <th width="9%" class="shrink-xs">Số hồ sơ BT</th>
                                                 <th width="13%">Số đơn BH</th>
-                                                <th width="15%">Loại hình BH</th>
-                                                <th width="10%">Ngày tổn thất</th>
-                                                <th width="10%">Ngày thông báo</th>
+                                                <th width="15%" class="shrink-md">Loại hình BH</th>
+                                                <th width="10%" class="shrink-md">Ngày tổn thất</th>
+                                                <th width="10%" class="shrink-md">Ngày thông báo</th>
                                                 <th width="10%">Tổng phí BH</th>
-                                                <th width="10%">Số tiền dự phòng đã duyệt</th>
-                                                <th width="10%">Số tiền thanh toán đã duyệt</th>
-                                                <th width="10%">Ngày thu phí</th>
+                                                <th width="10%" class="shrink-sm">Số tiền dự phòng đã duyệt</th>
+                                                <th width="10%" class="shrink-sm">Số tiền thanh toán đã duyệt</th>
+                                                <th width="10%" class="shrink-md">Ngày thu phí</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1599,6 +1604,7 @@
     <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.vi.min.js"></script>
     <script src="app-assets/vendors/js/cleave.min.js"></script>
     <script src="app-assets/vendors/js/datatable/datatables.min.js"></script>
+    <script src="app-assets/vendors/js/datatable/responsive.min.js"></script>
     <script src="app-assets/vendors/js/datatable/dataTables.buttons.min.js"></script>
     <script src="app-assets/vendors/js/datatable/buttons.flash.min.js"></script>
     <script src="app-assets/vendors/js/datatable/jszip.min.js"></script>
@@ -1609,7 +1615,6 @@
     <script src="app-assets/vendors/js/chart/d3.min.js"></script>
     <script src="app-assets/vendors/js/chart/d3_tooltip.js"></script>
     <script src="app-assets/vendors/js/chart/c3.min.js"></script>
-    <script src="app-assets/vendors/js/jquery.table-shrinker.js"></script>
     <!-- /JS Trang-->
     
     <!-- Custom JS Trang-->

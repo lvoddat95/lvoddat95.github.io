@@ -1,21 +1,6 @@
 
 $(function(){
 
-    if ($('.table-res').length > 0) {
-        var opt = {
-            customToggle: ["<span class='iconPlus bg-success'></span>","<span class='iconMinus bg-danger'></span>"],
-            customToggleAll: ["<span class='iconPlus bg-success'></span>","<span class='iconMinus bg-danger'></span>"],
-            iconsOnLeft:true,
-            useZebra: true,
-            useTransitions: false,
-            useObserver: true,
-            showToggle: true,
-            showToggleAll: true,
-            
-        };
-        $(".table-res").tableShrinker(opt);
-    }
-
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
     });
@@ -158,9 +143,6 @@ $(function(){
         })
     }
 
-    
-
-    
     $(".go-top").click(function () {
         $("html, body").animate({scrollTop: 0}, 500);
     });

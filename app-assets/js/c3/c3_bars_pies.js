@@ -68,6 +68,8 @@ var С3BarsPies = function() {
             var data_color = pie_chart_element2.getAttribute('data-color');
             var data_columns = pie_chart_element2.getAttribute('data-columns');
 
+            if(!data_size) data_size = '100%';
+
             // Generate chart
             var pie_chart = c3.generate({
                 bindto: pie_chart_element2,

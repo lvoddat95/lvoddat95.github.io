@@ -4107,10 +4107,7 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
     border-top-right-radius: 6px;
 }
 .modal-body{
-    padding: 0 15px;
-}
-.modal-body[class*=bg-]:not(.bg-transparent):not(.bg-light):not(.bg-white):not(.btn-outline):not(body){
-	padding: 15px;
+    padding: 15px;
 }
 .modal-content {
 	border-radius: 6px;

@@ -38,10 +38,18 @@
 
 <body class="sidebar-xs">
     <div class="page-content">
-        <div class="sidebar sidebar-main sidebar-expand-md">
+        <div class="sidebar">
+            <!-- Mobile Top -->
+            <div class="sidebar-mobile-toggler">
+				<span>Danh sách Menu</span>
+				<a href="#" class="sidebar-mobile-main-close">
+					<i class="icon-arrow-left8"></i>
+				</a>
+            </div>
+            <!-- Mobile Top -->
+            
             <!-- Sidebar content -->
             <div class="sidebar-content">
-                
                 <!-- Logo -->
                 <div class="logo clearfix">
                     <a href="#" class="sidebar-main-toggle">
@@ -58,11 +66,10 @@
                 <div class="card card-sidebar-mobile">
                     <ul class="nav nav-sidebar" data-nav-type="accordion">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">
+                            <a href="index.html" class="nav-link active" data-menu-title="Bảng điều khiển">
                                 <i class="linearicons-home"></i>
                                 <span class="menu-title">Bảng điều khiển</span>
                             </a>
-                            
                         </li>
                         <li class="nav-item nav-item-submenu">
                             <a href="javascript:;" class="nav-link">
@@ -79,14 +86,14 @@
                                 <!-- <li><a href="faq.html" class="nav-link"><div class="menu-title">Trang FAQ</div></a></li> -->
                             </ul>
                         </li>
-                        <li class="nav-item nav-item-submenu nav-item-open">
-                            <a href="javascript:;" class="nav-link active">
+                        <li class="nav-item nav-item-submenu">
+                            <a href="javascript:;" class="nav-link">
                                 <i class="linearicons-car"></i>
                                 <span class="menu-title"> Bảo hiểm xe cơ giới</span>
                             </a>
     
-                            <ul class="nav nav-group-sub " data-submenu-title="Bảo hiểm xe cơ giới">
-                                <li><a href="index2.html" class="nav-link active"><div class="menu-title">F01 - Bảo hiểm xe máy</div></a></li>
+                            <ul class="nav nav-group-sub" data-submenu-title="Bảo hiểm xe cơ giới">
+                                <li><a href="index2.html" class="nav-link"><div class="menu-title">F01 - Bảo hiểm xe máy</div></a></li>
                                 <li class="active"><a href="index2.html" class="nav-link"><div class="menu-title">F02 - Bảo hiểm ô tô</div></a></li>
                             </ul>
                         </li>
@@ -256,7 +263,6 @@
                                 <li><a href="" class="nav-link"><div class="menu-title">I01 - Bảo hiểm dầu khí</div></a></li>
                             </ul>
                         </li>
-    
                         <li class="nav-item nav-item-submenu">
                             <a href="javascript:;" class="nav-link">
                                 <i class="linearicons-repeat-one3"></i>
@@ -275,6 +281,8 @@
                                 <li><a href="" class="nav-link"><div class="menu-title">J11 - Nhận tái cố định nhóm bảo hiểm dầu khí</div></a></li>
                             </ul>
                         </li>
+                        
+                        
                     </ul>
                 </div>
                 <!-- End-Main navigation -->
@@ -294,17 +302,46 @@
                 <!-- End-BOX -->
             </div>
             <!-- End-Sidebar content -->
+
         </div>
         <div class="content-wrapper">
             
             <div class="content">
                 
+                <div class="mobile-bottom" >
+                    <a class="item" href="index.html">
+                        <i class="icon linearicons-home"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                    <a class="item mess" href="index.html">
+                        <i class="icon linearicons-bubble-dots"><span class="badge ">9</span></i>
+                        <span>Thông báo</span>
+                    </a>
+                    <a class="item" href="index.html">
+                        <i class="icon linearicons-layers"></i>
+                        <span>Ứng dụng</span>
+                    </a>
+                    <a class="item sidebar-mobile-main-toggle" href="javascript:;">
+                        <i class="icon linearicons-text-align-left"></i>
+                        <span>Menu</span>
+                    </a>
+                </div>
+
+                <!-- Header -->
                 <div class="header-top">
+                    <button class="d-md-none sidebar-mobile-main-toggle" type="button">
+                        <i class="linearicons-text-align-left font-size-m font-weight-bold"></i>
+                    </button>
                     <div class="top-left">
-                        
                         <div class="breadcrumb">
                             <a href="index2.html" class="breadcrumb-item"><i class="icon-steering-wheel mr-1"></i> F02 - Bảo hiểm ô tô</a>
                             <span class="breadcrumb-item active">Cập nhập đơn</span>
+                        </div>
+                        <div class="d-md-none logo-mobile">
+                            <a href="index.html" class="logo-text">
+                                <div class="logo-img"><img src="app-assets/images/logo/logo2.png" alt="Convex Logo"></div>
+                                <span class="text align-middle" style="font-weight: 900;">VNI</span>
+                            </a>
                         </div>
                     </div>
                     <div class="top-right">
@@ -314,12 +351,12 @@
                                 <a href="#" class="btn-search"><i class="linearicons-magnifier"></i></a>
                             </li>
                             <li>
-                                <a href="#" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Trợ giúp">
+                                <a href="#" data-popup="tooltip" data-trigger="hover" data-placement="bottom" data-original-title="Trợ giúp">
                                     <i class="icon-help"></i>
                                 </a>
                             </li>
                             <li class="dropdown-alert dropdown">
-                                <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" data-popup="tooltip" title="" data-placement="bottom" data-original-title="Thông báo">
+                                <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" data-popup="tooltip" data-trigger="hover" data-placement="bottom" data-original-title="Thông báo">
                                     <i class="icon-bubbles4"></i>
                                     <span class="badge ">9</span>
                                 </a>
@@ -345,7 +382,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted">VNI HCM gửi chứng từ báo mất ấn chỉ tháng 04/2020 </span>
+                                                    <span class="text-muted font-size-xxs">VNI HCM gửi chứng từ báo mất ấn chỉ tháng 04/2020 </span>
                                                 </div>
                                             </li>
                 
@@ -363,7 +400,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted">Danh bạ điện thoại toàn hệ thống VNI tính đến ngày
+                                                    <span class="text-muted font-size-xxs">Danh bạ điện thoại toàn hệ thống VNI tính đến ngày
                                                         19/4/2020</span>
                                                 </div>
                                             </li>
@@ -382,7 +419,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted">BH bắt buộc TNDS xe máy &amp; bảo hiểm tai nạn con người
+                                                    <span class="text-muted font-size-xxs">BH bắt buộc TNDS xe máy &amp; bảo hiểm tai nạn con người
                                                         theo ...</span>
                                                 </div>
                                             </li>
@@ -401,7 +438,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted">Nhằm quảng bá thương hiệu, hình ảnh VNI một các đồng bộ,
+                                                    <span class="text-muted font-size-xxs">Nhằm quảng bá thương hiệu, hình ảnh VNI một các đồng bộ,
                                                         Tổng công ty...</span>
                                                 </div>
                                             </li>
@@ -420,7 +457,7 @@
                                                         </a>
                                                     </div>
                 
-                                                    <span class="text-muted">Đơn bảo hiểm bảo hiểm 032002397/F02 phát sinh
+                                                    <span class="text-muted font-size-xxs">Đơn bảo hiểm bảo hiểm 032002397/F02 phát sinh
                                                         ngày...</span>
                                                 </div>
                                             </li>
@@ -460,11 +497,12 @@
 
                     </div>
                 </div>
+                <!-- /Header -->
                 <div class="page-title">
-                    <div>
+                    <div class="p-title">
                         <p class="font-weight-semibold font-size-m"><i class="icon-certificate mr-2"></i>Cập nhập đơn bảo hiểm</p>
                     </div>
-                    <div>
+                    <div class="p-button">
                         <div class="side-box d-inline-block">
                             <a class="side-btn btn btn-light mr-2" href=""><span class="badge badge-mark border-success mr-1 ripple-success"></span>Trạng thái đơn</a>
                             <div class="side-box-content">
@@ -1528,7 +1566,6 @@
                                                 <div class="header-elements">
                                                     <div class="list-icons">
                                                         <a class="list-icons-item rotate-180" data-action="collapse"></a>
-                                                        
                                                         <a class="list-icons-item" data-fullscreen="remove"></a>
                                                         <a class="list-icons-item" data-action="fullscreen"></a>
                                                     </div>
@@ -1557,7 +1594,7 @@
                                                                             <div id="collapsible-item-nested-child1" class="collapse">
                                                                                 <div class="c-body">
                                                                                     
-                                                                                    <table class="table table-bordered table-size12">
+                                                                                    <table class="table table-bordered table-res">
                                                                                         <colgroup>
                                                                                             <col width="20%">
                                                                                             <col width="10%">
@@ -1573,13 +1610,13 @@
                                                                                             <tr>
                                                                                                 <th>Phạm vi bảo hiểm</th>
                                                                                                 <th>Số tiền bảo hiểm</th>
-                                                                                                <th>Phí (%)</th>
-                                                                                                <th>Phí BH (có VAT)</th>
-                                                                                                <th>VAT (%)</th>
-                                                                                                <th>VAT</th>
-                                                                                                <th>COM (%)</th>
-                                                                                                <th>COM</th>
-                                                                                                <th>Định mức</th>
+                                                                                                <th class="shrink-lg">Phí (%)</th>
+                                                                                                <th class="shrink-lg">Phí BH (có VAT)</th>
+                                                                                                <th class="shrink-lg">VAT (%)</th>
+                                                                                                <th class="shrink-lg">VAT</th>
+                                                                                                <th class="shrink-lg">COM (%)</th>
+                                                                                                <th class="shrink-lg">COM</th>
+                                                                                                <th class="shrink-lg">Định mức</th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
@@ -1614,21 +1651,23 @@
                                                                                             </tr>
                                                                                         </tbody>
                                                                                     </table>
-                                                                                    <table class="table table-bordered table-size12" style="margin-top: -1px;">
-                                                                                        <tbody>
+                                                                                    <table class="table table-bordered table-res" style="margin-top: -1px;">
+                                                                                        <thead>
                                                                                             <tr>
                                                                                                 <th width="20%">
                                                                                                     <b>II. Điều khoản sửa đổi bổ sung</b>
                                                                                                 </th>
-                                                                                                <th width="10%"></th>
+                                                                                                <th width="10%" class="shrink-lg"></th>
                                                                                                 <th width="5%"></th>
-                                                                                                <th width="10%"></th>
-                                                                                                <th width="5%"></th>
-                                                                                                <th width="10%"></th>
-                                                                                                <th width="5%"></th>
-                                                                                                <th width="10%"></th>
-                                                                                                <th width="20%"></th>
+                                                                                                <th width="10%" class="shrink-lg"></th>
+                                                                                                <th width="5%" class="shrink-lg"></th>
+                                                                                                <th width="10%" class="shrink-lg"></th>
+                                                                                                <th width="5%" class="shrink-lg"></th>
+                                                                                                <th width="10%" class="shrink-lg"></th>
+                                                                                                <th width="20%" class="shrink-lg"></th>
                                                                                             </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
                                                                                             <tr>
                                                                                                 <td>
                                                                                                     <div class="dkbs">
@@ -1821,15 +1860,15 @@
                                                                                     <table class="table table-bordered table-size12" style="margin-top: -1px;">
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td width="20%"><b>Tổng cộng: </b></td>
+                                                                                                <td width="20%" class="shrink-lg"><b>Tổng cộng: </b></td>
                                                                                                 <td width="10%" align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right"><input class="form-control text-right" type="text" disabled readonly value="0.99"></td>
-                                                                                                <td width="10%"align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right"><input class="form-control text-right" type="text" disabled readonly value="10"></td>
-                                                                                                <td width="10%" align="right"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
-                                                                                                <td width="5%" align="right"><input class="form-control text-right" type="text" disabled readonly value="10.0"></td>
-                                                                                                <td width="10%"align="right"></td>
-                                                                                                <td width="20%" align="right"></td>
+                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0.99"></td>
+                                                                                                <td width="10%"align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="10"></td>
+                                                                                                <td width="10%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="0"></td>
+                                                                                                <td width="5%" align="right" class="shrink-lg"><input class="form-control text-right" type="text" disabled readonly value="10.0"></td>
+                                                                                                <td width="10%"align="right" class="shrink-lg"></td>
+                                                                                                <td width="20%" align="right" class="shrink-lg"></td>
                                                                                             </tr>
                                                                                         </tbody>
                                                                                     </table>
@@ -3030,6 +3069,8 @@
     <script src="app-assets/vendors/js/bootstrap/bootstrap-datepicker.vi.min.js"></script>
     <script src="app-assets/vendors/js/cleave.min.js"></script>
     <script src="app-assets/vendors/js/jquery.repeater.min.js"></script>
+    <script src="app-assets/vendors/js/jquery.table-shrinker.js"></script>
+    <script src="app-assets/vendors/js/jsmartable.js"></script>
 
     <!-- /JS Trang-->
     
