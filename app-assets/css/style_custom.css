@@ -1996,50 +1996,6 @@ hr{
     transition: transform .25s ease;
     transition: transform .25s ease, -webkit-transform .25s ease;
 }
-
-.timeline-custom {
-    border-left: 2px dashed #607D8B;
-    padding: 0;
-    margin-left: 10px;
-    position: relative;
-    list-style: none;
-}
-
-.timeline-info {
-    position: relative;
-    top: -3px;
-    margin-left: 23px;
-    margin-bottom: 3px;
-    font-weight: 500;
-    display: block;
-    padding: 9px;
-    border-radius: 4px;
-    background: #607D8B;
-    color: #fff;
-}
-.timeline-info:before{
-    content: '';
-    position: absolute;
-    top: 5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    left: -8px;
-    border-width: 7px 8px 7px 0;
-    border-color: transparent #607D8B transparent transparent;
-}
-.event.done .timeline-info:before {
-    border-color: transparent #8bc34a transparent transparent;
-}
-.event.done .timeline-info{
-    background: #8bc34a;
-}
-.event.active  .timeline-info{
-    background: #F44336;
-}
-.event.active .timeline-info:before {
-    border-color: transparent #F44336 transparent transparent;
-}
 .timeline-title {
     background: #f1f5f8;
     margin: -20px;
@@ -2047,6 +2003,50 @@ hr{
     padding: 12px 20px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+
+.timeline-headding {
+    position: relative;
+    top: 0;
+    margin-left: 23px;
+    margin-bottom: 3px;
+    font-weight: 500;
+    display: block;
+    padding: 9px;
+    border-radius: 4px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+}
+.timeline-headding:before{
+    content: '';
+    display: none;
+    position: absolute;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: -8px;
+    border-width: 7px 8px 7px 0;
+    border-color: transparent #f2f2f2 transparent transparent;
+}
+.event.done .timeline-headding:before {
+    display: block;
+    border-color: transparent #4caf50 transparent transparent;
+}
+.event.done .timeline-headding{
+    background: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+}
+.event.active  .timeline-headding{
+    background: #F44336;
+    color: #fff;
+    border-color: #F44336;
+}
+.event.active .timeline-headding:before {
+    display: block;
+    border-color: transparent #F44336 transparent transparent;
 }
 
 
@@ -2086,6 +2086,13 @@ hr{
     background: lightblue;
     border-radius: 5px 0 0 5px;
 }
+.timeline-custom {
+    border-left: 4px solid #4daf51;
+    padding: 0;
+    margin-left: 60px;
+    position: relative;
+    list-style: none;
+}
 
 .timeline-custom .event {
     position: relative;
@@ -2099,34 +2106,25 @@ hr{
     min-height: auto;
 }
 
-.timeline-custom .event:before, .timeline-custom .event:after {
+.timeline-custom .event:before{
     position: absolute;
     display: block;
     top: 0;
 }
 
-.timeline-custom .event:after {
-    position: relative;
-    top: -3px;
-    right: 0;
-    content: attr(data-date);
-    font-size: 90%;
-    padding-left: 30px;
-}
-
 .timeline-custom .event:before {
     content: '';
-    left: -11px;
+    top: 7px;
+    left: -12px;
     background: #ffffff;
     border-radius: 50%;
     height: 20px;
     width: 20px;
     line-height: 20px;
-    top: 0;
-    box-shadow: 0 0 0 4px #607D8B;
+    box-shadow: 0 0 0 4px #ccc;
 }
 .timeline-custom .event.done:before {
-    box-shadow: 0 0 0 4px #8BC34A;
+    box-shadow: 0 0 0 4px #4caf50;
 }
 
 .timeline-custom .event.active:before {
@@ -2144,14 +2142,14 @@ hr{
 }
 .timeline-custom .event:first-child:before,
 .timeline-custom .event:last-child:before{
-    background: #607D8B;
+    background: #ccc;
     border: 3px solid #fff;
 }
 .timeline-custom .event.done:first-child:before{
-    background: #8BC34A;
+    background: #4caf50;
 }
 .timeline-custom .event.done:last-child:before{
-    background: #8BC34A;
+    background: #4caf50;
 }
 .timeline-custom .event.active:first-child:before{
     background: #F44336;
@@ -2159,6 +2157,19 @@ hr{
 .timeline-custom .event.active:last-child:before{
     background: #F44336;
 }
+
+.timeline-custom .timeline-datetime {
+    position: absolute;
+    top: 4px;
+    font-size: 90%;
+    left: -70px;
+    text-align: center;
+}
+.timeline-datetime span {
+    display: block;
+    padding: 3px 0;
+}
+
 .side-box.open .timeline-custom .event:nth-child(1){
 	opacity: 0;
 	transform: translateX(50px);
