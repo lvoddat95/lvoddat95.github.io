@@ -9,19 +9,19 @@ $(function(){
         $(this).parents('.quick-action').toggleClass('toggle');
     });
 
-    $(document).on('click', function() {
-        if ($('.card-search').length > 0) {
-            $('.card-search').removeClass('overlay');
-        }
-    });
+    // $(document).on('click', function() {
+    //     if ($('.card-search').length > 0) {
+    //         $('.card-search').removeClass('overlay');
+    //     }
+    // });
     
     
-    $(".card-search").children().on('click', function (e) {
-        e.stopPropagation();
-        if ($(this).parent().hasClass('card-collapsed')) return false;
+    // $(".card-search").children().on('click', function (e) {
+    //     e.stopPropagation();
+    //     if ($(this).parent().hasClass('card-collapsed')) return false;
 
-        $(this).parent().addClass('overlay');
-    });
+    //     $(this).parent().addClass('overlay');
+    // });
     
     if ($('.side-box').length > 0) {
         $(".side-box").on('click','.side-btn', function (e) {
