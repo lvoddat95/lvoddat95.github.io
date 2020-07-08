@@ -918,6 +918,11 @@ a.sidebar-main-toggle:hover{
 .button-switch .switch {
     position: absolute;
     outline: none;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
 }
 
 .button-switch .switch:before, .button-switch .switch:after {
