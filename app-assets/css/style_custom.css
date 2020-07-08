@@ -882,6 +882,7 @@ a.sidebar-main-toggle:hover{
     color: #fff;
     height: 24px;
     position: relative;
+    overflow: hidden;
     width: 60px;
 }
 
@@ -915,13 +916,11 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch .switch {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    position: absolute;
+    outline: none;
 }
 
 .button-switch .switch:before, .button-switch .switch:after {
-    display: none;
     content: "";
     position: absolute;
     font-family: icomoon!important;
