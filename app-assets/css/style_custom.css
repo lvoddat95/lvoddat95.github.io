@@ -1170,8 +1170,9 @@ hr{
 }
 
 .popover {
-    border-color: #32353f;
-    background: #32353f;
+    border-color: #000;
+    background: #000;
+    font-size: inherit;
 }
 .bs-popover-top>.arrow::after, .bs-popover-auto[x-placement^="top"]>.arrow::after {
     bottom: 2px;
@@ -1212,7 +1213,7 @@ hr{
 
 .popover-body {
     font-size: inherit;
-    padding: 10px;
+    padding: 6px;
     color: #fff;
 }
 
@@ -1830,6 +1831,7 @@ hr{
     text-align: center;
     color: #2d3748;
     border-radius: 4px;
+    cursor: pointer !important;
 }
 
 .act-space {
