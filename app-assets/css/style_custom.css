@@ -1745,9 +1745,9 @@ hr{
 
 #chat-circle {
     position: fixed;
-    z-index: 3;
-    bottom: 20px;
-    right: 15px;
+    z-index: 9;
+    bottom: 15%;
+    left: 15px;
     background: #1c3faa;
     width: 45px;
     height: 45px;
