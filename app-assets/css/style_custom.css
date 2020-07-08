@@ -921,6 +921,7 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch .switch:before, .button-switch .switch:after {
+    display: none;
     content: "";
     position: absolute;
     font-family: icomoon!important;
