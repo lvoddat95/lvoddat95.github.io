@@ -880,11 +880,11 @@ a.sidebar-main-toggle:hover{
 .button-switch {
     font-weight: 400;
     color: #fff;
-    height: 24px;
+    height: 28px;
     position: relative;
     overflow: hidden;
-    width: 60px;
-    margin-top: -3px;
+    width: 64px;
+    margin-top: -6px;
     margin-left: -3px;
 }
 
@@ -909,7 +909,7 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch .lbl-off {
-    right: 9px;
+    right: 10px;
 }
 
 .button-switch .lbl-on {
@@ -947,7 +947,7 @@ a.sidebar-main-toggle:hover{
     height: 24px;
     width: 60px;
     left: 0;
-    top: 0;
+    top: 2px;
     -webkit-transition: background-color 0.25s ease-out 0.1s;
     transition: background-color 0.25s ease-out 0.1s;
 }
@@ -962,7 +962,7 @@ a.sidebar-main-toggle:hover{
 
 .button-switch .switch:after {
     content: "\ed6a";
-    top: 4px;
+    top: 6px;
     left: 4px;
     font-size: 7px;
     cursor: pointer;
@@ -998,6 +998,7 @@ a.sidebar-main-toggle:hover{
 .button-switch .switch#switch-blue:checked:before {
     background: #3498db;
 }
+
 
 .switch-title {
     font-size: 12px;
