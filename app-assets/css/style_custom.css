@@ -884,6 +884,8 @@ a.sidebar-main-toggle:hover{
     position: relative;
     overflow: hidden;
     width: 60px;
+    margin-top: -3px;
+    margin-left: -3px;
 }
 
 .button-switch.button-switch.no-label {
