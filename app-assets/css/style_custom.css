@@ -891,7 +891,9 @@ a.sidebar-main-toggle:hover{
 .button-switch.no-label .switch + label:before{
     content: '';
 }
-
+.switch {
+    display: none;
+}
 .switch + label{
     position: absolute;
     top: 0;
