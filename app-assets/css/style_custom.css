@@ -23,6 +23,7 @@ body {
 }
 
 .page-content {
+    min-height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-positive: 1;
@@ -50,8 +51,6 @@ body {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex: 1;
-    flex: 1;
     padding: 15px;
 }
 
@@ -896,8 +895,8 @@ a.sidebar-main-toggle:hover{
     position: absolute;
     pointer-events: none;
     font-size: 10px;
-    top: 4.5px;
-    margin: 0;
+    top: 50%;
+    margin: -7px 0 0;
     -webkit-transition: opacity 0.25s ease-out 0.1s;
     transition: opacity 0.25s ease-out 0.1s;
 }
@@ -913,7 +912,6 @@ a.sidebar-main-toggle:hover{
 .button-switch .lbl-on {
     opacity: 0;
     left: 16px;
-    margin: 0;
 }
 
 .button-switch .switch {
@@ -969,15 +967,7 @@ a.sidebar-main-toggle:hover{
     left: 4px;
     font-size: 7px;
     cursor: pointer;
-    box-shadow: 0 0.0625em 0.375em 0 #666;
     text-align: center;
-    transform: none;
-    -webkit-transition: -webkit-transform 0.25s ease-out 0.1s;
-    transition:
-    -webkit-transform 0.25s ease-out 0.1s;
-    transition: transform 0.25s ease-out 0.1s;
-    transition: transform 0.25s ease-out 0.1s,
-    -webkit-transform 0.25s ease-out 0.1s;
 }
 
 .button-switch .switch:checked:after {
