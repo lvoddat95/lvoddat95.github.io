@@ -1,7 +1,7 @@
 @media only screen and (min-width: 768px) {
     .wizard>.actions {
         position: fixed;
-        bottom: 0;
+        bottom: 15px;
         right: 15px;
         z-index: 11;
         border-radius: 6px;
@@ -9,6 +9,9 @@
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
+    body:not(.sidebar-xs) .wizard>.actions {
+        left: 265px;
+    }
 
 
 
@@ -305,6 +308,9 @@
         min-height: 70px;
     }
     
+    #chat-circle {
+        bottom: 15%;
+    }
 
 
 
