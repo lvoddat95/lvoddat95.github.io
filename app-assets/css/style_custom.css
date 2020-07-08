@@ -941,7 +941,7 @@ a.sidebar-main-toggle:hover{
     line-height: 16px;
 }
 
-.button-switch .switch:before {
+/* .button-switch .switch:before {
     cursor: pointer;
     border-radius: 30px;
     background: #bdc3c7;
@@ -959,7 +959,7 @@ a.sidebar-main-toggle:hover{
 
 .button-switch .switch:checked:before {
     background-color: #4caf50;
-}
+} */
 
 .button-switch .switch:after {
     content: "\ed6a";
