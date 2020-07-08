@@ -915,8 +915,9 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch .switch {
-    opacity: 0;
-    visibility: hidden;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .button-switch .switch:before, .button-switch .switch:after {
