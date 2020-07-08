@@ -30,7 +30,6 @@ var FormWizard = function() {
             headerTag: 'h6',
             bodyTag: 'fieldset',
             titleTemplate: '<span class="number">#index#</span> #title#',
-            // titleTemplate: '<span class="step">#index#</span> #title#',
             labels: {
                 current: "Bước đầu:",
                 pagination: "Phân trang",

@@ -133,8 +133,6 @@
         margin-top: auto;
         color: #fff;
         margin: auto -15px 0;
-        -ms-flex-grow: 1;
-        flex-grow: 1;
         max-height: 59px;
         padding: 10px 15px 7px !important;
     }
