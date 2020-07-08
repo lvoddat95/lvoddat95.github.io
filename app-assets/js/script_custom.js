@@ -1,5 +1,38 @@
-
 $(function(){
+
+    if ($('[data-tooltip="tipsy"]').length > 0) {
+
+        $('[data-tooltip="tipsy"]').each(function (index) {
+            var $this = $(this);
+            var v_gravity = '';
+            var v_pos = $this.data('position');
+
+            // Mac dinh hien thi "top"
+            if (!v_pos){
+                v_gravity = 's';
+            }else if( v_pos == 'bottom' ){
+                v_gravity = 'n';
+            }else if( v_pos == 'left' ){
+                v_gravity = 'e';
+            }else if( v_pos == 'right' ){
+                v_gravity = 'w';
+            }else if( v_pos == 'bottom-left' ){
+                v_gravity = 'ne';
+            }else if( v_pos == 'bottom-right' ){
+                v_gravity = 'nw';
+            }else if( v_pos == 'top-left' ){
+                v_gravity = 'se';
+            }else if( v_pos == 'top-right' ){
+                v_gravity = 'sw';
+            }
+
+            $this.tipsy({
+                gravity: v_gravity,
+            });
+        });
+
+    }
+
 
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
@@ -229,3 +262,5 @@ $(function(){
         lastScrollTop = windowTop;
     } );
 })
+
+
