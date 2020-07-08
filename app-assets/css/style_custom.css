@@ -967,6 +967,8 @@ a.sidebar-main-toggle:hover{
     font-size: 7px;
     cursor: pointer;
     text-align: center;
+    -webkit-transition: all 0.25s ease-out 0.1s;
+    transition: all 0.25s ease-out 0.1s;
 }
 
 .button-switch .switch:checked:after {
