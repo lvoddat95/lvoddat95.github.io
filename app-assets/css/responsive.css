@@ -195,8 +195,13 @@
         background-color: #1C3FAA;
         background-size: cover;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-        -webkit-transition: top 0.25s ease-in-out;
-        transition: top 0.25s ease-in-out;
+        -webkit-transition: all .3s cubic-bezier(.62,.74,.57,1);
+        -moz-transition: all .3s cubic-bezier(.62,.74,.57,1);
+        -ms-transition: all .3s cubic-bezier(.62,.74,.57,1);
+        -o-transition: all .3s cubic-bezier(.62,.74,.57,1);
+        transition: all .3s cubic-bezier(.62,.74,.57,1);
+        -webkit-transition-delay: .02s;
+        transition-delay: .02s;
     }
     .header-top.sticky.show {
         top: 0;
