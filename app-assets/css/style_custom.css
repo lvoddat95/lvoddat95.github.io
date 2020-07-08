@@ -878,126 +878,93 @@ a.sidebar-main-toggle:hover{
 }
 
 .button-switch {
-    font-weight: 400;
-    color: #fff;
-    height: 28px;
     position: relative;
-    overflow: hidden;
-    width: 64px;
-    margin-top: -6px;
-    margin-left: -3px;
+    width: 60px;
+    height: 24px;
 }
-
-.button-switch.button-switch.no-label {
+.button-switch.no-label {
     width: 45px;
 }
+.button-switch.no-label .switch + label{
+    width: 45px;
+}
+.button-switch.no-label .switch + label:before{
+    content: '';
+}
 
-.button-switch .lbl-off, .button-switch .lbl-on {
-    cursor: pointer;
-    display: block;
+.switch + label{
     position: absolute;
-    pointer-events: none;
-    font-size: 10px;
-    top: 50%;
-    margin: -7px 0 0;
-    -webkit-transition: opacity 0.25s ease-out 0.1s;
-    transition: opacity 0.25s ease-out 0.1s;
-}
-
-.button-switch.button-switch.no-label label {
-    font-size: 0px;
-}
-
-.button-switch .lbl-off {
-    right: 10px;
-}
-
-.button-switch .lbl-on {
-    opacity: 0;
-    left: 16px;
-}
-
-.button-switch .switch {
-    position: absolute;
-    outline: none;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    left: 0;
     top: 0;
+    outline: 0;
+    margin-bottom: 0;
+    display: block;
+    width: 60px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #bdc3c7;
+    border-radius: 30px;
+    padding: 3px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
 }
 
-.button-switch .switch:before, .button-switch .switch:after {
-    content: "";
+.switch:checked + label {
+    background: #4caf50;
+}
+
+.switch + label:after {
+    display: block;
+    content: "\ed6a";
     position: absolute;
     font-family: icomoon!important;
     border-radius: 50%;
     background: #fff;
     color: #bdc3c7;
     font-weight: 600;
-    height: 16px;
-    width: 16px;
-    line-height: 16px;
-}
-
-.button-switch .switch:before {
-    cursor: pointer;
-    border-radius: 30px;
-    background: #bdc3c7;
-    height: 24px;
-    width: 60px;
-    left: 0;
-    top: 2px;
-    -webkit-transition: background-color 0.25s ease-out 0.1s;
-    transition: background-color 0.25s ease-out 0.1s;
-}
-
-.button-switch.no-label .switch:before {
-    width: 45px;
-}
-
-.button-switch .switch:checked:before {
-    background-color: #4caf50;
-}
-
-.button-switch .switch:after {
-    content: "\ed6a";
-    top: 6px;
-    left: 4px;
-    font-size: 7px;
-    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
     text-align: center;
+    font-size: 8px;
     -webkit-transition: all 0.25s ease-out 0.1s;
     transition: all 0.25s ease-out 0.1s;
 }
-
-.button-switch .switch:checked:after {
-    -webkit-transform: translate(36px, 0);
-    transform: translate(36px, 0);
+.switch:checked + label:after {
+    left: auto;
+    right: 3px;
     content: '\ed6e';
-    color: #4caf50
+    color: #4caf50;
+}
+.switch + label:before {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: #111;
+}
+.switch + label:before {
+    content: attr(data-off);
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+}
+.switch:checked + label:before{
+    content: attr(data-on);
+    transform: translateY(-50%);
+    left: 16px;
 }
 
-.button-switch.no-label .switch:checked:after {
-    -webkit-transform: translate(21px, 0);
-    transform: translate(21px, 0);
-    content: '\ed6e';
-    color: #4caf50
-}
-.button-switch .switch:checked~.lbl-off {
-    opacity: 0;
-}
 
-.button-switch .switch:checked~.lbl-on {
-    opacity: 1;
-}
-.button-switch .switch#switch-orange:checked:before {
-    background: #e67e22;
-}
 
-.button-switch .switch#switch-blue:checked:before {
-    background: #3498db;
-}
+
+
 
 
 .switch-title {
