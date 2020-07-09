@@ -223,8 +223,8 @@
     .header-top .dropdown-user img{
         border: 2px solid #fff;
     }
-    .top-left{
-        margin-left: 30px;
+    .top-right > ul > li:not(.dropdown-user){
+        display: none;
     }
     .top-right > ul > li > a{
         color: #fff;
