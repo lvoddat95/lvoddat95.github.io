@@ -41,7 +41,7 @@ var DatatableDataSources = function() {
                 loadingRecords: "Đang tải...",
                 processing:     "Đang xử lý...",
                 search:         "",
-                searchPlaceholder: 'Nhập từ khóa...',
+                searchPlaceholder: 'Tìm kiếm nhanh ...',
                 zeroRecords:    "Không tìm thấy hồ sơ phù hợp",
                 paginate: {
                     first:      "Đầu",

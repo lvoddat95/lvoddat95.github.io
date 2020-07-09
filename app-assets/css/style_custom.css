@@ -233,8 +233,7 @@ a.sidebar-main-toggle:hover{
 
 .card {
     margin-bottom: 10px;
-    -webkit-box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.01), 0 15px 32px 0 rgba(0, 0, 0, 0.06);
-    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.01), 0 15px 32px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
     border-radius: 6px;
 }
 
@@ -1361,8 +1360,6 @@ hr{
 }
 
 .card.card-search>* {
-    position: relative;
-    z-index: 3;
     background: #fff !important;
 }
 
@@ -1871,40 +1868,50 @@ body:not(.sidebar-xs) #chat-circle {
     background: #f44336;
 }
 
-.tab-style {
-    background-color: #F1F5F8;
-}
-
 .tab-style .nav-tabs {
     border: none;
-    margin: 0;
+    margin: 0 7px;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
 }
 
 .tab-style .nav-tabs .nav-link {
+    position: relative;
+    padding: 9px;
     border: none;
     border-radius: 0;
-    color: #718096;
+    color: #222;
+    font-weight: 500;
+    background: #FAFAFA;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: none;
+    border-bottom: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px 0;
 }
 
-.tab-style .nav-tabs .nav-link.active, .tab-style .nav-tabs .nav-item.show .nav-link {
+.tab-style .nav-tabs .nav-link.active, 
+.tab-style .nav-tabs .nav-item.show .nav-link {
     color: #1C3FAA;
     background-color: #fff;
     border: 0;
-    border-radius: 0;
-    font-weight: 500;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    padding: 12px;
+}
+
+.tab-style .nav-tabs .nav-item{
+    margin: 0 3px;
+    text-align: left;
 }
 
 .tab-style .tab-content {
     padding: 20px;
     background: #fff;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
-.tab-style .nav-link {
-    padding: 1rem 1.25rem;
+    border-radius: 3px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, .1) 0 0 5px 0, rgba(0, 0, 0, .1) 0 0 1px 0;
 }
 
 .tab-style2 .nav-tabs {
