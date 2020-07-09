@@ -182,8 +182,8 @@ $(function(){
 
     if( $('.chat-box').length > 0 ){
         
-        $("#chat-circle").click(function() {    
-            $(".chat").addClass('open');
+        $(".chat-circle").click(function() {    
+            $(".chat").toggleClass('open');
         })
         
         $(".cb-toggle-close").click(function() {

@@ -1551,12 +1551,6 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-5">
-                                                                <div class="form-group ">
-                                                                    <label>Tiền hoa hồng: <span class="text-danger">*</span></label>
-                                                                    <input type="text" class="form-control required input-money" name="so_khung" placeholder="Nhập số tiền..." value="">
-                                                                </div>
-                                                            </div>
                                                         </div>
 
                                                         <div class="row" id="moigioi">
@@ -1591,7 +1585,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-3">
                                                                 <div class="form-group">
                                                                     <label>Hoa hồng: <span class="text-danger">*</span></label>
                                                                     <div class="input-group">
@@ -1602,14 +1596,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-                                                            <div class="col-md-3">
-                                                                <div class="form-group">
-                                                                    <label>Thành tiền: <span class="text-danger">*</span></label>
-                                                                    <input type="text" class="form-control required input-money" name="so_khung" placeholder="Nhập số tiền..." value="">
-                                                                </div>
-                                                            </div>
-
                                                         </div>
 
                                                         <div class="row">
@@ -2577,6 +2563,22 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Tổng số tiền hoa hồng đại lí: </label>
+                                                                    <input type="text" class="form-control input-money" name="hoa_hong_dai_li" placeholder="Nhập số tiền..." value="0">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Tổng số tiền hoa hồng môi giới: </label>
+                                                                    <input type="text" class="form-control input-money" name="hoa_hong_moi_gioi" placeholder="Nhập số tiền..." value="0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
@@ -2610,8 +2612,8 @@
                                                                     <input type="text" class="form-control input-money" name="giam_mien_thường" placeholder="Nhập số tiền..." value="0">
                                                                 </div>
                                                             </div>
-                                                            
                                                         </div>
+
                                                         <div class="row mb-3">
                                                             <div class="col-md-12">
                                                                 <b><label>Lịch thanh toán bảo hiểm: </label></b>
@@ -2770,7 +2772,7 @@
         </div>
     </div>
     <div class="chat-box">
-        <div class="chat close">
+        <div class="chat">
             <div class="chat-header">
                 <div class="cb-pic">
                     <img class="img-fluid" src="app-assets/images/icon-user.png" alt="avatar">
@@ -2829,7 +2831,7 @@
             </div>
             
         </div>
-        <div id="chat-circle" class="d-flex align-items-center justify-content-center">
+        <div class="chat-circle">
             <i class="icon-bubbles5 position-relative"><span class="badge">5</span></i>
         </div>
     </div>
@@ -2843,7 +2845,7 @@
             <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trình duyệt đơn" data-position="left"><i class="icon-file-check2"></i></a></li>
             <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Đóng đơn" data-position="left"><i class="icon-file-locked2"></i></a></li>
             <li><a href="javascript:;" class="btn-act act-space"><i class="icon-menu"></i></a></li>
-            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Thông báo" data-position="left"><i class="icon-bubble-notification position-relative"><span class="badge">2</span></i></a></li>
+            <li><a href="javascript:;" class="btn-act chat-circle" data-tooltip="tipsy" original-title="Chat" data-position="left"><i class="icon-bubble-notification position-relative"><span class="badge">2</span></i></a></li>
             <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trợ giúp" data-position="left"><i class="icon-help"></i></a></li>
             <li><a href="javascript:;" class="btn-act go-top" data-tooltip="tipsy" original-title="Lên đầu trang" data-position="left"><i class="icon-arrow-up52"></i></a></li>
         </ul>

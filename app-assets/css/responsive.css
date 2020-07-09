@@ -308,8 +308,9 @@
         min-height: 70px;
     }
     
-    #chat-circle {
-        bottom: 15%;
+    .chat-circle.chat-fixed {
+        bottom: 15px;
+        left: 15px;
     }
 
 
@@ -464,7 +465,13 @@
         top: 35px;
     }
 
-
+    .chat-footer,
+    .chat-header{
+        padding: 10px 15px;
+    }
+    .chat{
+        margin-bottom: 0;
+    }
 
 
 
