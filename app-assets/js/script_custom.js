@@ -33,6 +33,22 @@ $(function(){
 
     }
 
+    if ($('[select2]').length > 0) {
+        if (!$().select2) {
+            console.warn('Warning - select2.min.js is not loaded.');
+        }
+        $('[select2]').each(function (i, obj) {
+            if ( obj.length > 0 ){
+                $(obj).select2({ 
+                    language: "vi",
+                    minimumResultsForSearch: 5,
+                    width: '100%',
+                });
+            }
+        });
+    }
+
+
 
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
@@ -176,6 +192,8 @@ $(function(){
         })
     }
 
+
+
     $(".go-top").click(function () {
         $("html, body").animate({scrollTop: 0}, 500);
     });
@@ -197,9 +215,9 @@ var on_change_hinh_thuc_khai_thac = function(p_this){
 }
 
 var on_change_kenh_khai_thac = function(p_this){
-    console.log(p_this.value)
     if(p_this.value == 'daili'){
         $('#moigioi').hide();
+        $('#daili').show();
     }else if(p_this.value == 'moigioi'){
         $('#daili').hide();
         $('#moigioi').show();

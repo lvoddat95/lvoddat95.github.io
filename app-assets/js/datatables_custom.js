@@ -118,50 +118,50 @@ var DatatableDataSources = function() {
             ],
         });
 
-        // HTML sourced data
-        let v_table = $('.datatable-html').DataTable({
-            "lengthMenu": [
-                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
-                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
-            ],
-            buttons: [
-                { 
-                    extend: 'copy', 
-                    text: 'Sao chép bảng',
-                    exportOptions: {
-                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
-                    }
-                },
-                { 
-                    extend: 'csv', 
-                    text: 'Xuất file Csv',
-                    exportOptions: {
-                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
-                    }
-                },
-                { 
-                    extend: 'excel', 
-                    text: 'Xuất file Excel',
-                    exportOptions: {
-                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
-                    }
-                },
-                { 
-                    extend: 'pdf', 
-                    text: 'Xuất file Pdf',
-                    exportOptions: {
-                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
-                    }
-                },
-                { 
-                    extend: 'print', 
-                    text: 'In bảng',
-                    exportOptions: {
-                        columns: [ 1, 2, 3, 4, 5, 6, 7 ]
-                    }
-                },
-            ]
-        });
+        // // HTML sourced data
+        // let v_table = $('.datatable-html').DataTable({
+        //     "lengthMenu": [
+        //         [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
+        //         [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
+        //     ],
+        //     buttons: [
+        //         { 
+        //             extend: 'copy', 
+        //             text: 'Sao chép bảng',
+        //             exportOptions: {
+        //                 columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+        //             }
+        //         },
+        //         { 
+        //             extend: 'csv', 
+        //             text: 'Xuất file Csv',
+        //             exportOptions: {
+        //                 columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+        //             }
+        //         },
+        //         { 
+        //             extend: 'excel', 
+        //             text: 'Xuất file Excel',
+        //             exportOptions: {
+        //                 columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+        //             }
+        //         },
+        //         { 
+        //             extend: 'pdf', 
+        //             text: 'Xuất file Pdf',
+        //             exportOptions: {
+        //                 columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+        //             }
+        //         },
+        //         { 
+        //             extend: 'print', 
+        //             text: 'In bảng',
+        //             exportOptions: {
+        //                 columns: [ 1, 2, 3, 4, 5, 6, 7 ]
+        //             }
+        //         },
+        //     ]
+        // });
 
 
     };

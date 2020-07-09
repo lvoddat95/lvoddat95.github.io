@@ -225,7 +225,11 @@ a.sidebar-main-toggle:hover{
 .page-header-content[class*=border-bottom-]+.breadcrumb-line {
     border-top: 0;
 }
-
+.input-group>.select2-container{
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1% !important;
+}
 
 .card {
     margin-bottom: 10px;
@@ -779,8 +783,19 @@ a.sidebar-main-toggle:hover{
     height: 18px;
 }
 .select2-results__option{
+    margin: 0 5px;
     padding: 5px;
+    border-radius: 4px;
 }
+.select2-results__option[aria-selected=true] {
+    background-color: #2196F3 !important;
+    color: #fff !important; 
+}
+.select2-results__option.select2-results__option--highlighted {
+    background: rgba(0, 0, 0, .1);
+    color: #000;
+}
+
 
 .rdb_custom [type="radio"]:checked, .rdb_custom [type="radio"]:not(:checked) {
     position: absolute;

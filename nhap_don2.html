@@ -339,7 +339,7 @@
                                 </a>
                             </li>
                             <li class="dropdown-alert dropdown">
-                                <a href="#" class="dropdown-toggle caret-0" data-tooltip="tipsy" original-title="Thông báo" data-position="bottom">
+                                <a href="#" class="dropdown-toggle caret-0" data-toggle="dropdown" data-tooltip="tipsy" original-title="Thông báo" data-position="bottom">
                                     <i class="icon-bubbles4"></i>
                                     <span class="badge ">9</span>
                                 </a>
@@ -481,6 +481,7 @@
                     </div>
                 </div>
                 <!-- /Header -->
+                
                 <div class="page-title">
                     <div class="p-title">
                         <p class="font-weight-semibold font-size-m"><i class="icon-certificate mr-2"></i>Cập nhập đơn bảo hiểm</p>
@@ -555,13 +556,12 @@
                                                                 <div class="form-group ">
                                                                     <label>Hình thức khai thác: <span class="text-danger">*</span></label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control required" name="hinh_thuc_khai_thac">
+                                                                        <select class="form-control required" select2 name="hinh_thuc_khai_thac">
                                                                             <option value="">--- Chọn hình thức khai thác ---</option>
                                                                             <option value="opt1" selected>Trực tiếp</option>
                                                                             <option value="opt7">Đại lí</option>
                                                                             <option value="opt8">Môi giới</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -701,7 +701,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                 <label>Cán bộ khai thác: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="can_bo_khai_thac">
+                                                                    <select class="form-control required" select2 name="can_bo_khai_thac">
                                                                         <option id="" value="" name="">--- Chọn cán bộ khai thác ---</option>
                                                                         <option id="1227" name="Đào Mạnh Dương (đã nghỉ)" value="1227">Đào Mạnh Dương (đã nghỉ)</option>
                                                                         <option id="1205" name="Đào Minh Hùng(Đã khóa)" value="1205">Đào Minh Hùng(Đã khóa)</option>
@@ -719,7 +719,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                 <label>Cán bộ cấp đơn: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="can_bo_cap_don">
+                                                                    <select class="form-control required" select2 name="can_bo_cap_don">
                                                                         <option id="" value="" name="">--- Chọn cán bộ cấp đơn ---</option>
                                                                         <option id="1227" name="Đào Mạnh Dương (đã nghỉ)" value="1227">Đào Mạnh Dương (đã nghỉ)</option>
                                                                         <option id="1205" name="Đào Minh Hùng(Đã khóa)" value="1205">Đào Minh Hùng(Đã khóa)</option>
@@ -746,7 +746,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label>Loại tiền: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="loai_tien">
+                                                                    <select class="form-control required" select2 name="loai_tien">
                                                                         <option id="" value="" name="">--- Chọn Loại tiền ---</option>
                                                                         <option id="EUR" name="EUR" value="EUR">EUR</option>
                                                                         <option id="VND" name="VND" value="VND" selected>VND</option>
@@ -839,20 +839,19 @@
                                                                 <div class="form-group ">
                                                                     <label>Dòng xe: <span class="text-danger">*</span></label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control required" name="dong_xe">
+                                                                        <select class="form-control required" select2 name="dong_xe">
                                                                             <option value="">--- Chọn dòng xe ---</option>
                                                                             <option value="1" selected>Xe chở người</option>
                                                                             <option value="2">Xe chở hàng</option>
                                                                             <option value="3">Các xe loại khác</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
                                                                     <label>Nhóm xe: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="nhom_xe">
+                                                                    <select class="form-control required" select2 name="nhom_xe">
                                                                         <option id="" value="" name="">--- Chọn nhóm xe ---</option>
                                                                         <option id="OTO_DAU_KEO_ROMOOC" name="Đầu kéo, Đông lạnh, Xe hoạt động trong vùng khai thác khoáng sản"
                                                                             value="OTO_DAU_KEO_ROMOOC">Đầu kéo, Đông lạnh, Xe hoạt động trong vùng khai thác khoáng sản</option>
@@ -889,7 +888,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
                                                                     <label>Loại xe: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="loai_xe">
+                                                                    <select class="form-control required" select2 name="loai_xe">
                                                                         <option id="" value="" name="">--- Chọn loại xe ---</option>
                                                                         <option id="OTO_KKDVT_U6" name="Ô tô không KD vận tải - Dưới 6 chỗ ngồi" value="OTO_KKDVT_U6" selected>Ô tô không KD vận tải
                                                                             - Dưới 6 chỗ ngồi</option>
@@ -958,7 +957,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
                                                                     <label>Nhãn hiệu (hãng sản xuất): <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="nhan_hieu">
+                                                                    <select class="form-control required" select2 name="nhan_hieu">
                                                                         <option value="">--- Chọn nhãn hiệu ---</option>
                                                                         <option selected>Z-Hãng xe khác</option>
                                                                     </select>
@@ -967,7 +966,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group">
                                                                     <label>Số loại: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="so_loai">
+                                                                    <select class="form-control required" select2 name="so_loai">
                                                                         <option value="">-- Chọn hiệu xe --</option>
                                                                         <option value="ZX" selected>Z-Hiệu xe khác</option>
                                                                     </select>
@@ -977,12 +976,11 @@
                                                                 <div class="form-group ">
                                                                     <label>Nguồn gốc xe: <span class="text-danger">*</span></label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control required" name="nguon_goc">
+                                                                        <select class="form-control required" select2 name="nguon_goc">
                                                                             <option value="">--- Chọn nguồn gốc ---</option>
                                                                             <option value="1">Xe nhập khẩu</option>
                                                                             <option value="2" selected>Xe nội địa</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -992,7 +990,7 @@
                                                                         <div class="col-md-6">
                                                                             <label>Tháng SX/ĐK lần đầu: <span class="text-danger">*</span></label>
                                                                             <div class="form-group-select">
-                                                                                <select class="form-control required form-control-select2" name="thang_sx_dk" >
+                                                                                <select class="form-control required" select2 name="thang_sx_dk" >
                                                                                     <option id="1" name="1" value="1" selected="">1</option>
                                                                                     <option id="2" name="2" value="2">2</option>
                                                                                     <option id="3" name="3" value="3">3</option>
@@ -1012,7 +1010,7 @@
                                                                         <div class="col-md-6">
                                                                             <label>Năm SX/ĐK lần đầu: <span class="text-danger">*</span></label>
                                                                             <div class="form-group-select">
-                                                                                <select class="form-control required form-control-select2" name="nam_sx_dk" >
+                                                                                <select class="form-control required" select2 name="nam_sx_dk" >
                                                                                     <option value="" data-select2-id="26">--- Chọn năm ---</option>
                                                                                     <option value="2020" data-select2-id="525">2020</option>
                                                                                     <option value="2019" data-select2-id="526">2019</option>
@@ -1094,7 +1092,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
                                                                     <label>Số chỗ ngồi: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="so_cho_ngoi">
+                                                                    <select class="form-control required" select2 name="so_cho_ngoi">
                                                                         <option id="" value="" name="">--- Chọn số chỗ ngồi ---</option>
                                                                         <option id="1" name="1 chỗ ngồi" value="1">1 chỗ ngồi</option>
                                                                         <option id="2" name="2 chỗ ngồi" value="2">2 chỗ ngồi</option>
@@ -1107,7 +1105,7 @@
                                                             <div class="col-md-4">
                                                                 <div class="form-group ">
                                                                     <label>Trọng tải: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="trong_tai">
+                                                                    <select class="form-control required" select2 name="trong_tai">
                                                                         <option value="" data-select2-id="22">--- Chọn trọng tải ---</option>
                                                                         <option value="0" data-select2-id="256">Khac</option>
                                                                     </select>
@@ -1180,7 +1178,7 @@
                                                             <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <label>Đại lý: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="dai_ly" >
+                                                                    <select class="form-control required" select2 name="dai_ly" >
                                                                         <option id="" value="" name="">--- Chọn đại lý ---</option>
                                                                         <option id="DR-001" name="Trực tiếp" value="DR-001">Trực tiếp</option>
                                                                         <option id="HDDL012020MAFC" name="Công ty Tài Chính TNHH MTV  Mirae Asset (Việt Nam) (MAFC)" value="HDDL012020MAFC" selected>Công ty Tài Chính TNHH MTV Mirae Asset (Việt Nam) (MAFC)</option>
@@ -1207,7 +1205,7 @@
                                                             <div class="col-md-7">
                                                                 <div class="form-group">
                                                                     <label>Môi giới: <span class="text-danger">*</span></label>
-                                                                    <select class="form-control required form-control-select2" name="moi_gioi" >
+                                                                    <select class="form-control required" select2 name="moi_gioi" >
                                                                         <option id="" value="" name="">--- Chọn môi giới: ---</option>
                                                                         <option id="BR-009" name="AON VIET NAM LTD" value="BR-009">AON VIET NAM LTD</option>
                                                                         <option id="BR-004" name="GRAS SAVOYE WILLIS VIET NAM CO.,LTD" value="BR-004">GRAS SAVOYE WILLIS VIET NAM CO.,LTD
@@ -1270,7 +1268,7 @@
                                                                 <div class="form-group ">
                                                                 <label>Nguồn dịch vụ: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control form-control-select2" name="nguon_dich_vu">
+                                                                        <select class="form-control" select2 name="nguon_dich_vu">
                                                                             <option id="" value="" name="">--- Chọn nguồn dịch vụ ---</option>
                                                                             <option id="DANG_KIEM" name="Đăng Kiểm" value="DANG_KIEM">Đăng Kiểm</option>
                                                                             <option id="SHOW_ROOM" name="Show room" value="SHOW_ROOM">Show room</option>
@@ -1302,7 +1300,7 @@
                                                                 <div class="form-group ">
                                                                     <label>Chi tiết: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control form-control-select2" name="chi_tiet">
+                                                                        <select class="form-control" select2 name="chi_tiet">
                                                                             <option id="" value="" name="">--- Chọn chi tiết ---</option>
                                                                             <option value="1">Trung tâm đăng Kiểm</option>
                                                                             <option value="2">ShowRoom</option>
@@ -1319,7 +1317,7 @@
                                                                 <div class="form-group ">
                                                                     <label>Ngân hàng: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control form-control-select2" id="ngan_hang" name="ngan_hang" >
+                                                                        <select class="form-control" select2 id="ngan_hang" name="ngan_hang" >
                                                                             <option id="" value="" name="">--- Chọn ngân hàng ---</option>
                                                                             <option value="BANK_VN0003" title="Quỹ Tín dụng Nhân dân Trung ương (CCF)">Quỹ Tín dụng Nhân dân Trung ương (CCF)
                                                                             </option>
@@ -1389,7 +1387,7 @@
                                                                 <div class="form-group ">
                                                                     <label>Cán bộ ngân hàng: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control form-control-select2" name="chi_tiet">
+                                                                        <select class="form-control" select2 name="chi_tiet">
                                                                             <option id="" value="" name="">--- Chọn ---</option>
                                                                         </select>
                                                                     </div>
@@ -1399,13 +1397,12 @@
                                                                 <div class="form-group ">
                                                                     <label>Khối khách hàng: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control" name="vay_qua_ngan_hang">
+                                                                        <select class="form-control" select2 name="vay_qua_ngan_hang">
                                                                             <option id="" value="" name="">--- Chọn ---</option>
                                                                             <option id="CN" name="Cá nhân (RB)" value="CN">Cá nhân (RB)</option>
                                                                             <option id="DN" name="Doanh nghiệp vừa và nhỏ (SME)" value="DN">Doanh nghiệp vừa và nhỏ (SME)</option>
                                                                             <option id="DN_CB" name="Doanh nghiệp lớn (CB)" value="DN_CB">Doanh nghiệp lớn (CB)</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1413,7 +1410,7 @@
                                                                 <div class="form-group ">
                                                                     <label>Ngân hàng thụ hưởng </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control form-control-select2" name="chi_tiet">
+                                                                        <select class="form-control" select2 name="chi_tiet">
                                                                             <option value="" id="">--- Chọn ---</option>
                                                                             <option value="BANK_VN0011" title="Dầu khí Toàn Cầu(GP.Bank)">Dầu khí Toàn Cầu(GP.Bank)</option>
                                                                             <option value="BANK_VN0037" title="Ngoại Thương Việt Nam (Vietcombank)">Ngoại Thương Việt Nam (Vietcombank)</option>
@@ -1524,13 +1521,12 @@
                                                                 <div class="form-group ">
                                                                     <label>Hình thức phối hợp: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control" name="hinh_thuc_phoi_hop">
+                                                                        <select class="form-control" select2 name="hinh_thuc_phoi_hop">
                                                                             <option value="">--- Chọn hình thức phối hợp ---</option>
                                                                             <option value="1">HT(Đơn vị khai thác)</option>
                                                                             <option value="2">KHDN</option>
                                                                             <option value="3">PB(Doanh thu nhận phân bổ)</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1606,7 +1602,7 @@
                                                                                                 <td><input class="form-control text-right input-float" type="text" placeholder="0.0" value="10.0"></td>
                                                                                                 <td><input class="form-control text-right input-money" type="text" placeholder="0"></td>
                                                                                                 <td>
-                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                    <select class="form-control required " select2 name="dinh_muc" >
                                                                                                         <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
                                                                                                             title="Xe cơ giới khác">Xe cơ giới khác</option>
                                                                                                         <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
@@ -1947,7 +1943,7 @@
                                                                                                     <input class="form-control text-right input-money" type="text" value="0" >
                                                                                                 </td>
                                                                                                 <td>
-                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                    <select class="form-control required " select2 name="dinh_muc" >
                                                                                                         <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
                                                                                                             title="Xe cơ giới khác">Xe cơ giới khác</option>
                                                                                                         <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
@@ -1993,7 +1989,7 @@
                                                                                                     <input class="form-control text-right input-money" type="text" value="0" >
                                                                                                 </td>
                                                                                                 <td>
-                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                    <select class="form-control required " select2 name="dinh_muc" >
                                                                                                         <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
                                                                                                             title="Xe cơ giới khác">Xe cơ giới khác</option>
                                                                                                         <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
@@ -2094,7 +2090,7 @@
                                                                                                     <input class="form-control text-right input-money" type="text" value="0" >
                                                                                                 </td>
                                                                                                 <td>
-                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                    <select class="form-control required " select2 name="dinh_muc" >
                                                                                                         <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
                                                                                                             title="Xe cơ giới khác">Xe cơ giới khác</option>
                                                                                                         <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
@@ -2194,7 +2190,7 @@
                                                                                                     <input class="form-control text-right input-money" type="text" value="0" >
                                                                                                 </td>
                                                                                                 <td>
-                                                                                                    <select class="form-control required form-control-select2" name="dinh_muc" >
+                                                                                                    <select class="form-control required " select2 name="dinh_muc" >
                                                                                                         <option id="1A0CB825-AF10-4E71-973D-47A14076CABD" value="1A0CB825-AF10-4E71-973D-47A14076CABD"
                                                                                                             title="Xe cơ giới khác">Xe cơ giới khác</option>
                                                                                                         <option id="A43D9544-9201-490D-8087-A99CC3A6D906" value="A43D9544-9201-490D-8087-A99CC3A6D906"
@@ -2227,12 +2223,11 @@
                                                                 <div class="form-group ">
                                                                     <label>Loại miễn thường: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control" name="muc_mien_thuong">
+                                                                        <select class="form-control" select2 name="muc_mien_thuong">
                                                                             <option value="">--- Chọn mức miễn thường ---</option>
                                                                             <option value="1">Có khấu trừ</option>
                                                                             <option value="0">Không có khấu trừ</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2240,12 +2235,11 @@
                                                                 <div class="form-group ">
                                                                     <label>Số tiền miễn thường: </label>
                                                                     <div class="form-group-select">
-                                                                        <select class="form-control" name="so_tien_mien_thuong">
+                                                                        <select class="form-control" select2 name="so_tien_mien_thuong">
                                                                             <option value="">--- Chọn số tiền miễn thường ---</option>
                                                                             <option value="500000">500.000 đ/vụ</option>
                                                                             <option value="1500000">1.500.000 đ/vụ</option>
                                                                         </select>
-                                                                        <span class="select-icon"><i class="icon-arrow-down22"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2489,17 +2483,17 @@
     </div>
 
     <div class="quick-action">
-        <a href="javascript:;" class="btn-act btn-act-toggle open" data-tooltip="tipsy" original-title="Mở ra" data-position="right"><i class="icon-move-left"></i></a>
+        <a href="javascript:;" class="btn-act btn-act-toggle open" data-tooltip="tipsy" original-title="Mở ra" data-position="left"><i class="icon-move-left"></i></a>
         <ul class="list-unstyled mb-0">
             <li class="btn-act-view">
-                <a href="javascript:;" class="btn-act btn-act-toggle" data-tooltip="tipsy" original-title="Thu vào" data-position="right"><i class="icon-move-right"></i></a>
+                <a href="javascript:;" class="btn-act btn-act-toggle" data-tooltip="tipsy" original-title="Thu vào" data-position="left"><i class="icon-move-right"></i></a>
             </li>
-            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trình duyệt đơn" data-position="right"><i class="icon-file-check2"></i></a></li>
-            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Đóng đơn" data-position="right"><i class="icon-file-locked2"></i></a></li>
+            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trình duyệt đơn" data-position="left"><i class="icon-file-check2"></i></a></li>
+            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Đóng đơn" data-position="left"><i class="icon-file-locked2"></i></a></li>
             <li><a href="javascript:;" class="btn-act act-space"><i class="icon-menu"></i></a></li>
-            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Thông báo" data-position="right"><i class="icon-bubble-notification position-relative"><span class="badge">2</span></i></a></li>
-            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trợ giúp" data-position="right"><i class="icon-help"></i></a></li>
-            <li><a href="javascript:;" class="btn-act go-top" data-tooltip="tipsy" original-title="Lên đầu trang" data-position="right"><i class="icon-arrow-up52"></i></a></li>
+            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Thông báo" data-position="left"><i class="icon-bubble-notification position-relative"><span class="badge">2</span></i></a></li>
+            <li><a href="javascript:;" class="btn-act" data-tooltip="tipsy" original-title="Trợ giúp" data-position="left"><i class="icon-help"></i></a></li>
+            <li><a href="javascript:;" class="btn-act go-top" data-tooltip="tipsy" original-title="Lên đầu trang" data-position="left"><i class="icon-arrow-up52"></i></a></li>
         </ul>
     </div>
 
@@ -3091,6 +3085,7 @@
     <script src="app-assets/vendors/js/jquery_ui/blockui.min.js"></script>
     <script src="app-assets/vendors/js/jquery.matchHeight-min.js"></script>
     <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="app-assets/vendors/js/jquery.tipsy.js"></script>
     <!-- /CORE JS-->
 
     <!-- JS Trang-->

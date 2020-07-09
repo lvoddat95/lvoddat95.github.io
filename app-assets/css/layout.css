@@ -150,8 +150,8 @@
     border-radius: 30px;
 }
 
-.sidebar ul li.nav-item>a:not(.active):hover {
-    background: rgba(255, 255, 255, .1) !important;
+.sidebar ul li.nav-item a:not(.active):hover {
+    background: rgba(255, 255, 255, .1);
 }
 
 .sidebar ul li.nav-item>a.active:before {
@@ -290,6 +290,7 @@
         background: rgba(28, 63, 170, 0.77);
     }
     .sidebar-xs .sidebar ul li.nav-item .nav-group-sub a {
+        position: relative;
         background: transparent;
         color: #000;
         margin: 0;
@@ -310,6 +311,7 @@
         border-color: #ec407a;
         position: absolute;
         top: 50%;
+        left: 10px;
         display: block;
         width: 5px;
         height: 5px;
