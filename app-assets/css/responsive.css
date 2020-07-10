@@ -271,10 +271,10 @@
         width: 50%;
     }
     .card-header .card-title {
-        font-size: 12px;
+        font-size: 13px;
     }
     .modal-title{
-        font-size: 12px;
+        font-size: 13px;
     }
     .modal-header{
         padding: 8px;
@@ -449,9 +449,9 @@
         display: none;
     }
     .input-don .input-group-append > .btn {
-        font-size: inherit;
         max-width: 80px;
-        font-size: 0;
+        font-size: 9px;
+        padding: 0px 5px;
     }
     .input-don .input-group-append > .btn > i{
         margin: 0 !important;

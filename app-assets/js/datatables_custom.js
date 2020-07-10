@@ -90,13 +90,21 @@ var DatatableDataSources = function() {
                 [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
             ]
         });
+
           
-        $( ".collapse" ).on("shown.bs.collapse", function() {
+        $( "[datatable-collapse]" ).on("shown.bs.collapse", function() {
             $.each($.fn.dataTable.tables(true), function(){
                 $(this).DataTable().columns.adjust().draw();
             });
             v_datatable;
         });
+
+
+        $('[datatable-modal]').on('shown.bs.modal', function(e){
+            $($.fn.dataTable.tables(true)).DataTable()
+               .columns.adjust()
+               .responsive.recalc();
+         });
 
         var table_right = $('.datatable-right').DataTable( {
             responsive: {

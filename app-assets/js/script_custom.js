@@ -2,6 +2,10 @@ $(function(){
 
     if ($('[data-tooltip="tipsy"]').length > 0) {
 
+        if (!$().tipsy) {
+            console.warn('Warning - Tipsy js is not loaded.');
+        }
+
         $('[data-tooltip="tipsy"]').each(function (index) {
             var $this = $(this);
             var v_gravity = '';
@@ -113,7 +117,6 @@ $(function(){
             todayBtn: "linked",
         });
     }
-    $('[data-popup="popover"]').popover();
 
     $('.input-money').toArray().forEach(function (field) {
         new Cleave(field, {
@@ -160,6 +163,9 @@ $(function(){
     });
     
     if ($('.lich-thanh-toan').length > 0) {
+        if (!$().repeater) {
+            console.warn('Warning - repeater js is not loaded.');
+        }
         $('.lich-thanh-toan').each(function( index ) {
             $(this).repeater({
                 show: function () {
@@ -175,10 +181,10 @@ $(function(){
 
     }
 
-
-    $('.dropdown-scrollable').perfectScrollbar();
-
-    $('.nav-group-sub').perfectScrollbar();
+    if ($().perfectScrollbar) {
+        $('.dropdown-scrollable').perfectScrollbar();
+        $('.nav-group-sub').perfectScrollbar();
+    }
 
     if( $('.chat-box').length > 0 ){
         
