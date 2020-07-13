@@ -28,16 +28,16 @@ var DatatableDataSources = function() {
         $.extend( $.fn.dataTable.defaults, {
             autoWidth: false,
             responsive: true,
-            dom: '<"datatable-header"fl><"datatable-body"t><"datatable-footer"ip>',
+            dom: '<"datatable-header"f><"datatable-body"t><"datatable-footer"<"datatable-li"li>p>',
             language: {
                 decimal:        "",
                 emptyTable:     "Không có dữ liệu trong bảng",
-                info:           "Hiển thị _START_ - _END_ trên _TOTAL_ bản ghi",
+                info:           " Tổng số _TOTAL_ bản ghi",
                 infoEmpty:      "Không có bản ghi nào",
                 infoFiltered:   "(filtered from _MAX_ total entries)",
                 infoPostFix:    "",
                 thousands:      ",",
-                lengthMenu:     "Hiển thị danh sách _MENU_ bản ghi",
+                lengthMenu:     " _MENU_ ",
                 loadingRecords: "Đang tải...",
                 processing:     "Đang xử lý...",
                 search:         "",
@@ -85,9 +85,9 @@ var DatatableDataSources = function() {
                     targets:   0
                 },
             ],
-            "lengthMenu": [
-                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
-                [10, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
+            lengthMenu: [
+                [10, 20, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
+                [10, 20, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
             ]
         });
 

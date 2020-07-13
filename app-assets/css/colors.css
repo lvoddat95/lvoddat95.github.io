@@ -795,7 +795,7 @@
 }
 
 .text-primary {
-	color: #2196F3;
+	color: #1877f2;
 }
 
 .text-primary[href]:hover, .text-primary[href]:focus {
@@ -803,27 +803,27 @@
 }
 
 .bg-primary {
-	background-color: #2196F3;
+	background-color: #1877f2;
 }
 
 .border-primary {
-	border-color: #2196F3;
+	border-color: #1877f2;
 }
 
 .border-top-primary {
-	border-top-color: #2196F3;
+	border-top-color: #1877f2;
 }
 
 .border-bottom-primary {
-	border-bottom-color: #2196F3;
+	border-bottom-color: #1877f2;
 }
 
 .border-left-primary {
-	border-left-color: #2196F3;
+	border-left-color: #1877f2;
 }
 
 .border-right-primary {
-	border-right-color: #2196F3;
+	border-right-color: #1877f2;
 }
 
 .text-primary-300 {
@@ -5501,18 +5501,18 @@
 }
 
 .gradient-politics {
-	background-image: -webkit-linear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: -moz- oldlinear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: -o-linear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: linear-gradient(45deg, #2196F3, #D32929 !important);
+	background-image: -webkit-linear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: -moz- oldlinear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: -o-linear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: linear-gradient(45deg, #1877f2, #D32929 !important);
 	background-repeat: repeat-x;
 }
 
 .btn.gradient-politics:active, .fc button.gradient-politics:active, .btn.gradient-politics.active, .fc button.gradient-politics.active {
-	background-image: -webkit-linear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: -moz- oldlinear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: -o-linear-gradient(45deg, #2196F3, #D32929 !important);
-	background-image: linear-gradient(45deg, #2196F3, #D32929 !important);
+	background-image: -webkit-linear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: -moz- oldlinear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: -o-linear-gradient(45deg, #1877f2, #D32929 !important);
+	background-image: linear-gradient(45deg, #1877f2, #D32929 !important);
 	background-repeat: repeat-x;
 }
 
@@ -5633,6 +5633,9 @@ input::placeholder, textarea::placeholder {
 }
 .bd-color{
 	border-color: #1C3FAA !important;
+}
+.bg-color{
+	background-color: #1C3FAA !important;
 }
 .bg-color2 {
 	background-color: #F1F5F8 !important;

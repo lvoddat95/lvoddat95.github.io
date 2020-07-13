@@ -1,4 +1,9 @@
 @media only screen and (min-width: 768px) {
+
+    .modal .wizard>.actions{
+        position: static;
+        box-shadow: none;
+    }
     .wizard>.actions {
         position: fixed;
         bottom: 15px;
