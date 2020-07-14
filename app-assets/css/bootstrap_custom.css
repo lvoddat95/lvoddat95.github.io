@@ -956,10 +956,10 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 .btn {
 	position: relative;
 	font-size: 12px;
-    line-height: 1.4;
+    line-height: 18px;
     height: 28px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-radius: 4px;
 	font-weight: 500;
 	background-color: rgba(0,0,0,.1);

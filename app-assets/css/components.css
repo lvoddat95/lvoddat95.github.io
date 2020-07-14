@@ -3321,8 +3321,7 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 .wizard>.actions {
     position: relative;
     text-align: right;
-    padding: 1.25rem;
-    padding-top: 0;
+    padding: 15px;
 }
 
 .wizard>.actions>ul {
@@ -3343,13 +3342,6 @@ input[type=text].noui-height-helper:not(.noUi-target)[data-fouc] {
 
 .wizard>.actions>ul>li+li {
     margin-left: 1.25rem;
-}
-
-.wizard>.actions {
-    position: relative;
-    display: block;
-    text-align: right;
-    padding: 20px;
 }
 
 .wizard>.actions>ul {
@@ -16140,7 +16132,7 @@ textarea#HandsontableCopyPaste {
     cursor: pointer;
     color: #333;
     outline: 0;
-    border: 1px solid #777;
+    border: 1px solid #dfdfdf;
     border-radius: 0.1875rem;
     transition: all ease-in-out 0.15s;
 }
@@ -16166,7 +16158,8 @@ textarea#HandsontableCopyPaste {
     cursor: default;
     background-color: #fff;
     color: #999;
-    border-color: #999;
+    border-color: #dfdfdf;
+    cursor: not-allowed;
 }
 
 .dataTables_paginate.paging_simple .paginate_button {

@@ -344,7 +344,6 @@ a.sidebar-main-toggle:hover{
 .header-search {
     position: relative;
     overflow: hidden;
-    display: none;
 }
 
 .header-search>input {
