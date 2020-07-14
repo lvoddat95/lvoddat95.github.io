@@ -92,7 +92,14 @@ label {
 .modal{
     overflow: auto;
 }
+.modal-parent + .modal {
+    z-index: 1060;
+}
 
+.modal-backdrop + .modal-backdrop {
+    z-index: 1050;
+}
+    
 .btn.btn-light:hover{
     background-color: #ebedf0;
 }
@@ -1157,7 +1164,7 @@ select.input {
     width: 140px;
 }
 hr{
-    margin: 15px 0;
+    margin: 10px 0;
     border-color: #e2e8f0;
 }
 
