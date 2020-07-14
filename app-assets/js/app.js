@@ -73,84 +73,6 @@ var App = function () {
         });
     };
 
-    // Toggle secondary sidebar
-    var _sidebarSecondaryToggle = function() {
-        $(document).on('click', '.sidebar-secondary-toggle', function (e) {
-            e.preventDefault();
-            $('body').toggleClass('sidebar-secondary-hidden');
-        });
-    };
-
-
-    // Show right, resize main
-    var _sidebarRightMainToggle = function() {
-        $(document).on('click', '.sidebar-right-main-toggle', function (e) {
-            e.preventDefault();
-
-            // Right sidebar visibility
-            $('body').toggleClass('sidebar-right-visible');
-
-            // If visible
-            if ($('body').hasClass('sidebar-right-visible')) {
-
-                // Make main sidebar mini
-                $('body').addClass('sidebar-xs');
-
-                // Hide children lists if they are opened, since sliding animation adds inline CSS
-                $('.sidebar-main .nav-sidebar').children('.nav-item').children('.nav-group-sub').css('display', '');
-            }
-            else {
-                $('body').removeClass('sidebar-xs');
-            }
-        });
-    };
-
-    // Show right, hide main
-    var _sidebarRightMainHide = function() {
-        $(document).on('click', '.sidebar-right-main-hide', function (e) {
-            e.preventDefault();
-
-            // Opposite sidebar visibility
-            $('body').toggleClass('sidebar-right-visible');
-            
-            // If visible
-            if ($('body').hasClass('sidebar-right-visible')) {
-                $('body').addClass('sidebar-main-hidden');
-            }
-            else {
-                $('body').removeClass('sidebar-main-hidden');
-            }
-        });
-    };
-
-    // Toggle right sidebar
-    var _sidebarRightToggle = function() {
-        $(document).on('click', '.sidebar-right-toggle', function (e) {
-            e.preventDefault();
-
-            $('body').toggleClass('sidebar-right-visible');
-        });
-    };
-
-    // Show right, hide secondary
-    var _sidebarRightSecondaryToggle = function() {
-        $(document).on('click', '.sidebar-right-secondary-toggle', function (e) {
-            e.preventDefault();
-
-            // Opposite sidebar visibility
-            $('body').toggleClass('sidebar-right-visible');
-
-            // If visible
-            if ($('body').hasClass('sidebar-right-visible')) {
-                $('body').addClass('sidebar-secondary-hidden');
-            }
-            else {
-                $('body').removeClass('sidebar-secondary-hidden');
-            }
-        });
-    };
-
-
     // Toggle content sidebar
     var _sidebarComponentToggle = function() {
         $(document).on('click', '.sidebar-component-toggle', function (e) {
@@ -164,21 +86,6 @@ var App = function () {
     // On mobile
     //
 
-    // Expand sidebar to full screen on mobile
-    var _sidebarMobileFullscreen = function() {
-        $('.sidebar-mobile-expand').on('click', function (e) {
-            e.preventDefault();
-            var $sidebar = $(this).parents('.sidebar'),
-                sidebarFullscreenClass = 'sidebar-fullscreen'
-
-            if(!$sidebar.hasClass(sidebarFullscreenClass)) {
-                $sidebar.addClass(sidebarFullscreenClass);
-            }
-            else {
-                $sidebar.removeClass(sidebarFullscreenClass);
-            }
-        });
-    };
 
     // Toggle main sidebar on mobile
     var _sidebarMobileMainToggle = function() {
@@ -206,31 +113,6 @@ var App = function () {
         $('body').removeClass('sidebar-mobile-main');
         $(this).remove();
     });
-    // Toggle secondary sidebar on mobile
-    var _sidebarMobileSecondaryToggle = function() {
-        $('.sidebar-mobile-secondary-toggle').on('click', function (e) {
-            e.preventDefault();
-            $('body').toggleClass('sidebar-mobile-secondary').removeClass('sidebar-mobile-main sidebar-mobile-right');
-
-            // Fullscreen mode
-            if($('.sidebar-secondary').hasClass('sidebar-fullscreen')) {
-                $('.sidebar-secondary').removeClass('sidebar-fullscreen');
-            }
-        });
-    };
-
-    // Toggle right sidebar on mobile
-    var _sidebarMobileRightToggle = function() {
-        $('.sidebar-mobile-right-toggle').on('click', function (e) {
-            e.preventDefault();
-            $('body').toggleClass('sidebar-mobile-right').removeClass('sidebar-mobile-main sidebar-mobile-secondary');
-
-            // Hide sidebar if in fullscreen mode on mobile
-            if($('.sidebar-right').hasClass('sidebar-fullscreen')) {
-                $('.sidebar-right').removeClass('sidebar-fullscreen');
-            }
-        });
-    };
 
     // Toggle component sidebar on mobile
     var _sidebarMobileComponentToggle = function() {
@@ -306,31 +188,6 @@ var App = function () {
         $('.dropdown-content a[data-toggle="tab"]').on('click', function(e) {
             $(this).tab('show');
         });
-    };
-
-
-    // Components
-    // -------------------------
-
-    // Tooltip
-    var _componentTooltip = function() {
-
-        // Initialize
-        $('[data-popup="tooltip"]').tooltip();
-
-        // Demo tooltips, remove in production
-        var demoTooltipSelector = '[data-popup="tooltip-demo"]';
-        if($(demoTooltipSelector).is(':visible')) {
-            $(demoTooltipSelector).tooltip('show');
-            setTimeout(function() {
-                $(demoTooltipSelector).tooltip('hide');
-            }, 2000);
-        }
-    };
-
-    // Popover
-    var _componentPopover = function() {
-        $('[data-popup="popover"]').popover();
     };
 
 
@@ -482,7 +339,261 @@ var App = function () {
         });
     };
 
-    var _componentDaterange = function() {
+
+    // Components
+    // -------------------------
+
+    // Tooltip
+    var _component_tooltip = function() {
+
+        // Initialize
+        $('[data-popup="tooltip"]').tooltip();
+
+        // Demo tooltips, remove in production
+        var demoTooltipSelector = '[data-popup="tooltip-demo"]';
+        if($(demoTooltipSelector).is(':visible')) {
+            $(demoTooltipSelector).tooltip('show');
+            setTimeout(function() {
+                $(demoTooltipSelector).tooltip('hide');
+            }, 2000);
+        }
+    };
+
+    // Popover
+    var _component_popover = function() {
+        $('[data-popup="popover"]').popover();
+    };
+
+    // Datatable 
+    var _component_datatable = function() {
+        if (!$().DataTable) {
+            console.warn('Warning - datatables.min.js is not loaded.');
+            return;
+        }
+    
+        // Setting datatable defaults
+        $.extend( $.fn.dataTable.defaults, {
+            autoWidth: false,
+            responsive: true,
+            dom: '<"datatable-header"f><"datatable-body"t><"datatable-footer"<"datatable-li"li>p>',
+            language: {
+                decimal:        "",
+                emptyTable:     "Không có dữ liệu trong bảng",
+                info:           " Tổng số _TOTAL_ bản ghi",
+                infoEmpty:      "Không có bản ghi nào",
+                infoFiltered:   "(filtered from _MAX_ total entries)",
+                infoPostFix:    "",
+                thousands:      ",",
+                lengthMenu:     " _MENU_ ",
+                loadingRecords: "Đang tải...",
+                processing:     "Đang xử lý...",
+                search:         "",
+                searchPlaceholder: 'Tìm kiếm nhanh ...',
+                zeroRecords:    "Không tìm thấy hồ sơ phù hợp",
+                paginate: {
+                    first:      "Đầu",
+                    last:       "Cuối",
+                    next:       "Sau >>",
+                    previous:   "<< Trước"
+                },
+                aria: {
+                    sortAscending:  ": kích hoạt để sắp xếp cột tăng dần",
+                    sortDescending: ": kích hoạt để sắp xếp cột giảm dần"
+                },
+                buttons: {
+                    copyTitle: 'Đã thêm vào clipboard',
+                    copyKeys: 'Nhấn ctrl hoặc <i>\u2318</i> + C để sao chép dữ liệu từ bảng vào khay nhớ tạm của bạn. Để hủy, bấm vào tin nhắn này hoặc nhấn Esc.',
+                    copySuccess: {
+                        _: 'Sao chép %d dòng ',
+                        1: 'Sao chép 1 dòng '
+                    }
+                }
+            }
+        });
+    
+        $('.datatable').find('tr').each(function(){
+            $(this).find('th').eq(0).before('<th width="1%"></th>');
+            $(this).find('td').eq(0).before('<td></td>');
+        });
+    
+        var v_datatable = $('.datatable').DataTable( {
+            autoWidth: false,
+            responsive: {
+                details: {
+                    type: 'column'
+                },
+                breakpoints: [
+                    {name: 'desktop', width: Infinity},
+                    {name: 'tablet-l', width: 1200},
+                    {name: 'tablet-p', width: 992},
+                    {name: 'mobile-l', width: 576},
+                    {name: 'mobile-p', width: 320}
+                ]
+            },
+            columnDefs: [
+                {
+                    className: 'control not-desktop text-center',
+                    orderable: false,
+                    targets:   0
+                },
+            ],
+            lengthMenu: [
+                [10, 20, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, -1], 
+                [10, 20, 50, 100, 125, 150, 200, 250, 300, 400, 500, 1000, "Tất cả"]
+            ],
+        });
+    
+        $( "[datatable-collapse]" ).on("shown.bs.collapse", function() {
+            $.each($.fn.dataTable.tables(true), function(){
+                $(this).DataTable().columns.adjust().draw();
+            });
+            v_datatable;
+        });
+    
+        $('[datatable-modal]').on('shown.bs.modal', function(e){
+            $($.fn.dataTable.tables(true)).DataTable()
+               .columns.adjust()
+               .responsive.recalc();
+         });
+    
+      
+    };
+    
+    var _component_tooltip_tipsy = function(){
+        if ($('[data-tooltip="tipsy"]').length > 0) {
+            if (!$().tipsy) {
+                console.warn('Warning - Tipsy js is not loaded.');
+            }
+            $('[data-tooltip="tipsy"]').each(function (index) {
+                var $this = $(this);
+                var v_gravity = '';
+                var v_pos = $this.data('position');
+    
+                // Mac dinh hien thi "top"
+                if (!v_pos){
+                    v_gravity = 's';
+                }else if( v_pos == 'bottom' ){
+                    v_gravity = 'n';
+                }else if( v_pos == 'left' ){
+                    v_gravity = 'e';
+                }else if( v_pos == 'right' ){
+                    v_gravity = 'w';
+                }else if( v_pos == 'bottom-left' ){
+                    v_gravity = 'ne';
+                }else if( v_pos == 'bottom-right' ){
+                    v_gravity = 'nw';
+                }else if( v_pos == 'top-left' ){
+                    v_gravity = 'se';
+                }else if( v_pos == 'top-right' ){
+                    v_gravity = 'sw';
+                }
+    
+                $this.tipsy({
+                    gravity: v_gravity,
+                });
+            });
+    
+        }
+    }
+
+    // Select2
+    var _component_select2 = function() {
+        if ($('[select2]').length > 0) {
+            if (!$().select2) {
+                console.warn('Warning - select2.min.js is not loaded.');
+            }
+            $('[select2]').select2({ 
+                language: "vi",
+                minimumResultsForSearch: 5,
+                width: '100%',
+            });
+        }
+    }
+    
+    // Datepicker
+    var _component_datepicker = function(){
+        if ($().datepicker) {
+            $('.datepicker').datepicker({
+                language: "vi",
+                todayBtn: "linked",
+            });
+        }
+    }
+    
+    // Cleave js: dinh dang kieu nhap du lieu input
+    var _component_input_type = function(){
+        $('.input-money').toArray().forEach(function (field) {
+            new Cleave(field, {
+                numeral: true,
+                numeralThousandsGroupStyle: 'thousand',
+            });
+        });
+    
+        $('.input-date').toArray().forEach(function (field) {
+            new Cleave(field, {
+                date: true,
+                delimiter: '/',
+                datePattern: ['d', 'm', 'Y'],
+                copyDelimiter: true,
+            });
+        });
+    
+        $('.input-time').toArray().forEach(function (field) {
+            new Cleave(field, {
+                time: true,
+                timePattern: ['h', 'm'],
+                copyDelimiter: true,
+            });
+        });
+    
+        $('.input-float').toArray().forEach(function (field) {
+            new Cleave(field, {
+                blocks: [2, 4],
+                numeral: true,
+                delimiter: '',
+                copyDelimiter: true,
+            });
+        });
+        $('.input-number').toArray().forEach(function (field) {
+            new Cleave(field, {
+                numericOnly: true,
+            });
+        });
+        $('.input-phone').toArray().forEach(function (field) {
+            new Cleave(field, {
+                phone: true,
+                phoneRegionCode: 'VN',
+            });
+        });
+    }
+
+    var _component_repeater = function(){
+        if ($('.lich-thanh-toan').length > 0) {
+            if (!$().repeater) {
+                console.warn('Warning - repeater js is not loaded.');
+            }
+            $('.lich-thanh-toan').each(function( index ) {
+                $(this).repeater({
+                    show: function () {
+                        $(this).slideDown();
+                        // console.log($())
+                        _component_input_type();
+                        _component_datepicker();
+                        _component_select2();
+                    },
+                    hide: function (deleteElement) {
+                        if(confirm('Xoa dong nay ?')) {
+                            $(this).slideUp(deleteElement);
+                        }
+                    }
+                });
+            });
+    
+        }
+    }
+
+    // DateRange js
+    var _component_daterange = function() {
         if (!$().daterangepicker) {
             console.warn('Warning - daterangepicker.js is not loaded.');
             return;
@@ -524,6 +635,8 @@ var App = function () {
     };
 
 
+
+
     //
     // Return objects assigned to module
     //
@@ -546,18 +659,10 @@ var App = function () {
             // On desktop
             _sidebarMainResize();
             _sidebarMainToggle();
-            _sidebarSecondaryToggle();
-            _sidebarRightMainToggle();
-            _sidebarRightMainHide();
-            _sidebarRightToggle();
-            _sidebarRightSecondaryToggle();
             _sidebarComponentToggle();
 
             // On mobile
-            _sidebarMobileFullscreen();
             _sidebarMobileMainToggle();
-            _sidebarMobileSecondaryToggle();
-            _sidebarMobileRightToggle();
             _sidebarMobileComponentToggle();
         },
 
@@ -569,9 +674,15 @@ var App = function () {
 
         // Initialize all components
         initComponents: function() {
-            _componentTooltip();
-            _componentPopover();
-            _componentDaterange();
+            _component_tooltip();
+            _component_popover();
+            _component_daterange();
+            _component_repeater();
+            _component_datatable();
+            _component_tooltip_tipsy();
+            _component_select2();
+            _component_datepicker();
+            _component_input_type();
         },
 
         // Initialize all card actions

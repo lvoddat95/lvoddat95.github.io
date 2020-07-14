@@ -114,38 +114,6 @@ var FormWizard = function() {
         });
     };
 
-    // Select2 select
-    // var _componentSelect2 = function() {
-    //     if (!$().select2) {
-    //         console.warn('Warning - select2.min.js is not loaded.');
-    //         return;
-    //     }
-
-    //     // Initialize
-    //     var $select = $('.form-control-select2').select2({
-    //         language: "vi",
-    //         minimumResultsForSearch: 5,
-    //         width: '100%',
-    //     });
-
-        
-    //     // dropdownParent issues
-    //     // https://github.com/select2/select2-bootstrap-theme/issues/41
-
-    //     // Trigger value change when selection is made
-    //     $select.on('change', function() {
-    //         $(this).trigger('blur');
-    //         var v_input_name = $(this)[0].name;
-    //         var v_input_value = $(this)[0].value;
-    //         if (v_input_name == 'nguon_dich_vu' && v_input_value == 'NGAN_HANG' ){
-    //             $(this).closest('fieldset').find('#ngan_hang_opt').slideDown('400');
-    //         }else{
-    //             $(this).closest('fieldset').find('#ngan_hang_opt').slideUp('400');
-    //         }
-    //     });
-    // };
-
-
     var _componentCustom = function() {
       
     }

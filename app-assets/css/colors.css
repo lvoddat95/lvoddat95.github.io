@@ -5641,11 +5641,3 @@ input::placeholder, textarea::placeholder {
 	background-color: #F1F5F8 !important;
 }
 
-.input-group-text,
-.form-control,
-.table-bordered,
-.table-bordered th, 
-.table-bordered td,
-.table .thead-light th{
-	border-color: #e2e8f0;
-}

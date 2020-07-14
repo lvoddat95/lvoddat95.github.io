@@ -3158,6 +3158,10 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 	font-size: 0.75rem;
 }
 
+.breadcrumb-item [class^="linearicons-"]{
+	font-size: 14px;
+}
+
 a.breadcrumb-item, a.breadcrumb-elements-item {
 	display: inline-block;
 	color: inherit;

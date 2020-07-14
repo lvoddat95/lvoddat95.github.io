@@ -1,58 +1,17 @@
 $(function(){
+        
+    //Sửa lỗi input select2 khi mở modal bootstrap 4
+    $.fn.modal.Constructor.prototype._enforceFocus = function () {
+        var that = this;
+        $(document)
+        .off('focusin.bs.modal')
+        .on('focusin.bs.modal', function (e) {
 
-    if ($('[data-tooltip="tipsy"]').length > 0) {
-
-        if (!$().tipsy) {
-            console.warn('Warning - Tipsy js is not loaded.');
-        }
-
-        $('[data-tooltip="tipsy"]').each(function (index) {
-            var $this = $(this);
-            var v_gravity = '';
-            var v_pos = $this.data('position');
-
-            // Mac dinh hien thi "top"
-            if (!v_pos){
-                v_gravity = 's';
-            }else if( v_pos == 'bottom' ){
-                v_gravity = 'n';
-            }else if( v_pos == 'left' ){
-                v_gravity = 'e';
-            }else if( v_pos == 'right' ){
-                v_gravity = 'w';
-            }else if( v_pos == 'bottom-left' ){
-                v_gravity = 'ne';
-            }else if( v_pos == 'bottom-right' ){
-                v_gravity = 'nw';
-            }else if( v_pos == 'top-left' ){
-                v_gravity = 'se';
-            }else if( v_pos == 'top-right' ){
-                v_gravity = 'sw';
-            }
-
-            $this.tipsy({
-                gravity: v_gravity,
-            });
-        });
-
-    }
-
-    if ($('[select2]').length > 0) {
-        if (!$().select2) {
-            console.warn('Warning - select2.min.js is not loaded.');
-        }
-        $('[select2]').each(function (i, obj) {
-            if ( obj.length > 0 ){
-                $(obj).select2({ 
-                    language: "vi",
-                    minimumResultsForSearch: 5,
-                    width: '100%',
-                });
+            if ($(e.target).hasClass('select2-search__field')) {
+                return true;
             }
         });
-    }
-
-
+    };
 
     $("#input-chk-all").click(function () {
         $('.input-chk').not(this).prop('checked', this.checked);
@@ -62,20 +21,6 @@ $(function(){
         $(this).parents('.quick-action').toggleClass('toggle');
     });
 
-    // $(document).on('click', function() {
-    //     if ($('.card-search').length > 0) {
-    //         $('.card-search').removeClass('overlay');
-    //     }
-    // });
-    
-    
-    // $(".card-search").children().on('click', function (e) {
-    //     e.stopPropagation();
-    //     if ($(this).parent().hasClass('card-collapsed')) return false;
-
-    //     $(this).parent().addClass('overlay');
-    // });
-    
     if ($('.side-box').length > 0) {
         $(".side-box").on('click','.side-btn', function (e) {
             e.stopPropagation();
@@ -87,7 +32,6 @@ $(function(){
             $(this).closest('.side-box').removeClass('open');
         });
     }
-    
 
     if ($('.collapse-group').length > 0) {
         $('.cls_ckb').each(function (index) {
@@ -110,76 +54,8 @@ $(function(){
             });
         });
     }
-
-    if ($().datepicker) {
-        $('.datepicker').datepicker({
-            language: "vi",
-            todayBtn: "linked",
-        });
-    }
-
-    $('.input-money').toArray().forEach(function (field) {
-        new Cleave(field, {
-            numeral: true,
-            numeralThousandsGroupStyle: 'thousand',
-        });
-    });
-
-    $('.input-date').toArray().forEach(function (field) {
-        new Cleave(field, {
-            date: true,
-            delimiter: '/',
-            datePattern: ['d', 'm', 'Y'],
-            copyDelimiter: true,
-        });
-    });
-
-    $('.input-time').toArray().forEach(function (field) {
-        new Cleave(field, {
-            time: true,
-            timePattern: ['h', 'm'],
-            copyDelimiter: true,
-        });
-    });
-
-    $('.input-float').toArray().forEach(function (field) {
-        new Cleave(field, {
-            blocks: [2, 4],
-            numeral: true,
-            delimiter: '',
-            copyDelimiter: true,
-        });
-    });
-    $('.input-number').toArray().forEach(function (field) {
-        new Cleave(field, {
-            numericOnly: true,
-        });
-    });
-    $('.input-phone').toArray().forEach(function (field) {
-        new Cleave(field, {
-            phone: true,
-            phoneRegionCode: 'VN',
-        });
-    });
     
-    if ($('.lich-thanh-toan').length > 0) {
-        if (!$().repeater) {
-            console.warn('Warning - repeater js is not loaded.');
-        }
-        $('.lich-thanh-toan').each(function( index ) {
-            $(this).repeater({
-                show: function () {
-                    $(this).slideDown();
-                },
-                hide: function (deleteElement) {
-                    if(confirm('Xoa dong nay ?')) {
-                        $(this).slideUp(deleteElement);
-                    }
-                }
-            });
-        });
-
-    }
+    
 
     if ($().perfectScrollbar) {
         $('.dropdown-scrollable').perfectScrollbar();
@@ -204,38 +80,8 @@ $(function(){
         $("html, body").animate({scrollTop: 0}, 500);
     });
 
-    includeHTML();
-
+   
 });
-
-function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("include-html");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            console.log(elmnt.innerHTML)
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("include-html");
-            includeHTML();
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-      }
-    }
-};
 
 var on_change_hinh_thuc_khai_thac = function(p_this){
     console.log(p_this.value);
@@ -283,6 +129,9 @@ var list_view = function(p_this){
 var grid_view = function(p_this){
     $(p_this).closest('.f-right').removeClass('list').addClass('grid');
 }
+
+
+
 
 $(function(){
     var $window       = $(window);

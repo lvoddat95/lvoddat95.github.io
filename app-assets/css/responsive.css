@@ -318,6 +318,10 @@
         left: 15px;
     }
 
+    .list-files li{
+        width: 25%;
+    }
+
 
 
 
@@ -431,7 +435,36 @@
         -ms-justify-content: center;
         justify-content: center;
     }
-
+    .list-files li{
+        width: 33.3333%;
+    }
+    .nav-file .nav-link {
+        padding: 5px 0;
+    }
+    .nav-file .nav-link > i {
+        font-size: 10px;
+        margin-right: 3px;
+    }
+    .nav-file .nav-group-sub {
+        margin-left: 13px;
+    }
+    .f-right.grid .file-icon {
+        height: 30px;
+        width: 30px;
+    }
+    .file-manager{
+        margin: 0 -5px;
+    }
+    .f-left,
+    .f-right{
+        padding: 0 5px;
+    }
+    .nav-file {
+        padding: 15px 5px;
+    }
+    .f-right.list span.date, .f-right.list span.type{
+        display: none;
+    }
 }
 
 
@@ -457,6 +490,7 @@
         max-width: 80px;
         font-size: 9px;
         padding: 0px 5px;
+        line-height: normal;
     }
     .input-don .input-group-append > .btn > i{
         margin: 0 !important;

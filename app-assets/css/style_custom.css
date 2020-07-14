@@ -21,7 +21,6 @@ body {
     -ms-flex: 1;
     flex: 1;
 }
-
 .page-content {
     min-height: 100vh;
     display: -ms-flexbox;
@@ -825,7 +824,7 @@ a.sidebar-main-toggle:hover{
     padding-left: 5px;
     padding-right: 32px;
     height: 16px;
-    min-width: 60px;
+    min-width: 70px;
 }
 .select2-results__option{
     margin: 0 3px;
@@ -2467,7 +2466,8 @@ body.sidebar-mobile-main .quick-action {
     padding: 0;
     margin-top: 15px;
     max-height: 400px;
-    overflow-y: scroll;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .list-files li{
@@ -2475,12 +2475,7 @@ body.sidebar-mobile-main .quick-action {
     vertical-align: top;
     padding: 5px;
     font-size: 9px;
-    width: 25%;
-}
-.file-wrapper{
-    /* -webkit-transition: all ease-in-out 0.25s;
-    -ms-transition: all ease-in-out 0.25s;
-    transition: all ease-in-out 0.25s; */
+    width: 20%;
 }
 .f-right.grid .file-wrapper:hover{
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -2587,6 +2582,7 @@ body.sidebar-mobile-main .quick-action {
 .f-right.list .file-icon {
     border: 1px solid #e2e8f0;
     margin: 5px 10px;
+    min-width: 20px;
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
@@ -2613,6 +2609,8 @@ body.sidebar-mobile-main .quick-action {
     width: 100px;
 }
 .f-right.list .file-wrapper .dropdown {
+    left: 0px;
+    right: auto;
     top: 8px;
 }
 .f-right.list .file-wrapper:hover{
