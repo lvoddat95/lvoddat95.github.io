@@ -139,18 +139,23 @@ var App = function () {
 
         // Configure collapsible functionality
         $('.' + navClass).each(function() {
+            $this =  $('.' + navClass + ' > ' + '.' + navItemClass + ' > ' + '.' + navLinkClass);
             $(this).find('.' + navItemClass).has('.' + navSubmenuClass).children('.' + navItemClass + ' > ' + '.' + navLinkClass).not('.disabled').on('click', function (e) {
                 e.preventDefault();
 
                 // Simplify stuff
                 var $target = $(this),
                     $navSidebarMini = $('.sidebar-xs').not('.sidebar-mobile-main').find('.sidebar-main .' + navClass).children('.' + navItemClass);
+                    console.log($this)
 
                 // Collapsible
                 if($target.parent('.' + navItemClass).hasClass(navItemOpenClass)) {
+                    $target.addClass('ok')
                     $target.parent('.' + navItemClass).not($navSidebarMini).removeClass(navItemOpenClass).children('.' + navSubmenuClass).slideUp(navSlidingSpeed);
                 }
                 else {
+                    $this.removeClass('active');
+                    $target.addClass('active');
                     $target.parent('.' + navItemClass).not($navSidebarMini).addClass(navItemOpenClass).children('.' + navSubmenuClass).slideDown(navSlidingSpeed);
                 }
 
