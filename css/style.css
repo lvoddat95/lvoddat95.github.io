@@ -18,9 +18,19 @@ p {
 
 @font-face {
     font-family: 'Times New Roman';
-    src: url("../fonts/Times New Roman.ttf");
+    src: url("../fonts/TimesNewRoman.ttf");
 }
-
+@font-face {
+    font-family: "Times New Roman";
+    src: url("../fonts/TimesNewRoman-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Times New Roman";
+    src: url("fonts/TimesNewRoman-BoldOblique.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
 body {
     font-size: 14px;
     line-height: 24px;
@@ -364,7 +374,7 @@ body {
 }
 
 .thoi_han {
-    padding-left: 26px;
+    padding-left: 28px;
 }
 
 .thoi_han_den {
@@ -372,7 +382,7 @@ body {
 }
 
 .thoi_han .p_phut {
-    padding-left: 26px;
+    padding-left: 27px;
 }
 
 .thoi_han .p_ngay {
@@ -380,15 +390,15 @@ body {
 }
 
 .thoi_han .p_thang {
-    padding-left: 44px;
-}
-
-.thoi_han .p_nam {
     padding-left: 45px;
 }
 
+.thoi_han .p_nam {
+    padding-left: 48px;
+}
+
 .ngay_nop {
-    top: 10px;
+    margin-top: 5px;
     padding-left: 165px;
 }
 
@@ -407,11 +417,11 @@ body {
 }
 
 .cap_hoi .p_phut {
-    padding-left: 15px;
+    padding-left: 18px;
 }
 
 .cap_hoi .p_ngay {
-    padding-left: 20px;
+    padding-left: 23px;
 }
 
 .cap_hoi .p_thang {
@@ -481,7 +491,7 @@ body {
 }
 
 .phi_bao_hiem_vat {
-    top: 3px;
+    margin-top: 5px;
     padding-right: 40px;
 }
 

@@ -30,7 +30,7 @@
 	    </div>
 	</div>
 
-	<div class="view-container" >
+	<div class="view-container" style="display: none;">
 		<div class="print-wrapper">
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/p1.png" />
@@ -133,7 +133,7 @@
 
 	</div>
 
-	<div id="root" class="print-container" style="display: none;">
+	<div id="root" class="print-container" >
         <div class="print-wrapper">
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/pdf1.png" />
@@ -209,7 +209,7 @@
 		                  <span class="p_thang">12</span>
 		                  <span class="p_nam">20</span>
 		                </p>
-		                <div class="p-space" style="height: 100px;"></div>
+		                <div class="p-space" style="height: 89px;"></div>
 		                <p class="cap_hoi thoi_han_den text-left">
 		                  <span class="p_gio">12</span>
 		                  <span class="p_phut">00</span>
@@ -231,7 +231,10 @@
 
 	<script>
 		kendo.pdf.defineFont({
-	        "Times New Roman" : "https://lvoddat95.github.io/fonts/Times New Roman.ttf",
+	        "Times New Roman"             : "https://lvoddat95.github.io/fonts/TimesNewRoman.ttf",
+	        "Times New Roman|Bold"        : "https://lvoddat95.github.io/fonts/TimesNewRoman.ttf",
+	        "Times New Roman|Bold|Italic" : "https://lvoddat95.github.io/fonts/TimesNewRoman.ttf",
+	        "Times New Roman|Italic"      : "https://lvoddat95.github.io/fonts/TimesNewRoman.ttf",
 	    });
 		function getPDF(selector) {
 	        // kendo.drawing.drawDOM($(selector)).then(function(group){
