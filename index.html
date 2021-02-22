@@ -2,9 +2,11 @@
 <html>
 
 <head>
-  <title>html2pdf Test - Template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>html2pdf Test - Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
   
 </head>
 
@@ -28,12 +30,12 @@
 	    </div>
 	</div>
 
-	<div class="view-container">
+	<div class="view-container" >
 		<div class="print-wrapper">
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/p1.png" />
 	        	<div class="qr-code">
-	        		<img src="ma-qr.png" alt="">
+	        		<img src="imgs/ma-qr.png" alt="">
 	        	</div>
 	        </div>
         </div>
@@ -72,41 +74,6 @@
 		                  <input type="checkbox" name="foo" value="0" />
 		                  <input type="checkbox" name="foo" value="1" checked />
 		                </div>
-	              	</div>
-	              	<div class="p-content3">
-		                <p class="thoi_han thoi_han_tu text-left">
-		                  <span class="p_gio">12</span>
-		                  <span class="p_phut">00</span>
-		                  <span class="p_ngay">15</span>
-		                  <span class="p_thang">12</span>
-		                  <span class="p_nam">20</span>
-		                </p>
-		                <p class="thoi_han thoi_han_den text-left">
-		                  <span class="p_gio">12</span>
-		                  <span class="p_phut">00</span>
-		                  <span class="p_ngay">15</span>
-		                  <span class="p_thang">12</span>
-		                  <span class="p_nam">21</span>
-		                </p>
-
-		                <div class="p-space" style="height: 27px;"></div>
-
-		                <p class="phi_bao_hiem text-right">1,800,000</p>
-		                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
-
-		                <p class="ngay_nop text-left">
-		                  <span class="p_ngay">15</span>
-		                  <span class="p_thang">12</span>
-		                  <span class="p_nam">20</span>
-		                </p>
-		                <div class="p-space" style="height: 100px;"></div>
-		                <p class="cap_hoi thoi_han_den text-left">
-		                  <span class="p_gio">12</span>
-		                  <span class="p_phut">00</span>
-		                  <span class="p_ngay">15</span>
-		                  <span class="p_thang">12</span>
-		                  <span class="p_nam">2021</span>
-		                </p>
 	              	</div>
 	            </div>
 	        </div>
@@ -159,7 +126,7 @@
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/p4.png" />
 	        	<div class="bar-code">
-	        		<img src="ma-bar.png" alt="">
+	        		<img src="imgs/ma-bar.png" alt="">
 	        	</div>
 	        </div>
         </div>
@@ -171,10 +138,10 @@
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/pdf1.png" />
 	        	<div class="qr-code">
-	        		<img src="ma-qr.png" alt="">
+	        		<img src="imgs/ma-qr.png" alt="">
 	        	</div>
 	        	<div class="bar-code">
-	        		<img src="ma-bar.png" alt="">
+	        		<img src="imgs/ma-bar.png" alt="">
 	        	</div>
 	        </div>
         </div>
@@ -264,8 +231,8 @@
 
 	<script>
 		kendo.pdf.defineFont({
-	        "Newsreader-Regular" : "http://localhost/ol/fonts/Newsreader-Regular.ttf",
-	        "Newsreader-Medium" : "http://localhost/ol/fonts/Newsreader-Medium.ttf",
+	        "Newsreader-Regular" : "https://lvoddat95.github.io/fonts/Newsreader-Regular.ttf",
+	        "Newsreader-Medium" : "https://lvoddat95.github.io/fonts/Newsreader-Medium.ttf",
 	    });
 		function getPDF(selector) {
 	        // kendo.drawing.drawDOM($(selector)).then(function(group){

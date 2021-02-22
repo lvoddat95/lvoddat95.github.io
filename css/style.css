@@ -20,7 +20,7 @@ p {
 
 @font-face {
   font-family: 'Newsreader-Medium';
-  src: url("fonts/Newsreader-Medium.ttf");
+  src: url("../fonts/Newsreader-Medium.ttf");
 }
 
 body {
@@ -63,9 +63,6 @@ body {
 
 .img-asl {
   width: 179mm;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .print-wrapper {
@@ -78,7 +75,8 @@ body {
 }
 
 .p-content {
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 
 .p-content2 {
@@ -110,6 +108,11 @@ body {
 
 .view-container .img-asl{
   width: calc(179mm/2);
+}
+
+.view-container .p-content2,
+.view-container .p-content3{
+  width: 100%;
 }
 
 .pl-66 {
