@@ -1,204 +1,335 @@
-*::before,
-*::after,
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-print-color-adjust: none !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
 }
 
 p {
-  position: relative;
-  margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: 20px;
+    position: relative;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 20px;
 }
 
 @font-face {
-  font-family: 'Newsreader-Medium';
-  src: url("../fonts/Newsreader-Medium.ttf");
+    font-family: 'Newsreader-Medium';
+    src: url("../fonts/Newsreader-Medium.ttf");
 }
 
 body {
-  font-size: 14px;
-  line-height: 24px;
-  width: 179mm;
-  margin: auto;
-  background: #56565f;
-  font-weight: 600;
-  font-family: 'Newsreader-Medium';
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 179mm;
+    margin: auto;
+    background: #56565f;
+    font-weight: 600;
+    font-family: 'Newsreader-Medium';
 }
 
 .content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .print-header {
-  background: rgba(28, 63, 170, 0.77);
-  color: #fff;
-  width: 100%;
-  padding: 10px 20px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: space-between;
+    background: rgba(28, 63, 170, 0.77);
+    color: #fff;
+    width: 100%;
+    padding: 10px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .print-container {
-  position: relative;
+    position: relative;
 }
 
 .img-asl {
-  width: 179mm;
+    width: 179mm;
 }
 
 .print-wrapper {
-  position: relative;
-  display: block;
-  float: left;
-  height: 130mm;
-  width: 179mm;
-  margin: 0;
+    position: relative;
+    display: block;
+    float: left;
+    height: 130mm;
+    width: 179mm;
+    margin: 0;
 }
 
 .p-content {
-  position: absolute;
-  top: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
 }
 
 .p-content2 {
-  float: left;
-  width: 50%;
-  position: relative;
-  padding-left: 32px;
-  padding-right: 20px;
-  top: 80px;
+    float: left;
+    width: 50%;
+    position: relative;
+    padding-left: 32px;
+    padding-right: 20px;
+    top: 80px;
 }
 
 .p-content3 {
-  float: left;
-  width: 50%;
-  position: relative;
-  padding: 0 25px;
-  top: 57px;
-  line-height: 20px;
+    float: left;
+    width: 50%;
+    position: relative;
+    padding: 0 25px;
+    top: 57px;
+    line-height: 20px;
 }
 
-.view-container{
-  display: flex;
-  flex-direction: column;
+.view-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    line-height: 20px;
 }
 
-.view-container .print-wrapper{
-  width: calc(179mm/2);
+.view-container .print-wrapper {
+    width: 290px;
+    height: auto;
 }
 
-.view-container .img-asl{
-  width: calc(179mm/2);
+.view-container .img-asl {
+    display: block;
+    width: 100%;
 }
 
-.view-container .p-content2,
+.view-container .p-content2, .view-container .p-content3 {
+    width: 100%;
+}
+
+.view-container .print-wrapper::before {
+    content: '';
+    border: 1px solid #2e3190;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.view-container .p-content2 {
+    max-width: 290px;
+    top: 70px;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
 .view-container .p-content3{
-  width: 100%;
+    top: 50px;
+    line-height: 17px;
 }
+
+.view-container .qr-code img {
+    width: 50px;
+    height: 50px;
+    right: 119px;
+    bottom: 116px;
+}
+
+.view-container .chu_xe {
+    top: 2px;
+    height: 38px;
+    line-height: 18px;
+}
+
+.view-container .chu_xe > span:first-child{
+    width: 80px !important;
+}
+
+.view-container .dia_chi > span:first-child{
+    width: 50px !important;
+}
+
+.view-container .dia_chi {
+    height: 40px;
+}
+
+.view-container .bien_kiem_soat{
+    margin-bottom: 2px;
+    padding-left: 130px;
+}
+
+.view-container .so_khung {
+    padding-left: 120px;
+}
+
+.view-container .so_cho_ngoi{
+    top: 0;
+}
+
+.view-container  .loai_xe {
+    margin-top: 0px; 
+    padding-left: 55px;
+}
+
+.view-container .p-options {
+    padding-left: 59px;
+}
+
+.view-container .p-options>input:last-child {
+    left: 125px;
+}
+
+.view-container .thoi_han {
+    padding-left: 20px;
+    min-height: 17px;
+}
+
+.view-container .thoi_han .p_phut {
+    padding-left: 22px;
+}
+
+.view-container .thoi_han .p_ngay {
+    padding-left: 38px;
+}
+
+.view-container .thoi_han .p_thang {
+    padding-left: 37px;
+}
+
+.view-container .thoi_han .p_nam {
+    padding-left: 40px;
+}
+
+.view-container .ngay_nop {
+    top: 0;
+    padding-left: 135px;
+}
+
+.view-container .cap_hoi{
+    font-size: 7.5px;
+    padding-left: 100px;
+}
+
+.view-container .cap_hoi .p_thang{
+    padding-left: 20px;
+}
+
+.view-container .cap_hoi .p_thang{
+    padding-left: 18px;
+}
+
+.view-container .bar-code img {
+    width: 86px;
+    height: 36px;
+    left: 182px;
+    bottom: 26px;
+}
+.view-container .phi_bao_hiem {
+    top: -1px;
+    padding-right: 30px;
+}
+.view-container .phi_bao_hiem_vat {
+    top: 0;
+    padding-right: 30px;
+}
+
+
 
 .pl-66 {
-  padding-left: 66px;
+    padding-left: 66px;
 }
 
 .pl-0 {
-  padding-left: 0px;
+    padding-left: 0px;
 }
 
 .w-66 {
-  float: left;
-  width: 38px;
-  display: block;
-  height: 1px;
+    float: left;
+    width: 38px;
+    display: block;
+    height: 1px;
 }
 
 .p-double {
-  padding-left: 27px;
+    padding-left: 27px;
 }
 
 .pd-left {
-  float: left;
-  width: calc(100% - 145px);
+    float: left;
+    width: calc(100% - 145px);
 }
 
 .pd-right {
-  float: left;
-  width: 145px;
+    float: left;
+    width: 145px;
 }
 
 .p-double:after {
-  clear: both;
-  content: " ";
-  display: block;
-  width: 0px;
-  height: 0px;
+    clear: both;
+    content: " ";
+    display: block;
+    width: 0px;
+    height: 0px;
 }
 
 .p-options {
-  padding-left: 74px;
+    padding-left: 74px;
 }
 
 .p-options.style2 {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .p-options.style2>input {
-  display: block;
-  margin-left: 168px;
+    display: block;
+    margin-left: 168px;
 }
 
 .p-options.style2>input:nth-of-type(2) {
-  margin-left: 76.5px;
-  top: 2.5px;
+    margin-left: 76.5px;
+    top: 2.5px;
 }
 
 .p-options.style2>input:last-child {
-  margin-left: 131px;
-  left: 0;
-  top: 7px;
+    margin-left: 131px;
+    left: 0;
+    top: 7px;
 }
 
 .p-options>input:last-child {
-  position: relative;
-  left: 146px;
+    position: relative;
+    left: 146px;
 }
 
 .p-options>input {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
 
 .p-options>input {
-
-  /*      -moz-appearance: none;
+    /*      -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
         outline: none;*/
-  height: 13px;
-  width: 13px;
+    height: 13px;
+    width: 13px;
 }
 
 .p-options>input:before {
-
-  /*      content: "";
+    /*      content: "";
         transition: all 0.2s ease-in-out;
         -ms-display: flex;
         display: flex;
@@ -220,219 +351,211 @@ body {
 }
 
 .p-options>input:checked:before {
-
-  /*opacity: 1;*/
+    /*opacity: 1;*/
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 .thoi_han_thanh_toan_phi {
-  padding-right: 60px;
+    padding-right: 60px;
 }
 
 .thoi_han {
-  padding-left: 26px;
+    padding-left: 26px;
 }
 
 .thoi_han_den {
-  top: 2px;
+    top: 2px;
 }
 
 .thoi_han .p_phut {
-  padding-left: 26px;
+    padding-left: 26px;
 }
 
 .thoi_han .p_ngay {
-  padding-left: 44px;
+    padding-left: 44px;
 }
 
 .thoi_han .p_thang {
-  padding-left: 44px;
+    padding-left: 44px;
 }
 
 .thoi_han .p_nam {
-  padding-left: 45px;
+    padding-left: 45px;
 }
 
 .ngay_nop {
-  top: 10px;
-  padding-left: 165px;
+    top: 10px;
+    padding-left: 165px;
 }
 
 .ngay_nop .p_thang {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .ngay_nop .p_nam {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .cap_hoi {
-  font-size: 10px;
-  padding-left: 121px;
-  font-style: italic;
+    font-size: 10px;
+    padding-left: 121px;
+    font-style: italic;
 }
 
 .cap_hoi .p_phut {
-  padding-left: 15px;
+    padding-left: 15px;
 }
 
 .cap_hoi .p_ngay {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .cap_hoi .p_thang {
-  padding-left: 22px;
+    padding-left: 22px;
 }
 
 .cap_hoi .p_nam {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
-.mva_so_luong {
-}
+.mva_so_luong {}
 
 .mva_muc_trach_nhiem {
-  top: -2px;
-  right: 70px;
+    top: -2px;
+    right: 70px;
 }
 
 .mva_phi_bao_hiem {
-  top: -2px;
+    top: -2px;
 }
 
 .chu_xe {
-  top: 1px;
-  height: 44px;
-  overflow: visible;
-  white-space: normal;
+    top: 1px;
+    height: 44px;
+    overflow: visible;
+    white-space: normal;
 }
 
 .dia_chi {
-  height: 48px;
-  overflow: visible;
-  white-space: normal;
+    height: 48px;
+    overflow: visible;
+    white-space: normal;
 }
 
 .sdt {
-  padding-left: 115px;
+    padding-left: 115px;
 }
 
 .bien_kiem_soat {
-  padding-left: 170px;
+    padding-left: 170px;
 }
 
 .so_khung {
-  padding-left: 140px;
+    padding-left: 140px;
 }
 
 .so_may {
-  padding-left: 95px;
+    padding-left: 95px;
 }
 
 .loai_xe {
-  margin-top: -1px;
-  padding-left: 65px;
+    margin-top: -1px;
+    padding-left: 65px;
 }
 
 .trong_tai {
-  padding-right: 100px;
+    padding-right: 100px;
 }
 
 .so_cho_ngoi {
-  top: -1px;
-  padding-right: 100px;
+    top: -1px;
+    padding-right: 100px;
 }
 
 .phi_bao_hiem {
-  padding-right: 40px;
+    padding-right: 40px;
 }
 
 .phi_bao_hiem_vat {
-  top: 5px;
-  padding-right: 40px;
+    top: 3px;
+    padding-right: 40px;
 }
 
 [contenteditable] {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .button {
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: sans-serif;
-  font-size: 14px;
-  color: #fff;
-  background: #506bbd;
-  border: 1.5px solid;
-  transition: box-shadow .3s;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background: #506bbd;
+    border: 1.5px solid;
+    transition: box-shadow .3s;
 }
 
 .button.active {
-  border-color: red;
+    border-color: red;
 }
 
 .button:hover {
-  box-shadow: 0 0 11px rgb(255 255 255 / 90%) !important;
+    box-shadow: 0 0 11px rgb(255 255 255 / 90%) !important;
 }
 
 .qr-code img {
-  width: 59px;
-  height: 59px;
-  position: absolute;
-  right: 138px;
-  bottom: 134px;
-  z-index: 11;
+    width: 59px;
+    height: 59px;
+    position: absolute;
+    right: 138px;
+    bottom: 134px;
+    z-index: 11;
 }
 
 .bar-code img {
-  width: 100px;
-  height: 40px;
-  position: absolute;
-  left: 213px;
-  bottom: 32px;
-  object-fit: contain;
-  background: white;
-  z-index: 11;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 213px;
+    bottom: 32px;
+    object-fit: contain;
+    background: white;
+    z-index: 11;
 }
 
 @media print {
-  @page {
-    size: A5;
-    size: landscape;        /*size: portrait;*/
-    margin: 0;
-  }
-
-  .print-inner {
-    background: none;
-  }
-
-  .print-container {
-    background: transparent;
-    page-break-before: always;
-  }
-
-  body {
-    display: block;
-    border: none;
-    height: auto;
-    width: auto;
-  }
-
-  .content {
-    display: block;
-  }
-
-  .print-header {
-    display: none;
-  }
-
-  .print-hide {
-    display: none;
-  }
-
+    @page {
+        size: A5;
+        size: landscape;
+        /*size: portrait;*/
+        margin: 0;
+    }
+    .print-inner {
+        background: none;
+    }
+    .print-container {
+        background: transparent;
+        page-break-before: always;
+    }
+    body {
+        display: block;
+        border: none;
+        height: auto;
+        width: auto;
+    }
+    .content {
+        display: block;
+    }
+    .print-header {
+        display: none;
+    }
+    .print-hide {
+        display: none;
+    }
 }
