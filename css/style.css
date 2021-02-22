@@ -17,8 +17,8 @@ p {
 }
 
 @font-face {
-    font-family: 'Newsreader-Medium';
-    src: url("../fonts/Newsreader-Medium.ttf");
+    font-family: 'Times New Roman';
+    src: url("../fonts/Times New Roman.ttf");
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     margin: auto;
     background: #56565f;
     font-weight: 600;
-    font-family: 'Newsreader-Medium';
+    font-family: 'Times New Roman';
 }
 
 .content {
@@ -105,6 +105,7 @@ body {
     align-items: center;
     font-size: 11px;
     line-height: 20px;
+    font-family: 'Times New Roman';
 }
 
 .view-container .print-wrapper {
