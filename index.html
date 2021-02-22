@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>html2pdf Test - Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+</head>
+
+<body>
+	<div style="background-color: #fff;margin-bottom: 5mm;">
+	    <div class="print-header print-hide">
+	      <h1 style="font-size: 20px;font-family: sans-serif;">
+	        <svg style="fill: #fff;height: 20px;margin-bottom: -2px;" xmlns="http://www.w3.org/2000/svg"
+	          viewBox="0 0 512 512" xmlns:v="https://vecta.io/nano">
+	          <path
+	            d="M482 182.58V135c0-24.813-20.187-45-45-45h-23.787L327.617 4.404c-.018-.018-.039-.035-.057-.054A15.04 15.04 0 0 0 317.232.011c-.078-.001-.153-.011-.231-.011H105c-8.284 0-15 6.716-15 15v75H75c-24.813 0-45 20.187-45 45v47.58C12.541 188.772 0 205.445 0 225v182c0 24.813 20.187 45 45 45h45v45c0 8.284 6.716 15 15 15h302c8.284 0 15-6.716 15-15v-45h45c24.813 0 45-20.187 45-45V225c0-19.555-12.541-36.228-30-42.42zM422 120h15a15.02 15.02 0 0 1 15 15v45h-30v-60zm-90-68.787L370.787 90H332V51.213zM120 30h182v75c0 8.284 6.716 15 15 15h75v60H120V30zM60 135a15.02 15.02 0 0 1 15-15h15v60H60v-45zm332 347H120V332h272v150zm90-75a15.02 15.02 0 0 1-15 15h-45v-90h15c8.284 0 15-6.716 15-15s-6.716-15-15-15H75c-8.284 0-15 6.716-15 15s6.716 15 15 15h15v90H45a15.02 15.02 0 0 1-15-15V225a15.02 15.02 0 0 1 15-15h422a15.02 15.02 0 0 1 15 15v182zm-135-45H165c-8.284 0-15 6.716-15 15s6.716 15 15 15h182c8.284 0 15-6.716 15-15s-6.716-15-15-15zm0 60H165c-8.284 0-15 6.716-15 15s6.716 15 15 15h182c8.284 0 15-6.716 15-15s-6.716-15-15-15zM105 240H75c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />
+	        </svg>
+	        <span>Thông tin giấy chứng nhận BH</span>
+	      </h1>
+	      <div class="print-hide">
+	        <span style="display: inline-block; width: 5px;"></span>
+	        <a class="button" href="javascript:;" title="HDSD?" onclick="getPDF('#root');">
+	          <span>Generate PDF</span>
+	        </a>
+	      </div>
+	    </div>
+	</div>
+
+	<div class="view-container">
+		<div class="print-wrapper">
+	        <div class="print-inner">
+        		<img alt="" class="img-asl" src="imgs/p1.png" />
+	        	<div class="qr-code">
+	        		<img src="ma-qr.png" alt="">
+	        	</div>
+	        </div>
+        </div>
+
+        <div class="print-wrapper">
+	        <div class="print-inner">
+	        	<img alt="" class="img-asl" src="imgs/p2.png" />
+	            <div class="p-content">
+	              	<div class="p-content2">
+
+		            	<p class="chu_xe">
+		                  <span style='float: left;display: block; width: 95px; height: 1px;'></span>
+		                  <span contenteditable="true">Lê Văn A</span>
+		                </p>
+
+		                <p class="dia_chi">
+		                  <span style='float: left;display: block; width: 65px; height: 1px;'></span>
+		                  <span contenteditable="true">Toà Geleximco, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</span>
+		                </p> 
+
+		                <p class="sdt">0123456789</p>
+
+		                <p class="bien_kiem_soat">29A 666888</p>
+
+		                <p class="so_khung">RN2KF5326JC093785</p>
+
+		                <p class="loai_xe">MAZDA - CX 5 25G AT 2WD KF</p>
+
+		                <p class="trong_tai text-right">2</p>
+
+		                <p class="so_cho_ngoi text-right">5</p>
+
+		                <div class="p-space" style="height: 20px;"></div>
+
+		                <div class="p-options">
+		                  <input type="checkbox" name="foo" value="0" />
+		                  <input type="checkbox" name="foo" value="1" checked />
+		                </div>
+	              	</div>
+	              	<div class="p-content3">
+		                <p class="thoi_han thoi_han_tu text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <p class="thoi_han thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">21</span>
+		                </p>
+
+		                <div class="p-space" style="height: 27px;"></div>
+
+		                <p class="phi_bao_hiem text-right">1,800,000</p>
+		                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
+
+		                <p class="ngay_nop text-left">
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <div class="p-space" style="height: 100px;"></div>
+		                <p class="cap_hoi thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">2021</span>
+		                </p>
+	              	</div>
+	            </div>
+	        </div>
+        </div>
+
+        <div class="print-wrapper">
+	        <div class="print-inner">
+	        	<img alt="" class="img-asl" src="imgs/p3.png" />
+	            <div class="p-content">
+	              	<div class="p-content3">
+		                <p class="thoi_han thoi_han_tu text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <p class="thoi_han thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">21</span>
+		                </p>
+
+		                <div class="p-space" style="height: 27px;"></div>
+
+		                <p class="phi_bao_hiem text-right">1,800,000</p>
+		                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
+
+		                <p class="ngay_nop text-left">
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <div class="p-space" style="height: 100px;"></div>
+		                <p class="cap_hoi thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">2021</span>
+		                </p>
+	              	</div>
+	            </div>
+	        </div>
+        </div>
+
+        <div class="print-wrapper">
+	        <div class="print-inner">
+        		<img alt="" class="img-asl" src="imgs/p4.png" />
+	        	<div class="bar-code">
+	        		<img src="ma-bar.png" alt="">
+	        	</div>
+	        </div>
+        </div>
+
+	</div>
+
+	<div id="root" class="print-container" style="display: none;">
+        <div class="print-wrapper">
+	        <div class="print-inner">
+        		<img alt="" class="img-asl" src="imgs/pdf1.png" />
+	        	<div class="qr-code">
+	        		<img src="ma-qr.png" alt="">
+	        	</div>
+	        	<div class="bar-code">
+	        		<img src="ma-bar.png" alt="">
+	        	</div>
+	        </div>
+        </div>
+
+		<div class="p-space" style="float: left;width: 100%;height: 5mm;display: block;"></div>
+
+        <div class="print-wrapper">
+	        <div class="print-inner">
+	        	<img alt="" class="img-asl" src="imgs/pdf2.png" />
+	            <div class="p-content">
+	              	<div class="p-content2">
+
+		            	<p class="chu_xe">
+		                  <span style='float: left;display: block; width: 95px; height: 1px;'></span>
+		                  <span contenteditable="true">Lê Văn A</span>
+		                </p>
+
+		                <p class="dia_chi">
+		                  <span style='float: left;display: block; width: 65px; height: 1px;'></span>
+		                  <span contenteditable="true">Toà Geleximco, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</span>
+		                </p> 
+
+		                <p class="sdt">0123456789</p>
+
+		                <p class="bien_kiem_soat">29A 666888</p>
+
+		                <p class="so_khung">RN2KF5326JC093785</p>
+
+		                <p class="loai_xe">MAZDA - CX 5 25G AT 2WD KF</p>
+
+		                <p class="trong_tai text-right">2</p>
+
+		                <p class="so_cho_ngoi text-right">5</p>
+
+		                <div class="p-space" style="height: 20px;"></div>
+
+		                <div class="p-options">
+		                  <input type="checkbox" name="foo" value="0" />
+		                  <input type="checkbox" name="foo" value="1" checked />
+		                </div>
+	              	</div>
+	              	<div class="p-content3">
+		                <p class="thoi_han thoi_han_tu text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <p class="thoi_han thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">21</span>
+		                </p>
+
+		                <div class="p-space" style="height: 27px;"></div>
+
+		                <p class="phi_bao_hiem text-right">1,800,000</p>
+		                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
+
+		                <p class="ngay_nop text-left">
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">20</span>
+		                </p>
+		                <div class="p-space" style="height: 100px;"></div>
+		                <p class="cap_hoi thoi_han_den text-left">
+		                  <span class="p_gio">12</span>
+		                  <span class="p_phut">00</span>
+		                  <span class="p_ngay">15</span>
+		                  <span class="p_thang">12</span>
+		                  <span class="p_nam">2021</span>
+		                </p>
+	              	</div>
+	            </div>
+	        </div>
+        </div>
+    </div>
+</body>
+	
+	<script src="https://kendo.cdn.telerik.com/2021.1.119/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.119/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.119/js/kendo.all.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.3/pako.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<script>
+		kendo.pdf.defineFont({
+	        "Newsreader-Regular" : "http://localhost/ol/fonts/Newsreader-Regular.ttf",
+	        "Newsreader-Medium" : "http://localhost/ol/fonts/Newsreader-Medium.ttf",
+	    });
+		function getPDF(selector) {
+	        // kendo.drawing.drawDOM($(selector)).then(function(group){
+	        //   kendo.drawing.pdf.saveAs(group, "Invoice.pdf");
+	        // });
+
+	        kendo.drawing.drawDOM($(selector))
+	        .then(function(group) {
+	            // Render the result as a PDF file
+	            return kendo.drawing.exportPDF(group, {
+	                paperSize: "auto",
+	                imgDPI: 144,
+	                date: new Date(),
+	                creator: "Dat lv",
+	                subject: 'subject',
+	                title: 'title',
+	                // landscape: true,
+	                margin: { left: "5mm", top: "5mm", right: "5mm", bottom: "5mm" }
+	            });
+	        })
+	        .done(function(data) {
+	            // Save the PDF file
+	            kendo.saveAs({
+	                dataURI: data,
+	                fileName: "HR-Dashboard.pdf",
+	                proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+	            });
+	        });
+	    }
+
+
+
+	</script>
+
+<!-- <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.min.js"></script>
+<script>
+    function test() {
+      // Get the element.
+      var element = document.getElementById('root');
+
+      // Generate the PDF.
+      html2pdf().from(element).set({
+        margin: 0,
+        filename: 'test.pdf',
+        image:{type:'png'},
+        html2canvas: {
+          // dpi: 600,
+          scale:2,
+          // letterRendering: true,
+          // useCORS: true
+        },
+        jsPDF: { 
+          orientation: 'landscape', 
+          unit: 'mm', 
+          format: [140, 189], 
+          compressPDF: true 
+        }
+      }).save();
+</script> -->
+</html>
