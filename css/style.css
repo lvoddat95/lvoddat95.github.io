@@ -140,6 +140,7 @@ body {
 .view-container .p-content3{
     top: 50px;
     line-height: 17px;
+    padding: 0 15px;
 }
 
 .view-container .qr-code img {
@@ -194,12 +195,12 @@ body {
 }
 
 .view-container .thoi_han {
-    padding-left: 20px;
+    padding-left: 30px;
     min-height: 17px;
 }
 
 .view-container .thoi_han .p_phut {
-    padding-left: 22px;
+    padding-left: 24px;
 }
 
 .view-container .thoi_han .p_ngay {
@@ -216,19 +217,19 @@ body {
 
 .view-container .ngay_nop {
     top: 0;
-    padding-left: 135px;
+    padding-left: 146px;
 }
 
 .view-container .cap_hoi{
     font-size: 7.5px;
-    padding-left: 100px;
+    padding-left: 111px;
 }
 
 .view-container .cap_hoi .p_thang{
     padding-left: 20px;
 }
 
-.view-container .cap_hoi .p_thang{
+.view-container .cap_hoi .p_nam{
     padding-left: 18px;
 }
 
@@ -240,11 +241,9 @@ body {
 }
 .view-container .phi_bao_hiem {
     top: -1px;
-    padding-right: 30px;
 }
 .view-container .phi_bao_hiem_vat {
     top: 0;
-    padding-right: 30px;
 }
 
 
