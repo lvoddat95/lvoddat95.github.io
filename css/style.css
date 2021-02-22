@@ -27,17 +27,23 @@ p {
 }
 @font-face {
     font-family: "Times New Roman";
-    src: url("fonts/TimesNewRoman-BoldOblique.ttf");
+    src: url("../fonts/TimesNewRoman-Oblique.ttf");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "Times New Roman";
+    src: url("../fonts/TimesNewRoman-BoldOblique.ttf");
     font-weight: bold;
     font-style: italic, oblique;
 }
+
 body {
     font-size: 14px;
     line-height: 24px;
     max-width: 179mm;
     margin: auto;
     background: #56565f;
-    font-weight: 600;
+    font-weight: bold;
     font-family: 'Times New Roman';
 }
 
