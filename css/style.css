@@ -124,6 +124,7 @@ body {
 }
 
 .view-container {
+    position: relative;
     margin: auto;
     max-width: 290px;
     font-size: 11px;
@@ -263,6 +264,7 @@ body {
     margin-top: 1px;
     padding-left: 146px;
 }
+
 
 .pl-66 {
     padding-left: 66px;
@@ -561,7 +563,7 @@ body {
     height: 8px;
 }
 
-.slider_counter {
+.slider-counter {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -582,6 +584,32 @@ body {
 .slick-prev:before, 
 .slick-next:before {
     font-size: 32px;
+}
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev{
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+    outline: none;
+}
+.owl-carousel .owl-nav button.owl-next{
+    left: auto;
+    right: -45px;
+}
+.owl-carousel .owl-nav button.owl-next > span, 
+.owl-carousel .owl-nav button.owl-prev > span{
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 28px;
+    background: rgb(255 255 255 / 0.7);
+    border-radius: 50%;
+    color: #555;
+    margin: auto;
 }
 
 @media print {
