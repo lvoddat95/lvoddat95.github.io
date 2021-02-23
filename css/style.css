@@ -124,16 +124,24 @@ body {
 }
 
 .view-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin: auto;
-    max-width: 290px;
+    max-width: 400px;
     font-size: 11px;
     line-height: 20px;
     font-family: 'Times New Roman';
     height: 100vh;
     overflow: hidden;
 }
-
+.view-wrap{
+    position: relative;
+    margin: auto;
+    max-width: 290px;
+}
 .view-container .print-wrapper {
     width: 290px;
     height: auto;
@@ -598,6 +606,10 @@ body {
     width: 50px;
     outline: none;
 }
+.owl-carousel .owl-nav button.disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
 .owl-carousel .owl-nav button.owl-next{
     left: auto;
     right: -45px;
@@ -608,7 +620,7 @@ body {
     height: 30px;
     width: 30px;
     line-height: 28px;
-    background: rgb(255 255 255 / 0.7);
+    background: rgb(255 255 255 / 0.9);
     border-radius: 50%;
     color: #555;
     margin: auto;
