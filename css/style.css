@@ -264,12 +264,6 @@ body {
     padding-left: 146px;
 }
 
-.slider_counter {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-}
-
 .pl-66 {
     padding-left: 66px;
 }
@@ -565,6 +559,29 @@ body {
     background: #fff;
     line-height: 8px;
     height: 8px;
+}
+
+.slider_counter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+.slick-prev {
+    left: -45px;
+}
+.slick-next {
+    right: -45px;
+}
+.slick-prev, 
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+    font-size: 32px;
 }
 
 @media print {
