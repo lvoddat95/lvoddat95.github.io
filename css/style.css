@@ -124,9 +124,8 @@ body {
 }
 
 .view-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto;
+    max-width: 290px;
     font-size: 11px;
     line-height: 20px;
     font-family: 'Times New Roman';
@@ -263,6 +262,12 @@ body {
 .view-container .ngay_nop {
     margin-top: 1px;
     padding-left: 146px;
+}
+
+.slider_counter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
 }
 
 .pl-66 {

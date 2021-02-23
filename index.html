@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="https://kenwheeler.github.io/slick/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   
 </head>
@@ -30,7 +32,7 @@
 	    </div>
 	</div>
 
-	<div class="view-container" >
+	<div class="view-container slider">
 		<div class="print-wrapper">
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/p1.png" />
@@ -229,6 +231,8 @@
     <script src="https://kendo.cdn.telerik.com/2021.1.119/js/jszip.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2021.1.119/js/kendo.all.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.3/pako.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 	<script>
 		kendo.pdf.defineFont({
@@ -267,6 +271,31 @@
 	    }
 
 
+		var $slider = $('.slider');
+
+		if ($slider.length) {
+		  	var currentSlide;
+		  	var slidesCount;
+		  	var sliderCounter = document.createElement('div');
+		  	sliderCounter.classList.add('slider_counter');
+		  
+		  	var updateSliderCounter = function(slick, currentIndex) {
+		    	currentSlide = slick.slickCurrentSlide() + 1;
+		    	slidesCount = slick.slideCount;
+		    	$(sliderCounter).text(currentSlide + '/' +slidesCount)
+		  	};
+
+		  	$slider.on('init', function(event, slick) {
+		    	$slider.append(sliderCounter);
+		    	updateSliderCounter(slick);
+		  	});
+
+		  	$slider.on('afterChange', function(event, slick, currentSlide) {
+		    	updateSliderCounter(slick, currentSlide);
+		  	});
+
+		  $slider.slick();
+		}
 
 	</script>
 
