@@ -6,8 +6,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-	<link rel="stylesheet" href="https://kenwheeler.github.io/slick/slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   
 </head>
@@ -32,7 +32,7 @@
 	    </div>
 	</div>
 
-	<div class="view-container slider">
+	<div class="view-container owl-carousel owl-theme">
 		<div class="print-wrapper">
 	        <div class="print-inner">
         		<img alt="" class="img-asl" src="imgs/p1.png" />
@@ -231,7 +231,7 @@
     <script src="https://kendo.cdn.telerik.com/2021.1.119/js/jszip.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2021.1.119/js/kendo.all.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.3/pako.min.js" type="text/javascript" charset="utf-8" async defer></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
 
 
 	<script>
@@ -269,7 +269,11 @@
 	            });
 	        });
 	    }
-
+	    $('.owl-carousel').owlCarousel({
+		    nav:true,
+		    loop:true,
+		    items:1
+		})
 
 		var $slider = $('.slider');
 
@@ -294,7 +298,9 @@
 		    	updateSliderCounter(slick, currentSlide);
 		  	});
 
-		  $slider.slick();
+		  $slider.slick({
+		  	swipeToSlide: true,
+		  });
 		}
 
 	</script>
