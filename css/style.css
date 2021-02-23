@@ -126,7 +126,6 @@ body {
 .view-container {
     position: relative;
     margin:  30px auto;
-    height: 100vh;
     max-width: 400px;
     font-size: 11px;
     line-height: 20px;
