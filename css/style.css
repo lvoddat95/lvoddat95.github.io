@@ -124,18 +124,13 @@ body {
 }
 
 .view-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    margin: auto;
+    margin:  30px auto;
+    height: 100vh;
     max-width: 400px;
     font-size: 11px;
     line-height: 20px;
     font-family: 'Times New Roman';
-    height: 100vh;
-    overflow: hidden;
 }
 .view-wrap{
     position: relative;
@@ -575,8 +570,11 @@ body {
 
 .slider-counter {
     position: absolute;
-    bottom: 0;
+    bottom: 18px;
     left: 50%;
+    margin-left: -7px;
+    z-index: 11;
+    color: #000;
 }
 .slick-prev {
     left: -45px;

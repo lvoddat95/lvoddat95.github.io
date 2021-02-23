@@ -5,12 +5,20 @@
 	<title>html2pdf Test - Template</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   
 </head>
-
+<style type="text/css">
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative;
+	}
+</style>
 <body>
 	<div style="background-color: #fff;margin-bottom: 5mm; display: none;">
 	    <div class="print-header print-hide">
@@ -31,7 +39,7 @@
 	    </div>
 	</div>
 
-	<div class="view-container">
+	<div class="view-container" >
 		<div class="view-wrap">
 			<div class="slider owl-carousel">
 				<div class="print-wrapper">
@@ -245,9 +253,6 @@
 	        "Times New Roman|Italic"      : "https://lvoddat95.github.io/fonts/timesbi.ttf",
 	    });
 		function getPDF(selector) {
-	        // kendo.drawing.drawDOM($(selector)).then(function(group){
-	        //   kendo.drawing.pdf.saveAs(group, "Invoice.pdf");
-	        // });
 
 	        kendo.drawing.drawDOM($(selector))
 	        .then(function(group) {
@@ -267,8 +272,8 @@
 	            // Save the PDF file
 	            kendo.saveAs({
 	                dataURI: data,
-	                fileName: "HR-Dashboard.pdf",
-	                proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+	                fileName: "Invoice.pdf",
+	                // proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
 	            });
 	        });
 	    }
