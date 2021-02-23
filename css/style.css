@@ -130,6 +130,8 @@ body {
     font-size: 11px;
     line-height: 20px;
     font-family: 'Times New Roman';
+    height: 100vh;
+    overflow: hidden;
 }
 
 .view-container .print-wrapper {
