@@ -49,7 +49,7 @@ body {
     line-height: 24px;
     max-width: 179mm;
     margin: auto;
-    background: #56565f;   
+    background: #f5f5f5;   
      font-weight: bold;
     font-style: normal;
     font-family: 'Times New Roman';
@@ -125,7 +125,7 @@ body {
 
 .view-container {
     position: relative;
-    margin:  30px auto;
+    margin: auto;
     max-width: 400px;
     font-size: 11px;
     line-height: 20px;
@@ -569,7 +569,7 @@ body {
 
 .slider-counter {
     position: absolute;
-    bottom: 18px;
+    bottom: 0;
     left: 50%;
     margin-left: -7px;
     z-index: 11;
@@ -616,12 +616,60 @@ body {
     display: block;
     height: 30px;
     width: 30px;
-    line-height: 28px;
-    background: rgb(255 255 255 / 0.9);
+    line-height: 26px;
+    background: rgb(199 199 199 / 90%);
     border-radius: 50%;
     color: #555;
     margin: auto;
 }
+
+.tab-style > .nav-tabs {
+    border: none;
+    margin: 0 7px;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.tab-style > .nav-tabs .nav-link {
+    position: relative;
+    padding: 9px;
+    border: none;
+    border-radius: 0;
+    color: #222;
+    font-weight: 500;
+    background: #FAFAFA;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px 0;
+}
+
+.tab-style > .nav-tabs .nav-link.active, 
+.tab-style > .nav-tabs .nav-item.show .nav-link {
+    color: #ffffff;
+    background-color: #1c3faa;
+    padding: 12px;
+}
+
+.tab-style > .nav-tabs .nav-item {
+    margin: 0 3px;
+    text-align: left;
+}
+
+.tab-style > .tab-content {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    box-shadow: rgba(0, 0, 0, .1) 0 0 5px 0, rgba(0, 0, 0, .1) 0 0 1px 0;
+}
+
 
 @media print {
     @page {
