@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     -webkit-print-color-adjust: none !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
 }
 
 p {
@@ -670,40 +668,19 @@ body {
     box-shadow: rgba(0, 0, 0, .1) 0 0 5px 0, rgba(0, 0, 0, .1) 0 0 1px 0;
 }
 
+.p-content4{
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    right: 50px;
+    max-width: 290px;
+    padding: 0 30px;
+    text-align: right;
+}
 
-@media print {
-    @page {
-        size: A5;
-        size: landscape;        /*size: portrait;*/
-        margin: 0;
-    }
-
-    .print-inner {
-        background: none;
-    }
-
-    .print-container {
-        background: transparent;
-        page-break-before: always;
-    }
-
-    body {
-        display: block;
-        border: none;
-        height: auto;
-        width: auto;
-    }
-
-    .content {
-        display: block;
-    }
-
-    .print-header {
-        display: none;
-    }
-
-    .print-hide {
-        display: none;
-    }
-
+.muc-trach-nhiem{
+    padding-right: 55px;
+}
+.phi-bao-hiem{
+    top: -1px;
 }
