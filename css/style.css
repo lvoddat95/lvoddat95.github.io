@@ -45,7 +45,6 @@ p {
 body {
     font-size: 14px;
     line-height: 24px;
-    max-width: 179mm;
     margin: auto;
     background: #f5f5f5;   
      font-weight: bold;
@@ -659,6 +658,8 @@ body {
 }
 
 .tab-style > .tab-content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 20px;
     background: #fff;
@@ -683,4 +684,61 @@ body {
 }
 .phi-bao-hiem{
     top: -1px;
+}
+
+.print-style2 .print-wrapper{
+    width: 270mm;
+    height: 126.883mm;
+}
+
+.print-style2 .img-asl {
+    width: 270mm;
+}
+
+.print-style2 .qr-code img{
+    right: 479px;
+    bottom: 129px;
+}
+.print-style2 .p-link {
+    position: absolute;
+    right: 461px;
+    bottom: 102px;
+}
+
+
+[class*="p-box"] {
+    float: left;
+    width: 33.333%;
+    position: relative;
+    padding-left: 32px;
+    padding-right: 20px;
+    z-index: 111;
+}
+
+.p-box1{
+    top: 257px;
+    right: 70px;
+}
+
+.p-box2{
+    top: 76px;
+}
+
+.p-box3{
+    top: 55px;
+    line-height: 20px;
+    right: 5px;
+}
+
+.p-box2 .chu_xe {
+    top: 3px;
+    line-height: 22px;
+}
+
+.p-box2 .dia_chi{
+    height: 45px;
+}
+
+.p-box3 .ngay_nop {
+    margin-top: 3px;
 }
