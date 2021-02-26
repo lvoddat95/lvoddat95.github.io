@@ -309,25 +309,13 @@ body {
 }
 
 .p-options.style2 {
-    padding-left: 0;
+    padding-left: 73px;
 }
 
-.p-options.style2>input {
-    display: block;
-    margin-left: 168px;
-}
-
-.p-options.style2>input:nth-of-type(2) {
-    margin-left: 76.5px;
-    top: 2.5px;
-}
 
 .p-options.style2>input:last-child {
-    margin-left: 131px;
-    left: 0;
-    top: 7px;
+    left: 148px;
 }
-
 .p-options>input:last-child {
     position: relative;
     left: 146px;
@@ -339,18 +327,17 @@ body {
 }
 
 .p-options>input {
-
-    /*      -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        outline: none;*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
     height: 13px;
     width: 13px;
 }
 
 .p-options>input:before {
 
-    /*      content: "";
+          content: "";
         transition: all 0.2s ease-in-out;
         -ms-display: flex;
         display: flex;
@@ -368,12 +355,12 @@ body {
         position: absolute;
         -webkit-transform: rotateZ(40deg) skewX(0deg);
         transform: rotateZ(40deg) skewX(0deg);
-        width: 5px;*/
+        width: 5px;
 }
 
 .p-options>input:checked:before {
 
-    /*opacity: 1;*/
+    opacity: 1;
 }
 
 .text-right {
@@ -686,20 +673,20 @@ body {
     top: -1px;
 }
 
-.print-style2 .print-wrapper{
+.p-tndsbb-tn .print-wrapper{
     width: 270mm;
     height: 126.883mm;
 }
 
-.print-style2 .img-asl {
+.p-tndsbb-tn .img-asl {
     width: 270mm;
 }
 
-.print-style2 .qr-code img{
+.p-tndsbb-tn .qr-code img{
     right: 479px;
     bottom: 129px;
 }
-.print-style2 .p-link {
+.p-tndsbb-tn .p-link {
     position: absolute;
     right: 461px;
     bottom: 102px;
@@ -741,4 +728,54 @@ body {
 
 .p-box3 .ngay_nop {
     margin-top: 3px;
+}
+
+.so-ac-tndsbb {
+    position: absolute;
+    top: 163px;
+    right: 77px;
+    background: #fef200;
+    padding: 0 7px;
+    z-index: 11;
+}
+
+.so-ac-tndsbb > *{
+    color: #ed1c24;
+    font-weight: bold;
+}
+
+.so-ac-tndsbb > small{
+    font-size: 11px;
+}
+
+.so-ac-tndsbb > span{
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 300;
+    margin: 0 4px;
+}
+
+.p-page2 .so-ac-tndsbb {
+    top: -33px;
+    right: 50px;
+}
+
+.cap-truoc-ngay{
+    position: absolute;
+    font-style: italic;
+    font-size: 7px;
+    bottom: 19px;
+    left: 142px;
+    color: #ed1c24;
+}
+
+.so-ac-tndsbb.tn{
+    background: #e7f6e9;
+    top: 158px;
+}
+
+.so-ac-tndsbb.tn2{
+    top: 31px;
+    right: 30px;
+    padding-right: 10px;
 }
