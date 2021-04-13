@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>html2pdf Test - Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+
+<body>
+	<div class="print-header print-hide">
+		<h1 style="font-size: 20px;font-family: sans-serif;">
+			<svg style="fill: #fff;height: 20px;margin-bottom: -2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  xmlns:v="https://vecta.io/nano"><path d="M482 182.58V135c0-24.813-20.187-45-45-45h-23.787L327.617 4.404c-.018-.018-.039-.035-.057-.054A15.04 15.04 0 0 0 317.232.011c-.078-.001-.153-.011-.231-.011H105c-8.284 0-15 6.716-15 15v75H75c-24.813 0-45 20.187-45 45v47.58C12.541 188.772 0 205.445 0 225v182c0 24.813 20.187 45 45 45h45v45c0 8.284 6.716 15 15 15h302c8.284 0 15-6.716 15-15v-45h45c24.813 0 45-20.187 45-45V225c0-19.555-12.541-36.228-30-42.42zM422 120h15a15.02 15.02 0 0 1 15 15v45h-30v-60zm-90-68.787L370.787 90H332V51.213zM120 30h182v75c0 8.284 6.716 15 15 15h75v60H120V30zM60 135a15.02 15.02 0 0 1 15-15h15v60H60v-45zm332 347H120V332h272v150zm90-75a15.02 15.02 0 0 1-15 15h-45v-90h15c8.284 0 15-6.716 15-15s-6.716-15-15-15H75c-8.284 0-15 6.716-15 15s6.716 15 15 15h15v90H45a15.02 15.02 0 0 1-15-15V225a15.02 15.02 0 0 1 15-15h422a15.02 15.02 0 0 1 15 15v182zm-135-45H165c-8.284 0-15 6.716-15 15s6.716 15 15 15h182c8.284 0 15-6.716 15-15s-6.716-15-15-15zm0 60H165c-8.284 0-15 6.716-15 15s6.716 15 15 15h182c8.284 0 15-6.716 15-15s-6.716-15-15-15zM105 240H75c-8.284 0-15 6.716-15 15s6.716 15 15 15h30c8.284 0 15-6.716 15-15s-6.716-15-15-15z"/></svg>
+			<span>Thông tin giấy chứng nhận BH</span>
+		</h1>
+		<div class="print-hide">
+			<a class="button" href="javascript:;" title="In ấn chỉ?" onclick="window.print();">
+				<svg style="height: 15px;margin-bottom: -2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105 210H45c-8.291 0-15-6.709-15-15v-60c0-24.814 20.186-45 45-45h30c8.291 0 15 6.709 15 15v90c0 8.291-6.709 15-15 15z" fill="#57555c"/><path d="M482 195c0 8.291-6.709 15-15 15h-60c-8.291 0-15-6.709-15-15l-30-90c0-8.291 6.709-15 15-15h60c24.814 0 45 20.186 45 45v60z" fill="#3c3a41"/><path d="M422 120v75c0 8.399-6.599 15-15 15H105c-8.401 0-15-6.601-15-15V15c0-8.401 6.599-15 15-15h197l30 90 90 30z" fill="#ffffff"/><path d="M407 210H256V0h46l30 90 90 30v75c0 8.399-6.599 15-15 15z" fill="#ffffff"/><path d="M467 180H45c-24.901 0-45 20.099-45 45v182c0 24.899 20.099 45 45 45h422c24.901 0 45-20.101 45-45V225c0-24.901-20.099-45-45-45z" fill="#1ba9ef"/><path d="M302 105c0 8.399 6.599 15 15 15h105L302 0v105z" fill="#fe9923"/><path d="M512 225v182c0 24.899-20.099 45-45 45H256V180h211c24.901 0 45 20.099 45 45z" fill="#1689fc"/><path d="M105 270H75c-8.291 0-15-6.709-15-15s6.709-15 15-15h30c8.291 0 15 6.709 15 15s-6.709 15-15 15z" fill="#e1e4fb"/><path d="M422 319.999V497c0 8.399-6.599 15-15 15H105c-8.401 0-15-6.601-15-15V319.999h332z" fill="#ffffff"/><path d="M422 319.999V497c0 8.399-6.599 15-15 15H256V319.999h166z" fill="#ffffff"/><g fill="#aeadb3"><path d="M362 377c0 8.399-6.599 15-15 15H165c-8.401 0-15-6.601-15-15 0-8.401 6.599-15 15-15h182c8.401 0 15 6.599 15 15zM362 437c0 8.399-6.599 15-15 15H165c-8.401 0-15-6.601-15-15 0-8.401 6.599-15 15-15h182c8.401 0 15 6.599 15 15z"/></g><g fill="#8b8892"><path d="M362 437c0 8.399-6.599 15-15 15h-91v-30h91c8.401 0 15 6.599 15 15zM362 377c0 8.399-6.599 15-15 15h-91v-30h91c8.401 0 15 6.599 15 15z"/></g><path d="M452 317c0 8.399-6.599 15-15 15H75c-8.401 0-15-6.601-15-15 0-8.401 6.599-15 15-15h362c8.401 0 15 6.599 15 15z" fill="#57555c"/><path d="M452 317c0 8.399-6.599 15-15 15H256v-30h181c8.401 0 15 6.599 15 15z" fill="#3c3a41"/></svg>
+				<span>In giấy chứng nhận BH</span>
+			</a>
+			<span style="display: inline-block; width: 5px;"></span>
+			<a class="button" href="javascript:;" title="HDSD?"> 
+				<svg style="height: 15px;width: auto;margin-bottom: -2px;" height="512" viewBox="0 0 510 510" width="512" xmlns="http://www.w3.org/2000/svg"><path d="M60 0v465h60l112.5-159.868 7.5-152.566L232.5 0H60z" fill="#f4d844"/><path d="M405 0H232.5v305.132L405 60V0z" fill="#ecbd2c"/><path d="M120 60v450h165l15-225-15-225H120z" fill="#f9f9f9"/><path d="M285 60v450h66.041l21.626-80.667L450 411.213V60H285z" fill="#e2dff4"/><path d="M351.041 510L450 411.213h-98.959z" fill="#bebcdd"/><path d="M285 150H180v-30h105l15 15z" fill="#4e6ba6"/><path d="M285 210H180v-30h105l15 15zM285 270H180v-30h105l15 15zM285 330H180v-30h105l15 15z" fill="#a7cafc"/><path d="M390 150H285v-30h105z" fill="#28487a"/><path d="M390 210H285v-30h105zM390 270H285v-30h105zM390 330H285v-30h105z" fill="#8493fb"/><path d="M285 390H180v-30h105z" fill="#dd4e4e"/></svg>
+				<span>Hướng dẫn sử dụng</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="print-hide" style="height: 20px;"></div>
+
+	<div class="note print-hide" style="color: red;font-style: italic;">
+		* Lưu ý: Chọn khổ in <b>“A5”</b> để in giấy chứng nhận bảo hiểm.
+	</div>
+
+	<div class="content">
+
+		<div id="" class="print-container p-tndsbb-bb">
+			<div class="print-wrapper">
+		        <div class="print-inner">
+		        	<img alt="" class="img-asl" src="imgs/pdf2.png" />
+		            <div class="p-content">
+		              	<div class="p-content2">
+			            	<p class="chu_xe">
+			                  <span style='float: left;display: block; width: 95px; height: 1px;'></span>
+			                  <span contenteditable="true">Lê Văn A</span>
+			                </p>
+
+			                <p class="dia_chi">
+			                  <span style='float: left;display: block; width: 65px; height: 1px;'></span>
+			                  <span contenteditable="true">Toà Geleximco, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</span>
+			                </p> 
+
+			                <p class="sdt">0123456789</p>
+
+			                <p class="bien_kiem_soat">29A 666888</p>
+
+			                <p class="so_khung">RN2KF5326JC093785</p>
+
+			                <p class="loai_xe">MAZDA - CX 5 25G AT 2WD KF</p>
+
+			                <p class="trong_tai text-right">2</p>
+
+			                <p class="so_cho_ngoi text-right">5</p>
+
+			                <div class="p-space" style="height: 23px;"></div>
+
+			                <div class="p-options">
+			                  <input type="checkbox" name="foo" value="0" />
+			                  <input type="checkbox" name="foo" value="1" checked />
+			                </div>
+		              	</div>
+		              	<div class="p-content3">
+			                <p class="thoi_han thoi_han_tu text-left">
+			                  <span class="p_gio">12</span>
+			                  <span class="p_phut">00</span>
+			                  <span class="p_ngay">15</span>
+			                  <span class="p_thang">12</span>
+			                  <span class="p_nam">20</span>
+			                </p>
+			                <p class="thoi_han thoi_han_den text-left">
+			                  <span class="p_gio">12</span>
+			                  <span class="p_phut">00</span>
+			                  <span class="p_ngay">15</span>
+			                  <span class="p_thang">12</span>
+			                  <span class="p_nam">21</span>
+			                </p>
+
+			                <div class="p-space" style="height: 27px;"></div>
+
+			                <p class="phi_bao_hiem text-right">1,800,000</p>
+			                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
+
+			                <p class="ngay_nop text-left">
+			                  <span class="p_ngay">15</span>
+			                  <span class="p_thang">12</span>
+			                  <span class="p_nam">20</span>
+			                </p>
+			                <div class="p-space" style="height: 92px;"></div>
+			                <p class="cap_hoi thoi_han_den text-left">
+			                  <span class="p_gio">12</span>
+			                  <span class="p_phut">00</span>
+			                  <span class="p_ngay">15</span>
+			                  <span class="p_thang">12</span>
+			                  <span class="p_nam">2021</span>
+			                </p>
+		              	</div>
+		            </div>
+		        </div>
+	        </div>
+	        
+		</div>
+
+		<div id="" class="print-container p-tndsbb-tn">
+			<div class="print-wrapper">
+		        <div class="print-inner">
+		        	<img alt="" class="img-asl" src="imgs/dai02.png" />
+		            <div class="p-content">
+		              	<div class="p-box1">
+			                <p class="mva_so_luong_lai_xe text-right">2</p>
+			                <p class="mva_so_luong_nguoi_ngoi text-right">4</p>
+			                <p class="mva_sum_so_nguoi_bh text-right">6</p>
+			                <p class="mva_muc_trach_nhiem text-right">200</p>
+			                <p class="mva_phi_bao_hiem text-right">2,000,000</p>
+			            </div>
+
+			            <div class="p-box2">
+			                <p class="chu_xe">
+			                  	<span style='float: left;display: block; width: 95px; height: 1px;'></span>
+			                  	<span contenteditable="true">Lê Văn A</span>
+			                </p>
+
+			                <p class="dia_chi">
+			                  	<span style='float: left;display: block; width: 60px; height: 1px;'></span>
+			                  	<span contenteditable="true">Toà Geleximco, 36 Hoàng Cầu, Ô Chợ Dừa, Đống Đa, Hà Nội</span>
+			                </p>
+
+			                <p class="sdt">0123456789</p>
+
+			                <p class="bien_kiem_soat">29A 666888</p>
+
+			                <p class="so_khung">RN2KF5326JC093785</p>
+
+			                <p class="loai_xe">MAZDA - CX 5 25G AT 2WD KF</p>
+
+			                <p class="trong_tai text-right">2</p>
+
+			                <p class="so_cho_ngoi text-right">5</p>
+
+			                <div class="p-space" style="height: 19px;"></div>
+
+			                <div class="p-options style2">
+			                  	<input type="checkbox" name="foo" value="0" />
+			                  	<input type="checkbox" name="foo" value="1" checked />
+			                </div>
+			            </div>
+
+			            <div class="p-box3">
+			                <p class="thoi_han thoi_han_tu text-left">
+			                  	<span class="p_gio">12</span>
+			                  	<span class="p_phut">00</span>
+			                  	<span class="p_ngay">15</span>
+			                  	<span class="p_thang">12</span>
+			                  	<span class="p_nam">20</span>
+			                </p>
+			                <p class="thoi_han thoi_han_den text-left">
+			                  	<span class="p_gio">12</span>
+			                  	<span class="p_phut">00</span>
+			                  	<span class="p_ngay">15</span>
+			                  	<span class="p_thang">12</span>
+			                  	<span class="p_nam">21</span>
+			                </p>
+
+			                <div class="p-space" style="height: 27px;"></div>
+
+			                <p class="phi_bao_hiem text-right">1,800,000</p>
+			                <p class="phi_bao_hiem_vat text-right">1,800,000</p>
+
+			                <p class="ngay_nop text-left">
+			                  	<span class="p_ngay">15</span>
+			                  	<span class="p_thang">12</span>
+			                  	<span class="p_nam">20</span>
+			                </p>
+
+			                <div class="p-space" style="height: 87px;"></div>
+
+			                <p class="cap_hoi thoi_han_den text-left">
+			                  	<span class="p_gio">12</span>
+			                  	<span class="p_phut">00</span>
+			                  	<span class="p_ngay">15</span>
+			                  	<span class="p_thang">12</span>
+			                  	<span class="p_nam">2021</span>
+			                </p>
+			            </div>
+		            </div>
+		        </div>
+	        </div>
+		</div>
+
+	</div>
+
+</body>
+</html>
