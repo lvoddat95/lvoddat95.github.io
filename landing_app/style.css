@@ -348,10 +348,12 @@ img {
 .button-group a {
     margin-right: 24px;
 }
-
+.store-buttons a:first-child{
+    background-position-y: 0px;
+}
 .button-group a:last-child {
     margin-right: 0;
-    background-position-y: bottom;
+    background-position-y: -66px;
 }
 
 .store-buttons a {
