@@ -342,23 +342,32 @@ img {
 }*/
 
 .button-group {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .button-group a {
-    margin-right: 10px;
+    margin-right: 24px;
 }
 
 .button-group a:last-child {
     margin-right: 0;
+    background-position-y: bottom;
 }
 
 .store-buttons a {
     text-align: left;
+    background: url(dowload.png);
+    background-size: 190px;
+    transition: none;
+    background-repeat: no-repeat;
+    background-color: #000;
+    height: 60px;
+    border-radius: 12px;
 }
 
 .store-buttons img {
     max-width: 190px;
+    opacity: 0;
 }
 
 .store-buttons.store-black img {
