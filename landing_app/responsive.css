@@ -141,12 +141,19 @@
 /*BUTTONS*/
 @media (max-width: 575px) {
     .button-group a {
+        background-size: 160px;
         margin-top: 0;
         margin-right: 5px;
+        background-size: 160px;
+        height: 48px;
     }
 
     .button-group .btn {
         padding: 12px 20px
+    }
+    .button-group a:last-child {
+        margin-right: 0;
+        background-position-y: -56px;
     }
 }
 
