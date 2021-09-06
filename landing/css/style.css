@@ -449,13 +449,29 @@ label { color: #f9fdfa; cursor: pointer; font-size: 14px; font-weight: 400; }
 .appstore { margin-right: 0; background-position-y: -55px; }
 .title { font-size: 3.5rem; }
 .dbutton { max-width: 320px; margin: auto; }
-.border-qr { position: relative; }
+.border-qr { position: relative; }								
 .border-qr::after { content: ''; position: absolute; left: -6px; top: -6px; width: 120px; height: 120px; background: linear-gradient(to right, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to right, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to top, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to top, #51adb2 4px, transparent 4px) 100% 100%; background-repeat: no-repeat; background-size: 20px 20px; animation: pulse 2s infinite; }
 .banner { position: relative; left: 100px; }
 @media only screen and (max-width:991px) {
   .title { font-size: 46px; }
   #app_details { padding: 40px 15px; }
-  .banner { margin-top: 50px; }
+  .banner { 
+    margin: 50px auto 0;
+    left: 0;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .phone2 {
+		right: 0;
+	}
+  .bgphone{
+	width: 80vw;
+    height: 69vw;
+    opacity: .8;
+  }
+	  
+  
 }
 @media only screen and (max-width:320px) {
   .banner { left: 0; }
