@@ -451,12 +451,12 @@ label { color: #f9fdfa; cursor: pointer; font-size: 14px; font-weight: 400; }
 .dbutton { max-width: 320px; margin: auto; }
 .border-qr { position: relative; }
 .border-qr::after { content: ''; position: absolute; left: -6px; top: -6px; width: 120px; height: 120px; background: linear-gradient(to right, black 4px, transparent 4px) 0 0, linear-gradient(to right, black 4px, transparent 4px) 0 100%, linear-gradient(to left, black 4px, transparent 4px) 100% 0, linear-gradient(to left, black 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, black 4px, transparent 4px) 0 0, linear-gradient(to bottom, black 4px, transparent 4px) 100% 0, linear-gradient(to top, black 4px, transparent 4px) 0 100%, linear-gradient(to top, black 4px, transparent 4px) 100% 100%; background-repeat: no-repeat; background-size: 20px 20px; }
-.banner { position: relative; padding-left: 100px; }
+.banner { position: relative; left: 100px; }
 @media only screen and (max-width:991px) {
   .title { font-size: 46px; }
   #app_details { padding: 40px 15px; }
   .banner { margin-top: 50px; }
 }
 @media only screen and (max-width:320px) {
-  .banner { padding-left: 0; }
+  .banner { left: 0; }
 }
