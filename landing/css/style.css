@@ -1726,7 +1726,7 @@ label {
 
 #app_details {
     position: relative;
-    background-image: url(../skins/images/landingpage/bg-dotted.png);
+    background-image: url(../images/bg-dotted.png);
     padding: 100px 0;
     z-index: 1;
 }
@@ -1735,7 +1735,7 @@ label {
     display: block;
     height: 50px;
     width: 160px;
-    background: url(../skins/images/landingpage/dowload.png);
+    background: url(../images/dowload.png);
     background-size: 160px;
     transition: none;
     background-repeat: no-repeat;
