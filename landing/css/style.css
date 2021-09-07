@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-body { font-family: "Poppins", sans-serif; font-weight: 400; font-style: normal; color: #333; overflow-x: hidden; }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+body { font-family: "Roboto", sans-serif; font-weight: 400; font-style: normal; color: #333; overflow-x: hidden; }
 .img, img { max-width: 100%; -webkit-transition: all 0.3s linear 0s; -moz-transition: all 0.3s linear 0s; -ms-transition: all 0.3s linear 0s; -o-transition: all 0.3s linear 0s; transition: all 0.3s linear 0s; }
 .f-left { float: left; }
 .f-right { float: right; }
@@ -441,7 +440,14 @@ label { color: #f9fdfa; cursor: pointer; font-size: 14px; font-weight: 400; }
 .pr-190 { padding-right: 190px; }
 .pr-195 { padding-right: 195px; }
 .pr-200 { padding-right: 200px; }
-.phone2 { position: absolute; right: 121px; top: 0; }
+.phone1{
+	    position: relative;
+    z-index: 1;
+}
+.phone2 { position: absolute;
+    right: 75px;
+    bottom: 20px;
+    height: 90%;}
 .bgphone { position: absolute; bottom: -30px; z-index: -1; animation: pulse 2s infinite; width: 100%; height: 100%; background: #f09; background-image: linear-gradient(45deg, #003478 0%, #6bd4c5 100%); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; box-shadow: -10vmin 10vmin 0 rgb(255 255 255 / 7%); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; width: 540px; height: 464px; }
 #app_details { position: relative; background-image: url(../images/bg-dotted.png); padding: 100px 0; z-index: 1; }
 .store { display: block; height: 50px; width: 160px; background: url(../images/dowload.png); background-size: 160px; transition: none; background-repeat: no-repeat; background-color: #000; border-radius: 10px; }
@@ -452,6 +458,7 @@ label { color: #f9fdfa; cursor: pointer; font-size: 14px; font-weight: 400; }
 .border-qr { position: relative; }								
 .border-qr::after { content: ''; position: absolute; left: -6px; top: -6px; width: 120px; height: 120px; background: linear-gradient(to right, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to right, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to top, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to top, #51adb2 4px, transparent 4px) 100% 100%; background-repeat: no-repeat; background-size: 20px 20px; animation: pulse 2s infinite; }
 .banner { position: relative; left: 100px; }
+
 @media only screen and (max-width:991px) {
   .title { font-size: 46px; }
   #app_details { padding: 40px 15px; }
