@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <title>
+                    Bản nháp - Giấy chứng nhận bảo hiểm TNDS Xe máy
+                </title>
+            </meta>
+        </meta>
+    </head>
+    <style type="text/css">
+    body{
+    	height: 100vh;
+    width: 1100px;
+    margin: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    }
+        .content{
+	    display: -ms-flexbox;
+	    display: flex;
+	    flex-direction: -ms-column;
+	    flex-direction: column;
+	    -ms-flex-positive: 1;
+	    flex-grow: 1;
+	    -ms-flex: 1;
+	    flex: 1;
+	    -ms-align-items: center;
+	    align-items: center;
+	    justify-content: center;
+    }
+    .wrapper{
+
+		}
+        .tndsbb{
+    		position: relative;
+    		width: 768px;
+    	}
+    	.tndsbb.tn{
+    		margin-top: 10px;
+    	}
+    	.wattermark {
+		        position: absolute;
+    top: 32%;
+    left: -33px;
+    z-index: 11;
+    font-size: 60px;
+    white-space: nowrap;
+    transform: rotate( 
+35deg);
+    font-family: sans-serif;
+    color: rgb(0 0 0 / 39%);
+    z-index: 5;
+    font-size: 65px;
+		}
+    	.tndsbb.tn .wattermark{
+    		top: -22%;
+		}
+		.img{
+			width: 100%;
+			max-width: 768px;
+		}
+    </style>
+    <body>
+        <div class="content">
+            <div class="wrapper">
+                <!-- TNDS Bắt Buộc -->
+                <div class="tndsbb">
+                    <h2 class="wattermark">
+                        Bản Nháp - Không hiệu lực
+                    </h2>
+                    <div class="inner">
+                    </div>
+                    <img alt="TNSD" class="img" src="tnds.png">
+                    </img>
+                </div>
+                <!-- TNDS Tự nguyện -->
+                <div class="tndsbb tn">
+                    <h2 class="wattermark">
+                        Bản Nháp - Không hiệu lực
+                    </h2>
+                    <div class="inner">
+                    </div>
+                    <img alt="TNSD TN" class="img" src="tndstn.png">
+                    </img>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
