@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Ebaohiem - DEMO
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="icon" type="image/png" href="https://ebaohiem-test.bhhk.com.vn/Content/images/favicon.ico">
+
+    <link type="text/css" href="assets/css/zebra_dialog.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/colorbox.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/select2.min.css" rel="stylesheet">
+
+
+
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/dataTables.bootstrap4.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/buttons.bootstrap4.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pretty-checkbox.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/home.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/modules.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/popup.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/lightgallery.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/AjaxRequest.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/appear.js"></script>
+    <script type="text/javascript" src="assets/js/popper.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="assets/js/zebra_dialog.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="assets/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="assets/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.colVis.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/library.js"></script>
+    <script type="text/javascript" src="assets/js/data.ajax.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- Pretty Checkbox -->
+
+    <script type="text/javascript" src="assets/js/jquery.signalR-2.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightgallery-all.min.js"></script>
+    <script type="text/javascript" src="assets/js/call2_demo.js"></script>
+    <script type="text/javascript" src="assets/js/html2canvas.js"></script>
+    <script type="text/javascript" src="assets/js/latest.sdk.bundle.min.js"></script>
+    <style>
+        div.relative {
+            position: relative;
+            width: 60%;
+            height: 100%;
+            border: 1px solid silver;
+            margin: auto;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 15px;
+            right: 9px;
+            width: 20%;
+            height: 30%;
+            border: 1px solid silver;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <main class="main-content col-lg-12 col-md-12 col-sm-12 p-0">
+
+                <div class="main-navbar bg-white px-4">
+                    <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+                        <div class="main-navbar">
+                            <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap p-0">
+                                <a class="navbar-brand w-100 mr-0" href="https://ebaohiem-test.bhhk.com.vn/">
+                                    <div class="d-table m-auto">
+                                        <img id="main-logo" class="d-inline-block align-top mr-1" width="100px"
+                                            src="assets/images/logo.png" alt="VNI">
+                                    </div>
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="input-group input-group-seamless ml-3 hidden-sm hidden-xs" style="width: 52%;">
+                            <div class="slogan">
+                                <h2 class="namecty">Tổng công ty cổ phần bảo hiểm Hàng Không</h2>
+                                <p>
+                                    VIETNAM NATIONAL AVIATION INSURANCE CORPORATION
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav border-left flex-row ">
+                            <li class="nav-item border-right dropdown notifications hidden-sm hidden-xs">
+                                <a class="nav-link nav-link-icon text-center" href="javascript:void(0)"
+                                    style="padding-left: 10px; padding-right: 10px;">
+                                    <div class="nav-link-icon__wrapper">
+                                        <i class="fa fa-headphones header-phone-i"></i>
+                                        <div style="float: right; padding-left: 3px;">
+                                            <span class="header-phone-text">CALL CENTER</span>
+                                            <br>
+                                            <span class="header-phone-number">1900 969 690</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item border-right dropdown notifications">
+                                <a class="nav-link nav-link-icon text-center" href="javascript:void(0)"
+                                    style="padding-left: 10px; padding-right: 10px;">
+                                    <div class="nav-link-icon__wrapper">
+                                        <i class="fa fa-phone-square  header-phone-i"></i>
+                                        <div style="float: right; padding-left: 3px;">
+                                            <span class="header-phone-text">HOTLINE</span>
+                                            <br>
+                                            <span class="header-phone-number">097 276 5555</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown"
+                                    href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+
+                                    <img alt="avatar" class="user-avatar rounded-circle mr-2"
+                                        src="assets/images/avartarx100x100x2.png"
+                                        data-lazyload="assets/images/avartarx100x100x2.png">
+
+                                    <span class="d-none d-md-inline-block">VNI Trụ Sở Chính</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-small">
+                                    <a href="javascript:void(0)" class="dropdown-item"
+                                        onclick="ShowOpenDiaLog('/FormUser/UserChangeInfo','600px','500px','');">
+                                        <i class="fa fa-user-circle"></i>Thông tin tài khoản </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="javascript:void(0)" class="dropdown-item"
+                                        onclick="ShowOpenDiaLog('/FormUser/UserChangePass','650px','255px','');">
+                                        <i class="fa fa-lock"></i>Đổi mật khẩu </a>
+                                    <div class="dropdown-divider"></div>
+
+
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysUser/Index" class="dropdown-item">
+                                        <i class="fa fa-users"></i>Danh sách tài khoản </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysRole/Index" class="dropdown-item">
+                                        <i class="fa fa-sitemap"></i>Quản trị nhóm quyền </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysDanhSachPhamVi/Index"
+                                        class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Tỷ lệ theo PVBB </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysTyLeThoiHan/Index"
+                                        class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Tỷ lệ theo thời hạn </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysTyLeNhomXe/Index"
+                                        class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Tỷ lệ theo nhóm xe </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysTyLeDieuKhoan/Index"
+                                        class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Tỷ lệ điều khoản SĐBS </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysNganHang/Index" class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Ngân hàng </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysVNI/Index" class="dropdown-item">
+                                        <i class="fa fa-folder"></i>VNI </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="https://ebaohiem-test.bhhk.com.vn/SysMenu/Index" class="dropdown-item">
+                                        <i class="fa fa-folder"></i>Danh mục </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger"
+                                        href="https://ebaohiem-test.bhhk.com.vn/Login/Logout">
+                                        <i class="fa fa-sign-out"></i>Đăng xuất
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="card-header justify-content-between pb5 pl5 pr20 pt5 ">
+                    <div class="btn btn-link text-dark">
+                        <i class="fa fa-list-alt"></i>
+                        Thêm mới đơn bảo hiểm
+                    </div>
+                    <div class="btn-group btn-group-sm float-right pt5" style="padding: 3px;">
+                        <a href="javascript:void(0)" class="btn btn-secondary btn-inform" onclick="login_call();"
+                            data-popup-open="popup-call" title="Đánh giá rủi ro"><span><i
+                                    class="fa fa-file-image-o mr-2"></i>Đánh giá rủi do</span></a>
+                    </div>
+                </div>
+
+                <div class="popup" data-popup="popup-call">
+                    <div class="popup-inner w55pi" style="top: 50%; max-width: 100%;">
+                        <h3 class="title">Đánh giá rủi ro xe trước khi cấp đơn</h3>
+                        <a class="popup-close" data-popup-close="popup-call" href="#"><i class="fa fa-times"></i></a>
+
+                        <div class="popup-inner-content">
+                            <div class="all">
+                                <div class="text-left">
+                                    <a href="javascript:void(0)" class="btn btn-primary position-relative"
+                                        data-popup-open="popup-video-call" title="Video call">
+                                        <svg class="mr-2" fill="none" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                        </svg>Cuộc gọi Video</a>
+
+                                </div>
+                                <hr />
+                                <div id="video-container" class="row">
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+
+                                        <div class="video-frame">
+                                            <a href="javascript:void(0)" class="video-btn" data-toggle="modal"
+                                                data-src="https://www.lightgalleryjs.com/videos/video1.mp4"
+                                                data-target="#video1">
+                                                <img src="/Content/images/image_tran.jpg" alt="Backgroud" /></a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <div class="video-frame">
+                                            <a href="javascript:void(0)"
+                                                onclick="lightgallery('video-gallery','list_video_image')">
+                                                <img src="/Content/images/image_tran.jpg" alt="Backgroud" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <div class="video-frame">
+                                            <a href="javascript:void(0)"
+                                                onclick="lightgallery('video-gallery','list_video_image')">
+                                                <img src="/Content/images/image_tran.jpg" alt="Backgroud" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <div class="video-frame">
+                                            <a href="javascript:void(0)"
+                                                onclick="lightgallery('video-gallery','list_video_image')">
+                                                <img src="/Content/images/image_tran.jpg" alt="Backgroud" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup" data-popup="popup-video-call">
+                    <div class="popup-inner w100pi" style="top: 50%; max-width: 80%;">
+                        <div class="popup-inner-content">
+
+                            <a class="popup-close" id="close_call" data-popup-close="popup-video-call"
+                                onclick="testCloseup();" href="#"><i class="fa fa-times"></i></a>
+
+                            <div class="position-relative">
+                                <!-- Xoa class calling -->
+                                <div class="video-stream video-wrapper calling">
+                                    <span class="text-calling">ĐANG GỌI ...</span>
+                                    <div class="video-main">
+                                        <video id="remoteVideo" autoplay playsinline muted>
+                                            <source
+                                                src="https://sachinchoolur.github.io/lightgallery.js/static/videos/video4.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="video-small video-wrapper">
+                                        <span class="text-camera-off">Camera đang tắt</span>
+                                        <video id="localVideo" autoplay playsinline muted>
+                                            <source
+                                                src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                                                type="video/mp4">
+                                        </video>
+                                        <audio id="remoteAudio" autoplay playsinline
+                                            style="width: 1px; height: 1px;display: none"></audio>
+                                            <a href="javascript:void(0)" class="btn btn-light btn-video btn-icon"
+                                                id="muteBtn" onclick="toggleVideo(this, 'slash')">
+                                                <span class="video-on" tooltip="Tắt Video">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                        class="video_svg" x="0px" y="0px" width="24px" height="24px"
+                                                        viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                                        xml:space="preserve">
+                                                        <image id="image0" width="24" height="24" x="0" y="0"
+                                                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAALYAAAC2AZRp7/IAAAAHdElNRQflChsKAxhyI6btAAAAoklEQVQ4y92TMQrCUBBE34aAeIEU FmIvQtJ5CQ8QsPYc2ttaWVrmFOkscoIcwkawMOhYRUE++n8RkexWuzvTzMyaCKsoEP8DQgxgA4aO 21UXFyVhxxk5uqFg9r6ErRPcdvkEGjlrpnD6SBATIZhzRIiKL3CRMuLAvZ1jD2FWLP/auO4JPrIm 7Lm9rPYzLqNEiNo7GoIFG8bB4TMRFm/rwU8/AGD3tTRtGWvWAAAAJXRFWHRkYXRlOmNyZWF0ZQAy MDIxLTEwLTI3VDA3OjAzOjI0KzAzOjAwZY1gHQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0xMC0y N1QwNzowMzoyNCswMzowMBTQ2KEAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa AAAAAElFTkSuQmCC" />
+                                                    </svg>
+                                                </span>
+                                                <span class="video-off" tooltip="Bật Video" style="display: none;"><svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                        class="video_svg" x="0px" y="0px" width="24px" height="24px"
+                                                        viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                                        xml:space="preserve">
+                                                        <image id="image0" width="24" height="24" x="0" y="0"
+                                                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAAOwAAADsAXkocb0AAAAHdElNRQflChsKAxhyI6btAAAA3ElEQVRIx92UMQrCQBBFnxL1BAbP Y6dgaZvrKMHzWCuWsTJgxF4tPICxGgtD1GSTzCYg6E65vPcHZpgW9Z/LklsTPEQI6uJ9dggRg7/A e/ickcqKGZrTfQUsxIyKmr8o8DuTdHAhLgAOHhFrLHHBTeBj8qvEn80LQpsph7d/q3RB0mSVIJtu qoZ4iUCHFwq0eIFAjxsFNrhBYIfnBLZ4RpBfm3yVLJIuvXCV1XOHDwlXBCFmXNm8IJzSM+DgsWcF CwtcmOVvXAdfnT6n+yOH+qs4bHld2lpvQ9AEfwBK4y1cZUHteQAAACV0RVh0ZGF0ZTpjcmVhdGUA MjAyMS0xMC0yN1QwNzowMzoyNCswMzowMGWNYB0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTAt MjdUMDc6MDM6MjQrMDM6MDAU0NihAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48 GgAAAABJRU5ErkJggg==" />
+                                                    </svg></span>
+                                            </a>
+                                    </div>
+                                </div>
+                                <div class="video-btn-action">
+                                    <a href="javascript:void(0)" class="btn btn-light btn-capture btn-icon"
+                                        id="takePhoto" onclick="takePhoto()">
+                                        <span class="rec"></span>
+                                        <span tooltip="Chụp ảnh màn hình"><i class="fa fa-camera"></i></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="btn btn-danger btn-hangup btn-icon"
+                                        id="call2HangupBtn" onclick="testHangup()">
+                                        <span tooltip="Kết thúc"><i class="fa fa-phone"></i></span>
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="btn btn-light btn-microphone btn-icon"
+                                        id="muteBtn" onclick="toggleClass(this, 'mute')">
+                                        <span class="mic-on" tooltip="Tắt Mic"><i class="fa fa-microphone"></i></span>
+                                        <span class="mic-off" tooltip="Bật Mic" style="display: none;"><i
+                                                class="fa fa-microphone-slash"></i></span>
+                                    </a>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="modal fade" id="modal-video1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <!-- 16:9 aspect ratio -->
+                <iframe class="embed-responsive-item" src="" id="video1" allowscriptaccess="always"
+                    allow="autoplay"></iframe>
+        </div>
+    </div>
+    </div>
+    </div> -->
+
+    <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
+        <span class="copyright">
+            CopyRight © 2017 Bản quyền thuộc Tổng Công ty Cổ phần Bảo hiểm Hàng Không - website: <a target="_blank"
+                href="https://bhhk.com.vn/" title="bhhk.com.vn">bhhk.com.vn</a>
+        </span>
+    </footer>
+
+    </main>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

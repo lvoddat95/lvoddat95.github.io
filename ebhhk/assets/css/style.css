@@ -1,0 +1,187 @@
+/* Download buttons */
+.button-store .btn-dowload {
+	background-color: #fff;
+	color: #111;
+    display: inline-flex;
+    align-items: center;
+    min-width: 155px;
+    padding: 2px 10px;
+    border: 2px solid #fff;
+    font-weight: 500;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.button-store .btn-dowload.auto-width {
+	min-width:auto;
+}
+
+.button-store .btn-dowload i {
+	font-size:27px;
+	margin-right:10px;
+    transition:all 0.3s;
+}
+
+.button-store .btn-dowload p {
+	display:block;
+	font-size:17px;
+	line-height:1.4;
+	font-weight:700;
+	margin:0;
+    transition:all 0.3s;
+}
+
+.button-store .btn-dowload p em {
+	display:block;
+	clear:both;
+	font-style:normal;
+	font-size:12px;
+	margin:0;	
+	font-weight:500;
+    transition:all 0.3s;
+}
+
+.btn-dowload1{
+	margin-bottom: 10px;
+}
+.btn-dowload img{
+	margin-right: 5px;
+	max-width: 35px;
+}
+.qr-store{
+	display: flex;
+	margin: 30px 0 0;
+    max-width: 300px;
+}
+.border-qr {
+    position: relative;
+}
+
+.border-qr::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to right, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to left, #51adb2 4px, transparent 4px) 100% 100%, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 0 0, linear-gradient(to bottom, #51adb2 4px, transparent 4px) 100% 0, linear-gradient(to top, #51adb2 4px, transparent 4px) 0 100%, linear-gradient(to top, #51adb2 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    animation: pulse 2s infinite;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.banner-item-app .banner-content{
+    height: 100%;
+}
+.banner-item-app .banner-title{
+    padding: 0;
+
+}
+.banner-item-app .banner-details{
+    display: block;
+}
+.banner-item-app .banner-content-wrapper{
+    width: 100%;
+}
+.banner-item-app .banner-content-inner{
+    padding: 30px;
+}
+.banner-item-app .banner-content-wrapper:before{
+    display: block;
+}
+
+@media screen and (max-width: 786px) {
+    .banner-item-app .banner-title {
+        font-size: 18px;
+    }
+    .banner-item-app .banner-content{
+        position: static;
+    }
+    .banner-item-app .banner-wrapper {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .banner-item-app .banner-details{
+        font-size: 14px
+    }
+    
+    .banner-item-app .banner-content-inner{
+        padding: 40px;
+    }
+    .button-store .btn-dowload p{
+        font-size: 12px;
+    }
+    .button-store .btn-dowload p em{
+        font-size: 9px;
+    }
+    .btn-dowload img {
+        max-width: 25px;
+    }
+    .button-store .btn-dowload{
+        min-width: 120px;
+    }
+    .border-qr img {
+        width: 85px;
+    }
+    .border-qr::after {
+        width: 97px;
+        height: 97px;
+    }
+    .qr-store {
+        margin: 15px 0 0;
+        max-width: 230px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .banner-item-app .banner-content-inner{
+        text-align: center;
+        width: 100%;
+        padding: 6vw;
+    }
+    .banner-item-app .banner-details{
+        display: none;
+    }
+    .qr-store {
+        margin: 15px auto 0;
+    }
+}
+

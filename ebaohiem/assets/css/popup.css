@@ -1,0 +1,123 @@
+﻿
+.u-imgResponsive {
+    max-width: 100%;
+}
+
+.u-btn {
+    max-width: 260px;
+    flex: 0 0 100%;
+    padding: 8px 14px;
+    border: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(250, 198, 100, 0.27) 100%), #2976df;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.modal-btn {
+    flex: 1;
+    margin: 0;
+    max-width: 190px;
+}
+
+.modal-btn {
+    margin: 10px auto;
+}
+
+.u-btn.u-btn--success {
+    background: #00d000;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.ZebraDialog.modal-congrats {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 530px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 60px 80px 0 rgba(0, 0, 0, 0.4);
+}
+
+    .ZebraDialog.modal-congrats .ZebraDialog_Body {
+        height: 100% !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ZebraDialog.modal-congrats .ZebraDialog_Buttons {
+        text-align: center;
+    }
+
+        .ZebraDialog.modal-congrats .ZebraDialog_Buttons a {
+            width: 260px;
+            flex: 0 0 100%;
+            padding: 8px 14px;
+            border: 0;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(250, 198, 100, 0.27) 100%), #00d000;
+            border-radius: 24px;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+.modal-congrats-top {
+    padding: 30px 30px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(251, 251, 251, 2);
+}
+
+.modal-congrats-icon {
+    display: block;
+    max-width: 130px;
+    margin: 0 auto 25px;
+}
+
+.modal-congrats-header {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.modal-congrats-subheader {
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #999;
+}
+
+.modal-congrats-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #fff;
+}
+
+.modal-congrats-btn {
+    margin: 10px auto;
+}
+
+.blob {
+    height: 50px;
+    width: 50px;
+    color: #ffcc00;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 1;
+    font-size: 30px;
+    display: none;
+}
