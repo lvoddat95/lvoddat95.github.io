@@ -1,0 +1,102 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+}
+.header__logo {
+  height: 5.3rem;
+  width: 12rem;
+  object-fit: contain;
+  margin: 10px 0px;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  background-image: url(../images/small-icon.png);
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+}
+
+.header__box-phone {
+  display: flex;
+}
+
+.header__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+.icon-phone {
+  width: 26px;
+  height: 26px;
+  background-position: -73px -10px;
+}
+
+.icon-headphone {
+  width: 27px;
+  height: 26px;
+  background-position: -35px -10px;
+}
+
+.header__phone {
+  padding: 0 10px;
+}
+
+.header__phone .icon-headphone,
+.header__phone .icon-phone {
+  margin-right: 10px;
+}
+.header__phone--title {
+  color: #006c81;
+  margin-bottom: 0;
+}
+
+.header__phone--number {
+  font-weight: 700;
+  color: #e28f26;
+  margin-bottom: 0;
+}
+
+.footer {
+  padding: 15px 0;
+  font-size: 1.6rem;
+  color: #fff;
+  background: linear-gradient(90deg, #187185, #e29239);
+}
+
+.btn {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 1px solid #4daa5c;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  background-color: #ffff;
+  color: #4daa5c;
+}
