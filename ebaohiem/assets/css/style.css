@@ -361,3 +361,36 @@ svg.video_svg {
 }
 
 .video-is-off .text-camera-off{}
+
+@media (max-width: 1024px) {
+  .video-stream.calling .text-calling{
+    font-size: 20px;
+  }
+  .video-small{
+    height: 20vw;
+    width: 15vw;
+  }
+}
+@media (max-width: 600px) {
+  .video-stream.calling .text-calling{
+    font-size: 14px;
+  }
+  .video-small{
+    display: none !important;
+  }
+  [data-popup="popup-video-call"] .popup-close{
+    display: none;
+  }
+  [data-popup="popup-video-call"] .popup-inner{
+    max-width: calc(100% - 5px) !important;
+    border-radius: 8px;
+    background: transparent;
+  }
+  [data-popup="popup-video-call"] .popup-inner-content{
+    padding: 0px;
+  }
+  .video-stream video{
+    height: 100vh;
+        object-fit: fill;
+  }
+}

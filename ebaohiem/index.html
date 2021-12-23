@@ -84,7 +84,67 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="position-relative">
+        <div class="video-stream video-wrapper calling">
+            <span class="text-calling">ĐANG GỌI ...</span>
+            <div class="video-main">
+                <video id="remoteVideo" autoplay playsinline muted>
+                    <source src="https://sachinchoolur.github.io/lightgallery.js/static/videos/video4.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <div class="video-small video-wrapper">
+                <span class="text-camera-off">Camera đang tắt</span>
+                <video id="localVideo" autoplay playsinline muted>
+                    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                        type="video/mp4">
+                </video>
+                <audio id="remoteAudio" autoplay playsinline style="width: 1px; height: 1px;display: none"></audio>
+                <a href="javascript:void(0)" class="btn btn-light btn-video btn-icon" id="muteBtn"
+                    onclick="toggleVideo(this, 'slash')">
+                    <span class="video-on" tooltip="Tắt Video">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            class="video_svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"
+                            enable-background="new 0 0 24 24" xml:space="preserve">
+                            <image id="image0" width="24" height="24" x="0" y="0"
+                                href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAALYAAAC2AZRp7/IAAAAHdElNRQflChsKAxhyI6btAAAAoklEQVQ4y92TMQrCUBBE34aAeIEU FmIvQtJ5CQ8QsPYc2ttaWVrmFOkscoIcwkawMOhYRUE++n8RkexWuzvTzMyaCKsoEP8DQgxgA4aO 21UXFyVhxxk5uqFg9r6ErRPcdvkEGjlrpnD6SBATIZhzRIiKL3CRMuLAvZ1jD2FWLP/auO4JPrIm 7Lm9rPYzLqNEiNo7GoIFG8bB4TMRFm/rwU8/AGD3tTRtGWvWAAAAJXRFWHRkYXRlOmNyZWF0ZQAy MDIxLTEwLTI3VDA3OjAzOjI0KzAzOjAwZY1gHQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0xMC0y N1QwNzowMzoyNCswMzowMBTQ2KEAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa AAAAAElFTkSuQmCC" />
+                        </svg>
+                    </span>
+                    <span class="video-off" tooltip="Bật Video" style="display: none;"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            class="video_svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"
+                            enable-background="new 0 0 24 24" xml:space="preserve">
+                            <image id="image0" width="24" height="24" x="0" y="0"
+                                href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAAOwAAADsAXkocb0AAAAHdElNRQflChsKAxhyI6btAAAA3ElEQVRIx92UMQrCQBBFnxL1BAbP Y6dgaZvrKMHzWCuWsTJgxF4tPICxGgtD1GSTzCYg6E65vPcHZpgW9Z/LklsTPEQI6uJ9dggRg7/A e/ickcqKGZrTfQUsxIyKmr8o8DuTdHAhLgAOHhFrLHHBTeBj8qvEn80LQpsph7d/q3RB0mSVIJtu qoZ4iUCHFwq0eIFAjxsFNrhBYIfnBLZ4RpBfm3yVLJIuvXCV1XOHDwlXBCFmXNm8IJzSM+DgsWcF CwtcmOVvXAdfnT6n+yOH+qs4bHld2lpvQ9AEfwBK4y1cZUHteQAAACV0RVh0ZGF0ZTpjcmVhdGUA MjAyMS0xMC0yN1QwNzowMzoyNCswMzowMGWNYB0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTAt MjdUMDc6MDM6MjQrMDM6MDAU0NihAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48 GgAAAABJRU5ErkJggg==" />
+                        </svg></span>
+                </a>
+            </div>
+        </div>
+        <div class="video-btn-action">
+            <a href="javascript:void(0)" class="btn btn-light btn-capture btn-icon" id="takePhoto"
+                onclick="takePhoto()">
+                <span class="rec"></span>
+                <span tooltip="Chụp ảnh màn hình"><i class="fa fa-camera"></i></span>
+            </a>
+
+            <a href="javascript:void(0)" class="btn btn-danger btn-hangup btn-icon" id="call2HangupBtn"
+                onclick="testHangup()">
+                <span tooltip="Kết thúc"><i class="fa fa-phone"></i></span>
+            </a>
+
+            <a href="javascript:void(0)" class="btn btn-light btn-microphone btn-icon" id="muteBtn"
+                onclick="toggleClass(this, 'mute')">
+                <span class="mic-on" tooltip="Tắt Mic"><i class="fa fa-microphone"></i></span>
+                <span class="mic-off" tooltip="Bật Mic" style="display: none;"><i
+                        class="fa fa-microphone-slash"></i></span>
+            </a>
+
+
+        </div>
+
+
+    </div>
+    <!-- <div class="container-fluid">
         <div class="row">
             <main class="main-content col-lg-12 col-md-12 col-sm-12 p-0">
 
@@ -278,7 +338,6 @@
                                 onclick="testCloseup();" href="#"><i class="fa fa-times"></i></a>
 
                             <div class="position-relative">
-                                <!-- Xoa class calling -->
                                 <div class="video-stream video-wrapper calling">
                                     <span class="text-calling">ĐANG GỌI ...</span>
                                     <div class="video-main">
@@ -297,28 +356,28 @@
                                         </video>
                                         <audio id="remoteAudio" autoplay playsinline
                                             style="width: 1px; height: 1px;display: none"></audio>
-                                            <a href="javascript:void(0)" class="btn btn-light btn-video btn-icon"
-                                                id="muteBtn" onclick="toggleVideo(this, 'slash')">
-                                                <span class="video-on" tooltip="Tắt Video">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                                        class="video_svg" x="0px" y="0px" width="24px" height="24px"
-                                                        viewBox="0 0 24 24" enable-background="new 0 0 24 24"
-                                                        xml:space="preserve">
-                                                        <image id="image0" width="24" height="24" x="0" y="0"
-                                                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAALYAAAC2AZRp7/IAAAAHdElNRQflChsKAxhyI6btAAAAoklEQVQ4y92TMQrCUBBE34aAeIEU FmIvQtJ5CQ8QsPYc2ttaWVrmFOkscoIcwkawMOhYRUE++n8RkexWuzvTzMyaCKsoEP8DQgxgA4aO 21UXFyVhxxk5uqFg9r6ErRPcdvkEGjlrpnD6SBATIZhzRIiKL3CRMuLAvZ1jD2FWLP/auO4JPrIm 7Lm9rPYzLqNEiNo7GoIFG8bB4TMRFm/rwU8/AGD3tTRtGWvWAAAAJXRFWHRkYXRlOmNyZWF0ZQAy MDIxLTEwLTI3VDA3OjAzOjI0KzAzOjAwZY1gHQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0xMC0y N1QwNzowMzoyNCswMzowMBTQ2KEAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa AAAAAElFTkSuQmCC" />
-                                                    </svg>
-                                                </span>
-                                                <span class="video-off" tooltip="Bật Video" style="display: none;"><svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                                        class="video_svg" x="0px" y="0px" width="24px" height="24px"
-                                                        viewBox="0 0 24 24" enable-background="new 0 0 24 24"
-                                                        xml:space="preserve">
-                                                        <image id="image0" width="24" height="24" x="0" y="0"
-                                                            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAAOwAAADsAXkocb0AAAAHdElNRQflChsKAxhyI6btAAAA3ElEQVRIx92UMQrCQBBFnxL1BAbP Y6dgaZvrKMHzWCuWsTJgxF4tPICxGgtD1GSTzCYg6E65vPcHZpgW9Z/LklsTPEQI6uJ9dggRg7/A e/ickcqKGZrTfQUsxIyKmr8o8DuTdHAhLgAOHhFrLHHBTeBj8qvEn80LQpsph7d/q3RB0mSVIJtu qoZ4iUCHFwq0eIFAjxsFNrhBYIfnBLZ4RpBfm3yVLJIuvXCV1XOHDwlXBCFmXNm8IJzSM+DgsWcF CwtcmOVvXAdfnT6n+yOH+qs4bHld2lpvQ9AEfwBK4y1cZUHteQAAACV0RVh0ZGF0ZTpjcmVhdGUA MjAyMS0xMC0yN1QwNzowMzoyNCswMzowMGWNYB0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTAt MjdUMDc6MDM6MjQrMDM6MDAU0NihAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48 GgAAAABJRU5ErkJggg==" />
-                                                    </svg></span>
-                                            </a>
+                                        <a href="javascript:void(0)" class="btn btn-light btn-video btn-icon"
+                                            id="muteBtn" onclick="toggleVideo(this, 'slash')">
+                                            <span class="video-on" tooltip="Tắt Video">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                    class="video_svg" x="0px" y="0px" width="24px" height="24px"
+                                                    viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                                    xml:space="preserve">
+                                                    <image id="image0" width="24" height="24" x="0" y="0"
+                                                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAALYAAAC2AZRp7/IAAAAHdElNRQflChsKAxhyI6btAAAAoklEQVQ4y92TMQrCUBBE34aAeIEU FmIvQtJ5CQ8QsPYc2ttaWVrmFOkscoIcwkawMOhYRUE++n8RkexWuzvTzMyaCKsoEP8DQgxgA4aO 21UXFyVhxxk5uqFg9r6ErRPcdvkEGjlrpnD6SBATIZhzRIiKL3CRMuLAvZ1jD2FWLP/auO4JPrIm 7Lm9rPYzLqNEiNo7GoIFG8bB4TMRFm/rwU8/AGD3tTRtGWvWAAAAJXRFWHRkYXRlOmNyZWF0ZQAy MDIxLTEwLTI3VDA3OjAzOjI0KzAzOjAwZY1gHQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0xMC0y N1QwNzowMzoyNCswMzowMBTQ2KEAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa AAAAAElFTkSuQmCC" />
+                                                </svg>
+                                            </span>
+                                            <span class="video-off" tooltip="Bật Video" style="display: none;"><svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                    class="video_svg" x="0px" y="0px" width="24px" height="24px"
+                                                    viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                                    xml:space="preserve">
+                                                    <image id="image0" width="24" height="24" x="0" y="0"
+                                                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ cwAAAOwAAADsAXkocb0AAAAHdElNRQflChsKAxhyI6btAAAA3ElEQVRIx92UMQrCQBBFnxL1BAbP Y6dgaZvrKMHzWCuWsTJgxF4tPICxGgtD1GSTzCYg6E65vPcHZpgW9Z/LklsTPEQI6uJ9dggRg7/A e/ickcqKGZrTfQUsxIyKmr8o8DuTdHAhLgAOHhFrLHHBTeBj8qvEn80LQpsph7d/q3RB0mSVIJtu qoZ4iUCHFwq0eIFAjxsFNrhBYIfnBLZ4RpBfm3yVLJIuvXCV1XOHDwlXBCFmXNm8IJzSM+DgsWcF CwtcmOVvXAdfnT6n+yOH+qs4bHld2lpvQ9AEfwBK4y1cZUHteQAAACV0RVh0ZGF0ZTpjcmVhdGUA MjAyMS0xMC0yN1QwNzowMzoyNCswMzowMGWNYB0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTAt MjdUMDc6MDM6MjQrMDM6MDAU0NihAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48 GgAAAABJRU5ErkJggg==" />
+                                                </svg></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="video-btn-action">
@@ -350,33 +409,18 @@
                     </div>
                 </div>
 
+            </main>
 
-                <!-- <div class="modal fade" id="modal-video1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <!-- 16:9 aspect ratio -->
-                <iframe class="embed-responsive-item" src="" id="video1" allowscriptaccess="always"
-                    allow="autoplay"></iframe>
         </div>
     </div>
-    </div>
-    </div> -->
+
 
     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
         <span class="copyright">
             CopyRight © 2017 Bản quyền thuộc Tổng Công ty Cổ phần Bảo hiểm Hàng Không - website: <a target="_blank"
                 href="https://bhhk.com.vn/" title="bhhk.com.vn">bhhk.com.vn</a>
         </span>
-    </footer>
-
-    </main>
-    </div>
-    </div>
+    </footer> -->
 
 
 
