@@ -232,37 +232,212 @@
                 </center>
 
                 <form id="form__action" action="">
-                    <div id="form__action--wizard">
-                        <ul class="nav">
-                            <li>
-                                <a class="nav-link" href="#step-1">
-                                    1. Thông tin
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#step-2">
-                                    2. Xác nhận
-                                </a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#step-3">
-                                    3. Thanh toán
-                                </a>
-                            </li>
-                        </ul>
+                    <div id="form-wizard">
+                        <div class="step-wizard">
 
-                        <div class="tab-content">
-                            <div id="step-1" class="tab-pane" role="tabpanel">
-                                Step content
+
+                            <ul class="step-nav" role="navigation">
+                                <div id="progressbar" class="progressbar"></div>
+                                <li class="active">
+                                    <button>
+                                        <div class="step-number">1</div>
+                                        <div class="step-title">Thông tin</div>
+                                    </button>
+                                </li>
+                                <li class="">
+                                    <button>
+                                        <div class="step-number">2</div>
+                                        <div class="step-title">Xác nhận</div>
+                                    </button>
+                                </li>
+                                <li class="">
+                                    <button>
+                                        <div class="step-number">3</div>
+                                        <div class="step-title">Thanh toán</div>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="step-content">
+                                <div class="step-panel show">
+                                    <div class="form-block">
+                                        <div class="title">
+                                            <h6 class="text-uppercase">Thời hạn bảo hiểm</h6>
+                                            <div class="line"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="c_thoi_han_tu" class="form-label">Bắt đầu: <span class="text-danger">*</span></label>
+                                                        <input id="c_thoi_han_tu" type="text" class="form-control input-date datepicker" placeholder="dd/mm/yyyy" value="28/12/2021">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="c_thoi_han_den" class="form-label">Kết thúc: <span class="text-danger">*</span></label>
+                                                        <input id="c_thoi_han_den" type="text" class="form-control input-date datepicker" placeholder="dd/mm/yyyy" value="28/12/2022" disabled >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-block">
+                                        <div class="title">
+                                            <h6 class="text-uppercase">Thông tin người liên hệ</h6>
+                                            <div class="line"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="kinh_doan_vt"
+                                                    id="c_kinh_doan_vt">
+                                                <label class="form-check-label" for="c_kinh_doan_vt">
+                                                    Xe ô tô không kinh doanh vận tải
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="kinh_doan_vt"
+                                                    id="c_k_kinh_doan_vt" checked>
+                                                <label class="form-check-label" for="c_k_kinh_doan_vt">
+                                                    Xe ô tô kinh doanh vận tải
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_loai_xe" class="form-label">Loại xe: <span class="text-danger">*</span></label>
+                                                    <select id="c_loai_xe" class="form-control form-select" required>
+                                                        <option value="">Dưới 6 chỗ ngồi</option>
+                                                        <option value="">6 - 11 chỗ ngồi</option>
+                                                        <option value="">Xe vừa chở người, vừa chở hàng (Pickup, minivan)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_so_cho_ngoi" class="form-label">Số chỗ ngồi: <span class="text-danger">*</span></label>
+                                                    <input id="c_so_cho_ngoi" type="text" class="form-control input-number" placeholder="0" maxlength="2">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-block">
+                                        <div class="title">
+                                            <h6 class="text-uppercase">Thông tin trên đăng ký xe</h6>
+                                            <div class="line"></div>
+                                        </div>
+                                        <p class="desc">Nhập thông tin trên đăng ký xe của bạn.</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_ten_chu_xe" class="form-label">Tên chủ xe: <span class="text-danger">*</span></label>
+                                                    <input id="c_ten_chu_xe" type="text" class="form-control" placeholder="Nhập tên đầy đủ">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_dia_chi_chu_xe" class="form-label">Địa chỉ: <span class="text-danger">*</span></label>
+                                                    <input id="c_dia_chi_chu_xe" type="text" class="form-control" placeholder="Nhập địa chỉ">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_nhan_hieu" class="form-label">Nhãn hiệu: <span class="text-danger">*</span></label>
+                                                    <input id="c_nhan_hieu" type="text" class="form-control " placeholder="Mazda 3, Honda city">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_bien_so_xe" class="form-label">Biển số xe: <span class="text-danger">*</span></label>
+                                                    <input id="c_bien_so_xe" type="text" class="form-control " placeholder="11X - 12345">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_so_khung" class="form-label">Số khung: <span class="text-danger">*</span></label>
+                                                    <input id="c_so_khung" type="text" class="form-control " placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_so_may" class="form-label">Số máy: <span class="text-danger">*</span></label>
+                                                    <input id="c_so_may" type="text" class="form-control " placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-block">
+                                        <div class="title">
+                                            <h6 class="text-uppercase">Người nhận giấy chứng nhận</h6>
+                                            <div class="line"></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_ten_nguoi_nhan" class="form-label">Họ và tên: <span class="text-danger">*</span></label>
+                                                    <input id="c_ten_nguoi_nhan" type="text" class="form-control" placeholder="Nhập tên đầy đủ">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_cmt" class="form-label">CMND/CCCD: <span class="text-danger">*</span></label>
+                                                    <input id="c_cmt" type="text" class="form-control" placeholder="Nhập ">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="c_sdt" class="form-label">Số điện thoại: <span class="text-danger">*</span></label>
+                                                    <input id="c_sdt" type="text" class="form-control" placeholder="Nhập SĐT">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="c_dia_chi_nguoi_nhan" class="form-label">Địa chỉ: <span class="text-danger">*</span></label>
+                                            <input id="c_dia_chi_nguoi_nhan" type="text" class="form-control" placeholder="Nhập địa chỉ">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="step-panel">
+                                    <div class="form-group">
+                                        <label for="" class="form-label">: <span class="text-danger">*</span></label>
+                                        <input id="" type="text" class="form-control " placeholder="">
+                                    </div>
+                                </div>
+                                <div class="step-panel">
+                                    3
+                                </div>
+
                             </div>
-                            <div id="step-2" class="tab-pane" role="tabpanel">
-                                Step content
+                            <div class="step-button">
+                                <button class="btn" id="prev">Quay lại</button>
+                                <button class="btn" id="next">Tiếp tục</button>
                             </div>
-                            <div id="step-3" class="tab-pane" role="tabpanel">
-                                Step content
-                            </div>
-                            
                         </div>
+
+                        
+
                     </div>
                 </form>
 
@@ -340,7 +515,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
 
 </body>
 

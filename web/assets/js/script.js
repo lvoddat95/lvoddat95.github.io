@@ -1,26 +1,57 @@
 $(document).ready(function () {
-    var btnFinish = $('<button></button>').text('Finish')
-        .addClass('btn btn-info')
-        .on('click', function () {
-            alert('Finish Clicked');
+    
+    function setClasses(index, steps) {
+        if (index < 0 || index > steps) return;
+        if (index == 0) {
+            $("#prev").prop('disabled', true).css({"visibility": "hidden", "opacity": "0"});
+        } else {
+            $("#prev").prop('disabled', false).css({"visibility": "visible", "opacity": "1"});
+        }
+        if (index == steps) {
+            $("#next").text('Hoàn thành');
+        } else {
+            $("#next").text('Tiếp tục');
+        }
+        $(".step-wizard ul li").each(function () {
+            $(this).removeClass();
         });
-    var btnCancel = $('<button></button>').text('Cancel')
-        .addClass('btn btn-danger')
-        .on('click', function () {
-            $('#form__action--wizard').smartWizard("reset");
+        $(".step-wizard ul li:lt(" + index + ")").each(function () {
+            $(this).addClass("done");
         });
-    // SmartWizard initialize
-    $('#form__action--wizard').smartWizard({
-        selected: 0,
-        enableURLhash: false,
-        theme: 'dots',
-        transition: {
-            animation: 'fade', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-        },
-        // toolbarSettings: {
-        //     toolbarPosition: 'both', // both bottom
-        //     toolbarExtraButtons: [btnFinish, btnCancel]
-        // }
+        $(".step-wizard ul li:eq(" + index + ")").addClass("active");
+        $(".step-wizard .step-panel").each(function () {
+            $(this).hide();
+        });
+        $(".step-wizard .step-panel:eq(" + index + ")").show();
+        var p = index * (100 / steps);
+        $("#progressbar").width(p + '%');
+    }
+
+    $(".step-wizard ul button").click(function (e) {
+        e.preventDefault();
+        var step = $(this).find("div.step-number")[0].innerText;
+        var steps = $(".step-wizard ul li").length;
+        setClasses(step - 1, steps - 1)
     });
 
+    $("#prev").click(function (e) {
+        e.preventDefault();
+        var step = $(".step-wizard ul li.active div.step-number")[0].innerText;
+        var steps = $(".step-wizard ul li").length;
+        setClasses(step - 2, steps - 1);
+    });
+
+    $("#next").click(function (e) {
+        e.preventDefault();
+        if ($(this).text() == 'Hoàn thành') {
+            alert("submit the form?!?")
+        } else {
+            var step = $(".step-wizard ul li.active div.step-number")[0].innerText;
+            var steps = $(".step-wizard ul li").length;
+            setClasses(step, steps - 1);
+        }
+    });
+
+    // initial state setup
+    setClasses(0, $(".step-wizard ul li").length);
 });
