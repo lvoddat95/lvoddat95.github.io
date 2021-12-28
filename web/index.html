@@ -63,7 +63,7 @@
                                         data-bs-target="#collapse__1">
                                         Phạm vi bồi thường thiệt hại
                                     </button>
-                                    <div id="collapse__1" class="accordion__item--collapse collapse "
+                                    <div id="collapse__1" class="accordion__item--collapse collapse show"
                                         data-bs-parent="#accordion">
                                         <div class="accordion__item--body">
                                             <div class="entry__blog--content">
@@ -88,7 +88,7 @@
                                         data-bs-target="#collapse__2">
                                         Mức trách nhiệm bảo hiểm
                                     </button>
-                                    <div id="collapse__2" class="accordion__item--collapse collapse show"
+                                    <div id="collapse__2" class="accordion__item--collapse collapse "
                                         data-bs-parent="#accordion">
                                         <div class="accordion__item--body">
                                             <div class="entry__blog--content">
@@ -232,7 +232,7 @@
                 </center>
 
                 <form id="form__action" action="">
-                    <div id="smartwizard">
+                    <div id="form__action--wizard">
                         <ul class="nav">
                             <li>
                                 <a class="nav-link" href="#step-1">
@@ -340,33 +340,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        $(document).ready(function () {
-            var btnFinish = $('<button></button>').text('Finish')
-                .addClass('btn btn-info')
-                .on('click', function () {
-                    alert('Finish Clicked');
-                });
-            var btnCancel = $('<button></button>').text('Cancel')
-                .addClass('btn btn-danger')
-                .on('click', function () {
-                    $('#smartwizard').smartWizard("reset");
-                });
-            // SmartWizard initialize
-            $('#smartwizard').smartWizard({
-                selected: 0,
-                enableURLhash: false,
-                transition: {
-                    animation: 'fade', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-                },
-                // toolbarSettings: {
-                //     toolbarPosition: 'both', // both bottom
-                //     toolbarExtraButtons: [btnFinish, btnCancel]
-                // }
-            });
-
-        });
-    </script>
+    
 
 </body>
 

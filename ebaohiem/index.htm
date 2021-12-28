@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Ebaohiem - DEMO
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="icon" type="image/png" href="https://ebaohiem-test.bhhk.com.vn/Content/images/favicon.ico">
+
+    <link type="text/css" href="assets/css/zebra_dialog.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/colorbox.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/select2.min.css" rel="stylesheet">
+
+
+
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/dataTables.bootstrap4.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/buttons.bootstrap4.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pretty-checkbox.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/home.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/modules.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/popup.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/lightgallery.css">
+    <link type="text/css" rel="stylesheet" href="https://ebaohiem.bhhk.com.vn/Content/utils/zebradialog/flat/zebra_dialog.min.css?v=1.0">
+
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/AjaxRequest.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/appear.js"></script>
+    <script type="text/javascript" src="assets/js/popper.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="assets/js/zebra_dialog.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="assets/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="assets/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.colVis.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/library.js"></script>
+    <script type="text/javascript" src="assets/js/data.ajax.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <!-- Pretty Checkbox -->
+
+    <script type="text/javascript" src="assets/js/jquery.signalR-2.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightgallery-all.min.js"></script>
+    <script type="text/javascript" src="assets/js/call2_demo.js"></script>
+    <script type="text/javascript" src="assets/js/html2canvas.js"></script>
+    <script type="text/javascript" src="assets/js/latest.sdk.bundle.min.js"></script>
+    <style>
+        div.relative {
+            position: relative;
+            width: 60%;
+            height: 100%;
+            border: 1px solid silver;
+            margin: auto;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 15px;
+            right: 9px;
+            width: 20%;
+            height: 30%;
+            border: 1px solid silver;
+        }
+    </style>
+
+</head>
+
+<body>
+
+	<form id="vswForm" name="vswForm" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="_vsw_action" name="_vsw_action" />
+        <input type="hidden" name="Id" id="Id" value="ddf6bfcf-e837-4e70-86e0-0f5c2f7d6a45" />
+        <div class="main-content-container container-fluid2 px-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb5">
+                        
+                        <div class="card-header justify-content-between pb5 pl5 pr20 pt5 ">
+                            <div class="btn btn-link text-dark">
+                                <i class="fa fa-list-alt"></i>
+                                THÔNG TIN THAM GIA BẢO HIỂM
+                            </div>
+                            <div class="btn-group btn-group-sm float-right pt5" style="padding: 3px;">
+                                <button class="btn btn-secondary btn-inform" style="background-color: #4CAF50;" onclick="ConfirmZebraByContentAjax(this,'chap-nhan','');return false;" title="Xác nhận tham gia bảo hiểm"><span><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;&nbsp;Xác nhận tham gia bảo hiểm</span></button>
+                                <button class="btn btn-secondary btn-inform" style="background-color: red;" onclick="ConfirmZebraByContentAjax(this,'tu-choi','');return false;" title="Từ chối tham gia bảo hiểm"><span><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;&nbsp;Từ chối tham gia bảo hiểm</span></button>
+                            </div>
+                        </div>
+                        <div class="card-body collapse show font-13">
+                            <div style="width: 100%; margin: auto; text-align: center;">
+                                <iframe src="/Data/Files/GYCBH/Temp/27-12-2021/GYCBH_27122021_637761990556501575.pdf" width="100%" height="500"></iframe>
+                            </div>
+                        </div>
+                        <div class="card-header justify-content-between pb5 pl5 pr20 pt5 ">
+                            <div class="btn btn-link text-dark">
+                                <i class="fa fa-list-alt"></i>
+                                THÔNG TIN THAM GIA BẢO HIỂM
+                            </div>
+
+                        </div>
+
+                        <!-- // Copy this -->
+
+                        <div id="tu-choi">
+                            <div class="box-sizing-border-box">
+                                <label class="col-form-label" for="C_LY_DO">Lý do từ chối:<span class="required">*</span></label>
+                                <div class="validate-input" data-validate="">
+                                    <textarea class="form-control" rows="2" autocomplete="off" id="C_LY_DO" name="C_LY_DO" 
+                                    oninput="document.getElementById('C_LY_DO').value = this.value"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="chap-nhan">
+                            <div class="box-sizing-border-box">
+                                <label class="col-form-label" for="C_LY_DO">Vui lòng chọn lại thời gian hiệu lực bảo hiểm:<span class="required">*</span></label>
+                                <div class="validate-input" data-validate="" style="max-width: 200px;">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control mydatepicker" id="C_HIEU_LUC_TU_NGAY" name="C_HIEU_LUC_TU_NGAY" value="" placeholder="dd/mm/yyyy" 
+                                            oninput="document.getElementById('C_LY_DO').value = this.value" maxlength="10" />
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                function addMonths(date, months) {
+                                    var d = date.getDate();
+                                    date.setMonth(date.getMonth() + +months);
+                                    if (date.getDate() != d) {
+                                      date.setDate(0);
+                                    }
+                                    return date;
+                                }
+                                var end_date_limit = addMonths(new Date(),6);
+
+
+                                var today = new Date();
+                                var start_date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+                                var end_date = end_date_limit.getDate()+'/'+(end_date_limit.getMonth()+1)+'/'+end_date_limit.getFullYear();
+                                console.log(start_date);
+                                console.log(end_date);
+
+                                 $('.mydatepicker').datepicker({
+                                    format: 'dd/mm/yyyy',
+                                    todayHighlight: true,
+                                    autoclose: true,
+                                    todayBtn: true,
+                                    startDate: start_date,
+                                    endDate:end_date
+                                });
+                            </script>
+                        </div>
+
+                        <!-- // Copy this -->
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
