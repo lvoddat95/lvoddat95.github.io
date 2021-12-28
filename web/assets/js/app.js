@@ -15,7 +15,7 @@ var App = function () {
 
             $(select).select2({
                 language: "vi",
-                minimumResultsForSearch: 5,
+                minimumResultsForSearch: 10,
             });
 
             $(select).each(function (index, element) {
@@ -46,7 +46,8 @@ var App = function () {
     var _component_datepicker = function (p_datepicker) {
 
         if (!$().datepicker) {
-            return false;
+            console.warn('Warning - Datepicker Js is not loaded.');
+            return;
         }
 
         var datepicker = $('.datepicker');
