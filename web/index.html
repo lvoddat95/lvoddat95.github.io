@@ -35,9 +35,11 @@
                     </div>
                     <div class="header__right">
                         <div class="d-flex align-items-center">
-                            <h4 class="header__right-desc mb-0 me-4">Nhận ngay ưu đãi 25%</h4>
-                            <button class="btn btn-mua"><i class="far fa-fw fa-shopping-cart"></i> Mua online
-                                ngay</button>
+                            <h4 class="header__right-desc mb-0 mr-4">Nhận ngay ưu đãi 25%</h4>
+                            <button class="btn btn-mua" onclick="scroll_to_element('#entry__form', 700)">
+                                <span>Mua online ngay</span>
+                                <i class="far fa-shopping-cart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -49,7 +51,7 @@
 
                 <div class="row">
                     <div class="col-md-7">
-                        <h2 class="entry__blog--title">Mua bảo hiểm <br> Trách nhiệm dân sự bắt buộc</h2>
+                        <h2 class="entry__blog--title"><span>Mua bảo hiểm</span> <br> Trách nhiệm dân sự bắt buộc</h2>
                         <div class="entry__blog--right">
 
                             <div class="accordion mb-5" id="accordion">
@@ -141,8 +143,8 @@
                             </div>
 
                             <div class="entry__button">
-                                <button class="btn btn-sub" type="button">Tìm hiểu thêm <i
-                                        class="far ms-2 fa-long-arrow-right"></i></button>
+                                <button class="btn btn-sub" type="button">
+                                    <span>Tìm hiểu thêm</span><i class="far ml-2 fa-long-arrow-right"></i></button>
                             </div>
 
                         </div>
@@ -150,7 +152,9 @@
 
                     <div class="col-md-5">
                         <div class="entry__banner">
-                            <img class="entry__banner-img" src="assets/images/family-11.jpg" alt="VNI Insurance !">
+                            <div class="entry__banner-img">
+                                <img class="img" src="assets/images/family-11.jpg" alt="VNI Insurance !">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,7 +221,7 @@
             </form>
         </section>
 
-        <section class="entry__form">
+        <section id="entry__form" class="entry__form">
             <div class="container">
                 <center class="mb-5">
                     <h2 class="entry__blog--title text-center">Mua bảo hiểm Online</h2>
@@ -254,7 +258,7 @@
                             </ul>
 
                             <div class="step-content">
-                                <div class="step-panel show">
+                                <div class="step-panel step-panel-1 show">
                                     <div class="form-block">
                                         <div class="title">
                                             <h6 class="text-uppercase">Thời hạn bảo hiểm</h6>
@@ -320,7 +324,8 @@
                                                 <div class="form-group">
                                                     <label for="c_loai_xe" class="form-label">Loại xe: <span
                                                             class="text-danger">*</span></label>
-                                                    <select id="c_loai_xe" class="form-control form-select" select2 required>
+                                                    <select id="c_loai_xe" class="form-control form-select" select2
+                                                        required>
                                                         <option value="">Dưới 6 chỗ ngồi</option>
                                                         <option value="">6 - 11 chỗ ngồi</option>
                                                         <option value="">Xe vừa chở người, vừa chở hàng (Pickup,
@@ -450,20 +455,143 @@
 
 
                                 </div>
-                                <div class="step-panel">
-                                    <div class="form-group">
-                                        <label for="" class="form-label">: <span class="text-danger">*</span></label>
-                                        <input id="" type="text" class="form-control " placeholder="">
+
+                                <div class="step-panel step-panel-2">
+
+                                    <div class="row">
+                                        <div class="col-md-8 offset-md-2">
+                                            <div class="form-block">
+                                                <div class="title">
+                                                    <h6 class="text-uppercase">Thông tin bảo hiểm</h6>
+                                                    <div class="line"></div>
+                                                </div>
+                                                <div class="table-block">
+                                                    <table class="table ">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Bảo hiểm</td>
+                                                                <td>Trách nhiệm dân sự ô tô</td> 
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Phí bảo hiểm</td>
+                                                                <td>873.400 đ</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Thời hạn hợp đồng</td>
+                                                                <td>29/12/2021 - 28/12/2022</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mục đích sử dụng xe</td>
+                                                                <td>Xe ô tô không kinh doanh vận tải</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Loại xe</td>
+                                                                <td>6-11 chỗ ngồi</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số chỗ ngồi</td>
+                                                                <td>6</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-block">
+                                                <div class="title">
+                                                    <h6 class="text-uppercase">Thông tin trên đăng ký xe</h6>
+                                                    <div class="line"></div>
+                                                </div>
+                                                <div class="table-block">
+                                                    <table class="table ">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Tên chủ xe</td>
+                                                                <td>Lê Văn A</td> 
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Địa chỉ</td>
+                                                                <td>Toà Geleximco, Số 36 Hoàng Cầu, Đống Đa, Hà Nội</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dòng xe</td>
+                                                                <td>Honda Civic </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Biển số xe</td>
+                                                                <td>51B1 - 12345</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số khung</td>
+                                                                <td>AB123456789</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số máy</td>
+                                                                <td>XX123YY456</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-block">
+                                                <div class="title">
+                                                    <h6 class="text-uppercase">Thông tin người nhận giấy chứng nhận</h6>
+                                                    <div class="line"></div>
+                                                </div>
+                                                <div class="table-block">
+                                                    <table class="table ">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Họ và tên</td>
+                                                                <td>Lê Văn B</td> 
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CMND/CCCD</td>
+                                                                <td>123456789</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Số điện thoại</td>
+                                                                <td>0987654321</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Email</td>
+                                                                <td>contact@bhhk.com.vn</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Địa chỉ</td>
+                                                                <td>Toà Geleximco, Số 36 Hoàng Cầu, Đống Đa, Hà Nội</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group d-flex align-items-center justify-content-center">
+                                                <label class="checkcontainer" for="c_check_agree">
+                                                    <input id="c_check_agree" type="checkbox" checked="checked">
+                                                    <span class="checkmark"></span>
+                                                    <span class="font-weight-normal">Tôi đã đọc và đồng ý với <a href="javascript:;">Quy tắc bảo hiểm</a></span>
+                                                  </label>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="step-panel">
-                                    3
+                                    
+
+
+
                                 </div>
 
+                                <div class="step-panel step-panel-3">
+                                    3
+                                </div>
                             </div>
                             <div class="step-button">
-                                <button class="btn" id="prev">Quay lại</button>
-                                <button class="btn" id="next">Tiếp tục</button>
+                                <button class="btn btn-light" id="prev"><i class="far fa-fw fa-long-arrow-left"></i>
+                                    Quay lại</button>
+                                <button class="btn" id="next">Tiếp tục <i
+                                        class="far fa-fw fa-long-arrow-right"></i></button>
                             </div>
                         </div>
 
@@ -511,14 +639,14 @@
                         <!-- <p class="mb-0 text-right">Designed by Datlv</p> -->
                         <div class="header__box-phone">
                             <div class="header__phone">
-                                <i class=" fa-2x fa-fw me-2 fad fa-user-headset"></i>
+                                <i class=" fa-2x fa-fw mr-2 fad fa-user-headset"></i>
                                 <div class="header__phone--content">
                                     <p class="header__phone--title">Call Center</p>
                                     <a class="header__phone--number" href="tel:1900969690">1900 969 690</a>
                                 </div>
                             </div>
                             <div class="header__phone">
-                                <i class=" fa-2x fa-fw me-2 fad fa-phone-alt"></i>
+                                <i class=" fa-2x fa-fw mr-2 fad fa-phone-alt"></i>
                                 <div class="header__phone--content">
                                     <p class="header__phone--title">Hotline</p>
                                     <a class="header__phone--number" href="tel:+84972765555">097 276 5555</a>
@@ -531,12 +659,13 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="assets/js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="assets/js/select2.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/js/cleave.min.js"></script>
+    <script type="text/javascript" src="assets/js/i18n.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 
