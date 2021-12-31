@@ -338,8 +338,8 @@
                                                 <div class="form-group">
                                                     <label for="c_so_cho_ngoi" class="form-label">Số chỗ ngồi: <span
                                                             class="text-danger">*</span></label>
-                                                    <input id="c_so_cho_ngoi" type="text"
-                                                        class="form-control input-number" placeholder="0" maxlength="2">
+                                                    <input id="c_so_cho_ngoi" type="number"
+                                                        class="form-control input-number" placeholder="0" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
                                         </div>
