@@ -72,6 +72,7 @@
     border-radius: 8px;
     box-shadow: #ccc 0 5px 16px;
     background: rebeccapurple;
+    height: 100vh;
 }
 
 .videoContainer {
@@ -398,4 +399,25 @@ svg.video_svg {
 .box-sizing-border-box *,
 .box-sizing-border-box{
     box-sizing: border-box !important;
+}
+
+#video-capture {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 010px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    break-after: avoid;
+    height: 120px;
+    width: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+.dis-video-call {
+    pointer-events: none;
+    background: silver;
+    border-color: silver;
 }
