@@ -56,12 +56,12 @@ $(function () {
                         });
                         vXiuPt.innerHTML = getXiuPt = ((xiu.tB/tai.tB).toFixed(2));
 
-                        vSumSl.innerText = tai.tU - tai.tU;
+                        vSumSl.innerText = tai.tU - xiu.tU;
                         vSum.value = (tai.tB - xiu.tB).toLocaleString('vi', {
                             style: 'currency',
                             currency: 'VND'
                         });
-                        vSumPt.innerHTML = getTaiPt - getXiuPt;
+                        vSumPt.innerHTML = (getTaiPt - getXiuPt).toFixed(2);
 
 
 
