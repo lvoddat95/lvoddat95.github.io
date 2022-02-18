@@ -84,6 +84,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
                 <code id="kq">
 
                 </code>
