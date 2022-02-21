@@ -7,90 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
 
     <title>Hello, world!</title>
 </head>
 
 <body>
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+    <form action="post.php" target="_blank">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="offset-md-4 col-md-4">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td id="cell"><b>jpV</b></td>
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" style="width: 120px;">$</span>
+                                        </div>
+                                        <input type="text" name="" id="divjpV" class="form-control input-money text-right">
+                                    </div>
 
-    <div class="container">
-        <div class="row mt-4">
-            <div class="offset-md-4 col-md-4">
-                <table class="table table-bordered">
-                    <tbody>
-                        <tr>
-                            <td id="cell"><b>jpV</b></td>
-                            <td>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" style="width: 120px;">$</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>B</b> - T <span id="cellTai"></span></td>
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="divTaiSl" style="width: 60px;"></span>
+                                            <span class="input-group-text" id="divTaiPt" style="width: 60px;"></span>
+                                        </div>
+                                        <input type="text" name="" id="divTai" class="form-control input-money text-right" readonly>
                                     </div>
-                                    <input type="text" name="" id="divjpV" class="form-control input-money text-right">
-                                </div>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>B</b> - Tài <span id="cellTai"></span></td>
-                            <td>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="divTaiSl" style="width: 60px;"></span>
-                                        <span class="input-group-text" id="divTaiPt" style="width: 60px;"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>S</b> - X <span id="cellXiu"></span>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="divXiuSl" style="width: 60px;"></span>
+                                            <span class="input-group-text" id="divXiuPt" style="width: 60px;"></span>
+                                        </div>
+                                        <input type="text" name="" id="divXiu" class="form-control input-money text-right" readonly>
                                     </div>
-                                    <input type="text" name="" id="divTai" class="form-control input-money text-right" readonly>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>S</b> - Xỉu <span id="cellXiu"></span>
-                            </td>
-                            <td>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="divXiuSl" style="width: 60px;"></span>
-                                        <span class="input-group-text" id="divXiuPt" style="width: 60px;"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="divSumSl" style="width: 60px;"></span>
+                                            <span class="input-group-text" id="divSumPt" style="width: 60px;"></span>
+                                        </div>
+                                        <input type="text" name="" id="divSum" class="form-control input-money text-right" readonly>
                                     </div>
-                                    <input type="text" name="" id="divXiu" class="form-control input-money text-right" readonly>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="divSumSl" style="width: 60px;"></span>
-                                        <span class="input-group-text" id="divSumPt" style="width: 60px;"></span>
-                                    </div>
-                                    <input type="text" name="" id="divSum" class="form-control input-money text-right" readonly>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
-                <code id="kq">
-
-                </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <code id="kq"></code>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
     <script src="https://nosir.github.io/cleave.js/dist/cleave.min.js"></script>
     <script src="script.js"></script>
 </body>
