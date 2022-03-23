@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Câu truy vấn
 	$sql = "INSERT INTO t_record (c_id, c_name, c_value, c_ratio, c_boom, c_datetime) VALUES ('', '$name', '$value', '$ratio', '$boom', '$today')";
+	// echo $sql;
 	if (mysqli_query($conn, $sql)) {
 		echo 'Cập nhật thành công';
 	} else {
