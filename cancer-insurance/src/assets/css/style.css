@@ -17,44 +17,18 @@ Tags:
   --main-color: #123c4a;
   --sub-color: #ecb90a;
   --sub-color2: #b01513;
+  --silver: #ccc;
+  --gray: #999;
   --border-eee: 1px solid #eee;
   --border-ddd: 1px solid #ddd;
-  --border-ccc: 1px solid #ccc;
-  --blue: #005691;
-  --blue-2: #79a6c5;
-  --blue-3: #79a6c5;
-  --blue-4: #b6cedf;
-  --blue-5: #f2f6f9;
-  --blue-6: #00467f;
-  --red: #d30240;
-  --red-2: #de3e6d;
-  --red-3: #e87a9b;
-  --red-4: #f3b6c8;
-  --red-5: #fdf2f5;
-  --light-blue: #93d5f6;
-  --light-blue2: #addff8;
-  --light-blue-3: #c7e9fb;
-  --light-blue-4: #e0f3fd;
-  --light-blue-5: #fafdff;
-  --green: #009138;
-  --green-2: #39aa65;
-  --green-3: #73c391;
-  --green-4: #acdbbe;
-  --green-5: #e5f4ea;
-  --link: #2564e2;
-  --rhodomyrtus: #2e3a5b;
-  --rhodomyrtus-2: #596481;
-  --rhodomyrtus-3: #8592ab;
-  --rhodomyrtus-4: #dbe0e6;
-  --rhodomyrtus-5: #f4f5f6;
-  --rhodomyrtus-6: #ffffff;
+  --border-ccc: 1px solid var(--silver);
   --fw-medium: 500;
   --fw-bold: 700;
   --fz-12: 1.2rem;
   --fz-14: 1.4rem;
   --fz-16: 1.6rem;
   --fz-18: 1.8rem;
-  --fz-20: 2.0rem;
+  --fz-20: 2rem;
   --fz-24: 2.4rem;
   --transition-25: 0.25s ease;
   --radius-4: 4px;
@@ -298,9 +272,10 @@ a {
 .ci-block {
   position: relative;
   padding: 60px 0;
+  overflow: hidden;
 }
-.ci-header .container{
-    max-width: 1320px;
+.ci-header .container {
+  max-width: 1320px;
 }
 .ci-header .navbar {
   padding: 0;
@@ -510,7 +485,7 @@ a {
 .ci-summary__heading {
   font-weight: var(--fw-medium);
   text-align: center;
-  color: #999;
+  color: var(--gray);
   margin: 0 0 10px;
 }
 .ci-summary__row {
@@ -523,7 +498,7 @@ a {
   font-weight: var(--fw-medium);
 }
 .ci-summary__row span:first-child {
-  color: #999;
+  color: var(--gray);
 }
 .ci-summary__row span:last-child {
   text-align: right;
@@ -678,12 +653,12 @@ a {
   padding: 20px;
   border-radius: var(--radius-16);
   background-color: rgb(0 0 0 / 0.5%);
-  border: var(--border-ddd);
+  box-shadow: 0 3px 25px #dbe0e6;
   transition: var(--transition-25);
 }
 .ci-about-item:hover {
   cursor: pointer;
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 3px 25px #8592ab;
 }
 .ci-about-item::before {
   position: absolute;
@@ -749,9 +724,11 @@ a {
   /* background-color: #FEF9F4; */
   /* background-color: var(--main-color); */
   /* background-color: rgb(18 60 74 / 10%); */
+  background-color: rgb(252, 245, 231);
+  color: var(--main-color);
 }
-.ci-footer-top{
-    margin-bottom: 30px;
+.ci-footer-top {
+  margin-bottom: 30px;
 }
 .ci-copyright-block {
   padding: 10px 0;
@@ -774,43 +751,74 @@ a {
   content: "|";
 }
 .ci-copyright__left ul li a {
-  color: #111;
+  color: var(--main-color);
 }
 
 .logo-bottom img {
   width: 100%;
   max-width: 200px;
 }
-.footer-title{
-    margin-bottom: 14px;
-    font-size: var(--fz-20);
-    font-weight: var(--fw-medium);
-    color: var(--main-color);
+.footer-title {
+  margin-bottom: 14px;
+  font-size: var(--fz-20);
+  font-weight: var(--fw-medium);
+  color: var(--main-color);
 }
-.footer-content{
-    font-size: var(--fz-16);
+.footer-content {
+  font-size: var(--fz-16);
 }
-.footer-content ul{
-    margin: -3px 0;
+.footer-content ul {
+  margin: -3px 0;
 }
-.footer-content ul li{
-    padding: 3px 0;
+.footer-content ul li {
+  padding: 3px 0;
 }
-.footer-content ul li a{
-    color: #111;
+.footer-content ul li a {
+  color: var(--main-color);
 }
 
-.footer-content ul li a:hover{
-    color: var(--sub-color);
+.footer-content ul li a:hover {
+  color: var(--sub-color2);
 }
-.footer-content__social ul li{
-    display: inline-block;
-    margin-right: 10px;
+.footer-content__social ul li {
+  display: inline-block;
+  margin-right: 10px;
 }
-.footer-content__social .fa-facebook{
-    color: #395196;
-    font-size: var(--fz-24);
+.footer-content__social .fa-facebook {
+  color: #395196;
+  font-size: var(--fz-24);
 }
-.footer-content__social img{
-    max-width: 24px;
+.footer-content__social img {
+  max-width: 24px;
+}
+.ci-app-download {
+}
+.ci-app-title {
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-16);
+  margin-bottom: 18px;
+  color: var(--sub-color2);
+}
+.ci-app-subtitle {
+  font-weight: var(--fw-medium);
+  font-size: 48px;
+  margin-bottom: 24px;
+  color: var(--main-color);
+}
+.ci-app-desc {
+  font-size: 1.6rem;
+  color: var(--gray);
+}
+.ci-app-left {
+  padding: 60px 0;
+}
+
+.ci-app-img {
+  position: relative;
+  overflow: hidden;
+}
+.ci-app-img img {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
