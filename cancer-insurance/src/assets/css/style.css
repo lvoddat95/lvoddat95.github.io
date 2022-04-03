@@ -227,9 +227,6 @@ a {
   background-color: transparent;
   transition: var(--transition-25);
 }
-.container {
-  max-width: 1140px;
-}
 .ci-btn {
   height: auto;
   display: inline-block;
@@ -273,12 +270,6 @@ a {
   position: relative;
   padding: 60px 0;
   overflow: hidden;
-}
-.ci-header .container {
-  max-width: 1320px;
-}
-.ci-header .navbar {
-  padding: 0;
 }
 
 .ci-header .navbar-brand {
@@ -324,6 +315,7 @@ a {
   display: block;
   object-fit: cover;
   max-height: 600px;
+  object-position: top;
 }
 .ci-menu-link {
   font-size: 1.6rem;
@@ -700,7 +692,6 @@ a {
 }
 .ci-about-item__info p {
   margin: 0;
-  font-weight: 1.6rem;
   font-weight: var(--fw-medium);
 }
 .ci-desc {

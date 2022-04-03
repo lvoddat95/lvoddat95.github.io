@@ -24,60 +24,66 @@
     <link rel="stylesheet" href="utils/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="utils/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="utils/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="utils/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
 
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
 
 <body>
     <div id="ci-content" class="ci-content">
         <div id="ci-header" class="ci-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar px-3 p-xl-0 ">
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="assets/img/logo2.png" alt="Logo" width="130px">
                     </a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggle d-block d-xl-none" type="button">
+                        <b class="icon-bar"></b>
+                        <b class="icon-bar"></b>
+                        <b class="icon-bar"></b>
                     </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Giải quyết quyền lợi bảo hiểm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Hỗ trợ khách hàng</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Giới thiệu về công ty</a>
-                            </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li> -->
-                        </ul>
+                    <ul id="main-menu" class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giải quyết quyền lợi bảo hiểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hỗ trợ khách hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu về công ty</a>
+                        </li>
+                        <li class="nav-ỉtem-form d-block d-xl-none">
+                            <form class="d-block">
+                                <div class="ci-menu-link d-flex align-items-center me-0 mb-4">
+                                    <svg class="ci-menu-user-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                            d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
+                                    </svg>
+                                    <div class="ci-menu-link__item">
+                                        <a href="">
+                                            Đăng nhập
+                                        </a>
+                                    </div>
+                                    <span class="ci-menu-link__separator"></span>
+                                    <div class="ci-menu-link__item">
+                                        <a href="">
+                                            Đăng kí
+                                        </a>
+                                    </div>
+                                </div>
+                                <button class="ci-btn ci-bg-sub-color d-block w-100" type="button">MUA BẢO HIỂM</button>
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="navbar-right d-none d-xl-block">
                         <form class="d-flex align-items-center">
                             <div class="ci-menu-link d-flex align-items-center">
                                 <svg class="ci-menu-user-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -101,7 +107,6 @@
                             <button class="ci-btn" type="button">MUA BẢO HIỂM</button>
                         </form>
                     </div>
-
                 </div>
             </nav>
         </div>
@@ -489,45 +494,51 @@
                             </a>
                         </div>
                         <div class="col-lg-3">
-                            <div class="footer-title">Địa chỉ</div>
-                            <div class="footer-content">Toà nhà ABC, Số 123 Ố Chợ Dừa, Đống Đa, Hà Nội</div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="footer-title">Chăm sóc khách hàng</div>
-                            <div class="footer-content">
-                                <ul class="list-unstyled">
-                                    <li>Hotline: <a href="tel:+19001234">19001234</a></li>
-                                    <li>Email: <a href="mailto:contact@icancer.vn">contact@icancer.vn</a></li>
-                                    <li><a href="">Để lại thông tin liên hệ</a></li>
-                                </ul>
+                            <div class="footer-item">
+                                <div class="footer-title">Địa chỉ</div>
+                                <div class="footer-content">Toà nhà ABC, Số 123 Ố Chợ Dừa, Đống Đa, Hà Nội</div>
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="footer-title">Theo dõi chúng tôi</div>
-                            <div class="footer-content footer-content__social">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="">
-                                            <img src="assets/img/facebook.png" alt="Facebook">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="assets/img/youtube.png" alt="Youtube">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img src="assets/img/zalo.png" alt="Zalo">
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="footer-item">
+                                <div class="footer-title">Chăm sóc khách hàng</div>
+                                <div class="footer-content">
+                                    <ul class="list-unstyled">
+                                        <li>Hotline: <a href="tel:+19001234">19001234</a></li>
+                                        <li>Email: <a href="mailto:contact@icancer.vn">contact@icancer.vn</a></li>
+                                        <li><a href="">Để lại thông tin liên hệ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-item footer-item-last">
+                                <div class="footer-title">Theo dõi chúng tôi</div>
+                                <div class="footer-content footer-content__social">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="">
+                                                <img src="assets/img/facebook.png" alt="Facebook">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <img src="assets/img/youtube.png" alt="Youtube">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <img src="assets/img/zalo.png" alt="Zalo">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ci-copyright-block ci-block">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-block d-lg-flex text-center justify-content-between">
                         <div class="ci-copyright__left">
                             <ul>
                                 <li><a href="">Miễn trừ trách nhiệm</a></li>
@@ -552,6 +563,7 @@
 <script src="utils/owl.carousel/dist/owl.carousel.min.js"></script>
 <script src="utils/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script src="utils/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="utils/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
 
 <script src="assets/js/script.js"></script>
 
