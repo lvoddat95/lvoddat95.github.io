@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.ci-package-slider').slick({
         infinite: false,
         slidesToShow: 3,
@@ -21,7 +22,6 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
-
 
     if ($('#main-menu').length > 0) {
         if (typeof hcOffcanvasNav == 'undefined') {
@@ -47,27 +47,35 @@ $(document).ready(function () {
     }
 
 
+    $('.ci-btn').on("click", function () {
+        $('html, body').animate({
+            scrollTop: $("#ci-package-block").offset().top
+        }, 900)
+    });
+
 });
 
 $(window).on('scroll', function (e) {
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
-    if ($(window).scrollTop() >= ($(".ci-about-block").offset().top - ($(window).height()))) {
-        if (!$(".ci-about-block").hasClass("animated")) {
-            $('.ci-count').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 4000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(numberWithCommas(Math.ceil(now)));
-                    }
+    if ($('.ci-about-block').length > 0) {
+        if ($(window).scrollTop() >= ($(".ci-about-block").offset().top - ($(window).height()))) {
+            if (!$(".ci-about-block").hasClass("animated")) {
+                $('.ci-count').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(numberWithCommas(Math.ceil(now)));
+                        }
+                    });
                 });
-            });
-            // $("#triggered").addClass("show");
-            $(".ci-about-block").addClass("animated");
+                // $("#triggered").addClass("show");
+                $(".ci-about-block").addClass("animated");
+            }
         }
     }
 });
