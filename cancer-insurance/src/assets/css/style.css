@@ -674,7 +674,7 @@ a {
 }
 
 .ci-about-item__03::before {
-  content: "\f82d";
+  content: "\f0c0";
 }
 
 .ci-about-item__icon h3 {
@@ -813,3 +813,4 @@ a {
   right: 0;
   top: 0;
 }
+
