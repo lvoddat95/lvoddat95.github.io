@@ -51,11 +51,11 @@ $(document).ready(function () {
 
 $(window).on('scroll', function (e) {
     function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
-    if ($(window).scrollTop() >= ($(".goto").offset().top - ($(window).height()))) {
-        if (!$(".goto").hasClass("animated")) {
-            $('.count').each(function () {
+    if ($(window).scrollTop() >= ($(".ci-about-block").offset().top - ($(window).height()))) {
+        if (!$(".ci-about-block").hasClass("animated")) {
+            $('.ci-count').each(function () {
                 $(this).prop('Counter', 0).animate({
                     Counter: $(this).text()
                 }, {
@@ -67,7 +67,7 @@ $(window).on('scroll', function (e) {
                 });
             });
             // $("#triggered").addClass("show");
-            $(".goto").addClass("animated");
+            $(".ci-about-block").addClass("animated");
         }
     }
 });
