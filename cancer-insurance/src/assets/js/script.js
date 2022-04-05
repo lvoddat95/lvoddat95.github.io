@@ -53,6 +53,22 @@ $(document).ready(function () {
         }, 900)
     });
 
+    FLoatLabel();
+    function FLoatLabel() {
+        $(".float-label input").on("focus", function () {
+            var _parent = $(this).parent();
+            var _label = _parent.find('label');
+            _label.addClass('label-focus');
+        }).blur(function () {
+            var _label = $(this).parent().find('label');
+            if ($(this).val().trim() === '') {
+                _label.stop().removeClass('label-focus');
+            }
+        });
+
+         
+    }
+
 });
 
 $(window).on('scroll', function (e) {
