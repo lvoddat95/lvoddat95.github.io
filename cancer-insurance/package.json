@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
+    "@fancyapps/fancybox": "^3.5.7",
     "@fancyapps/ui": "^4.0.26",
     "@popperjs/core": "^2.11.4",
     "babel-loader": "^8.2.4",

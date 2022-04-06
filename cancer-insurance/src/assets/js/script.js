@@ -47,13 +47,22 @@ $(document).ready(function () {
     }
 
 
-    $('.ci-btn').on("click", function () {
+    $('.ci-btn-mua-bh').on("click", function () {
         $('html, body').animate({
             scrollTop: $("#ci-package-block").offset().top
         }, 900)
     });
 
+    // Len dau trang
+    $(".go-top").on("click", function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+
     FLoatLabel();
+
     function FLoatLabel() {
         $(".float-label input").on("focus", function () {
             var _parent = $(this).parent();
@@ -66,10 +75,69 @@ $(document).ready(function () {
             }
         });
 
-         
+
     }
 
 });
+
+// Show pass
+var show_password = function (p_this) {
+    var x = document.getElementById("password-input");
+    if (x.type === "password") {
+        x.type = "text";
+        $(p_this).addClass('show');
+    } else {
+        x.type = "password";
+        $(p_this).removeClass('show');
+    }
+}
+
+var fancybox_modal = function (source, closeMethod = 'true') {
+
+    if (closeMethod == false) {
+        clickSlide = false;
+        clickOutside = false;
+    } else {
+        clickSlide = 'close';
+        clickOutside = 'close';
+    }
+    $.fancybox.open({
+        src: source,
+        opts: {
+            // btnTpl: {
+            //     smallBtn: "",
+            // },
+            touch: false,
+            clickSlide: clickSlide,
+            clickOutside: clickOutside
+        }
+    });
+}
+
+var AlertMessage = function (source) {
+    Swal.fire({
+        template: '#alert-message-template',
+        title: '<strong>THÔNG BÁO</strong>',
+        html: $(source).html(),
+        width: 600,
+        backdrop: `rgba(0,0,0,.8)`,
+        position: 'center',
+        showCancelButton: false,
+        showDenyButton: false,
+        customClass: {
+            htmlContainer: 'entry_content',
+            confirmButton: 'btn ci-btn ci-bg-sub-color',
+        },
+        buttonsStyling: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "index.html";
+        }
+    })
+}
+
+
+
 
 $(window).on('scroll', function (e) {
     function numberWithCommas(x) {

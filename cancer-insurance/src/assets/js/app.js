@@ -15,7 +15,7 @@ var App = function () {
 
             $(select).select2({
                 language: "vi",
-                minimumResultsForSearch: 10,
+                minimumResultsForSearch: 5,
             });
 
             $(select).each(function (index, element) {

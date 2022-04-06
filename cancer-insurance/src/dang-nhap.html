@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="utils/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="utils/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="utils/sweetalert2/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="utils/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="utils/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="utils/hc-offcanvas-nav/dist/hc-offcanvas-nav.css">
     <link rel="stylesheet" href="utils/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="utils/datatables/datatables.min.css">
@@ -37,9 +37,9 @@
 <body>
     <div id="ci-content" class="ci-content">
 
-        <div class="auth-wrapper">
+        <div class="auth-wrapper" style="background-image: url(assets/img/slider.png);">
             <div id="auth-particles" class="bg-overlay"></div>
-            <div class="auth-page-content">
+            <div class="auth-page-content auth-page-login">
                 <div class="container">
 
                     <div class="card my-3 my-xl-5">
@@ -49,10 +49,10 @@
                                     <img src="assets/img/logo2.png" alt="" height="50">
                                 </a>
                             </div>
-                            <div class="text-center mt-2">
-                                <h3 class="auth-title">Đăng nhập</h3>
+                            <div class="text-center mt-2 mb-5">
+                                <h3 class="auth-title">ĐĂNG NHẬP</h3>
                             </div>
-                            <div class="p-2 mt-4">
+                            <div class="p-2">
                                 <form action="index.html">
 
                                     <div class="mb-4">
@@ -66,7 +66,7 @@
                                         <div class="position-relative auth-pass-inputgroup mb-3">
                                             <input type="password" class="form-control pe-5" placeholder="············"
                                                 id="password-input">
-                                            <button
+                                            <button onclick="show_password(this);"
                                                 class="btn btn-link position-absolute end-0 top-0 h-100 text-decoration-none text-muted"
                                                 style="width: 40px;" type="button" id="password-addon"><i
                                                     class="fa fa-eye-slash align-middle"></i></button>
@@ -86,7 +86,7 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <button class="btn w-100 ci-btn" type="submit">Đăng nhập</button>
+                                        <button class="btn w-100 ci-btn ci-btn-main" type="submit">Đăng nhập</button>
                                     </div>
 
                                     <div class="mt-4 text-center">
@@ -146,9 +146,10 @@
 <script src="utils/slick-carousel/slick/slick.min.js"></script>
 <script src="utils/owl.carousel/dist/owl.carousel.min.js"></script>
 <script src="utils/sweetalert2/dist/sweetalert2.all.min.js"></script>
-<script src="utils/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="utils/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
 <script src="utils/hc-offcanvas-nav/dist/hc-offcanvas-nav.js"></script>
 <script src="utils/select2/dist/js/select2.full.min.js"></script>
+<script src="utils/select2/dist/js/i18n/vi.js"></script>
 <script src="utils/datatables/datatables.min.js"></script>
 <script src="utils/datatables/dataTables.bootstrap5.min.js"></script>
 
