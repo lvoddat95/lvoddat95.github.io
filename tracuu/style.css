@@ -905,6 +905,15 @@ table.rwd-table {
     -ms-transform: skewX(-20deg) rotate(180deg);
     transform: skewX(-20deg) rotate(180deg);
 }
+#table{
+    /* font-size: 12px; */
+}
+#table tbody tr td:not(.first-cell){
+    text-align: left;
+}
+.table thead th {
+    vertical-align: middle;
+}
 
 /*RESPONSIVE*/
 @media only screen and (max-width:1199px) {
