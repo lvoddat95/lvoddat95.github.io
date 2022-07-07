@@ -14,13 +14,16 @@
     <script type="text/javascript" src="select2.min.js"></script>
     <script type="text/javascript" src="pdfmake.min.js"></script>
     <script type="text/javascript" src="vfs_fonts.js"></script>
-    <script type="text/javascript" src="datatables.min.js"></script>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/r-2.2.9/datatables.min.js"></script>
+    
 
     <script type="text/javascript" src="library.js"></script>
 
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="select2.min.css" />
-    <link rel="stylesheet" type="text/css" href="datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/r-2.2.9/datatables.min.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -96,22 +99,28 @@
                                 <div class="item">
                                     <h6><b>Thông tin về xe tham gia bảo hiểm</b></h6>
 
-                                    <table id="table" class="table table-bordered mt-3">
+                                    <table id="table" class="table table-responsive table-bordered mt-3" style="">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th class="text-center" width="22%">Thông tin</th>
-                                                <th class="text-center" width="15%">GCNBH cấp lần 1</th>
-                                                <th class="text-center" width="15%">GCNBH cấp lần 2</th>
-                                                <th class="text-center" width="15%">Thông tin bảo hiểm cuối cùng</th>
-                                                <th class="text-center" width="15%">GCN Huỷ</th>
+                                                <th class="text-center" width="22%" style="width: 120px;">Thông tin</th>
+                                                <th class="text-center" width="15%" style="width: 250px;">GCNBH cấp lần 1</th>
+                                                <th class="text-center" width="15%" style="width: 250px;">GCNBH cấp lần 2</th>
+                                                <th class="text-center" width="15%" style="width: 250px;">Thông tin bảo hiểm cuối cùng</th>
+                                                <th class="text-center" width="15%" style="width: 250px;">GCN Huỷ</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="first-cell">Số GCNBH</td>
-                                                <td><a href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000067</a></td>
-                                                <td><a href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000128</a></td>
-                                                <td><a href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000128</a></td>
+                                                <td><a
+                                                        href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000067</a>
+                                                </td>
+                                                <td><a
+                                                        href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000128</a>
+                                                </td>
+                                                <td><a
+                                                        href="https://ebhhk.com.vn/Data/Files/DH120320210005027/GCNBH/GCNBH_EOTO_0000067.pdf">EOTO/0000128</a>
+                                                </td>
                                                 <td>Đã hủy</td>
                                             </tr>
                                             <tr>
@@ -153,16 +162,16 @@
                                                 <td>Không thay đổi</td>
                                                 <td>Số 46, đường 3.6/2, KĐT Gamuda
                                                     Gardens, Phường Trần Phú, Quận Hoàng Mai,</td>
-                                                    <td>Số 46, đường 3.6/2, KĐT Gamuda
-                                                        Gardens, Phường Trần Phú, Quận Hoàng Mai,</td>
+                                                <td>Số 46, đường 3.6/2, KĐT Gamuda
+                                                    Gardens, Phường Trần Phú, Quận Hoàng Mai,</td>
                                             </tr>
 
-
+<!-- 
                                             <tr>
                                                 <td colspan="10" class="bg-light text-left">
                                                     <b>Thông tin xe được bảo hiểm</b>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                             <tr>
                                                 <td class="first-cell">Biển kiểm soát</td>
                                                 <td>30G-19595</td>
@@ -291,8 +300,6 @@
         </div>
     </footer>
 </body>
-<script>
 
-</script>
 
 </html>
