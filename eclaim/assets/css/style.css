@@ -751,7 +751,6 @@ select.select_element::-ms-expand {
     font-size: 2rem;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: .8px;
     color: #424242;
 }
 
@@ -777,6 +776,10 @@ select.select_element::-ms-expand {
     background: -o-linear-gradient(-45deg, #e08e34 0%, #FF5722 100%);
     background: -ms-linear-gradient(-45deg, #e08e34 0%, #FF5722 100%);
     background: linear-gradient(135deg, #e08e34 0%, #FF5722 100%);
+}
+
+.tie{
+    background-color: #fff;color: var(--sub-color2);border-radius: 2px;padding: 0 8px;
 }
 
 .clearfix {
@@ -1382,8 +1385,8 @@ table.rwd-table {
 }
 
 @media only screen and (max-width:767px) {
-    .title {
-        font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1199 - 320)));
+    .title h2{
+        font-size: 1.6rem;
     }
 
 }
