@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://tracuu.bhhk.vn/ -->
+<html lang="en" class="no-touch">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Yêu cầu bồi thường</title>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-strech">
+                <div class="header_left col-lg-2 col-md-3 col-sm-3 col-3">
+                    <a href="https://tracuu.bhhk.vn/">
+                        <img id="main-logo" class="" width="100px" src="assets/images/logo.png" alt="VNI">
+                    </a>
+                </div>
+                <div class="header_center text-center col-lg-6 ">
+                    <h5 class="text-uppercase fw-bold main-color mb-0">Tổng công ty cổ phần bảo hiểm Hàng Không</h5>
+                    <p class="sub-color mb-0">VIETNAM NATIONAL AVIATION INSURANCE CORPORATION</p>
+                </div>
+                <div class="header_right col-lg-4 col-md-9 col-sm-9 col-9">
+                    <ul class="list-none">
+                        <li>
+                            <a href="javascript:void(0)" class="h_tel table-custom">
+                                <i class="fa fa-headphones"></i>
+                                <span class="tel">
+                                    <span class="">CALL CENTER</span>
+                                    <b class="">1900 969 690</b>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="h_tel table-custom">
+                                <i class="fa fa-phone-square  header-phone-i"></i>
+                                <span class="tel">
+                                    <span class="">HOTLINE</span>
+                                    <b class="">097 276 5555</b>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <form action="" name="">
+                        <h4 class="title fw-medium">Yêu cầu bồi thường - Bảo hiểm Trễ chuyến
+                            <span
+                                style="background-color: #fff;color: var(--sub-color2);border-radius: 2px;padding: 0 8px;">
+                                Số GCNBH: H10/12345
+                            </span></h4>
+                        <div class="row">
+
+                            <div class="col-md-7 col-12">
+                                <div class="info-box__title">
+                                    <span>Nhập thông tin khiếu nại</span>
+                                </div>
+                                <div class="info-box">
+                                    <div class="item">
+                                        <!-- <h6 class="item-title"></h6> -->
+                                        <div class="item-content">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <label class="fw-medium mb-1">Ngày khiếu nại<span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <input type="date" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-4">
+                                                <label class="fw-medium mb-1">Lý do khiếu nại <span
+                                                        class="text-danger">&nbsp;*</span></label>
+                                                <textarea class="form-control floating-control" name="" id="" cols="10"
+                                                    rows="3"></textarea>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <label class="fw-medium mb-1">Số điện thoại <span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <input type="text" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <label class="fw-medium mb-1">Email<span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <input type="email" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-4">
+                                                <label class="fw-medium mb-1">Ngân hàng<span
+                                                        class="text-danger">&nbsp;*</span></label>
+                                                <select id="nganHang" name="nganHang" class="form-control" select2>
+                                                    <option value="">Chọn ngân hàng</option>
+                                                    <option value="1">Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt
+                                                        Nam - Agribank</option>
+                                                    <option value="2">Ngân hàng Đầu tư và Phát triển Việt Nam - BIDV
+                                                    </option>
+                                                    <option value="3">Ngân hàng Ngoại thương Việt Nam - Vietcombank
+                                                    </option>
+                                                    <option value="4">Ngân hàng Việt Nam Thịnh Vượng - VPbank</option>
+                                                    <option value="5">Ngân hàng Kỹ Thương Việt Nam - Techcombank
+                                                    </option>
+                                                    <option value="6">Ngân hàng Ngân hàng Á Châu - ACB</option>
+                                                    <option value="7">Ngân hàng Sài Gòn-Hà Nội - SHB</option>
+                                                    <option value="8">Ngân hàng Ngân hàng TMCP Sài Gòn - SCB</option>
+                                                    <option value="9">Ngân hàng Sài Gòn Thương Tín - Sacombank</option>
+                                                    <option value="10">Ngân hàng Ngân hàng Tiên Phong - TPBank</option>
+                                                    <option value="11">Ngân hàng NH TMCP Quốc tế Việt Nam - VIB</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group mb-4">
+                                                <label class="fw-medium mb-1">Chi nhánh<span
+                                                        class="text-danger">&nbsp;*</span></label>
+                                                <select id="chiNhanh" name="chiNhanh" class="form-control" select2>
+                                                    <option value="">Chọn chi nhánh</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <label class="fw-medium mb-1">Chủ tài khoản <span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <input type="text" class="form-control floating-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <label class="fw-medium mb-1">Số tài khoản<span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <input type="number" class="form-control floating-control"
+                                                            step="any" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="item">
+                                        <div class="item-content">
+                                            <label class="custom-checkbox d-flex align-content-center clear-fix" for="isXacNhan">
+                                                <input id="isXacNhan" type="checkbox" >
+                                                <span class="checkmark"></span>
+                                                <div class="text un-pre-line">
+                                                    Tôi cam kết các thông tin khai báo là chính xác, trung thực và hoàn
+                                                    toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng thời tôi đã
+                                                    đọc, hiểu và đồng ý với 
+                                                    <a target="_blank" href=""> điều kiện, điều khoản, quy tắc của VNI.</a>
+                                                </div>
+                                            </label>
+                                            <div class="text-center">
+                                                <button type="button" class="btn-main bg-main text-white">Gửi khiếu
+                                                    nại</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-12 mt-md-0 mt-5">
+                                <div class="info-box__title">
+                                    <span>Thông tin đơn bảo hiểm</span>
+                                </div>
+                                <div class="info-box mb-4">
+
+                                    <div class="item">
+                                        <h6 class="item-title">1. Thông tin chuyến bay</h6>
+                                        <div class="item-content">
+                                            <ul class="item-list list-unstyled mb-0">
+                                                <li>
+                                                    <span>Hãng bay</span>
+                                                    <span>Bamboo Airways (QH)</span>
+                                                </li>
+                                                <li>
+                                                    <span>Số hiệu chuyến bay</span>
+                                                    <span>QH1525</span>
+                                                </li>
+                                                <li>
+                                                    <span>Mã đặt chỗ</span>
+                                                    <span>AD3VHG</span>
+                                                </li>
+                                                <li>
+                                                    <span>Ngày khởi hành</span>
+                                                    <span>28/09/2022</span>
+                                                </li>
+                                                <li>
+                                                    <span>Hành trình</span>
+                                                    <span>Hà Nội (HAN) - Hồ Chí Minh (SGN)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="item-title">2. Thông tin về người mua bảo hiểm</h6>
+                                        <div class="item-content">
+                                            <ul class="item-list list-unstyled mb-0">
+                                                <li>
+                                                    <span>Họ tên</span>
+                                                    <span>Lê Văn A</span>
+                                                </li>
+                                                <li>
+                                                    <span>CMND/ CCCD/ Hộ chiếu</span>
+                                                    <span>123456789</span>
+                                                </li>
+                                                <li>
+                                                    <span>Số điện thoại</span>
+                                                    <span>0987 654 321</span>
+                                                </li>
+                                                <li>
+                                                    <span>Email</span>
+                                                    <span>contact-me@gmail.com</span>
+                                                </li>
+                                                <li>
+                                                    <span>Địa chỉ</span>
+                                                    <span>Hoàng Cầu, Đống Đa, Hà Nội</span>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h6 class="item-title">3. Danh sách người được bảo hiểm</h6>
+                                        <div class="item-content">
+                                            <table class="table table-striped" style="opacity: .95;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="fw-medium" scope="col">#</th>
+                                                        <th class="fw-medium" scope="col">Họ và tên</th>
+                                                        <th class="fw-medium" scope="col">CMND/Hộ chiếu</th>
+                                                        <th class="fw-medium" scope="col">Ngày sinh</th>
+                                                        <th class="fw-medium" scope="col">Giới tính</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="border-top-width: 1px;">
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Nguyễn Thị L</td>
+                                                        <td>174799222</td>
+                                                        <td>20/10/1991</td>
+                                                        <td>Nữ</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Lê Văn B</td>
+                                                        <td></td>
+                                                        <td>20/10/2007</td>
+                                                        <td>Nam</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="line"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="footer-logo">
+                        <a href="https://tracuu.bhhk.vn/#">
+                            <img class="img" src="assets/images/logo.png" alt="Logo VNI">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer_info">
+                        <p class="fz-16 mb-0 text-uppercase fw-medium">Tổng Công Ty Cổ Phần Bảo Hiểm Hàng Không</p>
+                        <p class="fz-14 mb-0">Trụ sở chính: Tầng 15, Tòa nhà Geleximco, số 36, Hoàng Cầu, Quận Đống Đa,
+                            Thành Phố Hà Nội</p>
+                        <p class="fz-14 mb-0">Tel:(024)-6276 5555 | Fax:(024)-6276 5556</p>
+                        <p class="fz-14 mb-0">Hotline: 097 276 5555 | Email:contact@bhhk.com.vn</p>
+                        <p class="fz-14 mb-0">Website: <a target="_blank" href="https://bhhk.com.vn/"
+                                title="bhhk.com.vn">bhhk.com.vn</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer_right">
+                        <div class="footer_social">
+                            <ul class="list-none d-inline-block">
+                                <li>
+                                    <a href="https://tracuu.bhhk.vn/" class="footer__contact--link">
+                                        <i class="fad fa-house"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/B%E1%BA%A3o-hi%E1%BB%83m-H%C3%A0ng-kh%C3%B4ng-VNI-719290374935199/"
+                                        class="footer__contact--link">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCbl6e9xSetYvCu2A9abRhjg"
+                                        class="footer__contact--link">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p class="title_14">
+                                CopyRight © 2022 Bản quyền thuộc <br> Tổng Công ty Cổ phần Bảo hiểm Hàng Không
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
