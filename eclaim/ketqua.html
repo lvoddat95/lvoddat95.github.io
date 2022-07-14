@@ -70,20 +70,15 @@
                                 style="background-color: #fff;color: var(--sub-color2);border-radius: 2px;padding: 0 8px;">
                                 Số GCNBH: H10/12345
                             </span></h4>
-                        <div class="row">
+                        <div class="row gx-5">
 
                             <div class="col-md-7 col-12">
-                                <div class="info-box__title">
-                                    <span>Nhập thông tin khiếu nại</span>
-                                </div>
-                                <div class="info-box">
-                                    <div class="item">
-                                        <!-- <h6 class="item-title"></h6> -->
-                                        <div class="item-content">
-
+                                <div class="">
+                                    <div class="">
+                                        <div class="">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group mb-4">
+                                                    <div class="form-group mb-3">
                                                         <label class="fw-medium mb-1">Ngày khiếu nại<span
                                                                 class="text-danger">&nbsp;*</span></label>
                                                         <input type="date" class="form-control" />
@@ -91,23 +86,23 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group mb-4">
+                                            <div class="form-group mb-3">
                                                 <label class="fw-medium mb-1">Lý do khiếu nại <span
                                                         class="text-danger">&nbsp;*</span></label>
-                                                <textarea class="form-control floating-control" name="" id="" cols="10"
-                                                    rows="3"></textarea>
+                                                <textarea class="form-control floating-control" name="" id=""
+                                                    rows="2"></textarea>
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group mb-4">
+                                                    <div class="form-group mb-3">
                                                         <label class="fw-medium mb-1">Số điện thoại <span
                                                                 class="text-danger">&nbsp;*</span></label>
                                                         <input type="text" class="form-control" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group mb-4">
+                                                    <div class="form-group mb-3">
                                                         <label class="fw-medium mb-1">Email<span
                                                                 class="text-danger">&nbsp;*</span></label>
                                                         <input type="email" class="form-control" />
@@ -115,47 +110,64 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group mb-4">
-                                                <label class="fw-medium mb-1">Ngân hàng<span
-                                                        class="text-danger">&nbsp;*</span></label>
-                                                <select id="nganHang" name="nganHang" class="form-control" select2>
-                                                    <option value="">Chọn ngân hàng</option>
-                                                    <option value="1">Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt
-                                                        Nam - Agribank</option>
-                                                    <option value="2">Ngân hàng Đầu tư và Phát triển Việt Nam - BIDV
-                                                    </option>
-                                                    <option value="3">Ngân hàng Ngoại thương Việt Nam - Vietcombank
-                                                    </option>
-                                                    <option value="4">Ngân hàng Việt Nam Thịnh Vượng - VPbank</option>
-                                                    <option value="5">Ngân hàng Kỹ Thương Việt Nam - Techcombank
-                                                    </option>
-                                                    <option value="6">Ngân hàng Ngân hàng Á Châu - ACB</option>
-                                                    <option value="7">Ngân hàng Sài Gòn-Hà Nội - SHB</option>
-                                                    <option value="8">Ngân hàng Ngân hàng TMCP Sài Gòn - SCB</option>
-                                                    <option value="9">Ngân hàng Sài Gòn Thương Tín - Sacombank</option>
-                                                    <option value="10">Ngân hàng Ngân hàng Tiên Phong - TPBank</option>
-                                                    <option value="11">Ngân hàng NH TMCP Quốc tế Việt Nam - VIB</option>
-                                                </select>
-                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
 
-                                            <div class="form-group mb-4">
-                                                <label class="fw-medium mb-1">Chi nhánh<span
-                                                        class="text-danger">&nbsp;*</span></label>
-                                                <select id="chiNhanh" name="chiNhanh" class="form-control" select2>
-                                                    <option value="">Chọn chi nhánh</option>
-                                                </select>
+                                                    <div class="form-group mb-3">
+                                                        <label class="fw-medium mb-1">Ngân hàng<span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <select id="nganHang" name="nganHang" class="form-control"
+                                                            select2>
+                                                            <option value="">Chọn ngân hàng</option>
+                                                            <option value="1">Ngân hàng Nông nghiệp và Phát triển Nông
+                                                                thôn Việt
+                                                                Nam - Agribank</option>
+                                                            <option value="2">Ngân hàng Đầu tư và Phát triển Việt Nam -
+                                                                BIDV
+                                                            </option>
+                                                            <option value="3">Ngân hàng Ngoại thương Việt Nam -
+                                                                Vietcombank
+                                                            </option>
+                                                            <option value="4">Ngân hàng Việt Nam Thịnh Vượng - VPbank
+                                                            </option>
+                                                            <option value="5">Ngân hàng Kỹ Thương Việt Nam - Techcombank
+                                                            </option>
+                                                            <option value="6">Ngân hàng Ngân hàng Á Châu - ACB</option>
+                                                            <option value="7">Ngân hàng Sài Gòn-Hà Nội - SHB</option>
+                                                            <option value="8">Ngân hàng Ngân hàng TMCP Sài Gòn - SCB
+                                                            </option>
+                                                            <option value="9">Ngân hàng Sài Gòn Thương Tín - Sacombank
+                                                            </option>
+                                                            <option value="10">Ngân hàng Ngân hàng Tiên Phong - TPBank
+                                                            </option>
+                                                            <option value="11">Ngân hàng NH TMCP Quốc tế Việt Nam - VIB
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group mb-3">
+                                                        <label class="fw-medium mb-1">Chi nhánh<span
+                                                                class="text-danger">&nbsp;*</span></label>
+                                                        <select id="chiNhanh" name="chiNhanh" class="form-control"
+                                                            select2>
+                                                            <option value="">Chọn chi nhánh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group mb-4">
+                                                    <div class="form-group mb-3">
                                                         <label class="fw-medium mb-1">Chủ tài khoản <span
                                                                 class="text-danger">&nbsp;*</span></label>
                                                         <input type="text" class="form-control floating-control" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group mb-4">
+                                                    <div class="form-group mb-3">
                                                         <label class="fw-medium mb-1">Số tài khoản<span
                                                                 class="text-danger">&nbsp;*</span></label>
                                                         <input type="number" class="form-control floating-control"
@@ -168,17 +180,18 @@
                                         </div>
                                     </div>
 
-
                                     <div class="item">
-                                        <div class="item-content">
-                                            <label class="custom-checkbox d-flex align-content-center clear-fix" for="isXacNhan">
-                                                <input id="isXacNhan" type="checkbox" >
+                                        <div>
+                                            <label class="custom-checkbox mt-2 d-flex align-content-center clear-fix"
+                                                for="isXacNhan">
+                                                <input id="isXacNhan" type="checkbox">
                                                 <span class="checkmark"></span>
                                                 <div class="text un-pre-line">
                                                     Tôi cam kết các thông tin khai báo là chính xác, trung thực và hoàn
                                                     toàn chịu trách nhiệm về các thông tin đã khai báo. Đồng thời tôi đã
-                                                    đọc, hiểu và đồng ý với 
-                                                    <a target="_blank" href=""> điều kiện, điều khoản, quy tắc của VNI.</a>
+                                                    đọc, hiểu và đồng ý với
+                                                    <a target="_blank" href=""> điều kiện, điều khoản, quy tắc của
+                                                        VNI.</a>
                                                 </div>
                                             </label>
                                             <div class="text-center">
@@ -187,8 +200,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
 
                                 </div>
                             </div>
@@ -201,7 +212,7 @@
                                 <div class="info-box mb-4">
 
                                     <div class="item">
-                                        <h6 class="item-title">1. Thông tin chuyến bay</h6>
+                                        <div class="item-title">1. Thông tin chuyến bay</div>
                                         <div class="item-content">
                                             <ul class="item-list list-unstyled mb-0">
                                                 <li>
@@ -228,7 +239,7 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <h6 class="item-title">2. Thông tin về người mua bảo hiểm</h6>
+                                        <div class="item-title">2. Thông tin về người mua bảo hiểm</div>
                                         <div class="item-content">
                                             <ul class="item-list list-unstyled mb-0">
                                                 <li>
@@ -256,9 +267,9 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <h6 class="item-title">3. Danh sách người được bảo hiểm</h6>
+                                        <div class="item-title">3. Danh sách người được bảo hiểm</div>
                                         <div class="item-content">
-                                            <table class="table table-striped" style="opacity: .95;">
+                                            <table class="table" style="opacity: .95;">
                                                 <thead>
                                                     <tr>
                                                         <th class="fw-medium" scope="col">#</th>
@@ -290,9 +301,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
 
                         </div>
                     </form>
