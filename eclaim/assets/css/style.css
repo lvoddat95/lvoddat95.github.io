@@ -741,8 +741,8 @@ select.select_element::-ms-expand {
 
 .title {
     position: relative;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 6px;
     border-bottom: 1px solid #dadada;
 }
 
@@ -1354,7 +1354,6 @@ table.rwd-table {
 }
 
 @media only screen and (max-width:1024px) {
-    .frm_button {}
 
 }
 
@@ -1383,17 +1382,8 @@ table.rwd-table {
 }
 
 @media only screen and (max-width:767px) {
-    .thong_tin {
-        font-size: 14px;
-    }
-
-    .thong_tin h6 {
-        margin-left: 40px;
-    }
-
     .title {
         font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1199 - 320)));
-        margin-bottom: 30px;
     }
 
 }
