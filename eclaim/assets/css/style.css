@@ -180,16 +180,8 @@ big {
     border: var(--border-ccc);
 }
 
-.border-ccc:hover {
-    background: #ccc;
-}
-
 .border-ddd {
     border: var(--border-ddd);
-}
-
-.border-ddd:hover {
-    background: #ddd;
 }
 
 .radius-4 {
