@@ -1294,25 +1294,20 @@ table.rwd-table {
     align-items: flex-start;
 }
 
-.upload-box{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-}
+
 .upload-box label{
-    font-weight: 400;
     margin-bottom: 0;
 }
-.upload-box label i{
+.upload-icon{
     width: 90px;
     height: 56px;
     border-radius: 4px;
     background: #eef1f6;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-bottom: 5px;
 }
 
 
