@@ -515,7 +515,7 @@ function isnum(t) {
 function count_char(t, e) {
     if ("" == t) return 0;
     var n, a, r;
-    for (a = 0, n = t; n.indexOf(e, 0) >= 0;) a++ , r = n.indexOf(e, 0) + 1, n = n.substring(r);
+    for (a = 0, n = t; n.indexOf(e, 0) >= 0;) a++, r = n.indexOf(e, 0) + 1, n = n.substring(r);
     return a
 }
 function char2number(t) {
@@ -1706,7 +1706,7 @@ function kieu_thanh_toan_onchange() {
                 s += '<svg class="svg svg-icon" viewBox="0 0 20 20">';
                 s += '<path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white; fill: white;"></path>';
                 s += '</svg><label>Đã thu phí</label></div></div></td ></tr>';
-                $("#list_ltt").append(s), format_string_to_money(eval("document.forms[0].C_PHI_BH_LTT" + count)), count++ , lantt++
+                $("#list_ltt").append(s), format_string_to_money(eval("document.forms[0].C_PHI_BH_LTT" + count)), count++, lantt++
             }
             $("#toolbar-list_ltt").hide()
         }
@@ -2130,7 +2130,7 @@ function load_file_upload() {
 function fileuploadLoaded(e) {
     var test_value = $("#postedFile").val();
     var extension = test_value.split('.').pop().toLowerCase();
-    if ($.inArray(extension, ['xls', 'xlsx', 'csv','XLS','XLSX','CSV']) == -1) {
+    if ($.inArray(extension, ['xls', 'xlsx', 'csv', 'XLS', 'XLSX', 'CSV']) == -1) {
         alertZebraContent("File dữ liệu không hợp lệ!");
         return false;
     }
@@ -2866,17 +2866,17 @@ function chang_mst() {
 }
 function set_requied_gcntnds(p_this) {
     if (p_this.checked) {
-        $('#reqEmail').show();
+        //$('#reqEmail').show();
         $('#label_sogcnbh_tnds').hide();
         $('#div_sogcnbh_tnds').hide();
         $('#div_sogcnbh_tnds input').attr("data-rule-required", "false");
-        $('#div_email_tnds input').attr("data-rule-required", "true");
+        //$('#div_email_tnds input').attr("data-rule-required", "true");
     } else {
-        $('#reqEmail').hide();
+        //$('#reqEmail').hide();
         $('#label_sogcnbh_tnds').show();
         $('#div_sogcnbh_tnds').show();
         $('#div_sogcnbh_tnds input').attr("data-rule-required", "true");
-        $('#div_email_tnds input').attr("data-rule-required", "false");
+        //$('#div_email_tnds input').attr("data-rule-required", "false");
     }
 }
 function change_doi_tuong() {
@@ -3045,6 +3045,7 @@ function show_pham_vi_TNDS_New(index) {
         load_phi_bh_tnds_xcg_new();
     } else if (ma_pham_vi == 'MVA') {
         var p_id = eval("document.forms[0].FK_DM_PHAM_VI_BAO_HIEM" + index + ".value");
+        change_doi_tuong();
         gia_tri_bh_lp_onchange(index, p_id)
     } else {
         load_phi_bao_hiem_all();
@@ -3159,4 +3160,475 @@ function tinh_so_tuoi() {
         return _;
     }
     return 0;
+}
+
+function chang_required_NTH(values) {
+    if (values == 'BANK_VN0018') {
+        $("#required_nth").show();
+        $("#required_ad_nth").show();
+        $("#C_NGUOI_HUONG_1").attr("data-rule-required", "true");
+        $("#C_DIA_CHI_NGUOI_HUONG_1").attr("data-rule-required", "true");
+    } else {
+        $("#required_nth").hide();
+        $("#required_ad_nth").hide();
+        $("#C_NGUOI_HUONG_1").attr("data-rule-required", "false");
+        $("#C_DIA_CHI_NGUOI_HUONG_1").attr("data-rule-required", "false");
+    }
+}
+
+function check_muc_dich(p_this) {
+    if (p_this.value == "OTO_KKDVT" || p_this.value == "OTO_KKDVT_TREN_9_CHO" || p_this.value == "OTO_TAP_LAI") {
+        $('#muc_dich').val('OTO_KKDVT');
+        $('#muc_dich').select2();
+        $("#lbl_muc_dich").show();
+        $("#muc_dich").attr("data-rule-required", "true");
+    }
+    else if (p_this.value == "OTO_DAU_KEO_ROMOOC" || p_this.value == "OTO_ROMOOC" || p_this.value == "OTO_HANG"
+        || p_this.value == "OTO_HDNBC" || p_this.value == "OTO_CHUYEN_DUNG_TAI" || p_this.value == "OTO_CHUYEN_DUNG") {
+        $('#muc_dich').val('');
+        $('#muc_dich').select2();
+        $("#lbl_muc_dich").hide();
+        $("#muc_dich").attr("data-rule-required", "false");
+    } else {
+        $('#muc_dich').val('OTO_KDVT');
+        $('#muc_dich').select2();
+        $("#lbl_muc_dich").show();
+        $("#muc_dich").attr("data-rule-required", "true");
+    }
+}
+
+function check_so_tuoi_sk() {
+    var t = document.forms[0].C_HIEU_LUC_TU_NGAY.value,
+        e = document.forms[0].C_HIEU_LUC_DEN_NGAY.value,
+        n = document.forms[0].C_DATE_OF_BIRTH.value;
+    if (isdate(n) && isdate(e)) {
+        dt_ngay_sinh = new Date(ddmmyyyy_to_mmddyyyy(n)), yyyyns = dt_ngay_sinh.getFullYear(), mmns = dt_ngay_sinh.getMonth() + 1, ddns = dt_ngay_sinh.getDate();
+        var a = new Date(ddmmyyyy_to_mmddyyyy(e)),
+            r = a.getDate(),
+            o = a.getMonth() + 1,
+            _ = a.getFullYear() - yyyyns,
+            i = _ - 70;
+        if (_ < 0) return alertZebraContent("Khách hàng phải đủ 0 tuổi trở nên."), void $("#C_DATE_OF_BIRTH").focus();
+        if (i > 0) {
+            alertZebraContent("Tuổi khách hàng đã quá " + i + " tuổi so với số tuổi cho phép được cấp đơn bảo hiểm.");
+            var l = (r < 10 ? "0" + r.toString() : r.toString()) + "/" + (o < 10 ? "0" + o.toString() : o.toString()) + "/" + (year - i);
+            isdate(l) || (l = "01/" + (parseFloat(o) + 1 < 10 ? "0" + (parseFloat(o) + 1).toString() : (parseFloat(o) + 1).toString()) + "/" + (year - i)), date_compare(t, l) > 0 && (document.forms[0].C_HIEU_LUC_DEN_NGAY.value = l), $("#C_DATE_OF_BIRTH").focus()
+        }
+    }
+}
+function change_month_new_2021(idx) {
+    var count_pv = document.forms[0].TotalRowPhamVi.value;
+    for (var i = 0; i < count_pv; i++) {
+        var ma_pham_vi = '';
+
+        if ($('#C_MA_PHAM_VI' + i)[0]) {
+            if (eval("document.forms[0].C_MA_PHAM_VI" + i + ".value")) {
+                ma_pham_vi = eval("document.forms[0].C_MA_PHAM_VI" + i + ".value");
+            }
+            if (ma_pham_vi == 'MVH') {
+                var thoi_han_bh = eval("document.forms[0].Thoi_han_bh.value");
+                var v_ngay_bat_dau = eval("document.forms[0].C_HIEU_LUC_TU_NGAY" + i + ".value");
+                var kt = addMonths(new Date(ddmmyyyy_to_mmddyyyy(v_ngay_bat_dau)), thoi_han_bh);
+                eval("document.forms[0].C_HIEU_LUC_DEN_NGAY" + i + ".value='" + kt + "'");
+                eval("document.forms[0].C_HIEU_LUC_DEN_NGAY.value='" + kt + "'");
+                eval("document.forms[0].C_HIEU_LUC_TU_NGAY.value='" + v_ngay_bat_dau + "'");
+                if (idx == 1) {
+                    load_pham_vi_bao_hiem_tnds_motor();
+                } else {
+                    load_phi_bh_tnds_xcg_new_2021();
+                }
+            }
+            if (ma_pham_vi == 'MVA') {
+                $("#C_GIA_TRI_BH" + i).trigger("onchange");
+            }
+        }
+    }
+}
+function show_pham_vi_TNDS_New_2021(index) {
+    console.log(eval("document.forms[0].cbk_pham_vi" + index + ".checked"))
+    if (eval("document.forms[0].cbk_pham_vi" + index + ".checked")) {
+        $('#listphamvi' + index).toggle('show');
+        $('#fieldset_listphamvi' + index).removeClass('css_fieldset_noborder');
+        $('#icon_listphamvi' + index).removeClass('fa-plus-circle');
+        $('#icon_listphamvi' + index).addClass('fa-minus-circle');
+    } else {
+        $('#listphamvi' + index).toggle('show');
+        $('#fieldset_listphamvi' + index).addClass('css_fieldset_noborder');
+        $('#icon_listphamvi' + index).removeClass('fa-minus-circle');
+        $('#icon_listphamvi' + index).addClass('fa-plus-circle');
+    }
+    var ma_pham_vi = eval("document.forms[0].C_MA_PHAM_VI" + index + ".value");
+    if (ma_pham_vi == 'MVA') {
+        if (eval("document.forms[0].cbk_pham_vi" + index + ".checked")) {
+            $("#lai_phu_xe").attr("optional", "false");
+            $("#required_songuoilp").show();
+        } else {
+            $("#lai_phu_xe").attr("optional", "true");
+            $("#required_songuoilp").hide();
+        }
+    }
+    if (ma_pham_vi == 'MV') {
+        if (eval("document.forms[0].cbk_pham_vi" + index + ".checked")) {
+            $("#gia_tri_thuc_te").attr("optional", "false");
+            $("#required_mv").show();
+        } else {
+            $("#gia_tri_thuc_te").attr("optional", "true");
+            $("#required_mv").hide();
+        }
+        load_phi_bh_xcg_();
+    } else if (ma_pham_vi == 'MVH') {
+        //if (eval("document.forms[0].cbk_pham_vi" + index + ".checked")) {
+        //    $("#C_SO_GCN" + index).attr("optional", "false");
+        //} else {
+        //    $("#C_SO_GCN" + index).attr("optional", "true");
+        //}
+        load_phi_bh_tnds_xcg_new_2021();
+    } else if (ma_pham_vi == 'MVA') {
+        var p_id = eval("document.forms[0].FK_DM_PHAM_VI_BAO_HIEM" + index + ".value");
+        gia_tri_bh_lp_onchange(index, p_id)
+    } else {
+        load_phi_bao_hiem_all();
+    }
+}
+function ngaysinh_bhsk_onchange() {
+    load_goi_bh_bhsk($('#C_MA_NGAN_HANG').val());
+}
+function check_so_tuoi_bhsk() {
+    var t = document.forms[0].C_HIEU_LUC_TU_NGAY.value,
+        e = document.forms[0].C_HIEU_LUC_DEN_NGAY.value,
+        n = document.forms[0].C_DATE_OF_BIRTH.value;
+    if (isdate(n) && isdate(e)) {
+        var ngay_sinh = new Date(ddmmyyyy_to_mmddyyyy(n)),
+            yyyyns = ngay_sinh.getFullYear(),
+            mmns = ngay_sinh.getMonth() + 1,
+            ddns = ngay_sinh.getDate();
+
+        var ngay_bat_dau = new Date(ddmmyyyy_to_mmddyyyy(t)),
+            yyyybd = ngay_bat_dau.getFullYear(),
+            mmbd = ngay_bat_dau.getMonth() + 1,
+            ddbd = ngay_bat_dau.getDate();
+
+        var ngay_ket_thuc = new Date(ddmmyyyy_to_mmddyyyy(e)),
+            yyyykt = ngay_ket_thuc.getFullYear(),
+            mmkt = ngay_ket_thuc.getMonth() + 1,
+            ddkt = ngay_ket_thuc.getDate();
+
+        var ngay_hien_tai = new Date(),
+            yyyyht = ngay_hien_tai.getFullYear(),
+            mmht = ngay_hien_tai.getMonth() + 1,
+            ddht = ngay_hien_tai.getDate();
+
+        var caculatoryear_kt_ns = yyyykt - yyyyns,
+            caculatoryear_ht_ns = mmht - mmns,
+            caculatormonth_ht_ns = yyyyht - yyyyns,
+            caculatorday_ht_ns = ddht - ddns;
+
+        if (caculatoryear_ht_ns == 0 && caculatormonth_ht_ns == 0 && caculatorday_ht_ns < 0) {
+            alertZebraContent("Ngày sinh không được lớn hơn ngày hiện tại.");
+            $("#C_DATE_OF_BIRTH").val('');
+            $("#C_DATE_OF_BIRTH").focus();
+        }
+        else if (caculatoryear_ht_ns == 0 && caculatormonth_ht_ns == 0 && caculatorday_ht_ns < 15) {
+            alertZebraContent("Tối thiểu 15 ngày mới được quyền tham gia sản phẩm bảo hiểm này.");
+            $("#C_DATE_OF_BIRTH").val('');
+            $("#C_DATE_OF_BIRTH").focus();
+        }
+        else if (caculatoryear_kt_ns > 65) {
+            alertZebraContent("Tuổi khách hàng đã quá 65 tuổi so với số tuổi cho phép được cấp đơn bảo hiểm.");
+            var l = (ddkt < 10 ? "0" + ddkt.toString() : ddkt.toString()) + "/" + (mmkt < 10 ? "0" + mmkt.toString() : mmkt.toString()) + "/" + (yyyykt - (caculatoryear_kt_ns - 65));
+            if (date_compare(t, l) > 0) {
+                $("#C_HIEU_LUC_DEN_NGAY").val(l);
+            } else {
+                $("#C_DATE_OF_BIRTH").val('');
+            }
+            $("#C_DATE_OF_BIRTH").focus();
+        }
+    }
+}
+function load_requied_dn_bhsk(t) {
+    if (t == "" || t == "KH_CA_NHAN_HO_GIA_DINH" || t == "CBNV") {
+        $("#box_title_doanh_nghiep").hide();
+        $("#C_MA_DOANH_NGHIEP").attr("data-rule-required", "false");
+        $("#C_TEN_DOANH_NGHIEP").attr("data-rule-required", "false");
+        $("#C_MST").attr("data-rule-required", "false");
+        $("#C_DIA_CHI_DN").attr("data-rule-required", "false");
+        if (t == "CBNV") {
+            $("#lbl_customer_code").html('Mã nhân viên:<span class="required">*</span>');
+            $("#lbl_customer_name").html('Tên nhân viên:<span class="required">*</span>');
+            $("#C_MA_KHACH_HANG").attr("data-rule-required", "true");
+            $("#C_TEN_KHACH_HANG").attr("data-msg-required", "Nhập tên nhân viên");
+        } else {
+            $("#lbl_customer_code").html('Mã khách hàng:');
+            $("#lbl_customer_name").html('Tên khách hàng:<span class="required">*</span>');
+            $("#C_MA_KHACH_HANG").attr("data-rule-required", "false");
+            $("#C_TEN_KHACH_HANG").attr("data-msg-required", "Nhập tên khách hàng");
+        }
+    } else {
+        $("#box_title_doanh_nghiep").show();
+        $("#C_MA_DOANH_NGHIEP").attr("data-rule-required", "true");
+        $("#C_TEN_DOANH_NGHIEP").attr("data-rule-required", "true");
+        $("#C_MST").attr("data-rule-required", "true");
+        $("#C_DIA_CHI_DN").attr("data-rule-required", "true");
+        $("#lbl_customer_code").html('Mã khách hàng:');
+        $("#lbl_customer_name").html('Tên khách hàng:<span class="required">*</span>');
+        $("#C_MA_KHACH_HANG").attr("data-rule-required", "false");
+        $("#C_TEN_KHACH_HANG").attr("data-msg-required", "Nhập tên khách hàng");
+    }
+}
+function onchangeLPX() {
+    $("#lai_phu_xe").trigger("change");
+}
+function nhom_xcg_tnds_onchange(p_this, p_is_load = '0') {
+    if (p_is_load == '0') {
+        $("#so_cho_ngoi").val("");
+    }
+    $("#trong_tai").attr("");
+    $('#so_cho_ngoi').select2();
+    $('#trong_tai').select2();
+    var n2 = document.getElementById("nhom_xcg"),
+        i2 = n2.querySelectorAll("option"),
+        l2 = Array.prototype.slice.call(i2, 0);
+    l2.forEach(function (t, a) {
+        if ($(t).val() == p_this.value) {
+            var muc_dich = $(t).data("mucdich");
+            var sosanh = parseInt($(t).data("sosanh"));
+            if (muc_dich != '' && muc_dich != 'CHO_HANG') {
+                $('#muc_dich').val(muc_dich);
+                $('#muc_dich').select2();
+                $("#lbl_muc_dich").show();
+                $("#muc_dich").attr("data-rule-required", "true");
+
+                var html_mucdich = '';
+                if (muc_dich == 'OTO_KKDVT') {
+                    html_mucdich = '<option value="OTO_KKDVT" selected>Không KD vận tải</option>';
+                } else {
+                    html_mucdich = '<option value="OTO_KDVT" selected>KD vận tải</option>';
+                }
+                $('#muc_dich').html(html_mucdich);
+                $('#muc_dich').select2();
+            } else {
+                $('#muc_dich').val('');
+                $('#muc_dich').select2();
+                $("#lbl_muc_dich").hide();
+                $("#muc_dich").attr("data-rule-required", "false");
+
+                var html_mucdich = '';
+                html_mucdich += '<option value="" selected>Chọn mục đích sử dụng</option>';
+                html_mucdich += '<option value="OTO_KKDVT">Không KD vận tải</option>';
+                html_mucdich += '<option value="OTO_KDVT">KD vận tải</option>';
+                $('#muc_dich').html(html_mucdich);
+                $('#muc_dich').select2();
+            }
+            if (sosanh == -1) {
+                console.log(1);
+                $("#lbl_scn").hide();
+                $("#lbl_tt").hide();
+                $("#so_cho_ngoi").attr("data-rule-required", "false");
+                $("#trong_tai").attr("data-rule-required", "false");
+            } else if (sosanh == 0) {
+                console.log(2);
+                $("#lbl_scn").show();
+                $("#lbl_tt").hide();
+                $("#so_cho_ngoi").attr("data-rule-required", "true");
+                $("#trong_tai").attr("data-rule-required", "false");
+            } else if (sosanh == 1) {
+                $("#lbl_scn").hide();
+                $("#lbl_tt").show();
+                $("#so_cho_ngoi").attr("data-rule-required", "false");
+                $("#trong_tai").attr("data-rule-required", "true");
+            }
+            //console.log(muc_dich);
+            //console.log(sosanh);
+        }
+    })
+}
+
+function check_ngay_cap(p_this) {
+    var ngay_hien_tai = new Date(),
+        yyyyht = ngay_hien_tai.getFullYear(),
+        mmht = ngay_hien_tai.getMonth() + 1,
+        ddht = ngay_hien_tai.getDate();
+
+    var date = ddht + "/" + (mmht < 10 ? ("0" + (mmht).toString()) : (mmht).toString()) + "/" + (yyyyht);
+    if (date_compare(p_this.value, date) > 0) {
+        //console.log(date);
+        alertZebraContent("Ngày cấp không được nhỏ hơn ngày hiện tại");
+        $('#C_NGAY_CAP').val(date.toString());
+        $('#C_NGAY_CAP').focus();
+    }
+}
+function check_hieu_luc(p_this) {
+    var ngay_hien_tai = new Date(),
+        yyyyht = ngay_hien_tai.getFullYear(),
+        mmht = ngay_hien_tai.getMonth() + 1,
+        ddht = ngay_hien_tai.getDate();
+
+    var date = ddht + "/" + (mmht < 10 ? ("0" + (mmht).toString()) : (mmht).toString()) + "/" + (yyyyht);
+    if (date_compare(p_this.value, date) > 0) {
+        //console.log(date);
+        alertZebraContent("Hiệu lực không được nhỏ hơn ngày hiện tại");
+        $('#C_HIEU_LUC_TU_NGAY').val(date.toString());
+        $('#C_HIEU_LUC_TU_NGAY').focus();
+        change_month_at();
+    }
+}
+function quanhenbh_onchange(p_value) {
+    if (p_value == 'BAN-THAN') {
+
+    } else {
+        $('#C_TEN_KHACH_HANG').val('');
+        $('#C_DATE_OF_BIRTH').val('');
+        $('#C_CMT').val('');
+        $('#C_PHONE').val('');
+        $('#C_EMAIL').val('');
+        $('#C_ADDRESS').val('');
+    }
+}
+function load_nguoi_thu_huong_bhsk(p_value) {
+    if (p_value == 'BAN-THAN') {
+        $('#C_NGUOI_HUONG_1').val($('#C_TEN_KHACH_HANG').val());
+        $('#C_MST_NGUOI_HUONG_2').val($('#C_DATE_OF_BIRTH').val());
+        $('#C_CMT_NGUOI_HUONG_2').val($('#C_CMT').val());
+        //$('#C_DIA_CHI_NGUOI_HUONG_1').val($('#C_ADDRESS').val());
+    } else {
+        $('#C_NGUOI_HUONG_1').val('');
+        $('#C_MST_NGUOI_HUONG_2').val('');
+        $('#C_CMT_NGUOI_HUONG_2').val('');
+        //$('#C_DIA_CHI_NGUOI_HUONG_1').val('');
+    }
+}
+function btn_add_cauhoinhom1_onclick() {
+    var t = document.forms[0].TotalRowNhomCauHoi1.value;
+    var e = ' <tr id="tr_nhomcauhoi1_' + t + '">';
+    e += '<td align="center">';
+    e += '<input type = "checkbox" id="cbnhomcauhoi1' + t + '" name="cidnhomcauhoi1" value="' + t + '">';
+    e += '</td>';
+    e += '<td align="center"><div class="input-group h-100">';
+    e += '<input type="text" class="form-control mydatepicker" autocomplete="off" onkeyup="FormatDate(this,event)" id="C_NGAY_DIEU_TRI_NHOM1_' + t + '" name="C_NGAY_DIEU_TRI_NHOM1_' + t + '" value="" maxlength="10" onkeydown="change_focus(document.forms[0],this,event)">';
+    e += '<div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-calendar"></i></div></div></div></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CHUAN_DOAN_NHOM1_' + t + '" name="C_CHUAN_DOAN_NHOM1_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CHI_TIET_NHOM1_' + t + '" name="C_CHI_TIET_NHOM1_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_KET_QUAN_NHOM1_' + t + '" name="C_KET_QUAN_NHOM1_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_THONG_TIN_BAC_SI_NHOM1_' + t + '" name="C_THONG_TIN_BAC_SI_NHOM1_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '</tr>';
+    $("#list_nhomcauhoi1").append(e), setDatePicker("mydatepicker"), document.forms[0].TotalRowNhomCauHoi1.value = parseFloat(t) + 1
+}
+function btn_del_cauhoinhom1_onclick() {
+    for (var t = document.forms[0].ListNhomCauHoi1Delete.value,
+        e = document.getElementsByName("cidnhomcauhoi1"),
+        n = 0; n < e.length; n++) e[n].checked && "" != e[n].value && ($("#tr_nhomcauhoi1_" + n).hide(),
+            t += ("" == t ? "" : ",") + n.toString(),
+            $("#cbnhomcauhoi1" + n).val(""),
+            $("#cbnhomcauhoi1" + n).prop("checked", !1));
+    document.forms[0].ListNhomCauHoi1Delete.value = t
+}
+function btn_add_cauhoinhom2_onclick() {
+    var t = document.forms[0].TotalRowNhomCauHoi2.value;
+    var e = ' <tr id="tr_nhomcauhoi2_' + t + '">';
+    e += '<td align="center">';
+    e += '<input type = "checkbox" id="cbnhomcauhoi2' + t + '" name="cidnhomcauhoi2" value="' + t + '">';
+    e += '</td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_SO_HDBH_NHOM2_' + t + '" name="C_SO_HDBH_NHOM2_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CONG_TY_BAO_HIEM_NHOM2_' + t + '" name="C_CONG_TY_BAO_HIEM_NHOM2_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td align="center"><div class="input-group h-100">';
+    e += '<input type="text" class="form-control mydatepicker" autocomplete="off" onkeyup="FormatDate(this,event)" id="C_NGAY_BAT_DAU_NHOM2_' + t + '" name="C_NGAY_BAT_DAU_NHOM2_' + t + '" value="" maxlength="10" onkeydown="change_focus(document.forms[0],this,event)">';
+    e += '<div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-calendar"></i></div></div></div></td>';
+    e += '<td align="center"><div class="input-group h-100">';
+    e += '<input type="text" class="form-control mydatepicker" autocomplete="off" onkeyup="FormatDate(this,event)" id="C_NGAY_KET_THUC_NHOM2_' + t + '" name="C_NGAY_KET_THUC_NHOM2_' + t + '" value="" maxlength="10" onkeydown="change_focus(document.forms[0],this,event)">';
+    e += '<div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-calendar"></i></div></div></div></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control text-right" id="C_SO_TIEN_BH_NHOM2_' + t + '" name="C_SO_TIEN_BH_NHOM2_' + t + '" value="" onkeyup="format_money(this,event)" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '</tr>';
+    $("#list_nhomcauhoi2").append(e), setDatePicker("mydatepicker"), document.forms[0].TotalRowNhomCauHoi2.value = parseFloat(t) + 1
+}
+function btn_del_cauhoinhom2_onclick() {
+    for (var t = document.forms[0].ListNhomCauHoi2Delete.value,
+        e = document.getElementsByName("cidnhomcauhoi2"),
+        n = 0; n < e.length; n++) e[n].checked && "" != e[n].value && ($("#tr_nhomcauhoi2_" + n).hide(),
+            t += ("" == t ? "" : ",") + n.toString(),
+            $("#cbnhomcauhoi2" + n).val(""),
+            $("#cbnhomcauhoi2" + n).prop("checked", !1));
+    document.forms[0].ListNhomCauHoi2Delete.value = t
+}
+function btn_add_cauhoinhom3_onclick() {
+    var t = document.forms[0].TotalRowNhomCauHoi3.value;
+    var e = ' <tr id="tr_nhomcauhoi3_' + t + '">';
+    e += '<td align="center">';
+    e += '<input type = "checkbox" id="cbnhomcauhoi3' + t + '" name="cidnhomcauhoi3" value="' + t + '">';
+    e += '</td>';
+    e += '<td align="center"><div class="input-group h-100">';
+    e += '<input type="text" class="form-control mydatepicker" autocomplete="off" onkeyup="FormatDate(this,event)" id="C_NGAY_YEU_CAU_BOI_THUONG_NHOM3_' + t + '" name="C_NGAY_YEU_CAU_BOI_THUONG_NHOM3_' + t + '" value="" maxlength="10" onkeydown="change_focus(document.forms[0],this,event)">';
+    e += '<div class="input-group-prepend"><div class="input-group-text"><i class="fa fa-calendar"></i></div></div></div></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CONG_TY_BAO_HIEM_NHOM3_' + t + '" name="C_CONG_TY_BAO_HIEM_NHOM3_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_MO_TA_YEU_CAU_BOI_THUONG_NHOM3_' + t + '" name="C_MO_TA_YEU_CAU_BOI_THUONG_NHOM3_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control text-right" id="C_SO_TIEN_BH_NHOM3_' + t + '" name="C_SO_TIEN_BH_NHOM3_' + t + '" value="" onkeyup="format_money(this,event)" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '</tr>';
+    $("#list_nhomcauhoi3").append(e), setDatePicker("mydatepicker"), document.forms[0].TotalRowNhomCauHoi3.value = parseFloat(t) + 1
+}
+function btn_del_cauhoinhom3_onclick() {
+    for (var t = document.forms[0].ListNhomCauHoi3Delete.value,
+        e = document.getElementsByName("cidnhomcauhoi3"),
+        n = 0; n < e.length; n++) e[n].checked && "" != e[n].value && ($("#tr_nhomcauhoi3_" + n).hide(),
+            t += ("" == t ? "" : ",") + n.toString(),
+            $("#cbnhomcauhoi3" + n).val(""),
+            $("#cbnhomcauhoi3" + n).prop("checked", !1));
+    document.forms[0].ListNhomCauHoi3Delete.value = t
+}
+function btn_add_cauhoinhom4_onclick() {
+    var t = document.forms[0].TotalRowNhomCauHoi4.value;
+    var e = ' <tr id="tr_nhomcauhoi3_' + t + '">';
+    e += '<td align="center">';
+    e += '<input type = "checkbox" id="cbnhomcauhoi4' + t + '" name="cidnhomcauhoi4" value="' + t + '">';
+    e += '</td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CONG_TY_BAO_HIEM_NHOM4_' + t + '" name="C_CONG_TY_BAO_HIEM_NHOM4_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_KHUOC_TU_NHOM4_' + t + '" name="C_KHUOC_TU_NHOM4_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_CHAP_NHAN_NHOM4_' + t + '" name="C_CHAP_NHAN_NHOM4_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '<td><input type="text" autocomplete="off" class="form-control" id="C_MO_TA_YEU_CAU_BOI_THUONG_NHOM4_' + t + '" name="C_MO_TA_YEU_CAU_BOI_THUONG_NHOM4_' + t + '" value="" onkeydown = "change_focus(document.forms[0],this,event)" ></td>';
+    e += '</tr>';
+    $("#list_nhomcauhoi4").append(e), setDatePicker("mydatepicker"), document.forms[0].TotalRowNhomCauHoi4.value = parseFloat(t) + 1
+}
+function btn_del_cauhoinhom4_onclick() {
+    for (var t = document.forms[0].ListNhomCauHoi4Delete.value,
+        e = document.getElementsByName("cidnhomcauhoi4"),
+        n = 0; n < e.length; n++) e[n].checked && "" != e[n].value && ($("#tr_nhomcauhoi4_" + n).hide(),
+            t += ("" == t ? "" : ",") + n.toString(),
+            $("#cbnhomcauhoi4" + n).val(""),
+            $("#cbnhomcauhoi4" + n).prop("checked", !1));
+    document.forms[0].ListNhomCauHoi4Delete.value = t
+}
+
+function ConfirmZebraByContentAjax(p_elem, p_content_id, p_url, p_name_form) {
+    if (typeof name_form === "undefined") name_form = 'vswForm';
+    let elem = document.getElementById(p_content_id);
+    let title = p_elem.getAttribute("title");
+    if (title == "null" || title == '') title = 'Thông báo';
+
+    $.Zebra_Dialog({
+        source: {
+            inline: elem.innerHTML
+        },
+        type: "confirmation",
+        overlay_close: !1,
+        title: title,
+        buttons: [{
+            caption: "Có",
+            callback: function () {
+                $('#loading').show();
+                vsw_form_name_submit(p_url, name_form);
+            }
+        }, {
+            caption: "Không",
+            callback: function () {
+            }
+        }]
+    })
+}
+function onchangeTrongTai() {
+    var nhom_xe = '';
+    if (document.forms[0].nhom_xcg) {
+        nhom_xe = document.forms[0].nhom_xcg.value;
+    }
+    var trong_tai = document.forms[0].trong_tai.value;
+    if (trong_tai > 10000 && nhom_xe == 'OTO_HANG') {
+        load_phi_bh_xcg();
+    }
 }
