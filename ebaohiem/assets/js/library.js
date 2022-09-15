@@ -3245,7 +3245,6 @@ function change_month_new_2021(idx) {
     }
 }
 function show_pham_vi_TNDS_New_2021(index) {
-    console.log(eval("document.forms[0].cbk_pham_vi" + index + ".checked"))
     if (eval("document.forms[0].cbk_pham_vi" + index + ".checked")) {
         $('#listphamvi' + index).toggle('show');
         $('#fieldset_listphamvi' + index).removeClass('css_fieldset_noborder');
