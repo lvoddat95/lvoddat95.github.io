@@ -127,7 +127,7 @@
                                 <h5 class="card-title text-uppercase text-danger">
                                     <i id="icon_thong_tin_chung"
                                         onclick="show_hide_box('box_thong_tin_chung','icon_thong_tin_chung');"
-                                        class="fa icon_show_hide_fieldset fa-minus-circle"></i>
+                                        class="fa icon_show_hide_fieldset fa-plus-circle"></i>
                                     THÔNG TIN CHUNG
                                 </h5>
                                 <div id="box_thong_tin_chung">
@@ -1891,7 +1891,7 @@
                                     THÔNG TIN XUẤT HÓA ĐƠN
                                 </h5>
 
-                                <div id="box_nguoi_thu_huong">
+                                <div id="box_nguoi_thu_huong" style="display: none;">
 
                                     <div class="row">
 
@@ -2014,7 +2014,7 @@
                                     <i id="icon_lich_tt" onclick="show_hide_box('box_lich_tt','icon_lich_tt');"
                                         class="fa icon_show_hide_fieldset fa-minus-circle"></i>
                                     LỊCH THANH TOÁN</h5>
-                                <div id="box_lich_tt">
+                                <div id="box_lich_tt" style="display: none;">
                                     <div class="form-group row">
                                         <div class="col-lg-4 col-md-4">
                                             <div class="form-group">
@@ -2096,7 +2096,7 @@
                                                 <tbody class="customtable">
 
                                                     <tr id="tr_ltt_0">
-                                                        <td  align="center">
+                                                        <td align="center">
                                                             <input type="checkbox" id="cbltt0" name="cidltt" value="0">
                                                             <input type="hidden" name="PK_LICH_THANH_TOAN_BH_LTT0"
                                                                 value="">
@@ -2177,39 +2177,45 @@
                                         class="fa icon_show_hide_fieldset fa-minus-circle"></i>
                                     TÀI LIỆU ĐÍNH KÈM
                                 </h5>
-                                <div class="form-group row" id="box_tai_lieu">
-                                    <div class="col-sm-12">
-                                        <input type="hidden" id="TotalRowTaiLieu" name="TotalRowTaiLieu" value="0" />
-                                        <input type="hidden" id="ListTaiLieuDelete" name="ListTaiLieuDelete" value="" />
-                                        <table id="list_tailieu" class="table  table-bordered">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th class="text-center" width="30%">Tên tài liệu</th>
-                                                    <th class="text-center" width="30%">Loại tài liệu</th>
-                                                    <th class="text-center" width="30%">Mô tả</th>
-                                                    <th class="text-center" width="3%">#</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="customtable">
+                                <div id="box_tai_lieu" style="display: none;">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <input type="hidden" id="TotalRowTaiLieu" name="TotalRowTaiLieu"
+                                                value="0" />
+                                            <input type="hidden" id="ListTaiLieuDelete" name="ListTaiLieuDelete"
+                                                value="" />
+                                            <table id="list_tailieu" class="table  table-bordered">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th class="text-center" width="30%">Tên tài liệu</th>
+                                                        <th class="text-center" width="30%">Loại tài liệu</th>
+                                                        <th class="text-center" width="30%">Mô tả</th>
+                                                        <th class="text-center" width="3%">#</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="customtable">
 
-                                            </tbody>
-                                            <tfoot style="background-color: #e9ecef;">
-                                            </tfoot>
-                                        </table>
+                                                </tbody>
+                                                <tfoot style="background-color: #e9ecef;">
+                                                </tfoot>
+                                            </table>
 
-                                        <input type="hidden" id="TotalRowImages" name="TotalRowImages" value="0" />
-                                        <input type="hidden" id="ListImagesDelete" name="ListImagesDelete" value="" />
-                                        <table class="table  table-bordered" id="list_images" style="display: none;">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th class="text-center" width="30%">Tên tài liệu</th>
-                                                    <th class="text-center" width="30%">Loại tài liệu</th>
-                                                    <th class="text-center" width="30%">Mô tả</th>
-                                                    <th class="text-center" width="3%">#</th>
-                                                </tr>
-                                            </thead>
+                                            <input type="hidden" id="TotalRowImages" name="TotalRowImages" value="0" />
+                                            <input type="hidden" id="ListImagesDelete" name="ListImagesDelete"
+                                                value="" />
+                                            <table class="table  table-bordered" id="list_images"
+                                                style="display: none;">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th class="text-center" width="30%">Tên tài liệu</th>
+                                                        <th class="text-center" width="30%">Loại tài liệu</th>
+                                                        <th class="text-center" width="30%">Mô tả</th>
+                                                        <th class="text-center" width="3%">#</th>
+                                                    </tr>
+                                                </thead>
 
-                                        </table>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
