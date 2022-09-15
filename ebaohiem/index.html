@@ -93,7 +93,7 @@
 
                         <div
                             class="card-header d-block d-sm-flex align-items-center justify-content-between pt-2 px-3 pb-3">
-                            <div class="mb-2" style="font-size: 18px;">
+                            <div class="mb-md-0 mb-2" style="font-size: 18px;">
                                 <i class="fa fa-file-text-o mr-2"></i><span>Thêm mới đơn bảo hiểm</span>
                             </div>
                             <div class="btn-group btn-group-sm">
@@ -363,7 +363,7 @@
                                                 <label class="col-md-4 col-form-label" for="C_PHONE">Điện
                                                     thoại:</label>
                                                 <div class="col-md-8 validate-input" data-validate="">
-                                                    <input type="number" onkeypress="return InputNumberOnly(event);"
+                                                    <input type="text"  pattern="[0-9]*"  onkeypress="return InputNumberOnly(event);"
                                                         onkeyup="FormatPhone(this,event)"
                                                         onchange="phonenumber(this); change_dien_thoai_nguoi_nhan_hoa_don();"
                                                         class="form-control" autocomplete="off" id="C_PHONE"
@@ -2281,7 +2281,7 @@
 
                         <div
                             class="card-header d-block d-sm-flex align-items-center justify-content-between pt-2 px-3 pb-3">
-                            <div class="mb-2" style="font-size: 18px;">
+                            <div class="mb-md-0 mb-2" style="font-size: 18px;">
                             </div>
                             <div class="btn-group btn-group-sm">
                                 <button class="btn bg-primary text-white btn-inform" id="btn_save_top"
