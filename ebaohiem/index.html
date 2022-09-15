@@ -888,7 +888,7 @@
                                 </h5>
                                 <div id="box_pham_vi_bh" style="display: none;">
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-lg-8 col-md-12">
                                             <div class="form-group row">
                                                 <label class="col-lg-2 col-md-2 col-form-label" for="C_HIEU_LUC_TU_GIO">
@@ -994,7 +994,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+ -->
 
                                     <div class="form-group row">
                                         <div class="col-sm-12">
@@ -1015,118 +1015,75 @@
                                                     style="display:none; margin-top: 5px; padding: 0 5px 10px 5px;">
 
                                                     <div class="row">
-                                                        <div class="col-lg-8 col-md-12">
+                                                        <div class="col-lg-4 col-md-8">
                                                             <div class="form-group row">
-                                                                <label class="col-lg-2 col-md-2 col-form-label"
+                                                                <label class="col-md-4 col-form-label"
                                                                     for="C_HIEU_LUC_TU_GIO">
                                                                     Thời hạn bảo hiểm:<span
                                                                         class="required">*</span></label>
-                                                                <div class="col-lg-10 col-md-9 validate-input"
+                                                                <div class="col-md-5 col-8 validate-input pr-0"
                                                                     data-validate="">
                                                                     <div class="row">
-                                                                        <div class="col-md-2">
-                                                                            Từ
+                                                                        <div class="form-group col-4 pr-0">
+                                                                            <div class="validate-input"
+                                                                                data-validate="">
+                                                                                <input type="text"
+                                                                                    onkeypress="valid_and_format_hour(this);return InputNumberOnly(event);"
+                                                                                    class="form-control"
+                                                                                    autocomplete="off"
+                                                                                    id="C_HIEU_LUC_TU_GIO"
+                                                                                    name="C_HIEU_LUC_TU_GIO"
+                                                                                    value="15:39"
+                                                                                    data-rule-required="true"
+                                                                                    data-msg-required="Nhập giờ bắt đầu bảo hiểm."
+                                                                                    maxlength="10"
+                                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-md-4">
-                                                                            <div class="row">
-                                                                                <div class="form-group col-4 pr-0">
-                                                                                    <div class="validate-input"
-                                                                                        data-validate="">
-                                                                                        <input type="text"
-                                                                                            onkeypress="valid_and_format_hour(this);return InputNumberOnly(event);"
-                                                                                            class="form-control"
-                                                                                            autocomplete="off"
-                                                                                            id="C_HIEU_LUC_TU_GIO"
-                                                                                            name="C_HIEU_LUC_TU_GIO"
-                                                                                            value="15:39"
-                                                                                            data-rule-required="true"
-                                                                                            data-msg-required="Nhập giờ bắt đầu bảo hiểm."
-                                                                                            maxlength="10"
-                                                                                            onkeydown="change_focus(document.forms[0],this,event)" />
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="form-group col-8">
-                                                                                    <div class="input-group validate-input"
-                                                                                        data-validate="">
-                                                                                        <input type="text"
-                                                                                            onchange="load_pham_vi_bao_hiem_motor();"
-                                                                                            class="form-control mydatepicker"
-                                                                                            autocomplete="off"
-                                                                                            id="C_HIEU_LUC_TU_NGAY"
-                                                                                            name="C_HIEU_LUC_TU_NGAY"
-                                                                                            value="13/09/2022"
-                                                                                            data-rule-required="true"
-                                                                                            data-msg-required="Nhập ngày bắt đầu hiệu lực của đơn bảo hiểm."
-                                                                                            maxlength="10"
-                                                                                            onkeyup="FormatDate(this,event)"
-                                                                                            onkeydown="change_focus(document.forms[0],this,event)" />
-                                                                                        <div
-                                                                                            class="input-group-prepend">
-                                                                                            <div
-                                                                                                class="input-group-text">
-                                                                                                <i
-                                                                                                    class="fa fa-calendar"></i>
-                                                                                            </div>
-                                                                                        </div>
+                                                                        <div class="form-group col-8">
+                                                                            <div class="input-group validate-input"
+                                                                                data-validate="">
+                                                                                <input type="text"
+                                                                                    onchange="load_pham_vi_bao_hiem_motor();"
+                                                                                    class="form-control mydatepicker"
+                                                                                    autocomplete="off"
+                                                                                    id="C_HIEU_LUC_TU_NGAY"
+                                                                                    name="C_HIEU_LUC_TU_NGAY"
+                                                                                    value="13/09/2022"
+                                                                                    data-rule-required="true"
+                                                                                    data-msg-required="Nhập ngày bắt đầu hiệu lực của đơn bảo hiểm."
+                                                                                    maxlength="10"
+                                                                                    onkeyup="FormatDate(this,event)"
+                                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text">
+                                                                                        <i class="fa fa-calendar"></i>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-2">
-                                                                            Đến
-                                                                        </div>
-                                                                        <div class="col-md-4">
-                                                                            <div class="row">
-                                                                                <div class="col-4 pr-0">
-                                                                                    <div class="validate-input"
-                                                                                        data-validate="">
-                                                                                        <input type="text"
-                                                                                            onkeypress="valid_and_format_hour(this);return InputNumberOnly(event);"
-                                                                                            class="form-control"
-                                                                                            autocomplete="off"
-                                                                                            id="C_HIEU_LUC_DEN_GIO"
-                                                                                            name="C_HIEU_LUC_DEN_GIO"
-                                                                                            value="15:39"
-                                                                                            data-rule-required="true"
-                                                                                            data-msg-required="Nhập giờ bắt đầu bảo hiểm."
-                                                                                            maxlength="10"
-                                                                                            onkeydown="change_focus(document.forms[0],this,event)" />
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-8">
-                                                                                    <div class="input-group validate-input"
-                                                                                        data-validate="">
-                                                                                        <input type="text"
-                                                                                            onchange="load_pham_vi_bao_hiem_motor();"
-                                                                                            class="form-control mydatepicker"
-                                                                                            autocomplete="off"
-                                                                                            id="C_HIEU_LUC_DEN_NGAY"
-                                                                                            name="C_HIEU_LUC_DEN_NGAY"
-                                                                                            value="13/09/2023"
-                                                                                            data-rule-required="true"
-                                                                                            data-msg-required="Nhập ngày kết thúc hiệu lực của đơn bảo hiểm."
-                                                                                            maxlength="10"
-                                                                                            onkeyup="FormatDate(this,event)"
-                                                                                            onkeydown="change_focus(document.forms[0],this,event)" />
-                                                                                        <div
-                                                                                            class="input-group-prepend">
-                                                                                            <div
-                                                                                                class="input-group-text">
-                                                                                                <i
-                                                                                                    class="fa fa-calendar"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-
-
                                                                     </div>
                                                                 </div>
+                                                                <div class="col-md-3 col-4 validate-input"
+                                                                    data-validate="">
+                                                                    <select style="width: 100%"
+                                                                        onchange="change_month_new_2021(0);"
+                                                                        class="form-control form-control-sm select2 w100pi"
+                                                                        id="Thoi_han_bh" name="Thoi_han_bh"
+                                                                        data-rule-required="true"
+                                                                        data-msg-required="Chọn đối tượng."
+                                                                        onkeydown="change_focus(document.forms[0],this,event)">
+                                                                        <option selected value="12">12 tháng</option>
+                                                                        <option value="18">18 tháng</option>
+                                                                        <option value="24">24 tháng</option>
+                                                                        <option value="30">30 tháng</option>
+                                                                    </select>
+                                                                </div>
+
                                                             </div>
                                                         </div>
+
+
                                                         <div class="col-lg-4 col-md-6 col-sm-12">
                                                             <div class="form-group row">
                                                                 <label class="col-md-4 col-form-label" for="C_SO_GCN">Số
@@ -1142,7 +1099,7 @@
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="col-md-6 col-sm-9 col-12">
+                                                        <div class="col-lg-4 col-md-6">
                                                             <table class="table table-bordered">
                                                                 <thead class="thead-light">
                                                                     <tr>
@@ -2016,8 +1973,9 @@
                                     LỊCH THANH TOÁN</h5>
                                 <div id="box_lich_tt" style="display: none;">
                                     <div class="form-group row">
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-4 col-md-6">
                                             <div class="form-group">
+
                                                 <table class="table table-bordered" style="margin: auto;">
                                                     <colgroup>
                                                         <col width="60%">
@@ -2030,72 +1988,77 @@
                                                         </tr>
                                                     </thead>
 
-                                                    <tr>
+                                                    <tbody>
+                                                        <tr>
 
-                                                        <td>TNDS bắt buộc </td>
-                                                        <td id="tong_phi_ltt0" style="text-align: right">0</td>
+                                                            <td>TNDS bắt buộc </td>
+                                                            <td id="tong_phi_ltt0" style="text-align: right">0</td>
 
-                                                    </tr>
+                                                        </tr>
 
-                                                    <tr>
+                                                        <tr>
 
-                                                        <td>Tai nạn lái, phụ xe và người ngồi trên xe </td>
-                                                        <td id="tong_phi_ltt1" style="text-align: right">0</td>
+                                                            <td>Tai nạn lái, phụ xe và người ngồi trên xe </td>
+                                                            <td id="tong_phi_ltt1" style="text-align: right">0</td>
 
-                                                    </tr>
+                                                        </tr>
 
-                                                    <tr>
-                                                        <td>Điều khoản bổ sung</td>
-                                                        <td id="dieu_khoan_sdbs_ltt" style="text-align: right">0</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Số tiền giảm miễn thường</td>
-                                                        <td id="so_tien_giam_mien_thuong_ltt" style="text-align: right">
-                                                            0
-                                                        </td>
-                                                    </tr>
+                                                        <tr>
+                                                            <td>Điều khoản bổ sung</td>
+                                                            <td id="dieu_khoan_sdbs_ltt" style="text-align: right">0
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Số tiền giảm miễn thường</td>
+                                                            <td id="so_tien_giam_mien_thuong_ltt"
+                                                                style="text-align: right">
+                                                                0
+                                                            </td>
+                                                        </tr>
 
-                                                    <tr class="bold" style="background-color: #fff;">
-                                                        <td>Tổng phí BH</td>
-                                                        <td>
-                                                            <input style="width: 98%"
-                                                                class="form-control text-right bold" readonly="readonly"
-                                                                onkeyup="format_money(this,event)" type="text"
-                                                                id="C_PHI_BH_THOI_HAN" name="C_PHI_BH_THOI_HAN"
-                                                                value="0"
-                                                                onkeydown="change_focus(document.forms[0],this,event)" />
-                                                            <input type="hidden" id="C_TONG_TIEN_DKBS"
-                                                                name="C_TONG_TIEN_DKBS" value="0"
-                                                                onkeydown="change_focus(document.forms[0],this,event)" />
-                                                            <input type="hidden" id="C_PHI_BH_NAM" name="C_PHI_BH_NAM"
-                                                                value="0"
-                                                                onkeydown="change_focus(document.forms[0],this,event)" />
+                                                        <tr class="bold" style="background-color: #fff;">
+                                                            <td>Tổng phí BH</td>
+                                                            <td class="p-0">
+                                                                <input class="form-control text-right bold"
+                                                                    readonly="readonly"
+                                                                    onkeyup="format_money(this,event)" type="text"
+                                                                    id="C_PHI_BH_THOI_HAN" name="C_PHI_BH_THOI_HAN"
+                                                                    value="0"
+                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                <input type="hidden" id="C_TONG_TIEN_DKBS"
+                                                                    name="C_TONG_TIEN_DKBS" value="0"
+                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                <input type="hidden" id="C_PHI_BH_NAM"
+                                                                    name="C_PHI_BH_NAM" value="0"
+                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
 
-                                                            <input type="hidden" id="C_SO_TIEN_GIAM_MIEN_THUONG"
-                                                                name="C_SO_TIEN_GIAM_MIEN_THUONG" value="0"
-                                                                onkeydown="change_focus(document.forms[0],this,event)" />
-                                                        </td>
-                                                    </tr>
+                                                                <input type="hidden" id="C_SO_TIEN_GIAM_MIEN_THUONG"
+                                                                    name="C_SO_TIEN_GIAM_MIEN_THUONG" value="0"
+                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8 col-md-8">
+                                        <div class="col-lg-4 col-md-6">
                                             <input type="hidden" id="TotalRowLTT" name="TotalRowLTT" value="1" />
                                             <input type="hidden" id="ListLTTDelete" name="ListLTTDelete" value="" />
                                             <input type="hidden" id="LanTT" name="LanTT" value="1" />
-                                            <table id="list_ltt" class="table  table-bordered">
+
+                                            <table class="table table-bordered" style="margin: auto;">
+                                                <colgroup>
+                                                    <col width="3%">
+                                                    <col width="97%">
+                                                </colgroup>
                                                 <thead class="thead-light">
                                                     <tr>
                                                         <th class="text-center">#</th>
-                                                        <th class="text-center" width="1%">Lần</th>
-                                                        <th class="text-center" width="36%">Ngày TT</th>
-                                                        <th class="text-center" width="25%">Số tiền</th>
-                                                        <th class="text-center" width="30%">Trạng thái</th>
+                                                        <th class="text-center">Thông tin thanh toán</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="customtable">
-
-                                                    <tr id="tr_ltt_0">
+                                                <tbody>
+                                                    <tr>
                                                         <td align="center">
                                                             <input type="checkbox" id="cbltt0" name="cidltt" value="0">
                                                             <input type="hidden" name="PK_LICH_THANH_TOAN_BH_LTT0"
@@ -2107,53 +2070,161 @@
                                                                 name="C_NGAY_THANH_TOAN_LTT0" value="13/09/2022">
                                                         </td>
                                                         <td>
-                                                            <input class="form-control text-center" autocomplete="off"
-                                                                type="text" id="C_LAN_THANH_TOAN_LTT0"
-                                                                name="C_LAN_THANH_TOAN_LTT0" value="1"
-                                                                onkeydown="change_focus(document.forms[0],this,event)">
-                                                        </td>
-                                                        <td align="center">
-                                                            <div class="input-group h-100 validate-input"
-                                                                data-validate="">
-                                                                <input type="text" readonly="readonly"
-                                                                    disabled="disabled" onchange="check_date_ltt();"
-                                                                    class="form-control " autocomplete="off"
-                                                                    value="13/09/2022" data-rule-required="true"
-                                                                    data-msg-required="Nhập ngày thanh toán."
-                                                                    maxlength="10" onkeyup="FormatDate(this,event)"
-                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text"><i
-                                                                            class="fa fa-calendar"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td align="center">
-                                                            <input class="form-control text-right" autocomplete="off"
-                                                                type="text" onkeyup="format_money(this,event)"
-                                                                id="C_PHI_BH_LTT0" name="C_PHI_BH_LTT0" value="0"
-                                                                onblur="load_so_tien_con_lai(0)"
-                                                                onkeydown="change_focus(document.forms[0],this,event)">
-                                                        </td>
-                                                        <td align="center">
-
-                                                            <b id="ckXacNhanThuPhi" style="">
-                                                                <input type="checkbox" name="c_xac_nhan_thu_phi"
-                                                                    id="c_xac_nhan_thu_phi" value="1" />
-                                                                <label for="c_xac_nhan_thu_phi">Xác nhận thu phí</label>
-                                                            </b>
-                                                            <b id="lbXacNhanThuPhi"
-                                                                style="color: red; display: none;">Chưa
-                                                                thu
-                                                                phí</b>
-                                                            <br />
-
+                                                            <table class="table-lite table-borderless">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Lần </td>
+                                                                        <td><input class="form-control text-right"
+                                                                                autocomplete="off" type="text"
+                                                                                id="C_LAN_THANH_TOAN_LTT0"
+                                                                                name="C_LAN_THANH_TOAN_LTT0" value="1"
+                                                                                onkeydown="change_focus(document.forms[0],this,event)">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Ngày thanh toán</td>
+                                                                        <td>
+                                                                            <div class="input-group h-100 validate-input"
+                                                                                data-validate="">
+                                                                                <input type="text" readonly="readonly"
+                                                                                    disabled="disabled"
+                                                                                    onchange="check_date_ltt();"
+                                                                                    class="form-control "
+                                                                                    autocomplete="off"
+                                                                                    value="13/09/2022"
+                                                                                    data-rule-required="true"
+                                                                                    data-msg-required="Nhập ngày thanh toán."
+                                                                                    maxlength="10"
+                                                                                    onkeyup="FormatDate(this,event)"
+                                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i
+                                                                                            class="fa fa-calendar"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Số tiền</td>
+                                                                        <td><input class="form-control text-right"
+                                                                                autocomplete="off" type="text"
+                                                                                onkeyup="format_money(this,event)"
+                                                                                id="C_PHI_BH_LTT0" name="C_PHI_BH_LTT0"
+                                                                                value="0"
+                                                                                onblur="load_so_tien_con_lai(0)"
+                                                                                onkeydown="change_focus(document.forms[0],this,event)">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trạng thái</td>
+                                                                        <td class="text-center"><b id="ckXacNhanThuPhi"
+                                                                                style="color: green;">
+                                                                                <input type="hidden"
+                                                                                    name="c_xac_nhan_thu_phi"
+                                                                                    id="c_xac_nhan_thu_phi" value="1" />
+                                                                                ✓ Xác nhận thu phí
+                                                                                </>
+                                                                                <b id="lbXacNhanThuPhi"
+                                                                                    style="color: red; display: none;">Chưa
+                                                                                    thu
+                                                                                    phí</b>
+                                                                                <br />
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
                                                         </td>
                                                     </tr>
-
+                                                    <tr>
+                                                        <td align="center">
+                                                            <input type="checkbox" id="cbltt0" name="cidltt" value="0">
+                                                            <input type="hidden" name="PK_LICH_THANH_TOAN_BH_LTT0"
+                                                                value="">
+                                                            <input type="hidden" name="C_NGAY_THU_PHI0"
+                                                                value="13/09/2022">
+                                                            <input type="hidden" name="FK_BANG_KE0" value="">
+                                                            <input type="hidden" id="C_NGAY_THANH_TOAN_LTT0"
+                                                                name="C_NGAY_THANH_TOAN_LTT0" value="13/09/2022">
+                                                        </td>
+                                                        <td>
+                                                            <table class="table-lite table-borderless">
+                                                                <colgroup>
+                                                                    <col width="50%">
+                                                                    <col width="50%">
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Lần </td>
+                                                                        <td><input class="form-control text-right"
+                                                                                autocomplete="off" type="text"
+                                                                                id="C_LAN_THANH_TOAN_LTT0"
+                                                                                name="C_LAN_THANH_TOAN_LTT0" value="1"
+                                                                                onkeydown="change_focus(document.forms[0],this,event)">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Ngày thanh toán</td>
+                                                                        <td>
+                                                                            <div class="input-group h-100 validate-input"
+                                                                                data-validate="">
+                                                                                <input type="text" readonly="readonly"
+                                                                                    disabled="disabled"
+                                                                                    onchange="check_date_ltt();"
+                                                                                    class="form-control "
+                                                                                    autocomplete="off"
+                                                                                    value="13/09/2022"
+                                                                                    data-rule-required="true"
+                                                                                    data-msg-required="Nhập ngày thanh toán."
+                                                                                    maxlength="10"
+                                                                                    onkeyup="FormatDate(this,event)"
+                                                                                    onkeydown="change_focus(document.forms[0],this,event)" />
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text"><i
+                                                                                            class="fa fa-calendar"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Số tiền</td>
+                                                                        <td><input class="form-control text-right"
+                                                                                autocomplete="off" type="text"
+                                                                                onkeyup="format_money(this,event)"
+                                                                                id="C_PHI_BH_LTT0" name="C_PHI_BH_LTT0"
+                                                                                value="0"
+                                                                                onblur="load_so_tien_con_lai(0)"
+                                                                                onkeydown="change_focus(document.forms[0],this,event)">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trạng thái</td>
+                                                                        <td class="text-center"><b id="ckXacNhanThuPhi"
+                                                                                style="color: green;">
+                                                                                <input type="hidden"
+                                                                                    name="c_xac_nhan_thu_phi"
+                                                                                    id="c_xac_nhan_thu_phi" value="1" />
+                                                                                ✓ Xác nhận thu phí
+                                                                                </>
+                                                                                <b id="lbXacNhanThuPhi"
+                                                                                    style="color: red; display: none;">Chưa
+                                                                                    thu
+                                                                                    phí</b>
+                                                                                <br />
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
+
                                             <div class="toolbar-list" id="toolbar-list_ltt"
                                                 style="text-align: center; margin-top: 5px;">
 
@@ -2185,7 +2256,9 @@
                                                 value="0" />
                                             <input type="hidden" id="ListTaiLieuDelete" name="ListTaiLieuDelete"
                                                 value="" />
-                                            <table id="list_tailieu" class="table  table-bordered">
+
+                                            <table class="table  table-bordered" id="list_images"
+                                                style="">
                                                 <thead class="thead-light">
                                                     <tr>
                                                         <th class="text-center" width="30%">Tên tài liệu</th>
@@ -2194,28 +2267,12 @@
                                                         <th class="text-center" width="3%">#</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="customtable">
-
-                                                </tbody>
-                                                <tfoot style="background-color: #e9ecef;">
-                                                </tfoot>
                                             </table>
 
                                             <input type="hidden" id="TotalRowImages" name="TotalRowImages" value="0" />
                                             <input type="hidden" id="ListImagesDelete" name="ListImagesDelete"
                                                 value="" />
-                                            <table class="table  table-bordered" id="list_images"
-                                                style="display: none;">
-                                                <thead class="thead-light">
-                                                    <tr>
-                                                        <th class="text-center" width="30%">Tên tài liệu</th>
-                                                        <th class="text-center" width="30%">Loại tài liệu</th>
-                                                        <th class="text-center" width="30%">Mô tả</th>
-                                                        <th class="text-center" width="3%">#</th>
-                                                    </tr>
-                                                </thead>
 
-                                            </table>
                                         </div>
                                     </div>
                                 </div>
