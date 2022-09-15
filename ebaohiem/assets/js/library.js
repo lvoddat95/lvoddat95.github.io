@@ -2531,12 +2531,8 @@ function btn_add_ltt_xcg_onclick() {
         }
     var so_tien_con_lai = parseFloat(tong_phi) - parseFloat(so_tien);
     var s = ' <tr id="tr_ltt_' + count + '">';
-    s += '<td align="center"><div class="pretty p-svg p-curve checkbox-blue" style="margin-right: 0;">';
+    s += '<td align="center">';
     s += '<input type = "checkbox" id="cbltt' + count + '" name="cidltt" value="' + count + '">';
-    s += '<div class="state p-success" style="opacity: 1;">';
-    s += '<svg class="svg svg-icon" viewBox="0 0 20 20">';
-    s += '<path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white; fill: white;"></path>';
-    s += '</svg><label></label></div></div>';
     s += '<input type="hidden" name="PK_LICH_THANH_TOAN_BH_LTT' + count + '" value=""><input type="hidden" name="FK_BANG_KE' + count + '" value="">';
     s += '<input type="hidden" name="C_NGAY_THU_PHI' + count + '" value=""></td>';
     s += '<td><input type="text" autocomplete="off" class="form-control text-center" name="C_LAN_THANH_TOAN_LTT' + count + '" value="' + (parseFloat(lantt) + 1) + '" onkeydown="change_focus(document.forms[0],this,event)"></td> ';

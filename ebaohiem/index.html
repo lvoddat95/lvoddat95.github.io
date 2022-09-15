@@ -363,7 +363,7 @@
                                                 <label class="col-md-4 col-form-label" for="C_PHONE">Điện
                                                     thoại:</label>
                                                 <div class="col-md-8 validate-input" data-validate="">
-                                                    <input type="text" onkeypress="return InputNumberOnly(event);"
+                                                    <input type="number" onkeypress="return InputNumberOnly(event);"
                                                         onkeyup="FormatPhone(this,event)"
                                                         onchange="phonenumber(this); change_dien_thoai_nguoi_nhan_hoa_don();"
                                                         class="form-control" autocomplete="off" id="C_PHONE"
@@ -886,7 +886,7 @@
                                         class="fa icon_show_hide_fieldset fa-minus-circle"></i>
                                     PHẠM VI, QUYỀN LỢI BẢO HIỂM, PHÍ BẢO HIỂM, GIẤY CHỨNG NHẬN BẢO HIỂM
                                 </h5>
-                                <div id="box_pham_vi_bh">
+                                <div id="box_pham_vi_bh" style="display: none;">
 
                                     <div class="row">
                                         <div class="col-lg-8 col-md-12">
@@ -902,7 +902,7 @@
                                                             <div class="row">
                                                                 <div class="form-group col-4 pr-0">
                                                                     <div class="validate-input" data-validate="">
-                                                                        <input type="text"
+                                                                        <input type="time"
                                                                             onkeypress="valid_and_format_hour(this);return InputNumberOnly(event);"
                                                                             class="form-control" autocomplete="off"
                                                                             id="C_HIEU_LUC_TU_GIO"
@@ -916,7 +916,7 @@
                                                                 <div class="form-group col-8">
                                                                     <div class="input-group validate-input"
                                                                         data-validate="">
-                                                                        <input type="text"
+                                                                        <input type="date"
                                                                             onchange="load_pham_vi_bao_hiem_motor();"
                                                                             class="form-control mydatepicker"
                                                                             autocomplete="off" id="C_HIEU_LUC_TU_NGAY"
@@ -2086,7 +2086,7 @@
                                             <table id="list_ltt" class="table  table-bordered">
                                                 <thead class="thead-light">
                                                     <tr>
-                                                        <th>#</th>
+                                                        <th class="text-center">#</th>
                                                         <th class="text-center" width="1%">Lần</th>
                                                         <th class="text-center" width="36%">Ngày TT</th>
                                                         <th class="text-center" width="25%">Số tiền</th>
@@ -2096,7 +2096,7 @@
                                                 <tbody class="customtable">
 
                                                     <tr id="tr_ltt_0">
-                                                        <td>
+                                                        <td  align="center">
                                                             <input type="checkbox" id="cbltt0" name="cidltt" value="0">
                                                             <input type="hidden" name="PK_LICH_THANH_TOAN_BH_LTT0"
                                                                 value="">
@@ -2171,7 +2171,6 @@
                                 </div>
                             </div>
 
-                            <hr />
                             <div id="list_table_file">
                                 <h5 class="card-title text-uppercase text-danger">
                                     <i id="icon_tai_lieu" onclick="show_hide_box('box_tai_lieu','icon_tai_lieu');"
