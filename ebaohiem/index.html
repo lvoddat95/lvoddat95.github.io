@@ -1906,7 +1906,11 @@
                                                     for="C_DIEN_THOAI_NHAN_HOA_DON">Số
                                                     điện thoại:</label>
                                                 <div class="col-md-8 validate-input" data-validate="">
-                                                    <input type="text" class="form-control" autocomplete="off"
+                                                    <input type="text" pattern="[0-9]*" class="form-control" autocomplete="off"
+                                                        id="C_DIEN_THOAI_NHAN_HOA_DON" name="C_DIEN_THOAI_NHAN_HOA_DON"
+                                                        value=""
+                                                        onkeydown="change_focus(document.forms[0],this,event)" />
+                                                        <input type="number" pattern="[0-9]+" class="form-control" autocomplete="off"
                                                         id="C_DIEN_THOAI_NHAN_HOA_DON" name="C_DIEN_THOAI_NHAN_HOA_DON"
                                                         value=""
                                                         onkeydown="change_focus(document.forms[0],this,event)" />
