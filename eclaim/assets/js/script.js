@@ -116,3 +116,14 @@ $(function () {
 	});
 
 });
+
+var onchange_san_pham = function (p_this) {
+	let elemt = $(p_this);
+	if (elemt.val() == "tre-chuyen-bay") {
+		$("#tre-chuyen-bay").slideDown();
+		$("#an-tam-bay-cao").slideUp();
+	} else {
+		$("#an-tam-bay-cao").slideDown();
+		$("#tre-chuyen-bay").slideUp();
+	}
+}

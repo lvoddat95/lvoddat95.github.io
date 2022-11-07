@@ -1310,7 +1310,14 @@ table.rwd-table {
     margin: auto;
 }
 
-
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    max-width: 16px !important;
+    cursor: pointer;
+    color: var(--main-color);
+  }
+  
 
 
 

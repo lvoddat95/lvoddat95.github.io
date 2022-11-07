@@ -108,6 +108,129 @@
                                     </div>
                                 </div>
 
+                                <div class="border-ddd mb-3">
+                                    <div class="item">
+                                        <div class="item-title">Sản phẩm</div>
+                                        <div class="item-content">
+                                            <div class="row">
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <input type="radio" id="sp1" name="san-pham" value="tre-chuyen-bay"
+                                                        checked="checked" onchange="onchange_san_pham(this);">
+                                                    <label for="sp1" class="ms-2" style="cursor: pointer;">Trễ chuyễn bay</label>
+                                                </div>
+                                                <div class="col-md-6 col-12 d-flex align-items-center">
+                                                    <input type="radio" id="sp2" name="san-pham" value="an-tam-bay-cao" onchange="onchange_san_pham(this);">
+                                                    <label for="sp2" class="ms-2" style="cursor: pointer;">An tâm bay cao cùng VNI</label>
+                                                </div>
+                                            </div>
+
+                                            <ul id="tre-chuyen-bay" class="list-unstyled">
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option1">
+                                                        <input id="option1" type="checkbox" disabled="disabled"
+                                                            checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            a. Trễ chuyến bay
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option2">
+                                                        <input id="option2" type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            b. Huỷ chuyến bay
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option3">
+                                                        <input id="option3" type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            c. Bảo hiểm quay đầu/đáp xuống sân bay khác
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option4">
+                                                        <input id="option4" type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            d. Hành lý đến trễ
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <ul id="an-tam-bay-cao" class="list-unstyled" style="display: none;">
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option1">
+                                                        <input id="option1" type="checkbox" disabled="disabled"
+                                                            checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            a. Trễ chuyến bay
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option2">
+                                                        <input id="option2" type="checkbox" disabled="disabled"
+                                                        checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            b. Bảo hiểm quay đầu/đáp xuống sân bay khác 
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label
+                                                        class="custom-checkbox mt-4 d-flex align-content-center clear-fix"
+                                                        for="option3">
+                                                        <input id="option3" type="checkbox" disabled="disabled"
+                                                        checked="checked">
+                                                        <span class="checkmark"></span>
+                                                        <div class="text un-pre-line">
+                                                            c. Bảo hiểm du lịch trong nước
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group mb-3">
+                                    <label class="fw-medium mb-1">Sản phẩm: <span
+                                            class="text-danger">&nbsp;*</span></label>
+                                    <div class="row">
+                                        <div class="col-md-4 col-12 d-flex align-items-center">
+                                            <input type="radio" id="sp1" name="san-pham" value="tre-chuyen-bay" checked="checked">
+                                            <label for="sp1" class="ms-2">Trễ chuyễn bay</label>
+                                        </div>
+                                        <div class="col-md-4 col-12 d-flex align-items-center">
+                                            <input type="radio" id="sp2" name="san-pham" value="an-tam-bay-cao">
+                                            <label for="sp2" class="ms-2">An tâm bay cao cùng VNI</label>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+
+
                                 <div class="form-group mb-3">
                                     <label class="fw-medium mb-0 me-5">Ngày khiếu nại:</label>
                                     <span class="mb-0"><i
