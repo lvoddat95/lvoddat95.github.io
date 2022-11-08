@@ -746,7 +746,7 @@ select.select_element::-ms-expand {
     color: #424242;
 }
 
-.title p{
+.title p {
     font-size: 1.25rem;
 }
 
@@ -770,8 +770,11 @@ select.select_element::-ms-expand {
     background: linear-gradient(135deg, #e08e34 0%, #FF5722 100%);
 }
 
-.tie{
-    background-color: #fff;color: var(--sub-color2);border-radius: 2px;padding: 0 8px;
+.tie {
+    background-color: #fff;
+    color: var(--sub-color2);
+    border-radius: 2px;
+    padding: 0 8px;
 }
 
 .clearfix {
@@ -1177,11 +1180,14 @@ table.rwd-table {
     position: relative;
     padding-left: 23px;
     margin-bottom: 10px;
+    min-height: 16px;
+    min-width: 16px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    background: #fff;
 }
 
 .custom-checkbox input {
@@ -1198,7 +1204,8 @@ table.rwd-table {
     width: 16px;
     border: var(--border-gray)
 }
-.custom-checkbox input:checked~.checkmark{
+
+.custom-checkbox input:checked~.checkmark {
     border-color: var(--main-color);
 }
 
@@ -1216,9 +1223,11 @@ table.rwd-table {
     transform: translate(-50%, -50%);
     color: var(--main-color);
 }
+
 .custom-checkbox input:checked~.checkmark:after {
     display: block;
 }
+
 .select2 {
     width: 100% !important;
 }
@@ -1295,10 +1304,11 @@ table.rwd-table {
 }
 
 
-.upload-box label{
+.upload-box label {
     margin-bottom: 0;
 }
-.upload-icon{
+
+.upload-icon {
     width: 90px;
     height: 56px;
     border-radius: 4px;
@@ -1316,22 +1326,103 @@ input[type="radio"] {
     max-width: 16px !important;
     cursor: pointer;
     color: var(--main-color);
-  }
-  
+}
+
+
+.col-group {
+    display: flex;
+    -ms-display: flex;
+}
+
+.col-label {
+    float: left;
+    width: 100px;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+
+.col-content {
+    position: relative;
+    width: calc(100% - 100px);
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-weight: var(--fw-medium);
+}
+
+.form-group .col-label {
+    margin-bottom: 0;
+}
+
+.col-label-s {
+    width: 150px;
+}
+
+.col-label-s+.col-content {
+    width: calc(100% - 150px);
+}
+
+.col-label-s+.col-content-l {
+    max-width: 430px;
+}
+
+.col-label-s+.col-content-xl {
+    max-width: 832px;
+}
+
+.col-label-m {
+    width: 200px;
+}
+
+.col-label-m+.col-content {
+    width: calc(100% - 200px);
+}
+
+.col-label-l {
+    width: 300px;
+    font-weight: 400;
+}
+
+.col-label-l+.col-content {
+    width: calc(100% - 300px);
+}
+
+.col-content-xxl {
+    max-width: 920px;
+}
+
+.col-content-xl {
+    max-width: 720px;
+}
+
+.col-content-l {
+    max-width: 520px;
+}
+
+.col-content-m {
+    max-width: 260px;
+}
+
+.col-content-s {
+    max-width: 170px;
+}
+
+.col-content-xs {
+    max-width: 115px;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+.table>:not(:first-child) {
+    border-top: 1px solid currentColor;
+}
 
 
 
@@ -1369,9 +1460,7 @@ input[type="radio"] {
 
 }
 
-@media only screen and (max-width:1024px) {
-
-}
+@media only screen and (max-width:1024px) {}
 
 @media only screen and (max-width:991px) {
     .form_heading {
@@ -1398,7 +1487,7 @@ input[type="radio"] {
 }
 
 @media only screen and (max-width:767px) {
-    .title h2{
+    .title h2 {
         font-size: 1.6rem;
     }
 
