@@ -1,3 +1,5 @@
+import datatableJson from './vi.json' assert {type: 'json'};
+
 // Select2 
 ! function () {
 	if (jQuery && jQuery.fn && jQuery.fn.select2 && jQuery.fn.select2.amd) var n = jQuery.fn.select2.amd;
@@ -115,6 +117,19 @@ $(function () {
 		})
 	});
 
+	var table = $('.datatable').DataTable( {
+        dom:            "Bfrtip",
+        // scrollY:        "300px",
+        scrollX:        true,
+        // scrollCollapse: true,
+        paging:         false,
+        buttons:        [ 'colvis' ],
+        // fixedColumns:   {
+        //     left: 2
+        // },
+		"language": datatableJson
+    });
+	table.columns( [12,13,14,15,16] ).visible( false );
 });
 
 var onchange_san_pham = function (p_this) {

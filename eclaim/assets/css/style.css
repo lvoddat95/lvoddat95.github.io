@@ -1417,16 +1417,18 @@ input[type="radio"] {
 .col-content-xs {
     max-width: 115px;
 }
-
-
-
 .table>:not(:first-child) {
     border-top: 1px solid currentColor;
 }
 
 
 
-
+button.dt-button.active:not(.disabled), 
+div.dt-button.active:not(.disabled), 
+a.dt-button.active:not(.disabled), 
+input.dt-button.active:not(.disabled) {
+    background: linear-gradient(to bottom, #d1e2f7 0%, #79ace9 100%) !important;
+}
 
 
 
