@@ -25,3 +25,15 @@ signaturePad.addEventListener("afterUpdateStroke", () => {
 	$output.val(signaturePad.toDataURL());
 	// console.log(signaturePad.toDataURL());
 });
+
+
+function resizeCanvas() {
+	const ratio = Math.max(window.devicePixelRatio || 1, 1);
+	canvas.width = canvas.offsetWidth * ratio;
+	canvas.height = canvas.offsetHeight * ratio;
+	canvas.getContext("2d").scale(ratio, ratio);
+	signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
