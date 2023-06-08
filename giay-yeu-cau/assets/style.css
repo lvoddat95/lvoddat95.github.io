@@ -83,7 +83,7 @@
 
     /* Boostrap Config */
 
-    --container-width: 800px;
+    --container-width: 820px;
 
 }
 
@@ -396,6 +396,7 @@ p {
     width: 400px;
     opacity: .2;
     z-index: -1;
+    display: none;
 }
 
 .header {
@@ -491,4 +492,70 @@ tbody, td, tfoot, th, thead, tr {
 
 .show {
     display: flex;
+}
+
+.page {
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #333;
+    page-break-after: always;
+}
+
+.page::after {
+    content: "";
+    background-image: url(./logo-icon.png);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    opacity: .2;
+    height: 100%;
+    z-index: -1;
+}
+
+#button {
+    position: sticky;
+    bottom: 0;
+    z-index: 1123;
+    padding: 0 0 10px;
+    background: #fff;
+}
+
+@media print {
+    #button {
+        display: none;
+    }
+
+    .page {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+}
+
+.diagonalCross {
+    background: linear-gradient(to top right, transparent calc(50% - 1px), black , transparent calc(50% + 1px) );
+}
+
+.line{
+    color:#fff;
+    background: var(--main-color);
+    padding: 2px 4px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.text{
+    position: relative;
+    margin-bottom: 2px;
+    padding-left: 22px;
+}
+.text > span{
+    position: absolute;
+    left: 0;
 }
