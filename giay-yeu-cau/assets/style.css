@@ -539,23 +539,98 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .diagonalCross {
-    background: linear-gradient(to top right, transparent calc(50% - 1px), black , transparent calc(50% + 1px) );
+    background: linear-gradient(to top right, transparent calc(50% - 1px), black, transparent calc(50% + 1px));
 }
 
-.line{
-    color:#fff;
+.line {
+    color: #fff;
     background: var(--main-color);
     padding: 2px 4px;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-.text{
+.text {
     position: relative;
     margin-bottom: 2px;
     padding-left: 22px;
 }
-.text > span{
+
+.text>span {
     position: absolute;
     left: 0;
+}
+
+
+.height-100 {
+    height: 100vh
+}
+
+.card {
+    width: 400px;
+    border: none;
+    box-shadow: 0px 5px 20px 0px #d2dae3;
+    padding: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.card h6 {
+    color: var(--main-color);
+    font-size: 20px
+}
+
+.inputs input {
+    width: 40px;
+    height: 40px
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0
+}
+
+.card-2 {
+    background-color: #fff;
+    padding: 10px;
+    width: 350px;
+    height: 100px;
+    bottom: -50px;
+    left: 20px;
+    position: absolute;
+    border-radius: 5px
+}
+
+.card-2 .content {
+    margin-top: 50px
+}
+
+.card-2 .content a {
+    color: var(--main-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid var(--main-color);
+}
+
+.validate {
+    border-radius: 20px;
+    height: 40px;
+    width: 140px;
+    background-color: var(--main-color) !important;
+    border: 1px solid var(--main-color);
+}
+
+.validate:hover{
+    opacity: .8;
+}
+
+.background-transparent{
+    background: transparent;
 }
