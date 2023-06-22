@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiêu đề trang</title>
+</head>
+
+<body>
+    <style>
+        #container {
+            font-size: 14px;
+            margin: auto;
+            max-width: 1063px;
+            line-height: normal;
+            padding: 15px;
+            border: 1px solid #ccc;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        table tr {
+        }
+
+        table td {
+            vertical-align: top;
+            padding: 0 0 4px;
+        }
+
+        @media print {
+            thead:fisrt-child() {
+                display: table-cell;
+            }
+
+            tfoot:last-of-type {
+                display: table-row-group;
+            }
+
+            .table tr.row-checked:hover,
+            .table tr.row-checked:hover td,
+            .table tbody tr:hover {
+                background-color: transparent !important;
+            }
+
+            #container {
+                border: 0;
+                padding: 0;
+            }
+        }
+    </style>
+    <div id="container">
+
+        <center>
+            <strong>TỔNG CÔNG TY CỔ PHẦN BẢO HIỂM HÀNG KHÔNG</strong>
+            <p style="margin:5px 0 0;">Chi nhánh: VNI Quảng Bình</p>
+        </center>
+
+        <div style="height: 30px;"></div>
+
+        <center>
+            <strong>PHIẾU THU PHÍ BẢO HIỂM</strong>
+            <p style="margin:5px 0 0;">Ngày nộp: 17/02/2023</p>
+        </center>
+
+        <div style="text-align: right;">
+            <i>Số: 2023/356/PTT/96</i>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Tên người nộp:</td>
+                <td>Vũ Thị Như Quỳnh</td>
+            </tr>
+            <tr>
+                <td>Địa chi:</td>
+                <td>PKD2</td>
+            </tr>
+            <tr>
+                <td>Số tiền:</td>
+                <td>
+                    5,123,213,222.00 VNĐ <br>
+                    <i>(Bằng chữ: <b>Năm triệu bốn trăm hai mươi bảy nghìn sáu trăm mười ba
+                            đồng</b>)</i>
+                </td>
+            </tr>
+            <tr>
+                <td>Nội dung</td>
+                <td>Thu phí BH đơn số: 364/2023/F02</td>
+            </tr>
+        </table>
+
+        <div style="height: 50px;"></div>
+
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 25%; text-align: center;">
+                    <b>Lãnh đạo đơn vị</b>
+                </td>
+                <td style="width: 25%; text-align: center;">
+                    <b>Phụ trách kế toán</b>
+                </td>
+                <td style="width: 25%; text-align: center;">
+                    <b>Thủ quỹ</b>
+                </td>
+                <td style="width: 25%; text-align: center;">
+                    <b>Người nộp tiền</b>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
