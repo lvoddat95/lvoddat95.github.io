@@ -70,6 +70,7 @@
     <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
     <script type="text/javascript" src="assets/js/library.js"></script>
     <script type="text/javascript" src="assets/js/data.ajax.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 
 </head>
 
@@ -509,7 +510,7 @@
                                     </div>
                                     <div class="payment-text hidden-xs">Bước 3</div>
                                 </a>
-                                <div class="payment-summary hidden-xs">Thông tin cá nhân</div>
+                                <div class="payment-summary hidden-xs">Thông tin người được bảo hiểm</div>
                             </div>
 
                             <div class="payment-step-item readonly ">
@@ -549,77 +550,14 @@
                                     <div class="form-group">
                                         <div class="lbl-txt">Sản phẩm</div>
                                         <div class="form-content">
-                                            <span style="font-weight: 500; text-transform: uppercase;">Bảo hiểm trễ chuyến bay</span>
+                                            <span style="font-weight: 500; text-transform: uppercase;">Bảo hiểm trễ
+                                                chuyến bay</span>
                                         </div>
                                     </div>
-
-                                    <!-- 
-
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Người được BH/Hành khách <span
-                                                class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content">
-                                            <input type="text" class="form-control payment-form-input"
-                                                data-rule-required="false" data-msg-required="Nhập họ và tên"
-                                                name="TenNDHB" id="TenNDHB" value="" placeholder="Họ và tên"
-                                                maxlength="200" />
-                                        </div>
-                                    </div>
-
-                                    
--->
 
                                     <div>
-                                        <h3>Thông tin chuyến bay</h3>
                                         <div class="form-group">
-                                            <div class="lbl-txt">Số hiệu chuyến bay <span class="cl-red">&nbsp;*</span>
-                                            </div>
-                                            <div class="form-content">
-                                                <input type="text" class="form-control payment-form-input mb10"
-                                                    data-rule-required="false"
-                                                    data-msg-required="Nhập số hiệu chuyến bay" name="SoHieuChuyenBay"
-                                                    id="SoHieuChuyenBay" value="" placeholder="VN123, QH456,..."
-                                                    maxlength="200" />
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="lbl-txt">Hãng bay <span class="cl-red">&nbsp;*</span>
-                                            </div>
-
-                                            <div class="form-content select-wrapper2 mb10">
-                                                <select name="GoiBaoHiem" data-rule-required="false"
-                                                    data-msg-required="Chọn hãng bay" id="GoiBaoHiem"
-                                                    class="js-select2 payment-form-select">
-                                                    <option value="">Chọn hãng bay</option>
-                                                    <option value="VN">Vietnam Airline (VN)</option>
-                                                    <option value="VJ">Vietjet Air (VJ)</option>
-                                                    <option value="BL">Jetstar Pacific Airlines (BL)</option>
-                                                    <option value="QH">Bamboo Airways (QH)</option>
-                                                    <option value="VU">Vietravel Airlines (VU)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="lbl-txt">Ngày bay <span class="cl-red">&nbsp;*</span>
-                                            </div>
-                                            <div class="form-content">
-                                                <div class='input-group date js-datepicker mb10'>
-                                                    <input type="text" class="form-control payment-form-input"
-                                                        onkeyup="FormatDate(this,event)" data-rule-required="false"
-                                                        data-msg-required="Nhập ngày đi" name="FromDate" id="FromDate"
-                                                        value="" placeholder="dd/mm/yyyy" maxlength="10" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="lbl-txt">Hành trình <span class="cl-red">&nbsp;*</span>
+                                            <div class="lbl-txt">Điểm đi <span class="cl-red">&nbsp;*</span>
                                             </div>
                                             <div class="form-content">
                                                 <div class="row gutter-10">
@@ -628,7 +566,7 @@
                                                             <select name="HanhTrinhTu" data-rule-required="false"
                                                                 data-msg-required="Chọn hãng bay" id="HanhTrinhTu"
                                                                 class="js-select2 payment-form-select">
-                                                                <option value="HAN">&#9992; Điểm đi</option>
+                                                                <option value="HAN">🛫 Chọn</option>
                                                                 <option value="HAN">Hà Nội (HAN)</option>
                                                                 <option value="SGN">Hồ Chí Minh (SGN)</option>
                                                                 <option value="DAD">Đà Nẵng (DAD)</option>
@@ -654,12 +592,23 @@
                                                             </select>
                                                         </div>
                                                     </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Điểm đến <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+
                                                     <div class="col-md-6">
                                                         <div class="select-wrapper2">
                                                             <select name="HanhTrinhDen" data-rule-required="false"
                                                                 data-msg-required="Chọn hãng bay" id="HanhTrinhDen"
                                                                 class="js-select2 payment-form-select">
-                                                                <option value="">&#9992; Điểm đến</option>
+                                                                <option value="">🛬 Chọn</option>
                                                                 <option value="HAN">Hà Nội (HAN)</option>
                                                                 <option value="SGN">Hồ Chí Minh (SGN)</option>
                                                                 <option value="DAD">Đà Nẵng (DAD)</option>
@@ -688,106 +637,154 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Loại chuyến đi <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+                                                    <div class="col-md-6 ">
+                                                        <label class="cs-radio">
+                                                            Một chiều
+                                                            <input type="radio" id="loai1" name="LoaiChuyenDi"
+                                                                value="mot-chieu" checked onchange="LoaiChuyenDiOnChange(this);">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="cs-radio ">
+                                                            Khứ hồi
+                                                            <input type="radio" id="loai2" name="LoaiChuyenDi"
+                                                                value="khu-hoi" onchange="LoaiChuyenDiOnChange(this);">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Gói bảo hiểm <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+                                                    <div class="col-md-6">
+                                                        <div class="form-content select-wrapper2">
+                                                            <select name="GoiBaoHiem" data-rule-required="false"
+                                                                data-msg-required="Chọn số tiền bảo hiểm" id="GoiBaoHiem"
+                                                                class="js-select2 payment-form-select" onchange="GoiBaoHiemOnChange(this)">
+                                                                <option value="ca-nhan">Cá nhân</option>
+                                                                <option value="gia-dinh">Gia đình</option>
+                                                                <option value="khach-doan">Khách đoàn</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Số lượng <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+                                                    <div class="col-md-6">
+                                                        <div class="form-content">
+                                                            <input type="number"
+                                                                class="form-control payment-form-input mb10"
+                                                                data-rule-required="false"
+                                                                data-msg-required="Nhập số lượng" name="SoLuong"
+                                                                id="SoLuong" value="1" placeholder="0" maxlength="3" disabled/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-content">
+                                                            <input type="number" disabled
+                                                                class="form-control payment-form-input mb10"
+                                                                data-rule-required="false"
+                                                                data-msg-required="Nhập số lượng" name="SoLuongTreEm"
+                                                                id="SoLuongTreEm" value="" placeholder="Trẻ em"
+                                                                maxlength="3" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Ngày đi <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+                                                    <div class="col-md-6">
+                                                        <div class='input-group date js-datepicker mb10'>
+                                                            <input type="text" class="form-control payment-form-input"
+                                                                onkeyup="FormatDate(this,event)"
+                                                                data-rule-required="false"
+                                                                data-msg-required="Nhập ngày đi" name="FromDate"
+                                                                id="FromDate" value="" placeholder="dd/mm/yyyy"
+                                                                maxlength="10" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control payment-form-input mb10"
+                                                            data-rule-required="false"
+                                                            data-msg-required="Nhập số hiệu chuyến bay"
+                                                            name="SoHieuChuyenBay" id="SoHieuChuyenBay" value=""
+                                                            placeholder="* Số hiệu chuyến bay" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="NgayVeBox" class="form-group" style="display: none;">
+                                            <div class="lbl-txt">Ngày về <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <div class="row gutter-10">
+                                                    <div class="col-md-6">
+                                                        <div class='input-group date js-datepicker mb10'>
+                                                            <input type="text" class="form-control payment-form-input"
+                                                                onkeyup="FormatDate(this,event)"
+                                                                data-rule-required="false"
+                                                                data-msg-required="Nhập ngày về" name="ToDate"
+                                                                id="ToDate" value="" placeholder="dd/mm/yyyy"
+                                                                maxlength="10" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="text" class="form-control payment-form-input mb10"
+                                                            data-rule-required="false"
+                                                            data-msg-required="Nhập số hiệu chuyến bay"
+                                                            name="SoHieuChuyenBay" id="SoHieuChuyenBay" value=""
+                                                            placeholder="* Số hiệu chuyến bay" maxlength="200" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="lbl-txt">Mã đặt chỗ <span class="cl-red">&nbsp;*</span>
+                                            </div>
+                                            <div class="form-content">
+                                                <input type="text" class="form-control payment-form-input mb10"
+                                                    data-rule-required="false"
+                                                    data-msg-required="Nhập " name="MaDatCho"
+                                                    id="MaDatCho" value="" placeholder=""
+                                                    maxlength="200" />
+                                            </div>
+                                        </div>
+
+
+
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <div class="lbl-txt">Thông tin chuyến bay<span class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content">
-                                            <input type="text" class="form-control payment-form-input mb10"
-                                            data-rule-required="false" data-msg-required="Nhập số hiệu chuyến bay"
-                                            name="SoHieuChuyenBay" id="SoHieuChuyenBay" value=""
-                                            placeholder="Số hiệu chuyến bay" maxlength="200" />
 
-                                            <div class="form-content select-wrapper2 mb10">
-                                                <select name="GoiBaoHiem" data-rule-required="false"
-                                                    data-msg-required="Chọn hãng bay" id="GoiBaoHiem"
-                                                    class="js-select2 payment-form-select">
-                                                    <option value="">Chọn hãng bay</option>
-                                                    <option value="VN">Vietnam Airline (VN)</option>
-                                                    <option value="VJ">Vietjet Air (VJ)</option>
-                                                    <option value="BL">Jetstar Pacific Airlines (BL)</option>
-                                                    <option value="QH">Bamboo Airways (QH)</option>
-                                                    <option value="VU">Vietravel Airlines (VU)</option>
-                                                </select>
-                                            </div>
-
-                                            <div class='input-group date js-datepicker mb10'>
-                                                <input type="text" class="form-control payment-form-input"
-                                                    onkeyup="FormatDate(this,event)" data-rule-required="false"
-                                                    data-msg-required="Nhập ngày đi" name="FromDate" id="FromDate"
-                                                    value="" placeholder="Ngày bay" maxlength="10" />
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="row gutter-10">
-                                                <div class="col-md-6">
-                                                    <div class="select-wrapper2">
-                                                        <select name="HanhTrinhTu" data-rule-required="false"
-                                                            data-msg-required="Chọn hãng bay" id="HanhTrinhTu"
-                                                            class="js-select2 payment-form-select">
-                                                            <option value="HAN">&#9992; Điểm đi</option>
-                                                            <option value="HAN">Hà Nội (HAN)</option>
-                                                            <option value="SGN">Hồ Chí Minh (SGN)</option>
-                                                            <option value="DAD">Đà Nẵng (DAD)</option>
-                                                            <option value="CXR">Nha Trang (CXR)</option>
-                                                            <option value="PQC">Phú Quốc (PQC)</option>
-                                                            <option value="HUI">Huế (HUI)</option>
-                                                            <option value="HPH">Hải Phòng (HPH)</option>
-                                                            <option value="VCA">Cần Thơ (VCA)</option>
-                                                            <option value="CAH">Cà Mau (CAH)</option>
-                                                            <option value="VCS">Côn Đảo (VCS)</option>
-                                                            <option value="VCL">Chu Lai (VCL)</option>
-                                                            <option value="BMV">Buôn Ma Thuột (BMV)</option>
-                                                            <option value="DLI">Đà Lạt (DLI)</option>
-                                                            <option value="DIN">Điện Biên (DIN)</option>
-                                                            <option value="VDH">Đồng Hới (VDH)</option>
-                                                            <option value="THD">Thanh Hóa (THD)</option>
-                                                            <option value="TBB">Tuy Hoà (TBB)</option>
-                                                            <option value="UIH">Quy Nhơn (UIH)</option>
-                                                            <option value="PXU">Pleiku (PXU)</option>
-                                                            <option value="VKG">Rạch Giá (VKG)</option>
-                                                            <option value="VII">Vinh (VII)</option>
-                                                            <option value="VDO">Vân Đồn (VDO)</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="select-wrapper2">
-                                                        <select name="HanhTrinhDen" data-rule-required="false"
-                                                            data-msg-required="Chọn hãng bay" id="HanhTrinhDen"
-                                                            class="js-select2 payment-form-select">
-                                                            <option value="">&#9992; Điểm đến</option>
-                                                            <option value="HAN">Hà Nội (HAN)</option>
-                                                            <option value="SGN">Hồ Chí Minh (SGN)</option>
-                                                            <option value="DAD">Đà Nẵng (DAD)</option>
-                                                            <option value="CXR">Nha Trang (CXR)</option>
-                                                            <option value="PQC">Phú Quốc (PQC)</option>
-                                                            <option value="HUI">Huế (HUI)</option>
-                                                            <option value="HPH">Hải Phòng (HPH)</option>
-                                                            <option value="VCA">Cần Thơ (VCA)</option>
-                                                            <option value="CAH">Cà Mau (CAH)</option>
-                                                            <option value="VCS">Côn Đảo (VCS)</option>
-                                                            <option value="VCL">Chu Lai (VCL)</option>
-                                                            <option value="BMV">Buôn Ma Thuột (BMV)</option>
-                                                            <option value="DLI">Đà Lạt (DLI)</option>
-                                                            <option value="DIN">Điện Biên (DIN)</option>
-                                                            <option value="VDH">Đồng Hới (VDH)</option>
-                                                            <option value="THD">Thanh Hóa (THD)</option>
-                                                            <option value="TBB">Tuy Hoà (TBB)</option>
-                                                            <option value="UIH">Quy Nhơn (UIH)</option>
-                                                            <option value="PXU">Pleiku (PXU)</option>
-                                                            <option value="VKG">Rạch Giá (VKG)</option>
-                                                            <option value="VII">Vinh (VII)</option>
-                                                            <option value="VDO">Vân Đồn (VDO)</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div> -->
 
                                     <div class="modal fade modalChuyeBay" id="modalChuyeBay" tabindex="-1" role="dialog"
                                         aria-labelledby="modalChuyeBay">
@@ -966,7 +963,8 @@
                                 Thành Phố Hà Nội</p>
                             <div class="flex-sm">
                                 <p class="footer__info--text"><span>Tel:(024)-6276 5555</span><span>&nbsp;|&nbsp;</span>
-                                    <span class="footer__info--text">Fax:(024)-6276 5556</span></p>
+                                    <span class="footer__info--text">Fax:(024)-6276 5556</span>
+                                </p>
                             </div>
                             <div class="flex-sm">
                                 <p class="footer__info--text">Hotline:097 276 5555</p>
@@ -989,27 +987,7 @@
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            ! function (s, u, b, i, z) {
-                                var o, t, r, y;
-                                s[i] || (s._sbzaccid = z, s[i] = function () {
-                                    s[i].q.push(arguments)
-                                }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net",
-                                    "storage.googleapis" + (t = ".com"),
-                                    "app.sbz.workers.dev", i + "a" + (o = function (k, t) {
-                                        var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3);
-                                        return k !== t ? n : n.toString(32)
-                                    })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t
-                                ], (y = function (k) {
-                                    var t, n;
-                                    s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u
-                                        .getElementsByTagName(b)[
-                                            0], t.async = 1, t.src = "https://" + r[k] +
-                                        "/sbz/app.js?accid=" + z, n.parentNode
-                                        .insertBefore(t, n), setTimeout(y, 2e3, k + 1))
-                                })(0))
-                            }(window, document, "script", "subiz", "acqqzzytstrrgkbunsnx")
-                        </script>
+                       
                     </div>
 
                 </div>

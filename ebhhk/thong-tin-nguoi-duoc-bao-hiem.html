@@ -509,7 +509,7 @@
                                     </div>
                                     <div class="payment-text hidden-xs">Bước 3</div>
                                 </a>
-                                <div class="payment-summary hidden-xs">Thông tin cá nhân</div>
+                                <div class="payment-summary hidden-xs">Thông tin người được bảo hiểm </div>
                             </div>
 
                             <div class="payment-step-item readonly ">
@@ -544,12 +544,14 @@
                     <div class="payment-content-wrapper">
                         <div class="payment-form">
                             <form method="post" name="form_payment" id="form_payment">
-                                <h4 class="payment-title">THÔNG TIN CÁ NHÂN</h4>
+
+                                <h4 class="payment-title">THÔNG TIN BẢO HIỂM</h4>
+
                                 <div class="payment-form-group">
-                                    <h3>Thông tin người mua bảo hiểm</h3>
+                                    <h3>Thông tin người yêu cầu bảo hiểm</h3>
                                     <div class="form-group">
                                         <div class="lbl-txt">
-                                            Họ và tên
+                                            Họ và tên người yêu cầu BH
                                             <span class="cl-red">&nbsp;*</span>
                                             <span class="info" data-toggle="tooltip" data-placement="top"
                                                 title="Đại lý, mẹ mua cho con,… người cùng chuyến bay"><i
@@ -562,159 +564,134 @@
                                                 placeholder="Nhập tiếng việt có dấu" maxlength="200" />
                                         </div>
                                     </div>
+
                                     <div class="form-group">
-                                        <div class="lbl-txt">Số CMND/CCCD/Hộ chiếu<span class="cl-red">&nbsp;*</span>
+                                        <div class="lbl-txt">Ngày sinh <span class="cl-red">&nbsp;*</span>
+                                        </div>
+                                        <div class="form-content">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-6">
+                                                    <div class='input-group date js-datepicker mb10'>
+                                                        <input type="text" class="form-control payment-form-input"
+                                                            onkeyup="FormatDate(this,event)" data-rule-required="false"
+                                                            data-msg-required="Nhập ngày đi" name="FromDate"
+                                                            id="FromDate" value="" placeholder="dd/mm/yyyy"
+                                                            maxlength="10" />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="lbl-txt">Số điện thoại<span class="cl-red">&nbsp;*</span>
+                                        </div>
+                                        <div class="form-content">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-6">
+                                                    <input type="number" class="form-control payment-form-input"
+                                                        data-rule-required="false" data-msg-required="" name="" id=""
+                                                        value="" placeholder="0987 654 321" maxlength="100" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="lbl-txt">Email<span class="cl-red">&nbsp;*</span>
                                         </div>
                                         <div class="form-content">
                                             <input type="number" class="form-control payment-form-input"
-                                                data-rule-required="false"
-                                                data-msg-required="Nhập số CMND/CCCD/Hộ chiếu " name="MaDinhDanh"
-                                                id="MaDinhDanh" value=""
-                                                placeholder="Chứng minh thư, thẻ căn cước, hộ chiếu" maxlength="100" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Tỉnh/Thành Phố:<span class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content select-wrapper2">
-                                            <select name="ThanhPho" data-rule-required="false"
-                                                data-msg-required="Vui lòng chọn Tỉnh/Thành Phố" id="ThanhPho"
-                                                class="js-select2 payment-form-select">
-                                                <option value="" data-select2-id="2">-- Chọn Tỉnh/Thành phố --
-                                                </option>
-                                                <optgroup label="Miền Bắc">
-                                                    <option value="4853">Bắc Giang</option>
-                                                    <option value="4870">Bắc Kạn</option>
-                                                    <option value="4863">Bắc Ninh</option>
-                                                    <option value="4865">Cao Bằng</option>
-                                                    <option value="12976">Điện Biên</option>
-                                                    <option value="4864">Hà Giang</option>
-                                                    <option value="4855">Hà Nam</option>
-                                                    <option value="4851">Hải Dương</option>
-                                                    <option value="13641">Hoà Bình</option>
-                                                    <option value="5013">Hưng Yên</option>
-                                                    <option value="4866">Lai Châu</option>
-                                                    <option value="4859">Lạng Sơn</option>
-                                                    <option value="4867">Lào Cai</option>
-                                                    <option value="4856">Nam Định</option>
-                                                    <option value="4858">Ninh Bình</option>
-                                                    <option value="4861">Phú Thọ</option>
-                                                    <option value="4854">Quảng Ninh</option>
-                                                    <option value="4860">Sơn La</option>
-                                                    <option value="4869">Tuyên Quang</option>
-                                                    <option value="4857">Thái Bình</option>
-                                                    <option value="4852">Thái Nguyên</option>
-                                                    <option value="4770">Thành Phố Hà Nội</option>
-                                                    <option value="4850">Thành Phố Hải Phòng</option>
-                                                    <option value="4862">Vĩnh Phúc</option>
-                                                    <option value="4868">Yên Bái</option>
-                                                </optgroup>
-                                                <optgroup label="Miền Trung">
-                                                    <option value="4879">Bình Định</option>
-                                                    <option value="4884">Đắk Lắk</option>
-                                                    <option value="20461">Đắk Nông</option>
-                                                    <option value="4883">Gia Lai</option>
-                                                    <option value="4873">Hà Tĩnh</option>
-                                                    <option value="4882">Kon Tum</option>
-                                                    <option value="4881">Khánh Hòa</option>
-                                                    <option value="4872">Nghệ An</option>
-                                                    <option value="4880">Phú Yên</option>
-                                                    <option value="4874">Quảng Bình</option>
-                                                    <option value="4877">Quảng Nam</option>
-                                                    <option value="4878">Quảng Ngãi</option>
-                                                    <option value="4875">Quảng Trị</option>
-                                                    <option value="4871">Thanh Hóa</option>
-                                                    <option value="4849">Thành Phố Đà Nẵng</option>
-                                                    <option value="4876">Thừa Thiên Huế</option>
-                                                </optgroup>
-                                                <optgroup label="Miền Nam">
-                                                    <option value="4899">An Giang</option>
-                                                    <option value="4892">Bà Rịa - Vũng Tàu</option>
-                                                    <option value="4902">Bạc Liêu</option>
-                                                    <option value="4896">Bến Tre</option>
-                                                    <option value="4890">Bình Dương</option>
-                                                    <option value="4889">Bình Phước</option>
-                                                    <option value="4887">Bình Thuận</option>
-                                                    <option value="4903">Cà Mau</option>
-                                                    <option value="4891">Đồng Nai</option>
-                                                    <option value="4894">Đồng Tháp</option>
-                                                    <option value="23032">Hậu Giang</option>
-                                                    <option value="4904">Kiên Giang</option>
-                                                    <option value="4885">Lâm Đồng</option>
-                                                    <option value="4893">Long An</option>
-                                                    <option value="4886">Ninh Thuận</option>
-                                                    <option value="4901">Sóc Trăng</option>
-                                                    <option value="4888">Tây Ninh</option>
-                                                    <option value="4895">Tiền Giang</option>
-                                                    <option value="4900">Thành Phố Cần Thơ</option>
-                                                    <option value="4807">Thành Phố Hồ Chí Minh</option>
-                                                    <option value="4897">Trà Vinh</option>
-                                                    <option value="4898">Vĩnh Long</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-
-                                        <div class="lbl-txt">Quận/Huyện:<span class="cl-red">&nbsp;*</span></div>
-                                        <div class="form-content select-wrapper2">
-                                            <select name="QuanHuyen" data-rule-required="false"
-                                                data-msg-required="Vui lòng chọn Quận/Huyện" id="QuanHuyen"
-                                                class="js-select2 payment-form-select">
-                                                <option value="" data-select2-id="4">--- Chọn Quận/Huyện ---
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Phường/Xã:<span class="cl-red">&nbsp;*</span></div>
-
-                                        <div class="form-content select-wrapper2">
-                                            <select name="PhuongXa" data-rule-required="false"
-                                                data-msg-required="Vui lòng chọn Phường/Xã" id="PhuongXa"
-                                                class="js-select2 payment-form-select">
-                                                <option value="" data-select2-id="6">-- Chọn Phường/Xã --</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Địa chỉ liên hệ:</div>
-                                        <div class="form-content">
-                                            <input type="text" class="form-control payment-form-input"
-                                                data-rule-required="true" data-msg-required="Nhập địa chỉ liên hệ"
-                                                name="BillingAddress" id="BillingAddress" value="" placeholder="Địa chỉ"
-                                                maxlength="500">
+                                                data-rule-required="false" data-msg-required="Nhập số Email "
+                                                name="Email" id="Email" value="" placeholder="email@gmail.com"
+                                                maxlength="100" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="payment-form-group">
-                                    <h3>Thông tin nhận giấy chứng nhận bảo hiểm</h3>
+                                    <h3>Chi tiết chuyến bay</h3>
                                     <div class="form-group">
-                                        <div class="lbl-txt">Email nhận GCNBH:<span class="cl-red">&nbsp;*</span>
+                                        <div class="lbl-txt">
+                                            Chuyến bay khởi hành 🛫<span class="cl-red">&nbsp;*</span>
                                         </div>
                                         <div class="form-content">
-                                            <input type="text" class="form-control payment-form-input"
-                                                autocomplete="off" data-rule-required="true" data-rule-email="true"
-                                                data-msg-email="Phải nhập đúng định dạng email"
-                                                data-msg-required="Nhập địa chỉ email" name="BillingEmail"
-                                                id="BillingEmail" value="" placeholder="Địa chỉ email" maxlength="100">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-6">
+                                                    Hà Nội (HAN)
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row gutter-10">
+                                                        <div class="col-md-4">
+                                                            Giờ đi
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="time" class="form-control payment-form-input"
+                                                                data-rule-required="false" data-msg-required="" name=""
+                                                                id="" value="" placeholder="00:00" maxlength="100" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="lbl-txt">Điện thoại liên hệ:<span class="cl-red">&nbsp;*</span>
+                                        <div class="lbl-txt">
+                                            Chuyến bay về 🛬<span class="cl-red">&nbsp;*</span>
                                         </div>
                                         <div class="form-content">
-                                            <input type="text" class="form-control payment-form-input"
-                                                autocomplete="off" data-rule-required="true"
-                                                data-msg-required="Nhập số điện thoại" name="BillingPhone"
-                                                id="BillingPhone" value="" placeholder="Số điện thoại" maxlength="100">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-6">
+                                                    Đà nẵng (DAD)
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row gutter-10">
+                                                        <div class="col-md-4">
+                                                            Giờ về
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type="time" class="form-control payment-form-input"
+                                                                data-rule-required="false" data-msg-required="" name=""
+                                                                id="" value="" placeholder="00:00" maxlength="100" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
+
                                 <div class="payment-form-group">
-                                    <h3>Thông tin người được BH/Hành khách</h3>
+                                    <h3>Thông tin người được bảo hiểm</h3>
+
+                                    <div class="register-wrapper">
+                                        <div class="container contact__container">
+                                            <div class="contact-info" style="margin-bottom: 10px;">
+                                                <a href="javascript:void(0)" onclick="$('#postedFile').click();"
+                                                    style="font-size: 14px; font-style: italic; text-align: left"
+                                                    class="register-link"><i class="fa fa-upload"></i>&nbsp;<i
+                                                        class="fa fa-file-excel-o"></i>&nbsp;Chọn danh sách người tham
+                                                    gia từ file excel</a>
+                                                <input type="file" onchange="LoadNguoiThamGia(event)" id="postedFile"
+                                                    name="postedFile" style="display: none;">
+                                            </div>
+                                            <div class="contact-form" style="margin-bottom: 10px;">
+                                                <a target="_blank"
+                                                    href="/Data/TempFile/Mau_import_danh_sach_nguoi_tham_gia_bao_hiem.xlsx"
+                                                    style="font-size: 14px; font-style: italic; text-align: right;"
+                                                    class="register-link"><i class="fa fa-download"></i>&nbsp;<i
+                                                        class="fa fa-file-excel-o"></i>&nbsp;Tải file danh sách mẫu tại
+                                                    đây</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group hidden-xs">
                                         <table class="table table-bordered table-hover table-beneficiary"
                                             id="table_person">
@@ -723,6 +700,8 @@
                                                     <th class="w54">STT</th>
                                                     <th>Họ và tên</th>
                                                     <th class="w100">Giới tính</th>
+                                                    <th class="w100">Ngày sinh</th>
+                                                    <th class="w100">CMND/CCCD/Hộ chiếu</th>
                                                     <th class="w160">Thao tác</th>
                                                 </tr>
                                             </thead>
@@ -779,18 +758,37 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <!-- <div class="form-group">
-                                                                    <label class="form-label payment-label">Quan
-                                                                        hệ</label>
-                                                                    <div class="form-content">
+
+                                                            <div class="form-group">
+                                                                <label class="form-label payment-label">Ngày
+                                                                    sinh<span class="cl-red"> *</span></label>
+                                                                <div class="form-content">
+                                                                    <div class='input-group date js-datepicker mb10'>
                                                                         <input type="text"
                                                                             class="form-control payment-form-input"
-                                                                            name="Relationship" id="Relationship"
-                                                                            value=""
-                                                                            placeholder="Quạn hệ với người được bảo hiểm"
-                                                                            maxlength="100">
+                                                                            onkeyup="FormatDate(this,event)"
+                                                                            data-rule-required="false"
+                                                                            data-msg-required="Nhập ngày về"
+                                                                            name="ToDate" id="ToDate" value=""
+                                                                            placeholder="dd/mm/yyyy" maxlength="10" />
+                                                                        <span class="input-group-addon">
+                                                                            <span
+                                                                                class="glyphicon glyphicon-calendar"></span>
+                                                                        </span>
                                                                     </div>
-                                                                </div> -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="form-label payment-label">CMND/CCCD/Hộ
+                                                                    chiếu<span class="cl-red"> *</span></label>
+                                                                <div class="form-content">
+                                                                    <input type="number"
+                                                                        class="form-control payment-form-input" name=""
+                                                                        id="" value="" placeholder="" maxlength="100">
+                                                                </div>
+                                                            </div>
+
+
                                                             <div class="form-group">
                                                                 <div class="form-button-wrapper">
                                                                     <a class="btn button-gray2 mr20" id="id_close_modal"
@@ -922,7 +920,8 @@
                                 Thành Phố Hà Nội</p>
                             <div class="flex-sm">
                                 <p class="footer__info--text"><span>Tel:(024)-6276 5555</span><span>&nbsp;|&nbsp;</span>
-                                    <span class="footer__info--text">Fax:(024)-6276 5556</span></p>
+                                    <span class="footer__info--text">Fax:(024)-6276 5556</span>
+                                </p>
                             </div>
                             <div class="flex-sm">
                                 <p class="footer__info--text">Hotline:097 276 5555</p>
@@ -945,27 +944,7 @@
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            ! function (s, u, b, i, z) {
-                                var o, t, r, y;
-                                s[i] || (s._sbzaccid = z, s[i] = function () {
-                                    s[i].q.push(arguments)
-                                }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net",
-                                    "storage.googleapis" + (t = ".com"),
-                                    "app.sbz.workers.dev", i + "a" + (o = function (k, t) {
-                                        var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3);
-                                        return k !== t ? n : n.toString(32)
-                                    })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t
-                                ], (y = function (k) {
-                                    var t, n;
-                                    s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u
-                                        .getElementsByTagName(b)[
-                                            0], t.async = 1, t.src = "https://" + r[k] +
-                                        "/sbz/app.js?accid=" + z, n.parentNode
-                                        .insertBefore(t, n), setTimeout(y, 2e3, k + 1))
-                                })(0))
-                            }(window, document, "script", "subiz", "acqqzzytstrrgkbunsnx")
-                        </script>
+
                     </div>
 
                 </div>

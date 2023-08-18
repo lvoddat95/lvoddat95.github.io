@@ -70,6 +70,7 @@
     <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
     <script type="text/javascript" src="assets/js/library.js"></script>
     <script type="text/javascript" src="assets/js/data.ajax.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 
 </head>
 
@@ -509,7 +510,7 @@
                                     </div>
                                     <div class="payment-text hidden-xs">Bước 3</div>
                                 </a>
-                                <div class="payment-summary hidden-xs">Thông tin cá nhân</div>
+                                <div class="payment-summary hidden-xs">Thông tin người được bảo hiểm</div>
                             </div>
 
                             <div class="payment-step-item readonly ">
@@ -549,63 +550,127 @@
 
                                     <h6 class="payment-form-headline">Bảo hiểm trễ chuyến bay</h6>
 
-                                    <!-- <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Số Passport/ID/CCCD: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">0123456789</span></p>
-                                    </div>
-
                                     <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Người được BH/Hành khách: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">Nguyễn Văn A</span></p>
-                                    </div>
-
-                                    <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Người mua bảo hiểm: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">Lê Văn B</span></p>
-                                    </div> -->
-
-                                    <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Hãng bay: </p>
+                                        <p class="lbl-txt">Điểm đi:</p>
                                         <div class="detail-txt">
-                                            <span style="font-weight: 500;">Bamboo Airways (QH)</span>
+                                            <span style="font-weight: 500;">Hà Nội (HAN)</span>
                                         </div>
                                     </div>
 
                                     <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Số hiệu chuyến bay: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">QH1525</span></p>
-                                    </div>
-
-                                    <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Ngày khởi hành: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">20/08/2022</span></p>
-                                    </div>
-
-                                    <div class="form-group mb10 flex-row-mb">
-                                        <p class="lbl-txt">Hành trình: </p>
-                                        <p class="detail-txt"><span style="font-weight: 500;">Đà Nẵng - Hà Nội</span>
-                                        </p>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Số tiền BH/Mức trách nhiệm <span
-                                                class="cl-red">&nbsp;*</span></div>
-                                        <div class="form-content select-wrapper2">
-                                            <select name="STBH" data-rule-required="false"
-                                                data-msg-required="Chọn số tiền bảo hiểm" id="STBH"
-                                                class="js-select2 payment-form-select">
-                                                <option value="">--- Chọn số tiền bảo hiểm ---</option>
-                                                <option value="500000">500 nghìn đồng</option>
-                                                <option value="1000000">1 triệu đồng</option>
-                                                <option value="1500000">1,5 triệu đồng</option>
-                                                <option value="2000000">2 triệu đồng</option>
-                                            </select>
+                                        <p class="lbl-txt">Điểm đến:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">Đà Nẵng (DAD)</span>
                                         </div>
                                     </div>
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt">Gió bảo hiểm:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">Gia đình</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt">Số lượng:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">2</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt">Ngày đi:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">17/08/2023</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt">Ngày về:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">17/09/2023</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt">Mã đặt chỗ:</p>
+                                        <div class="detail-txt">
+                                            <span style="font-weight: 500;">23ABCXTY</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-chuong-trinh">
+                                        <div class="lbl-txt">
+                                            Chọn chương trình
+                                        </div>
+                                        <div class="form-content">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-6 ">
+                                                    <label class="cs-radio">
+                                                        Chương trình 1
+                                                        <input type="radio" id="loai1" name="ChuongTrinh" value="ct1"
+                                                            checked onchange="ChuongTrinhOnChange(this);">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="cs-radio ">
+                                                        Chương trình 2
+                                                        <input type="radio" id="loai2" name="ChuongTrinh" value="ct2"
+                                                            onchange="ChuongTrinhOnChange(this);">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb20">
+                                        <table class="table table-bordered table-hover table-beneficiary">
+                                            <thead>
+                                                <tr>
+                                                    <th class="">Quyền lợi</th>
+                                                    <th>Thời gian trì hoãn</th>
+                                                    <th class="">Số tiền bảo hiểm</th>
+                                                    <th class="">Phí bảo hiểm</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="chuong-trinh-1">
+                                                <tr>
+                                                    <td rowspan="2">Trễ chuyến bay</td>
+                                                    <td>120 - 180 phút</td>
+                                                    <td>350,000 VNĐ</td>
+                                                    <td rowspan="2">54,000 VNĐ</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Trên 180 phút</td>
+                                                    <td>700,000 VNĐ</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody id="chuong-trinh-2" style="display: none;">
+                                                <tr>
+                                                    <td rowspan="2">Trễ chuyến bay</td>
+                                                    <td>120 - 180 phút</td>
+                                                    <td>600,000 VNĐ</td>
+                                                    <td rowspan="2">72,000 VNĐ</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Trên 180 phút</td>
+                                                    <td>1,200,000 VNĐ</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+
 
                                     <div class="form-group">
                                         <p class="lbl-txt">Phí bảo hiểm (gồm VAT):&nbsp;</p>
-                                        <p class="detail-txt" style="color: #006c81;" id="total_phi">0 VNĐ</p>
+                                        <p class="detail-txt" style="color: #006c81;" id="total_phi">54,000 VNĐ</p>
                                     </div>
                                 </div>
 
@@ -722,7 +787,8 @@
                                 Thành Phố Hà Nội</p>
                             <div class="flex-sm">
                                 <p class="footer__info--text"><span>Tel:(024)-6276 5555</span><span>&nbsp;|&nbsp;</span>
-                                    <span class="footer__info--text">Fax:(024)-6276 5556</span></p>
+                                    <span class="footer__info--text">Fax:(024)-6276 5556</span>
+                                </p>
                             </div>
                             <div class="flex-sm">
                                 <p class="footer__info--text">Hotline:097 276 5555</p>
@@ -745,27 +811,7 @@
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            ! function (s, u, b, i, z) {
-                                var o, t, r, y;
-                                s[i] || (s._sbzaccid = z, s[i] = function () {
-                                    s[i].q.push(arguments)
-                                }, s[i].q = [], s[i]("setAccount", z), r = ["widget.subiz.net",
-                                    "storage.googleapis" + (t = ".com"),
-                                    "app.sbz.workers.dev", i + "a" + (o = function (k, t) {
-                                        var n = t <= 6 ? 5 : o(k, t - 1) + o(k, t - 3);
-                                        return k !== t ? n : n.toString(32)
-                                    })(20, 20) + t, i + "b" + o(30, 30) + t, i + "c" + o(40, 40) + t
-                                ], (y = function (k) {
-                                    var t, n;
-                                    s._subiz_init_2094850928430 || r[k] && (t = u.createElement(b), n = u
-                                        .getElementsByTagName(b)[
-                                            0], t.async = 1, t.src = "https://" + r[k] +
-                                        "/sbz/app.js?accid=" + z, n.parentNode
-                                        .insertBefore(t, n), setTimeout(y, 2e3, k + 1))
-                                })(0))
-                            }(window, document, "script", "subiz", "acqqzzytstrrgkbunsnx")
-                        </script>
+
                     </div>
 
                 </div>
