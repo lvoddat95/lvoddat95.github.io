@@ -2574,7 +2574,7 @@ ul.footer__navbar__menu .navbar__menu--link:hover {
 
 @media screen and (min-width: 768px) {
     .product-logo-image {
-        width: auto
+        width: 100px;
     }
 }
 
