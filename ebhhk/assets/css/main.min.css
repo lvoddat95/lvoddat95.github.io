@@ -1459,6 +1459,7 @@ ul {
 .header__phone {
     padding: 0 10px;
 }
+
 .header-fixed .header__phone {
     font-size: 12px;
 }
@@ -1611,7 +1612,7 @@ ul.header__navbar__menu>li:hover .header__navbar__menu2, ul.header__navbar__menu
     background-color: #fff
 }
 
-.header-fixed .header__navbar__menu .navbar__menu--link{
+.header-fixed .header__navbar__menu .navbar__menu--link {
     font-size: 13px;
     padding: 0 12px;
 }
@@ -6840,6 +6841,23 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     user-select: none;
     font-weight: 400;
     font-size: 16px;
+}
+
+.cs-radio-small {
+    font-size: 14px;
+    padding-left: 25px;
+}
+
+.cs-radio.cs-radio-small .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+}
+
+.cs-radio-small .checkmark {
+    height: 18px;
+    width: 18px
 }
 
 /* Hide the browser's default radio button */
