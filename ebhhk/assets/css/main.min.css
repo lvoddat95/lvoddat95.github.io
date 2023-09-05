@@ -1140,11 +1140,11 @@ ul {
 }
 
 .mt-15 {
-    margin-top: 15;
+    margin-top: 15px;
 }
 
 .mb-15 {
-    margin-bottom: 15;
+    margin-bottom: 15px;
 }
 
 .mt-20 {
@@ -7341,6 +7341,10 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
 }
 
 /* -------------------------------------------------------------------------- */
+.lbl-txt-col{
+    display: block;
+    padding: 8px 0;
+}
 .row.gutter-0 {
     margin-left: 0;
     margin-right: 0;
@@ -7500,7 +7504,7 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
 }
 
 
-.toggle {
+.custom-toggle {
     cursor: pointer;
     display: inline-block;
 }
@@ -7555,4 +7559,69 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     margin-left: 5px;
     position: relative;
     top: 2px;
+}
+.custom-checkbox {
+    width: 100%;
+    height: 40px;
+}
+
+.custom-checkbox input.input-checkbox {
+    display: none;
+}
+
+.custom-checkbox input.input-checkbox+label {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-checkbox input.input-checkbox+label>.status-switch {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: darkgrey;
+    color: white;
+    transition: all 0.5s ease;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.custom-checkbox input.input-checkbox+label>.status-switch:before, .custom-checkbox input.input-checkbox+label>.status-switch:after {
+    border-radius: 2px;
+    height: calc(100% - 6px);
+    width: calc(50% - 3px);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox input.input-checkbox+label>.status-switch:before {
+    background-color: white;
+    color: #424242;
+    box-shadow: 0 0 4px 4px rgb(0 0 0 / 10%);
+    left: 3px;
+    z-index: 10;
+    content: attr(data-unchecked);
+}
+
+.custom-checkbox input.input-checkbox+label>.status-switch:after {
+    right: 0;
+    content: attr(data-checked);
+}
+
+.custom-checkbox input.input-checkbox:checked+label>.status-switch {
+    background-color: #006c81;
+}
+
+.custom-checkbox input.input-checkbox:checked+label>.status-switch:after {
+    left: 0;
+    content: attr(data-unchecked);
+}
+
+.custom-checkbox input.input-checkbox:checked+label>.status-switch:before {
+    color: #006c81;
+    left: 50%;
+    content: attr(data-checked);
 }

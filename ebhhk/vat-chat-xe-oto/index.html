@@ -545,7 +545,8 @@
                 <div class="container">
                     <div class="payment-content-wrapper">
                         <div class="payment-form">
-                            <form method="post" name="form_payment" id="form_payment" action="thong-tin-chu-xe-lai-xe.html">
+                            <form method="post" name="form_payment" id="form_payment"
+                                action="thong-tin-chu-xe-lai-xe.html">
                                 <h4 class="payment-title">1. NHẬP THÔNG TIN CƠ BẢN</h4>
                                 <div class="pt-20 pb-20">
 
@@ -554,7 +555,7 @@
                                         <!-- <div class="form-group">
                                             <div class="row gutter-10">
                                                 <div class="col-md-3">
-                                                    <span class="lbl-txt">Sản phẩm</span>
+                                                    <span class="lbl-txt lbl-txt-col">Sản phẩm</span>
                                                 </div>
                                                 <div class="col-md-9">
                                                     <div class="form-content">
@@ -580,7 +581,7 @@
                                                                     Không kinh doanh
                                                                     <input type="radio" name="MucDichSuDung"
                                                                         value="khong-kinh-doanh" checked
-                                                                        onchange="LoaiChuyenDiOnChange(this);">
+                                                                        onchange="">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                             </div>
@@ -589,11 +590,21 @@
                                                                     Kinh doanh
                                                                     <input type="radio" name="MucDichSuDung"
                                                                         value="kinh-doanh"
-                                                                        onchange="LoaiChuyenDiOnChange(this);">
+                                                                        onchange="">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                             </div>
+                                                            
                                                         </div>
+                                                        <!-- <div class="custom-checkbox">
+                                                            <input class="input-checkbox" id="MucDichSuDung" type="checkbox" name="MucDichSuDung">
+                                                            <label for="MucDichSuDung">
+                                                                <div class="status-switch"
+                                                                    data-unchecked="Không kinh doanh"
+                                                                    data-checked="Kinh doanh">
+                                                                </div>
+                                                            </label>
+                                                        </div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -604,7 +615,7 @@
                                         <div class="form-group">
                                             <div class="row gutter-10">
                                                 <div class="col-md-3">
-                                                    <span class="lbl-txt">Loại xe <span
+                                                    <span class="lbl-txt lbl-txt-col">Loại xe <span
                                                             class="cl-red">&nbsp;*</span></span>
                                                 </div>
                                                 <div class="col-md-9">
@@ -623,7 +634,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Hãng xe <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Hãng xe <span class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -643,7 +654,7 @@
                                                             <div class="form-group">
                                                                 <div class="row gutter-10">
                                                                     <div class="col-md-6">
-                                                                        <span class="lbl-txt">Năm sản xuất <span
+                                                                        <span class="lbl-txt lbl-txt-col">Năm sản xuất <span
                                                                                 class="cl-red">&nbsp;*</span></span>
                                                                     </div>
                                                                     <div class="col-md-6">
@@ -665,7 +676,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Dòng xe <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Dòng xe <span class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -685,7 +696,7 @@
                                                             <div class="form-group">
                                                                 <div class="row gutter-10">
                                                                     <div class="col-md-6">
-                                                                        <span class="lbl-txt">Phiên bản <span
+                                                                        <span class="lbl-txt lbl-txt-col">Phiên bản <span
                                                                                 class="cl-red">&nbsp;*</span></span>
                                                                     </div>
                                                                     <div class="col-md-6">
@@ -708,7 +719,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Số chỗ ngồi <span
+                                                <span class="lbl-txt lbl-txt-col">Số chỗ ngồi <span
                                                         class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
@@ -731,7 +742,7 @@
                                                                             Đã đăng ký
                                                                             <input type="radio" name="XeDangKy"
                                                                                 value="1" checked
-                                                                                onchange="LoaiChuyenDiOnChange(this);">
+                                                                                onchange="">
                                                                             <span class="checkmark"></span>
                                                                         </label>
                                                                     </div>
@@ -740,11 +751,21 @@
                                                                             Chưa đăng ký
                                                                             <input type="radio" name="XeDangKy"
                                                                                 value="0"
-                                                                                onchange="LoaiChuyenDiOnChange(this);">
+                                                                                onchange="">
                                                                             <span class="checkmark"></span>
                                                                         </label>
                                                                     </div>
                                                                 </div>
+
+                                                                <!-- <div class="custom-checkbox">
+                                                                    <input class="input-checkbox" id="XeDangKy" type="checkbox" name="XeDangKy">
+                                                                    <label for="XeDangKy">
+                                                                        <div class="status-switch"
+                                                                            data-unchecked="Chưa đăng ký"
+                                                                            data-checked="Đã đăng ký">
+                                                                        </div>
+                                                                    </label>
+                                                                </div> -->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -757,7 +778,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Biển kiểm soát <span
+                                                <span class="lbl-txt lbl-txt-col">Biển kiểm soát <span
                                                         class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
@@ -780,7 +801,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Số khung <span
+                                                <span class="lbl-txt lbl-txt-col">Số khung <span
                                                         class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
@@ -794,7 +815,7 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt">Số máy <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Số máy <span class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -816,8 +837,8 @@
                                                             Tải lên
                                                         </span>
                                                         <input type="file" name="AnhMatTruoc" id="AnhMatTruoc"
-                                                            style="display:none" accept="image/*" onchange="UploadFile(this)"
-                                                            autocomplete="off">
+                                                            style="display:none" accept="image/*"
+                                                            onchange="UploadFile(this)" autocomplete="off">
                                                     </label>
                                                     <p class="mt-5">Ảnh mặt trước xe<span
                                                             class="text-danger">&nbsp;*</span></p>
@@ -833,8 +854,8 @@
                                                             Tải lên
                                                         </span>
                                                         <input type="file" name="AnhMatSau" id="AnhMatSau"
-                                                            style="display:none" accept="image/*" onchange="UploadFile(this)"
-                                                            autocomplete="off">
+                                                            style="display:none" accept="image/*"
+                                                            onchange="UploadFile(this)" autocomplete="off">
                                                     </label>
                                                     <p class="mt-5">Ảnh mặt sau xe<span
                                                             class="text-danger">&nbsp;*</span></p>
@@ -850,8 +871,8 @@
                                                             Tải lên
                                                         </span>
                                                         <input type="file" name="AnhTrenXe" id="AnhTrenXe"
-                                                            style="display:none" accept="image/*" onchange="UploadFile(this)"
-                                                            autocomplete="off">
+                                                            style="display:none" accept="image/*"
+                                                            onchange="UploadFile(this)" autocomplete="off">
                                                     </label>
                                                     <p class="mt-5">Ảnh mặt trên xe<span
                                                             class="text-danger">&nbsp;*</span></p>
@@ -867,8 +888,8 @@
                                                             Tải lên
                                                         </span>
                                                         <input type="file" name="AnhGamXe" id="AnhGamXe"
-                                                            style="display:none" accept="image/*" onchange="UploadFile(this)"
-                                                            autocomplete="off">
+                                                            style="display:none" accept="image/*"
+                                                            onchange="UploadFile(this)" autocomplete="off">
                                                     </label>
                                                     <p class="mt-5">Ảnh mặt gầm xe<span
                                                             class="text-danger">&nbsp;*</span></p>
@@ -949,7 +970,7 @@
                                                                         <input type="text"
                                                                             class="form-control payment-form-input"
                                                                             onkeyup="format_money(this,event)" name=""
-                                                                            id="" value="" placeholder="">
+                                                                            id="" value="" placeholder="0">
                                                                     </div>
                                                                 </div>
 
@@ -990,7 +1011,7 @@
                                     </div>
 
                                     <!-- <div class="form-group">
-                                        <div class="lbl-txt">Hãng bay:<span class="cl-red">&nbsp;*</span></div>
+                                        <div class="lbl-txt lbl-txt-col">Hãng bay:<span class="cl-red">&nbsp;*</span></div>
                                         <div class="form-content select-wrapper2">
                                         </div>
                                     </div> -->

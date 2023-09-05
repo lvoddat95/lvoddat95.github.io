@@ -1,8 +1,91 @@
 $(document).ready(function () {
+
     SumFee();
+
+    formatTimeInput();
+
+    // Thay đổi thông tin người được bảo hiểm khi nhập
+    $('#ThongTinNguoiYeuCauBaoHiem').find('[data-model]').on('change', function () {
+        let value = $(this).val();
+        let model = $(this).data('model');
+
+        if ($('input[name="IsNguoiDuocBH"]').is(":checked")) {
+            if($('[data-model=' + model + ']').is('select')){
+                if($('[name=' + model + ']').val() != value){
+                    $('[name=' + model + ']').select2('val',value);
+                }
+            }else{
+                $('[name=' + model + ']').val(value);
+            }
+        }
+    });
+
 });
 
 
+// Kiểm tra check box "true" nếu là người mua bảo hiểm thì lấy thông tin sang người được bảo hiểm
+var IsNguoiMuaBHOnChange = function (elem) {
+    let $Name = $('[name="Name0"]');
+    let $Gender = $('[name="Gender0"]');
+    let $NgaySinh = $('[name="NgaySinh0"]');
+    let $CMT = $('[name="CMT0"]');
+    let $SDT = $('[name="SDT0"]');
+    let $Email = $('[name="Email0"]');
+
+    let NameNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Name.attr('name') + ']')).val();
+    let GenderNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Gender.attr('name') + ']')).val();
+    let NgaySinhNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $NgaySinh.attr('name') + ']')).val();
+    let CMTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $CMT.attr('name') + ']')).val();
+    let SDTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $SDT.attr('name') + ']')).val();
+    let EmailNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Email.attr('name') + ']')).val();
+
+    if ($(elem).is(":checked")) {
+        $Name.prop( "disabled", true ).val(NameNDBH);
+        $Gender.prop( "disabled", true ).select2("val", GenderNDBH);
+        $NgaySinh.prop( "disabled", true ).val(NgaySinhNDBH);
+        $CMT.prop( "disabled", true ).val(CMTNDBH);
+        $SDT.prop( "disabled", true ).val(SDTNDBH);
+        $Email.prop( "disabled", true ).val(EmailNDBH);
+    }else{
+        $Name.prop( "disabled", false );
+        $Gender.prop( "disabled", false );
+        $NgaySinh.prop( "disabled", false );
+        $CMT.prop( "disabled", false );
+        $Email.prop( "disabled", false );
+    }
+}
+
+
+// Hàm format định dạng nhập thời gian theo định dạng hh:mm
+function formatTimeInput() {
+    const timeInputs = document.getElementsByClassName('input-time');
+
+    for (let i = 0; i < timeInputs.length; i++) {
+        const timeInput = timeInputs[i];
+
+        timeInput.addEventListener('keyup', function (event) {
+            let timeValue = timeInput.value.trim();
+            const keyCode = event.keyCode || event.which;
+
+            // Kiểm tra nếu không phải là số hoặc phím ":" thì không hiển thị giá trị
+            if (!((keyCode >= 48 && keyCode <= 57) || keyCode === 8 || keyCode === 46 || keyCode === 37 || keyCode === 39 || keyCode === 9 || keyCode === 190 || keyCode === 110)) {
+                timeInput.value = '';
+                return;
+            }
+
+            // Định dạng giờ theo định dạng hh:ss
+            if (timeValue.length === 2 && keyCode !== 8 && keyCode !== 46) {
+                timeValue += ':';
+            } else if (timeValue.length > 5) {
+                timeValue = timeValue.slice(0, 5);
+            }
+
+            timeInput.value = timeValue;
+        });
+    }
+}
+
+// Hàm tính tổng phí
 function SumFee() {
     let $total_fee = $total_fee_vat = $vat_fee = 0;
     $.each($('.ChuongTrinh'), function (index, elem) {
@@ -20,9 +103,9 @@ function SumFee() {
     $('.total_phi_vat').text(parseFloat($total_fee_vat).f_formatMoney(0, ".", ",") + ' VNĐ')
 }
 
+// Hàm thay đổi loại di chuyển
 var LoaiChuyenDiOnChange = function (elem) {
     var self = elem;
-    console.log(elem.value);
     if (elem.value == 'khu-hoi') {
         $('#NgayVeBox').slideDown();
     } else {
@@ -30,6 +113,7 @@ var LoaiChuyenDiOnChange = function (elem) {
     }
 }
 
+// Hàm thay đổi gói bảo hiểm
 var GoiBaoHiemOnChange = function (elem) {
     if (elem.value != 'ca-nhan') {
         $('input[name="SoLuong"], input[name="SoLuongTreEm"]').prop("disabled", false);
@@ -38,6 +122,7 @@ var GoiBaoHiemOnChange = function (elem) {
     }
 }
 
+// Hàm thay đổi chương trình bảo hiểm
 var ChuongTrinhOnChange = function (elem, program) {
     if (elem.value == 'ct2') {
         $('#' + program).find('.chuong-trinh-2').show();
@@ -52,7 +137,7 @@ var ChuongTrinhOnChange = function (elem, program) {
     SumFee();
 }
 
-
+// Hàm thay đổi nếu xuất hóa đơn
 var XuatHoaDonOnChange = function (elem) {
     if ($(elem).is(":checked")) {
         $('#form-xuat-hoa-don').show();
@@ -62,6 +147,7 @@ var XuatHoaDonOnChange = function (elem) {
     }
 }
 
+// Hàm thay đổi loại chuyên khách hàng
 var LoaiChuyenKhachHangOnChange = function (elem) {
     if (elem.value == 'doanh-nghiep') {
         $('#hoa-don-doanh-nghiep').show();
@@ -72,6 +158,14 @@ var LoaiChuyenKhachHangOnChange = function (elem) {
     }
 }
 
+
+
+
+
+
+
+
+// JS BẢO HIỂM VẬT CHẤT Ô TÔ-----------------------------------------------------------------------------------------------------------------------------
 
 var UploadFile = function (elem) {
     const file = elem.files[0];
@@ -89,7 +183,7 @@ var UploadFile = function (elem) {
 
         // Read the file as a data URL
         reader.readAsDataURL(file);
-    }else{
+    } else {
         preview.hide().attr('src', '');
     }
 }
@@ -107,4 +201,10 @@ var ThongTinChuXeOnChange = function (elem) {
         $('.label-tt-lai-xe').show();
         $('.box-tt-lai-xe').slideDown();
     }
+}
+
+
+var load_event_onchange = function () {
+    console.log("event here");
+    console.log("Tham khao event: load_phi_tai_nan_nguoi_ngoi_tren_xe");
 }
