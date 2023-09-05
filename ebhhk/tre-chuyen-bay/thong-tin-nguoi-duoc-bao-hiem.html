@@ -562,7 +562,7 @@
                                             <input type="text" class="form-control payment-form-input"
                                                 data-rule-required="false" data-msg-required="Nhập họ và tên"
                                                 name="NguoiMuaBH" id="NguoiMuaBH" value=""
-                                                placeholder="Nhập tiếng việt có dấu" maxlength="200" data-model="Name0"/>
+                                                placeholder="Nhập tiếng việt có dấu" maxlength="200" data-field="Name0"/>
                                         </div>
                                     </div>
 
@@ -572,7 +572,7 @@
                                         <div class="form-content select-wrapper2">
 
                                             <select name="GioiTinhNguoiBH" id="GioiTinhNguoiBH"
-                                                class="js-select2 payment-form-select" data-model="Gender0">
+                                                class="js-select2 payment-form-select" data-field="Gender0">
                                                 <option value="">- Chọn -</option>
                                                 <option value="1">Nam</option>
                                                 <option value="2">Nữ</option>
@@ -591,23 +591,12 @@
                                                     onkeyup="FormatDate(this,event)" data-rule-required="false"
                                                     data-msg-required="Nhập ngày đi" name="NgaySinhNguoiBH"
                                                     id="NgaySinhNguoiBH" value="" placeholder="dd/mm/yyyy"
-                                                    maxlength="10" data-model="NgaySinh0" />
+                                                    maxlength="10" data-field="NgaySinh0" />
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
 
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="lbl-txt">Số điện thoại<span class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content">
-
-                                            <input type="number" class="form-control payment-form-input"
-                                                name="SDTNguoiBH" id="SDTNguoiBH" value="" placeholder="0987 654 321"
-                                                maxlength="100" data-model="SDT0" />
                                         </div>
                                     </div>
 
@@ -618,10 +607,22 @@
                                             <input type="number" class="form-control payment-form-input"
                                                 data-rule-required="false" data-msg-required="" name="CMTNguoiBH"
                                                 id="CMTNguoiBH" value="" placeholder="" maxlength="11"
-                                                data-model="CMT0" />
+                                                data-field="CMT0" />
                                         </div>
                                     </div>
 
+
+                                    <div class="form-group">
+                                        <div class="lbl-txt">Số điện thoại<span class="cl-red">&nbsp;*</span>
+                                        </div>
+                                        <div class="form-content">
+
+                                            <input type="number" class="form-control payment-form-input"
+                                                name="SDTNguoiBH" id="SDTNguoiBH" value="" placeholder="0987 654 321"
+                                                maxlength="100" data-field="SDT0" />
+                                        </div>
+                                    </div>
+                    
 
                                     <div class="form-group">
                                         <div class="lbl-txt">Email<span class="cl-red">&nbsp;*</span>
@@ -631,7 +632,7 @@
                                                 data-rule-required="false" data-msg-required="Nhập số Email "
                                                 name="EmailNguoiBH" id="EmailNguoiBH" value=""
                                                 placeholder="email@gmail.com" maxlength="100"
-                                                data-model="Email0" />
+                                                data-field="Email0" />
                                         </div>
                                     </div>
                                 </div>
@@ -761,7 +762,7 @@
                                                             <div class="form-content select-wrapper2">
                                                                 <select name="Gender0" id="Gender0"
                                                                     class="js-select2 payment-form-select"
-                                                                    data-model="Gender">
+                                                                    data-field="Gender">
                                                                     <option value="">Chọn</option>
                                                                     <option value="1">Nam</option>
                                                                     <option value="2">Nữ</option>

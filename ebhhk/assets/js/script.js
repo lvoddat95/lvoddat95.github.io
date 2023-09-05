@@ -5,17 +5,17 @@ $(document).ready(function () {
     formatTimeInput();
 
     // Thay đổi thông tin người được bảo hiểm khi nhập
-    $('#ThongTinNguoiYeuCauBaoHiem').find('[data-model]').on('change', function () {
+    $('#ThongTinNguoiYeuCauBaoHiem').find('[data-field]').on('change', function () {
         let value = $(this).val();
-        let model = $(this).data('model');
+        let field = $(this).data('field');
 
         if ($('input[name="IsNguoiDuocBH"]').is(":checked")) {
-            if($('[data-model=' + model + ']').is('select')){
-                if($('[name=' + model + ']').val() != value){
-                    $('[name=' + model + ']').select2('val',value);
+            if($('[data-field=' + field + ']').is('select')){
+                if($('[name=' + field + ']').val() != value){
+                    $('[name=' + field + ']').select2('val',value);
                 }
             }else{
-                $('[name=' + model + ']').val(value);
+                $('[name=' + field + ']').val(value);
             }
         }
     });
@@ -32,12 +32,12 @@ var IsNguoiMuaBHOnChange = function (elem) {
     let $SDT = $('[name="SDT0"]');
     let $Email = $('[name="Email0"]');
 
-    let NameNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Name.attr('name') + ']')).val();
-    let GenderNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Gender.attr('name') + ']')).val();
-    let NgaySinhNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $NgaySinh.attr('name') + ']')).val();
-    let CMTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $CMT.attr('name') + ']')).val();
-    let SDTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $SDT.attr('name') + ']')).val();
-    let EmailNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-model=' + $Email.attr('name') + ']')).val();
+    let NameNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Name.attr('name') + ']')).val();
+    let GenderNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Gender.attr('name') + ']')).val();
+    let NgaySinhNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $NgaySinh.attr('name') + ']')).val();
+    let CMTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $CMT.attr('name') + ']')).val();
+    let SDTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $SDT.attr('name') + ']')).val();
+    let EmailNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Email.attr('name') + ']')).val();
 
     if ($(elem).is(":checked")) {
         $Name.prop( "disabled", true ).val(NameNDBH);
