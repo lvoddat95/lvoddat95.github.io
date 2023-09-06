@@ -473,7 +473,7 @@
 
     <main class="main">
         <div class="payment__wrapper">
-            <section class="payment-step">
+            <section class="payment-step payment-4-step">
                 <div class="container">
                     <div class="payment-step-wrapper">
                         <div class="payment-list-step-sumary">(Click vào các bước tương ứng để xem lại các nội dung đã
@@ -513,24 +513,14 @@
                                 <div class="payment-summary hidden-xs">Chương trình bảo hiểm </div>
                             </div>
 
-                            <div class="payment-step-item readonly ">
-                                <a href="tom-tat-don-hang.html" class="readonly" title="Bước 4">
-                                    <div class="payment-icon">
-                                        <span class="iconb-step5-sm hidden-xs"></span>
-                                        <span class="payment-icon--text visible-xs">4</span>
-                                    </div>
-                                    <div class="payment-text hidden-xs">Bước 4</div>
-                                </a>
-                                <div class="payment-summary hidden-xs">Tóm tắt đơn hàng</div>
-                            </div>
 
                             <div class="payment-step-item readonly ">
                                 <a href="xac-nhan-thanh-toan.html" class="readonly" title="Bước 5">
                                     <div class="payment-icon">
                                         <span class="iconb-step6-sm hidden-xs"></span>
-                                        <span class="payment-icon--text visible-xs">5</span>
+                                        <span class="payment-icon--text visible-xs">4</span>
                                     </div>
-                                    <div class="payment-text hidden-xs">Bước 5</div>
+                                    <div class="payment-text hidden-xs">Bước 4</div>
                                 </a>
                                 <div class="payment-summary hidden-xs">Xác nhận thanh toán</div>
                             </div>
@@ -557,7 +547,7 @@
                                                         class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
-                                                <div class="row" style="display: flex;">
+                                                <div class="row d-block d-md-flex">
 
                                                     <div class="col-md-6">
                                                         <div class="row gutter-10">
@@ -675,14 +665,14 @@
 
                                     <div class="sp-box">
 
-                                        <input type="checkbox" value="0" name="hdn_tndstn" checked id="hdn_tndstn"
+                                        <input type="checkbox" checked value="0" name="hdn_tndstn" id="hdn_tndstn"
                                             style="display: none;" />
 
-                                        <h3 class="toggle toggle_check" for="TNDSTN"
-                                            data-onchange="load_event_onchange" data-control="hdn_tndstn"
-                                            style="text-transform: none; cursor: pointer;">
+                                        <h3 class="toggle toggle_check" for="TNDSTN" data-onchange="load_event_onchange"
+                                            data-control="hdn_tndstn">
                                             1. Bảo hiểm TNDS tự nguyện (tăng thêm ngoài TNDS bắt buộc)
                                         </h3>
+
 
                                         <div class="toggle_content" style="display: block" id="TNDSTN">
 
@@ -761,17 +751,16 @@
                                     </div>
 
                                     <div class="sp-box">
-
-                                        <input type="checkbox" value="0" name="hdn_tndstn" checked id="hdn_tndstn"
+                                        <input type="checkbox" checked value="0" name="hdn_tnds_hhtx" id="hdn_tnds_hhtx"
                                             style="display: none;" />
 
-                                        <h3 class="toggle toggle_check" for="TNDSTN"
-                                            data-onchange="load_event_onchange" data-control="hdn_tndstn"
+                                        <h3 class="toggle toggle_check" for="TNDS_HHTX"
+                                            data-onchange="load_event_onchange" data-control="hdn_tnds_hhtx"
                                             style="text-transform: none; cursor: pointer;">
                                             2. Bảo hiểm TNDS của chủ xe đối với hàng hoá trên xe
                                         </h3>
 
-                                        <div class="toggle_content" style="display: block" id="TNDSTN">
+                                        <div class="toggle_content" style="display: block" id="TNDS_HHTX">
 
 
                                             <div class="mb-10">
@@ -785,7 +774,7 @@
                                                                 <input type="text"
                                                                     class="form-control payment-form-input text-right"
                                                                     onkeyup="format_money(this,event)" name="" id=""
-                                                                    value="" placeholder="0" maxlength="2">
+                                                                    value="" placeholder="0" maxlength="4">
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <span class="lbl-txt lbl-txt-col text-right"
@@ -799,7 +788,8 @@
                                             <div class="mb-10">
                                                 <div class="row">
                                                     <div class="col-md-4">
-                                                        <span class="lbl-txt lbl-txt-col">- Mức trách nhiệm bảo hiểm</span>
+                                                        <span class="lbl-txt lbl-txt-col">- Mức trách nhiệm bảo
+                                                            hiểm</span>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="row">
@@ -843,6 +833,188 @@
 
                                         </div>
                                     </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" checked value="0" name="hdn_tnlpx" id="hdn_tnlpx"
+                                            style="display: none;" />
+
+                                        <h3 class="toggle toggle_check" for="TNLPX" data-onchange="load_event_onchange"
+                                            data-control="hdn_tnlpx">
+                                            3. Bảo hiểm tai nạn lái xe và người ngồi trên xe
+                                        </h3>
+
+                                        <div class="toggle_content" style="display: block" id="TNLPX">
+
+
+                                            <div class="mb-10">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <span class="lbl-txt lbl-txt-col">- Số người</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <input type="text"
+                                                                    class="form-control payment-form-input text-right"
+                                                                    onkeyup="format_money(this,event)" name="" id=""
+                                                                    value="" placeholder="0" maxlength="3">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <span class="lbl-txt lbl-txt-col text-right"
+                                                                    style="width: auto;">người</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-10">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <span class="lbl-txt lbl-txt-col">- Mức trách nhiệm bảo
+                                                            hiểm</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <input type="text"
+                                                                    class="form-control payment-form-input text-right"
+                                                                    onkeyup="format_money(this,event)" name="" id=""
+                                                                    value="" placeholder="0">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <span class="lbl-txt lbl-txt-col text-right"
+                                                                    style="width: auto;">đồng / người / vụ</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs01" id="bs01"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs01">
+                                            4. BS01 - Bảo hiểm thay thế mới (bảo hiểm mới thay cũ)
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs02" id="bs02"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs02">
+                                            5. BS02 - Bảo hiểm lựa chọn cơ sở sửa chữa chính hãng
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs03" id="bs03"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs03">
+                                            6. BS03 - Bảo hiểm thuê xe trong thời gian sửa chữa (bảo hiểm gián đoạn sử
+                                            dụng xe)
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs04" id="bs04"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs04">
+                                            7. BS04 - Bảo hiểm đối với xe miễn thuế, tạm nhập, tái xuất
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs05" id="bs05"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs05">
+                                            8. BS05 -Bảo hiểm vật chất xe cơ giới ngoài lãnh thổ Việt Nam (Trung Quốc,
+                                            Lào, Campluchia và Thái Lan);
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs06" id="bs06"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs06">
+                                            9. BS06 - Bảo hiểm tổn thất do Thuỷ kích
+                                        </h3>
+                                    </div>
+
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs07" id="bs07"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs07">
+                                            10. BS07 - Bảo hiểm vật chất xe cơ giới lưu hành tạm thời
+                                        </h3>
+                                    </div>
+
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs08" id="bs08"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs08">
+                                            11. BS08 - Bảo hiểm mất bộ phận
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs09" id="bs09"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs09">
+                                            12. BS09 - Bảo hiểm xe tập lái
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs10" id="bs10"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs10">
+                                            13. BS10 - Bảo hiểm tổn thất xảy ra trong quá trình hoạt động của thiết bị
+                                            chuyên dùng
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs11" id="bs11"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs11">
+                                            14. BS11 - Các điều khoản thoả thuận bổ sung khác
+                                        </h3>
+                                    </div>
+
+                                    <div class="sp-box">
+                                        <input type="checkbox" value="0" name="bs12" id="bs12"
+                                            style="display: none;" />
+                                        <h3 class="toggle " for="" data-onchange="load_event_onchange"
+                                            data-control="bs12">
+                                            7. BS12 - Bảo hiểm cho xe tải (chở hàng) có thực hiện cải tạo/hoán cải
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="payment-form-group">
+
+                                    <div class="form-group mb10 flex-row-mb">
+                                        <p class="lbl-txt" style="font-weight: bold; color: #006c81;">Phí bảo hiểm (gồm
+                                            VAT):</p>
+                                        <p class="detail-txt" style="color: #006c81; text-align: right;" id="total_all">
+                                            1,517,000 VNĐ</p>
+                                    </div>
                                 </div>
 
 
@@ -851,7 +1023,7 @@
                                         <div class="form-button-wrapper">
                                             <a href="thong-tin-chu-xe-lai-xe.html" class="btn button-gray2 mr20"
                                                 title="Quay lại">Quay lại</a>
-                                            <a href="tom-tat-don-hang.html" class="btn button-orange2"
+                                            <a href="xac-nhan-thanh-toan.html" class="btn button-orange2"
                                                 title="Tiếp tục">Tiếp
                                                 tục</a>
                                         </div>

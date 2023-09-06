@@ -4256,9 +4256,17 @@ ul.footer__navbar__menu .navbar__menu--link:hover {
     background: #e0e0e0
 }
 
+.payment-4-step .payment-icon:before, .payment-4-step .payment-icon:after {
+    width: 21px
+}
+
 @media screen and (min-width: 768px) {
     .payment-icon:before, .payment-icon:after {
         width: 41px
+    }
+
+    .payment-4-step .payment-icon:before, .payment-4-step .payment-icon:after {
+        width: 61px
     }
 }
 
@@ -7341,10 +7349,11 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
 }
 
 /* -------------------------------------------------------------------------- */
-.lbl-txt-col{
+.lbl-txt-col {
     display: block;
     padding: 8px 0;
 }
+
 .row.gutter-0 {
     margin-left: 0;
     margin-right: 0;
@@ -7560,21 +7569,22 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     position: relative;
     top: 2px;
 }
-.custom-checkbox {
+
+.switch-checkbox {
     width: 100%;
     height: 40px;
 }
 
-.custom-checkbox input.input-checkbox {
+.switch-checkbox input.input-checkbox {
     display: none;
 }
 
-.custom-checkbox input.input-checkbox+label {
+.switch-checkbox input.input-checkbox+label {
     height: 100%;
     width: 100%;
 }
 
-.custom-checkbox input.input-checkbox+label>.status-switch {
+.switch-checkbox input.input-checkbox+label>.status-switch {
     cursor: pointer;
     width: 100%;
     height: 100%;
@@ -7586,7 +7596,7 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     border-radius: 3px;
 }
 
-.custom-checkbox input.input-checkbox+label>.status-switch:before, .custom-checkbox input.input-checkbox+label>.status-switch:after {
+.switch-checkbox input.input-checkbox+label>.status-switch:before, .switch-checkbox input.input-checkbox+label>.status-switch:after {
     border-radius: 2px;
     height: calc(100% - 6px);
     width: calc(50% - 3px);
@@ -7597,7 +7607,7 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     transition: all 0.3s ease;
 }
 
-.custom-checkbox input.input-checkbox+label>.status-switch:before {
+.switch-checkbox input.input-checkbox+label>.status-switch:before {
     background-color: white;
     color: #424242;
     box-shadow: 0 0 4px 4px rgb(0 0 0 / 10%);
@@ -7606,22 +7616,116 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     content: attr(data-unchecked);
 }
 
-.custom-checkbox input.input-checkbox+label>.status-switch:after {
+.switch-checkbox input.input-checkbox+label>.status-switch:after {
     right: 0;
     content: attr(data-checked);
 }
 
-.custom-checkbox input.input-checkbox:checked+label>.status-switch {
+.switch-checkbox input.input-checkbox:checked+label>.status-switch {
     background-color: #006c81;
 }
 
-.custom-checkbox input.input-checkbox:checked+label>.status-switch:after {
+.switch-checkbox input.input-checkbox:checked+label>.status-switch:after {
     left: 0;
     content: attr(data-unchecked);
 }
 
-.custom-checkbox input.input-checkbox:checked+label>.status-switch:before {
+.switch-checkbox input.input-checkbox:checked+label>.status-switch:before {
     color: #006c81;
     left: 50%;
     content: attr(data-checked);
+}
+
+@media (min-width: 768px) {
+    .d-md-flex {
+        display: flex !important;
+    }
+}
+
+
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.custom-checkbox label {
+    margin: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.custom-checkbox label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #f2f2f2;
+    border: 1px solid rgba(75, 101, 132, 0.3);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked~label:before {
+    background: #006c81 no-repeat center;
+    background-size: 12px 12px;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQ1LjcwMSA0NS43IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NS43MDEgNDUuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yMC42ODcsMzguMzMyYy0yLjA3MiwyLjA3Mi01LjQzNCwyLjA3Mi03LjUwNSwwTDEuNTU0LDI2LjcwNGMtMi4wNzItMi4wNzEtMi4wNzItNS40MzMsMC03LjUwNCAgICBjMi4wNzEtMi4wNzIsNS40MzMtMi4wNzIsNy41MDUsMGw2LjkyOCw2LjkyN2MwLjUyMywwLjUyMiwxLjM3MiwwLjUyMiwxLjg5NiwwTDM2LjY0Miw3LjM2OGMyLjA3MS0yLjA3Miw1LjQzMy0yLjA3Miw3LjUwNSwwICAgIGMwLjk5NSwwLjk5NSwxLjU1NCwyLjM0NSwxLjU1NCwzLjc1MmMwLDEuNDA3LTAuNTU5LDIuNzU3LTEuNTU0LDMuNzUyTDIwLjY4NywzOC4zMzJ6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.custom-checkbox input[type="checkbox"]:focus~label {
+    color: #006c81;
+}
+
+
+
+.payment-form-group .sp-box h3.toggle::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 0.3em;
+    transition: background-color 300ms, border-color 300ms;
+}
+
+.payment-form-group .sp-box h3.toggle::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: 2px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 0.3em;
+    transition: background-color 300ms, border-color 300ms;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='-10 -10 64.56 64.56'%3E%3Cpath d='M23.297 38.74a6.563 6.563 0 0 1-10.16.499L1.308 26.112a5.083 5.083 0 1 1 7.551-6.805l8.369 9.288a.617.617 0 0 0 .956-.047L35.386 5.217a5.083 5.083 0 1 1 8.181 6.032L23.297 38.74z'/%3E%3C/svg%3E"), #fff;
+    background-repeat: no-repeat;
+}
+
+.payment-form-group .sp-box h3.toggle.toggle_check::after {
+    opacity: 1;
+}
+
+.payment-form-group .sp-box h3.toggle {
+    font-size: 16px;
+    position: relative;
+    background: none;
+    color: #333;
+    cursor: pointer;
+    text-transform: inherit;
+}
+
+.payment-form-group .sp-box h3.toggle.toggle_check {
+    position: relative;
+    background: none;
+    background-color: #ddd;
+    color: #006c81;
 }
