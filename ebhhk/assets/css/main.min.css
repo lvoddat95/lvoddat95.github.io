@@ -7552,7 +7552,7 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
 }
 
 .toggle-checkbox:checked+.toggle-switch {
-    background: #56c080;
+    background: #006c80;
 }
 
 .toggle-checkbox:checked+.toggle-switch:before {
