@@ -1,5 +1,27 @@
 $(document).ready(function () {
-
+    $("#demoForm").validate({
+        onfocusout: false,
+        onkeyup: false,
+        onclick: false,
+        rules: {
+            "user": {
+                required: true,
+                maxlength: 15
+            },
+            "password": {
+                required: true,
+                minlength: 8,
+                validatePassword: true,
+            },
+            "re-password": {
+                equalTo: "#password",
+                minlength: 8
+            },
+            "to-date": {
+                validateDateRange: true
+            },
+        }
+    });
     SumFee();
 
     formatTimeInput();
@@ -10,15 +32,38 @@ $(document).ready(function () {
         let field = $(this).data('field');
 
         if ($('input[name="IsNguoiDuocBH"]').is(":checked")) {
-            if($('[data-field=' + field + ']').is('select')){
-                if($('[name=' + field + ']').val() != value){
-                    $('[name=' + field + ']').select2('val',value);
+            if ($('[data-field=' + field + ']').is('select')) {
+                if ($('[name=' + field + ']').val() != value) {
+                    $('[name=' + field + ']').select2('val', value);
                 }
-            }else{
+            } else {
                 $('[name=' + field + ']').val(value);
             }
         }
     });
+
+    
+$.validator.addMethod("validateDateRange", function (value, element) {
+    var fromDate = new Date($("#FromDate").val());
+    var toDate = new Date(value);
+    return this.optional(element) || toDate >= fromDate;
+}, "Ngày kết thúc phải lớn hơn hoặc bằng ngày bắt đầu");
+
+
+// combine them both, including the parameter for minlength
+$.validator.addClassRules("customer", { cRequired: true, validateDateRange: true });
+
+jQuery.validator.addMethod("laxEmail", function (value, element) {
+    // allow any non-whitespace characters as the host part
+    return this.optional(element) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@(?:\S{1,63})$/.test(value);
+}, 'Please enter a valid email address.');
+
+$.validator.addClassRules("customer", { cRequired: true, validateDateRange: true });
+
+$.validator.addClassRules("laxEmail", { required: true, laxEmail: true });
+
+$.validator.addClassRules("validToDate", { required: true, validateDateRange: true });
+
 
 });
 
@@ -32,26 +77,26 @@ var IsNguoiMuaBHOnChange = function (elem) {
     let $SDT = $('[name="SDT0"]');
     let $Email = $('[name="Email0"]');
 
-    let NameNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Name.attr('name') + ']')).val();
-    let GenderNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Gender.attr('name') + ']')).val();
-    let NgaySinhNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $NgaySinh.attr('name') + ']')).val();
-    let CMTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $CMT.attr('name') + ']')).val();
-    let SDTNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $SDT.attr('name') + ']')).val();
-    let EmailNDBH =  $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Email.attr('name') + ']')).val();
+    let NameNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Name.attr('name') + ']')).val();
+    let GenderNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Gender.attr('name') + ']')).val();
+    let NgaySinhNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $NgaySinh.attr('name') + ']')).val();
+    let CMTNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $CMT.attr('name') + ']')).val();
+    let SDTNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $SDT.attr('name') + ']')).val();
+    let EmailNDBH = $('#ThongTinNguoiYeuCauBaoHiem').find(('[data-field=' + $Email.attr('name') + ']')).val();
 
     if ($(elem).is(":checked")) {
-        $Name.prop( "disabled", true ).val(NameNDBH);
-        $Gender.prop( "disabled", true ).select2("val", GenderNDBH);
-        $NgaySinh.prop( "disabled", true ).val(NgaySinhNDBH);
-        $CMT.prop( "disabled", true ).val(CMTNDBH);
-        $SDT.prop( "disabled", true ).val(SDTNDBH);
-        $Email.prop( "disabled", true ).val(EmailNDBH);
-    }else{
-        $Name.prop( "disabled", false );
-        $Gender.prop( "disabled", false );
-        $NgaySinh.prop( "disabled", false );
-        $CMT.prop( "disabled", false );
-        $Email.prop( "disabled", false );
+        $Name.prop("disabled", true).val(NameNDBH);
+        $Gender.prop("disabled", true).select2("val", GenderNDBH);
+        $NgaySinh.prop("disabled", true).val(NgaySinhNDBH);
+        $CMT.prop("disabled", true).val(CMTNDBH);
+        $SDT.prop("disabled", true).val(SDTNDBH);
+        $Email.prop("disabled", true).val(EmailNDBH);
+    } else {
+        $Name.prop("disabled", false);
+        $Gender.prop("disabled", false);
+        $NgaySinh.prop("disabled", false);
+        $CMT.prop("disabled", false);
+        $Email.prop("disabled", false);
     }
 }
 

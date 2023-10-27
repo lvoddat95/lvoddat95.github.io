@@ -562,7 +562,8 @@
                                             <input type="text" class="form-control payment-form-input"
                                                 data-rule-required="false" data-msg-required="Nhập họ và tên"
                                                 name="NguoiMuaBH" id="NguoiMuaBH" value=""
-                                                placeholder="Nhập tiếng việt có dấu" maxlength="200" data-field="Name0"/>
+                                                placeholder="Nhập tiếng việt có dấu" maxlength="200"
+                                                data-field="Name0" />
                                         </div>
                                     </div>
 
@@ -622,7 +623,7 @@
                                                 maxlength="100" data-field="SDT0" />
                                         </div>
                                     </div>
-                    
+
 
                                     <div class="form-group">
                                         <div class="lbl-txt">Email<span class="cl-red">&nbsp;*</span>
@@ -631,64 +632,66 @@
                                             <input type="email" class="form-control payment-form-input"
                                                 data-rule-required="false" data-msg-required="Nhập số Email "
                                                 name="EmailNguoiBH" id="EmailNguoiBH" value=""
-                                                placeholder="email@gmail.com" maxlength="100"
-                                                data-field="Email0" />
+                                                placeholder="email@gmail.com" maxlength="100" data-field="Email0" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="payment-form-group">
                                     <h3>Chi tiết chuyến bay</h3>
-                                    <div class="form-group">
-                                        <div class="lbl-txt">
-                                            Chuyến bay khởi hành 🛫<span class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content">
-                                            <div class="row gutter-10">
-                                                <div class="col-md-6">
+
+                                    <div class="row gutter-10 mb-15">
+                                        <div class="col-md-9 col-xs-8">
+                                            <div class="form-group">
+                                                <div class="lbl-txt">
+                                                    Chuyến bay khởi hành 🛫<span class="cl-red">&nbsp;*</span>
+                                                </div>
+                                                <div class="form-content">
                                                     Hà Nội (HAN)
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="row gutter-10">
-                                                        <div class="col-md-4">
-                                                            Giờ đi
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <input type="time" class="form-control payment-form-input"
-                                                                data-rule-required="false" data-msg-required="" name=""
-                                                                id="" value="" placeholder="00:00" maxlength="100" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                        </div>
 
+                                        <div class="col-md-3 col-xs-4">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-4">
+                                                    Giờ đi
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="time" class="form-control payment-form-input"
+                                                        data-rule-required="false" data-msg-required="" name="" id=""
+                                                        value="" placeholder="00:00" maxlength="100" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="lbl-txt">
-                                            Chuyến bay về 🛬<span class="cl-red">&nbsp;*</span>
-                                        </div>
-                                        <div class="form-content">
-                                            <div class="row gutter-10">
-                                                <div class="col-md-6">
+
+                                    <div class="row gutter-10">
+                                        <div class="col-md-9 col-xs-8">
+                                            <div class="form-group">
+                                                <div class="lbl-txt">
+                                                    Chuyến bay về 🛫<span class="cl-red">&nbsp;*</span>
+                                                </div>
+                                                <div class="form-content">
                                                     Đà nẵng (DAD)
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="row gutter-10">
-                                                        <div class="col-md-4">
-                                                            Giờ về
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <input type="time" class="form-control payment-form-input"
-                                                                data-rule-required="false" data-msg-required="" name=""
-                                                                id="" value="" placeholder="00:00" maxlength="100" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                        </div>
 
+                                        <div class="col-md-3 col-xs-4">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-4">
+                                                    Giờ về
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="time" class="form-control payment-form-input"
+                                                        data-rule-required="false" data-msg-required="" name="" id=""
+                                                        value="" placeholder="00:00" maxlength="100" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
 
@@ -727,7 +730,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group hidden-xs">
                                         <div class="table-responsive">
                                             <table class="table table-bordered table-hover table-beneficiary"
                                                 id="table_person" style="min-width: 900px;">
@@ -802,8 +805,8 @@
                                                         <td>
                                                             <div class="form-content">
                                                                 <input type="email"
-                                                                    class="form-control payment-form-input" name="Email0"
-                                                                    id="Email0" value="">
+                                                                    class="form-control payment-form-input"
+                                                                    name="Email0" id="Email0" value="">
                                                             </div>
                                                         </td>
                                                         <td></td>
@@ -815,12 +818,125 @@
                                     </div>
 
                                     <div class="form-group visible-xs" id="table_person_mobile">
+                                        <p class="txt-details mb-15" style="text-align: center;"><b
+                                                style="font-weight: bold; text-transform: uppercase;">Danh sách người
+                                                tham gia bảo hiểm</b></p>
+
+                                        <div class="details-beneficiary">
+                                            <p class="txt-details">
+                                                STT:
+                                                <b>
+                                                    1
+                                                </b>
+                                            </p>
+                                            <div class="txt-details">
+                                                Họ và tên:
+                                                <input type="text" class="form-control payment-form-input"
+                                                    data-rule-required="true" data-msg-required="Nhập họ và tên"
+                                                    name="Name0" id="Name0" value="" maxlength="200">
+                                            </div>
+                                            <div class="txt-details">
+                                                Ngày sinh:
+                                                <div class="form-content">
+                                                    <div class="input-group date js-datepicker">
+                                                        <input type="text" class="form-control payment-form-input"
+                                                            onkeyup="FormatDate(this,event)" data-rule-required="true"
+                                                            data-msg-required="Nhập ngày sinh" name="NgaySinh0"
+                                                            id="NgaySinh0" value="">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="txt-details">
+                                                Giới tính:
+                                                <select name="Gender0" id="Gender0" class="form-control payment-form-select">
+                                                    <option value="">Chọn</option>
+                                                    <option value="1">Nam</option>
+                                                    <option value="2">Nữ</option>
+                                                </select>
+                                            </div>
+                                            <div class="txt-details">
+                                                CMND/CCCD/Hộ chiếu
+                                                <input type="text" class="form-control payment-form-input"
+                                                    name="Address0" id="Address0" value="" maxlength="300">
+                                            </div>
+                                            <div class="txt-details">
+                                                Số điện thoại:
+                                                <input type="text" class="form-control payment-form-input" name="Phone0"
+                                                    id="Phone0" value="" maxlength="100">
+                                            </div>
+                                            <div class="txt-details">
+                                                Email:
+                                                <input type="text" class="form-control payment-form-input" name="Email0"
+                                                    id="Email0" value="" maxlength="100">
+                                            </div>
+                                            <div class="txt-details">
+                                                Thao tác:
+                                            </div>
+                                        </div>
+                                        <div class="details-beneficiary">
+                                            <p class="txt-details">
+                                                STT:
+                                                <b>
+                                                    2
+                                                </b>
+                                            </p>
+                                            <div class="txt-details">
+                                                Họ và tên:
+                                                <input type="text" class="form-control payment-form-input"
+                                                    data-rule-required="true" data-msg-required="Nhập họ và tên"
+                                                    name="Name0" id="Name0" value="" maxlength="200">
+                                            </div>
+                                            <div class="txt-details">
+                                                Ngày sinh:
+                                                <div class="form-content">
+                                                    <div class="input-group date js-datepicker">
+                                                        <input type="text" class="form-control payment-form-input"
+                                                            onkeyup="FormatDate(this,event)" data-rule-required="true"
+                                                            data-msg-required="Nhập ngày sinh" name="NgaySinh0"
+                                                            id="NgaySinh0" value="">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="txt-details">
+                                                Giới tính:
+                                                <select name="Gender0" id="Gender0" class="form-control payment-form-select">
+                                                    <option value="">Chọn</option>
+                                                    <option value="1">Nam</option>
+                                                    <option value="2">Nữ</option>
+                                                </select>
+                                            </div>
+                                            <div class="txt-details">
+                                                CMND/CCCD/Hộ chiếu
+                                                <input type="text" class="form-control payment-form-input"
+                                                    name="Address0" id="Address0" value="" maxlength="300">
+                                            </div>
+                                            <div class="txt-details">
+                                                Số điện thoại:
+                                                <input type="text" class="form-control payment-form-input" name="Phone0"
+                                                    id="Phone0" value="" maxlength="100">
+                                            </div>
+                                            <div class="txt-details">
+                                                Email:
+                                                <input type="text" class="form-control payment-form-input" name="Email0"
+                                                    id="Email0" value="" maxlength="100">
+                                            </div>
+                                            <div class="txt-details">
+                                                Thao tác:
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="form-group">
                                         <a class="btn btn-default button-white" id="btn_add_person" data-toggle="modal"
                                             data-target="#modal_payment"><i class="icon-add"></i>Thêm người được bảo
                                             hiểm</a>
+
                                     </div>
 
                                     <div class="modal fade modal_payment" id="modal_payment" tabindex="-1" role="dialog"

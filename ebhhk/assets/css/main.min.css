@@ -1312,7 +1312,15 @@ ul {
     line-height: 20px;
     padding: 10px;
     font-size: 16px;
-    border-color: #e0e0e0
+    border-color: #e0e0e0;
+}
+.payment-form-select{
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-color: #e0e0e0;
+    box-shadow: none;
 }
 
 .input-text2::-webkit-input-placeholder, .payment-form-input::-webkit-input-placeholder {
@@ -4518,6 +4526,31 @@ ul.footer__navbar__menu .navbar__menu--link:hover {
     flex-basis: 0;
     font-size: 16px;
     font-weight: 700
+}
+
+.payment-form-right .detail-txt {
+    text-align: right;
+}
+
+@media (max-width:767px) {
+    .payment-form-right .lbl-txt2 > span{
+        float: right;
+    }
+    
+    .payment-form-right .details-beneficiary .txt-details > b{
+        float: right;
+    }
+
+    .payment-form-right .payment-form-group .flex-wrap-mb{
+        display: block;
+    }
+    .payment-form-right .payment-form-group .flex-wrap-mb .flex2{
+        display: inline-block;
+        margin: 0;
+    }
+    .payment-form-right .payment-form-group .flex-wrap-mb .flex2:last-child{
+        float: right;
+    }
 }
 
 .payment-form .detail-txt .noti {

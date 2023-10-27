@@ -544,92 +544,99 @@
             <section class="payment-content">
                 <div class="container">
                     <div class="payment-content-wrapper">
-                        <div class="payment-form">
-                            <form method="post" name="form_payment" id="form_payment" action="tinh-phi-bao-hiem.html">
+                        <div class="payment-form payment-form-right">
+                            <form method="post" name="form_payment" id="demoForm">
                                 <h4 class="payment-title">1. NHẬP THÔNG TIN CƠ BẢN</h4>
                                 <div class="pt-20 pb-20">
 
 
                                     <div>
-
-                                        <div class="form-group">
-                                            <div class="row gutter-10">
-                                                <div class="col-md-3">
-                                                    <span class="lbl-txt">Điểm đi <span
-                                                            class="cl-red">&nbsp;*</span></span>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="form-content">
-                                                        <div class="select-wrapper2">
-                                                            <select name="HanhTrinhTu" data-rule-required="false"
-                                                                data-msg-required="Chọn hãng bay" id="HanhTrinhTu"
-                                                                class="js-select2 payment-form-select">
-                                                                <option value="HAN">🛫 Chọn</option>
-                                                                <option value="HAN">Hà Nội (HAN)</option>
-                                                                <option value="SGN">Hồ Chí Minh (SGN)</option>
-                                                                <option value="DAD">Đà Nẵng (DAD)</option>
-                                                                <option value="CXR">Nha Trang (CXR)</option>
-                                                                <option value="PQC">Phú Quốc (PQC)</option>
-                                                                <option value="HUI">Huế (HUI)</option>
-                                                                <option value="HPH">Hải Phòng (HPH)</option>
-                                                                <option value="VCA">Cần Thơ (VCA)</option>
-                                                                <option value="CAH">Cà Mau (CAH)</option>
-                                                                <option value="VCS">Côn Đảo (VCS)</option>
-                                                                <option value="VCL">Chu Lai (VCL)</option>
-                                                                <option value="BMV">Buôn Ma Thuột (BMV)</option>
-                                                                <option value="DLI">Đà Lạt (DLI)</option>
-                                                                <option value="DIN">Điện Biên (DIN)</option>
-                                                                <option value="VDH">Đồng Hới (VDH)</option>
-                                                                <option value="THD">Thanh Hóa (THD)</option>
-                                                                <option value="TBB">Tuy Hoà (TBB)</option>
-                                                                <option value="UIH">Quy Nhơn (UIH)</option>
-                                                                <option value="PXU">Pleiku (PXU)</option>
-                                                                <option value="VKG">Rạch Giá (VKG)</option>
-                                                                <option value="VII">Vinh (VII)</option>
-                                                                <option value="VDO">Vân Đồn (VDO)</option>
-                                                            </select>
+                                        <div class="row gutter-10">
+                                            <div class="col-md-12 col-xs-6">
+                                                <div class="form-group">
+                                                    <div class="row gutter-10">
+                                                        <div class="col-md-3">
+                                                            <span class="lbl-txt">Điểm đi <span
+                                                                    class="cl-red">&nbsp;*</span></span>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="form-content">
+                                                                <div class="select-wrapper2">
+                                                                    <select name="HanhTrinhTu" data-rule-required="true"
+                                                                        data-msg-required="Chọn hãng bay"
+                                                                        id="HanhTrinhTu"
+                                                                        class="js-select2 payment-form-select">
+                                                                        <option value="HAN">🛫 Chọn</option>
+                                                                        <option value="HAN">Hà Nội (HAN)</option>
+                                                                        <option value="SGN">Hồ Chí Minh (SGN)</option>
+                                                                        <option value="DAD">Đà Nẵng (DAD)</option>
+                                                                        <option value="CXR">Nha Trang (CXR)</option>
+                                                                        <option value="PQC">Phú Quốc (PQC)</option>
+                                                                        <option value="HUI">Huế (HUI)</option>
+                                                                        <option value="HPH">Hải Phòng (HPH)</option>
+                                                                        <option value="VCA">Cần Thơ (VCA)</option>
+                                                                        <option value="CAH">Cà Mau (CAH)</option>
+                                                                        <option value="VCS">Côn Đảo (VCS)</option>
+                                                                        <option value="VCL">Chu Lai (VCL)</option>
+                                                                        <option value="BMV">Buôn Ma Thuột (BMV)</option>
+                                                                        <option value="DLI">Đà Lạt (DLI)</option>
+                                                                        <option value="DIN">Điện Biên (DIN)</option>
+                                                                        <option value="VDH">Đồng Hới (VDH)</option>
+                                                                        <option value="THD">Thanh Hóa (THD)</option>
+                                                                        <option value="TBB">Tuy Hoà (TBB)</option>
+                                                                        <option value="UIH">Quy Nhơn (UIH)</option>
+                                                                        <option value="PXU">Pleiku (PXU)</option>
+                                                                        <option value="VKG">Rạch Giá (VKG)</option>
+                                                                        <option value="VII">Vinh (VII)</option>
+                                                                        <option value="VDO">Vân Đồn (VDO)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row gutter-10">
-                                                <div class="col-md-3">
-                                                    <span class="lbl-txt">Điểm đến <span
-                                                            class="cl-red">&nbsp;*</span></span>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="form-content">
-                                                        <div class="select-wrapper2">
-                                                            <select name="HanhTrinhDen" data-rule-required="false"
-                                                                data-msg-required="Chọn hãng bay" id="HanhTrinhDen"
-                                                                class="js-select2 payment-form-select">
-                                                                <option value="HAN">🛬 Chọn</option>
-                                                                <option value="HAN">Hà Nội (HAN)</option>
-                                                                <option value="SGN">Hồ Chí Minh (SGN)</option>
-                                                                <option value="DAD">Đà Nẵng (DAD)</option>
-                                                                <option value="CXR">Nha Trang (CXR)</option>
-                                                                <option value="PQC">Phú Quốc (PQC)</option>
-                                                                <option value="HUI">Huế (HUI)</option>
-                                                                <option value="HPH">Hải Phòng (HPH)</option>
-                                                                <option value="VCA">Cần Thơ (VCA)</option>
-                                                                <option value="CAH">Cà Mau (CAH)</option>
-                                                                <option value="VCS">Côn Đảo (VCS)</option>
-                                                                <option value="VCL">Chu Lai (VCL)</option>
-                                                                <option value="BMV">Buôn Ma Thuột (BMV)</option>
-                                                                <option value="DLI">Đà Lạt (DLI)</option>
-                                                                <option value="DIN">Điện Biên (DIN)</option>
-                                                                <option value="VDH">Đồng Hới (VDH)</option>
-                                                                <option value="THD">Thanh Hóa (THD)</option>
-                                                                <option value="TBB">Tuy Hoà (TBB)</option>
-                                                                <option value="UIH">Quy Nhơn (UIH)</option>
-                                                                <option value="PXU">Pleiku (PXU)</option>
-                                                                <option value="VKG">Rạch Giá (VKG)</option>
-                                                                <option value="VII">Vinh (VII)</option>
-                                                                <option value="VDO">Vân Đồn (VDO)</option>
-                                                            </select>
+                                            <div class="col-md-12 col-xs-6">
+                                                <div class="form-group">
+                                                    <div class="row gutter-10">
+                                                        <div class="col-md-3">
+                                                            <span class="lbl-txt">Điểm đến <span
+                                                                    class="cl-red">&nbsp;*</span></span>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="form-content">
+                                                                <div class="select-wrapper2">
+                                                                    <select name="HanhTrinhDen"
+                                                                        data-rule-required="true"
+                                                                        data-msg-required="Chọn hãng bay"
+                                                                        id="HanhTrinhDen"
+                                                                        class="js-select2 payment-form-select">
+                                                                        <option value="HAN">🛬 Chọn</option>
+                                                                        <option value="HAN">Hà Nội (HAN)</option>
+                                                                        <option value="SGN">Hồ Chí Minh (SGN)</option>
+                                                                        <option value="DAD">Đà Nẵng (DAD)</option>
+                                                                        <option value="CXR">Nha Trang (CXR)</option>
+                                                                        <option value="PQC">Phú Quốc (PQC)</option>
+                                                                        <option value="HUI">Huế (HUI)</option>
+                                                                        <option value="HPH">Hải Phòng (HPH)</option>
+                                                                        <option value="VCA">Cần Thơ (VCA)</option>
+                                                                        <option value="CAH">Cà Mau (CAH)</option>
+                                                                        <option value="VCS">Côn Đảo (VCS)</option>
+                                                                        <option value="VCL">Chu Lai (VCL)</option>
+                                                                        <option value="BMV">Buôn Ma Thuột (BMV)</option>
+                                                                        <option value="DLI">Đà Lạt (DLI)</option>
+                                                                        <option value="DIN">Điện Biên (DIN)</option>
+                                                                        <option value="VDH">Đồng Hới (VDH)</option>
+                                                                        <option value="THD">Thanh Hóa (THD)</option>
+                                                                        <option value="TBB">Tuy Hoà (TBB)</option>
+                                                                        <option value="UIH">Quy Nhơn (UIH)</option>
+                                                                        <option value="PXU">Pleiku (PXU)</option>
+                                                                        <option value="VKG">Rạch Giá (VKG)</option>
+                                                                        <option value="VII">Vinh (VII)</option>
+                                                                        <option value="VDO">Vân Đồn (VDO)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -645,7 +652,7 @@
                                                 <div class="col-md-9">
                                                     <div class="form-content">
                                                         <div class="row gutter-10">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 col-xs-6">
                                                                 <label class="cs-radio">
                                                                     Một chiều
                                                                     <input type="radio" id="loai1" name="LoaiChuyenDi"
@@ -654,7 +661,7 @@
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                             </div>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-4 col-xs-6">
                                                                 <label class="cs-radio ">
                                                                     Khứ hồi
                                                                     <input type="radio" id="loai2" name="LoaiChuyenDi"
@@ -702,7 +709,7 @@
                                                                     <input type="text"
                                                                         class="form-control payment-form-input"
                                                                         onkeyup="FormatDate(this,event)"
-                                                                        data-rule-required="false"
+                                                                        data-rule-required="true"
                                                                         data-msg-required="Nhập ngày đi" name="FromDate"
                                                                         id="FromDate" value="" placeholder="dd/mm/yyyy"
                                                                         maxlength="10" />
@@ -1290,9 +1297,11 @@
                                                 </div>
                                                 <div class="col-md-9">
                                                     <div class="form-content">
-                                                        <input type="text" class="form-control payment-form-input"
+                                                        <input type="text" data-rule-required="true"
+                                                            data-msg-required="Chọn mã đặt chỗ ngày đi"
+                                                            class="form-control payment-form-input"
                                                             name="MaDatChoNgayDi" id="MaDatChoNgayDi" value=""
-                                                            placeholder="" />
+                                                            placeholder="" aria-invalid="true">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1300,6 +1309,7 @@
 
 
                                         <div id="NgayVeBox" class="form-group" style="display: none;">
+                                            <br>
                                             <div class="row gutter-10">
                                                 <div class="col-md-3">
                                                     <span class="lbl-txt">Ngày về <span
@@ -1312,9 +1322,9 @@
                                                                 <div class="form-group">
                                                                     <div class='input-group date js-datepicker mb10'>
                                                                         <input type="text"
-                                                                            class="form-control payment-form-input"
+                                                                            class="form-control payment-form-input validToDate"
                                                                             onkeyup="FormatDate(this,event)"
-                                                                            data-rule-required="false"
+                                                                            data-rule-required="true"
                                                                             data-msg-required="Nhập ngày đi"
                                                                             name="FromDate" id="FromDate" value=""
                                                                             placeholder="dd/mm/yyyy" maxlength="10" />
