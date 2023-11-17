@@ -8,15 +8,12 @@
     <title>VNI - Demo</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="../app-assets/images/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="../app-assets/images/ico/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../app-assets/images/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../app-assets/images/ico/favicon-16x16.png">
 
     <!-- core stylesheet -->
     <link rel="stylesheet" type="text/css" href="../app-assets/fonts/iconmoon/iconmoon.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="../app-assets/fonts/font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/fonts/font-awesome/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/bootstrap.min.css">
     <!-- core stylesheet -->
 
@@ -41,7 +38,10 @@
 
 <body>
 
+
     <div class="p-3">
+
+      
 
         <div id="myModal" class="modal bd-modal" tabindex="-1" role="dialog" data-backdrop="static">
             <div class="modal-dialog  modal-sm">
@@ -51,15 +51,15 @@
                 </div>
 
                 <div class="modal-content rounded-0">
-                    <div class="camera position-relative">
+                    <div class="camera ">
 
                         <input type="hidden" id="modal-data-image" value="">
 
-                        <video class="camera-stream border border-danger p1 w-100"></video>
-
-                        <canvas id="canvas" style="display:none"></canvas>
-
-                        <img id="photo" src="" alt="" style="display:none">
+                        <div class="position-relative">
+                            <video class="camera-stream p1 w-100"></video>
+                            <canvas id="canvas" style="display:none"></canvas>
+                            <img id="photo" src="" alt="" style="display:none">
+                        </div>
 
                         <div class="m-2">
                             <a href="javascript:void(0);" class="capture-camera btn-camera text-primary">
@@ -85,29 +85,35 @@
         </div>
 
         <section>
+            <div class="alert alert-warning" role="alert">
+                <strong>Lưu ý:</strong> Thiết bị cần được cấp quyền truy cập vị trí và quyền truy cập Camera.
+            </div>
+
+            <input type="hidden" id="hdn_lat" name="hdn_lat" value="">
+            <input type="hidden" id="hdn_log" name="hdn_log" value="">
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card p-2">
                         <div class="card-body">
 
                             <h6 class="card-title">1. Ảnh sau xe</h6>
 
-                            <button type="button" class="btn btn-sub open-camera h-auto p-2" data-img="anh-truoc">
+                            <button type="button" class="btn btn-sub open-camera h-auto p-2" data-img="anh_truoc">
                                 <i class="fa fa-camera mr-1"></i>
                                 <span>Mở máy ảnh</span>
                             </button>
 
-                            <div id="anh-truoc" class="photo-wrapper mt-2">
+                            <div id="anh_truoc" class="photo-wrapper mt-2">
                                 <img class="img-fluid" alt="">
-                                <input type="hidden" name="anh-truoc" value="">
+                                <input type="hidden" id="hdn_anh_truoc" name="hdn_anh_truoc" value="">
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -127,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -147,7 +153,7 @@
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card p-2">
                         <div class="card-body">
 
@@ -169,7 +175,7 @@
 
 
 
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card">
                         <div class="card-body">
 
@@ -181,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-sm-6 col-12">
                     <div class="card">
                         <div class="card-body">
 
@@ -204,6 +210,10 @@
             background-color: #e6e6e6;
         }
 
+        .camera-stream {
+            border: 2px solid red;
+        }
+
         .btn-camera {
             padding: 1.2rem;
             display: block;
@@ -220,7 +230,11 @@
         }
 
         #photo {
-            width: 40%;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            border: 2px solid #fff;
+            width: 26%;
             margin-top: 10px;
             margin-left: 10px;
         }
@@ -311,43 +325,41 @@
                 let v_data_image = $('#modal-data-image').val();
                 $('#' + v_data_image).show();
                 $('#' + v_data_image).find('img').attr('src', data);
+                $('#' + v_data_image).find('input').val(data);
 
             } else {
                 clearphoto();
             }
         });
 
-        $(".open-camera").on("click", function (e) {
-            var v_data_img = $(this).data("img");
+        function show_camera(p_this) {
+            var v_data_img = p_this.data("img");
             $('#modal-data-image').val(v_data_img);
-
             $('#myModal').modal('show');
-
             capture();
+        }
 
-            // if (navigator.geolocation) {
-            //     navigator.geolocation.getCurrentPosition(function(position) {
+        $(".open-camera").on("click", function (e) {
 
-            //         var latitude = position.coords.latitude;
-            //         var longitude = position.coords.longitude;
+            let elem = $(this);
 
-            //         console.log("Vị trí hiện tại của bạn là:", latitude, longitude);
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
 
-            //         $('#myModal').modal('show');
+                    console.log("Vị trí hiện tại của bạn là:", latitude, longitude);
 
-            //         capture();
+                    show_camera(elem);
 
-            //     }, function(error) {
-            //         if (error.code === error.PERMISSION_DENIED) {
-            //             alert("Vui lòng bật định vị để sử dụng tính năng này!");
-            //         } else {
-            //             $('#myModal').modal('show');
-            //             capture();
-            //         }
-            //     });
-            // } else {
-            //     console.log("Trình duyệt của bạn không hỗ trợ định vị geolocation.")
-            // }
+                }, function (error) {
+                    if (error.code === error.PERMISSION_DENIED) {
+                        alert("Vui lòng bật định vị để sử dụng tính năng này!");
+                    }
+                });
+            } else {
+                alert("Trình duyệt của bạn không hỗ trợ định vị geolocation.")
+            }
         });
     </script>
 </body>
