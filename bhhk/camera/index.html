@@ -56,7 +56,8 @@
                         <input type="hidden" id="modal-data-image" value="">
 
                         <div class="position-relative">
-                            <video class="camera-stream p1 w-100"></video>
+                            <p class="txt-camera m-2">Đang mở Camera...</p>
+                            <video class="camera-stream p1 w-100" style="display: none;"></video>
                             <canvas id="canvas" style="display:none"></canvas>
                             <img id="photo" src="" alt="" style="display:none">
                         </div>
@@ -240,7 +241,7 @@
         }
 
         .modal-dialog {
-            overflow: hidden;
+            overflow-y: auto;
             margin: 0;
             height: 100%;
             max-width: 100%;
@@ -261,7 +262,7 @@
 
 
         // camera stream video element
-        let on_stream_video = document.querySelector('.camera-stream');
+        let camera_stream = document.querySelector('.camera-stream');
 
         // flip button element
         let flipBtn = document.querySelector('.flip-camera');
@@ -290,8 +291,10 @@
             navigator.mediaDevices.getUserMedia(constraints)
                 .then(function (mediaStream) {
                     stream = mediaStream;
-                    on_stream_video.srcObject = stream;
-                    on_stream_video.play();
+                    $(camera_stream).show();
+                    $(".txt-camera").hide();
+                    camera_stream.srcObject = stream;
+                    camera_stream.play();
                 })
                 .catch(function (err) {
                     console.log(err)
@@ -311,6 +314,8 @@
 
         function clearPhoto() {
             $('#photo').hide();
+            $('.txt-camera').show();
+            $('.camera-stream').hide();
         }
 
         $(".capture-camera").on("click", function (e) {
