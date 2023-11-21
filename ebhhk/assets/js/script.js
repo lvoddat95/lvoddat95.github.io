@@ -253,3 +253,15 @@ var load_event_onchange = function () {
     console.log("event here");
     console.log("Tham khao event: load_phi_tai_nan_nguoi_ngoi_tren_xe");
 }
+
+
+var XeDangKyOnChange = function (elem) {
+    // Xe đã đăng ký
+    if (elem.value == 1) {
+        $('#bien-kiem-soat').show();
+        $('#ngay-nhan-xe-du-kien').hide();
+    } else {
+        $('#bien-kiem-soat').hide();
+        $('#ngay-nhan-xe-du-kien').show();
+    }
+}

@@ -542,20 +542,6 @@
 
                                     <div>
 
-                                        <!-- <div class="form-group">
-                                            <div class="row gutter-10">
-                                                <div class="col-md-3">
-                                                    <span class="lbl-txt lbl-txt-col">Sản phẩm</span>
-                                                </div>
-                                                <div class="col-md-9">
-                                                    <div class="form-content">
-                                                        <span style="font-weight: 500; text-transform: uppercase;">Bảo
-                                                            hiểm vật chất
-                                                            xe ô tô</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
 
                                         <div class="form-group">
                                             <div class="row gutter-10">
@@ -566,35 +552,25 @@
                                                 <div class="col-md-9">
                                                     <div class="form-content">
                                                         <div class="row gutter-10">
-                                                            <div class="col-md-6 ">
+                                                            <div class="col-md-6 col-xs-6">
                                                                 <label class="cs-radio">
                                                                     Không kinh doanh
                                                                     <input type="radio" name="MucDichSuDung"
-                                                                        value="khong-kinh-doanh" checked
-                                                                        onchange="">
+                                                                        value="khong-kinh-doanh" checked onchange="">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-md-6 col-xs-6">
                                                                 <label class="cs-radio ">
                                                                     Kinh doanh
                                                                     <input type="radio" name="MucDichSuDung"
-                                                                        value="kinh-doanh"
-                                                                        onchange="">
+                                                                        value="kinh-doanh" onchange="">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                             </div>
-                                                            
+
                                                         </div>
-                                                        <!-- <div class="switch-checkbox">
-                                                            <input class="input-checkbox" id="MucDichSuDung" type="checkbox" name="MucDichSuDung">
-                                                            <label for="MucDichSuDung">
-                                                                <div class="status-switch"
-                                                                    data-unchecked="Không kinh doanh"
-                                                                    data-checked="Kinh doanh">
-                                                                </div>
-                                                            </label>
-                                                        </div> -->
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -624,7 +600,8 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt lbl-txt-col">Hãng xe <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Hãng xe <span
+                                                        class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -644,8 +621,8 @@
                                                             <div class="form-group">
                                                                 <div class="row gutter-10">
                                                                     <div class="col-md-6">
-                                                                        <span class="lbl-txt lbl-txt-col">Năm sản xuất <span
-                                                                                class="cl-red">&nbsp;*</span></span>
+                                                                        <span class="lbl-txt lbl-txt-col">Năm sản xuất
+                                                                            <span class="cl-red">&nbsp;*</span></span>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="select-wrapper2">
@@ -666,7 +643,8 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt lbl-txt-col">Dòng xe <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Dòng xe <span
+                                                        class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -686,8 +664,8 @@
                                                             <div class="form-group">
                                                                 <div class="row gutter-10">
                                                                     <div class="col-md-6">
-                                                                        <span class="lbl-txt lbl-txt-col">Phiên bản <span
-                                                                                class="cl-red">&nbsp;*</span></span>
+                                                                        <span class="lbl-txt lbl-txt-col">Phiên bản
+                                                                            <span class="cl-red">&nbsp;*</span></span>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="select-wrapper2">
@@ -717,7 +695,6 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-
                                                                 <input type="number"
                                                                     class="form-control text-right payment-form-input mb10"
                                                                     name="SoChoNgoi" id="SoChoNgoi" value="0"
@@ -727,35 +704,27 @@
                                                         <div class="col-md-8">
                                                             <div class="form-group">
                                                                 <div class="row gutter-10">
-                                                                    <div class="col-md-6 ">
+                                                                    <div class="col-md-6 col-xs-6 ">
                                                                         <label class="cs-radio">
                                                                             Đã đăng ký
                                                                             <input type="radio" name="XeDangKy"
                                                                                 value="1" checked
-                                                                                onchange="">
+                                                                                onchange="XeDangKyOnChange(this)">
                                                                             <span class="checkmark"></span>
                                                                         </label>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-6 col-xs-6">
                                                                         <label class="cs-radio ">
                                                                             Chưa đăng ký
                                                                             <input type="radio" name="XeDangKy"
                                                                                 value="0"
-                                                                                onchange="">
+                                                                                onchange="XeDangKyOnChange(this)">
                                                                             <span class="checkmark"></span>
                                                                         </label>
                                                                     </div>
                                                                 </div>
 
-                                                                <!-- <div class="switch-checkbox">
-                                                                    <input class="input-checkbox" id="XeDangKy" type="checkbox" name="XeDangKy">
-                                                                    <label for="XeDangKy">
-                                                                        <div class="status-switch"
-                                                                            data-unchecked="Chưa đăng ký"
-                                                                            data-checked="Đã đăng ký">
-                                                                        </div>
-                                                                    </label>
-                                                                </div> -->
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -765,21 +734,36 @@
 
 
 
-
-                                        <div class="row gutter-10">
-                                            <div class="col-md-3">
-                                                <span class="lbl-txt lbl-txt-col">Biển kiểm soát <span
-                                                        class="cl-red">&nbsp;*</span></span>
+                                        <div id="bien-kiem-soat" class="form-group">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-3">
+                                                    <span class="lbl-txt lbl-txt-col">Biển kiểm soát <span
+                                                            class="cl-red">&nbsp;*</span></span>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <input type="text" class="form-control payment-form-input" value=""
+                                                        placeholder="" />
+                                                </div>
                                             </div>
-                                            <div class="col-md-9">
-                                                <div class='input-group date js-datepicker mb10'>
-                                                    <input type="text" class="form-control payment-form-input"
-                                                        onkeyup="FormatDate(this,event)" data-rule-required="false"
-                                                        data-msg-required="Nhập ngày đi" name="FromDate" id="FromDate"
-                                                        value="" placeholder="dd/mm/yyyy" maxlength="10" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
+                                        </div>
+
+                                        <div id="ngay-nhan-xe-du-kien" class="form-group" style="display: none;">
+                                            <div class="row gutter-10">
+                                                <div class="col-md-3">
+                                                    <span class="lbl-txt lbl-txt-col">Ngày nhận xe dự kiến <span
+                                                            class="cl-red">&nbsp;*</span></span>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class='input-group date js-datepicker'>
+                                                        <input type="text" class="form-control payment-form-input"
+                                                            onkeyup="FormatDate(this,event)" data-rule-required="false"
+                                                            data-msg-required="Nhập ngày đi" name="FromDate"
+                                                            id="FromDate" value="" placeholder="dd/mm/yyyy"
+                                                            maxlength="10" />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -805,7 +789,8 @@
 
                                         <div class="row gutter-10">
                                             <div class="col-md-3">
-                                                <span class="lbl-txt lbl-txt-col">Số máy <span class="cl-red">&nbsp;*</span></span>
+                                                <span class="lbl-txt lbl-txt-col">Số máy <span
+                                                        class="cl-red">&nbsp;*</span></span>
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="form-content">
@@ -818,7 +803,7 @@
                                         <br>
 
                                         <div class="row gutter-10">
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-xs-6">
                                                 <div class="form-group mb-3 upload-box text-center">
                                                     <label for="AnhMatTruoc">
                                                         <img class="upload-img-preview" src="#" alt="Preview Image">
@@ -835,7 +820,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-xs-6">
                                                 <div class="form-group mb-3 upload-box text-center">
                                                     <label for="AnhMatSau">
                                                         <img class="upload-img-preview" src="#" alt="Preview Image">
@@ -852,7 +837,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-xs-6">
                                                 <div class="form-group mb-3 upload-box text-center">
                                                     <label for="AnhTrenXe">
                                                         <img class="upload-img-preview" src="#" alt="Preview Image">
@@ -869,7 +854,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-xs-6">
                                                 <div class="form-group mb-3 upload-box text-center">
                                                     <label for="AnhGamXe">
                                                         <img class="upload-img-preview" src="#" alt="Preview Image">

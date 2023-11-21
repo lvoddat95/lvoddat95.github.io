@@ -7754,6 +7754,7 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     color: #333;
     cursor: pointer;
     text-transform: inherit;
+    text-align: justify;
 }
 
 .payment-form-group .sp-box h3.toggle.toggle_check {
@@ -7762,3 +7763,4 @@ ul.nav-title li.current a, ul.nav-title li:hover a, ul.nav-title li.current span
     background-color: #ddd;
     color: #006c81;
 }
+
