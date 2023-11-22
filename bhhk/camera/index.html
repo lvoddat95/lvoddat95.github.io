@@ -58,6 +58,7 @@
                         <div>
                             <p id="camera_status" style="display: none;"></p>
                             <div id="my_camera" class="position-relative"></div>
+                            <canvas id="canvas" style="display:none;"></canvas>
                         </div>
 
                         <div class="m-2">
@@ -268,18 +269,6 @@
 			image_format: 'jpeg',
 			jpeg_quality: 90
         });
-
-        // Webcam.set({
-        // 	width: 1280,
-        // 	height: 720,
-        // 	image_format: 'jpeg',
-        // 	jpeg_quality: 90,
-        // 	constraints: {
-        // 		width: { exact: 1280 },
-        // 		height: { exact: 720 }
-        // 	}
-        // });
-
         Webcam.attach('#my_camera');
         
         // Sự kiện load camera
@@ -299,12 +288,25 @@
         // Chụp ảnh
         function take_snapshot() {
             let v_id_anh = $('#modal-data-image').val();
-            Webcam.snap(function (data_uri) {
-                $('#my_camera').append('<img id="photo" src="' + data_uri + '"/>');
+            
+            const video = document.querySelector('video');
+            const canvas = document.querySelector('#canvas');
+            let context = canvas.getContext('2d');
+
+            const height = video.videoHeight;
+            const width = video.videoWidth;
+            
+            if (width && height) {
+                canvas.width = width;
+                canvas.height = height;
+                context.drawImage(video, 0, 0, width, height);
+                var data = canvas.toDataURL('image/png');
+
+                $('#my_camera').append('<img id="photo" src="' + data + '"/>');
                 $('#'+v_id_anh).show();
-                $('#'+v_id_anh).find('img').attr('src', data_uri);
-                $('#'+v_id_anh).find('input').val(data_uri);
-            });
+                $('#'+v_id_anh).find('img').attr('src', data);
+                $('#'+v_id_anh).find('input').val(data);
+            }
         }
 
         // Reset ảnh chụp
