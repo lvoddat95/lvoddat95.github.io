@@ -311,18 +311,34 @@
                 $('#' + v_id_anh).find('input').val(data);
             }
         }
+        let currentCameraIndex = 0; // Index của camera đang được sử dụng
+        let cameraList = []; // Danh sách các camera
 
+        function getCameraList() {
+            navigator.mediaDevices.enumerateDevices()
+                .then(devices => {
+                    cameraList = devices.filter(device => device.kind === 'videoinput');
+                    console.log('Danh sách camera:', cameraList);
+
+                    // Bước 1.3: Bắt đầu hiển thị camera mặc định
+                    if (cameraList.length > 0) {
+                        const defaultCamera = cameraList[currentCameraIndex];
+                        Webcam.attach('#webcam', null, null, null, defaultCamera);
+                    }
+                })
+                .catch(error => console.error('Lỗi khi lấy danh sách camera:', error));
+        }
+        getCameraList()
         // Hàm chuyển đổi camera
-        function flipCamera() {
-            Webcam.list((cameras) => {
-                if (cameras.length > 1) {
-                    currentCameraIndex = (currentCameraIndex + 1) % cameras.length;
-                    const selectedCamera = cameras[currentCameraIndex];
+        function flip_camera() {
+            console.log(cameraList.length)
+            if (cameraList.length > 1) {
+                currentCameraIndex = (currentCameraIndex + 1) % cameraList.length;
+                const selectedCamera = cameraList[currentCameraIndex];
 
-                    Webcam.reset();
-                    Webcam.attach('#webcam', null, null, null, selectedCamera);
-                }
-            });
+                Webcam.reset();
+                Webcam.attach('#webcam', null, null, null, selectedCamera);
+            }
         }
 
         // Hàm dừng camera
