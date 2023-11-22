@@ -331,7 +331,7 @@
         getCameraList()
         // Hàm chuyển đổi camera
         function flip_camera() {
-            console.log(cameraList.length)
+            alert(cameraList.length)
             if (cameraList.length > 1) {
                 currentCameraIndex = (currentCameraIndex + 1) % cameraList.length;
                 const selectedCamera = cameraList[currentCameraIndex];
