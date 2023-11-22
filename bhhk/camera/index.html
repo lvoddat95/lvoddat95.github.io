@@ -70,12 +70,11 @@
                         </div>
 
                         <div class="m-2 d-flex align-items-center">
-                            <button class="flip-camera btn-camera w-50 mr-1">
+                            <a href="javascript:void(0);" class="flip-camera btn-camera w-50 mr-1">
                                 <i class="fa fa-undo mr-1 text-orange"></i>
-                                <span>Chuyển Cam</span></button>
+                                <span>Chuyển Cam</span></a>
 
-                            <a href="javascript:void(0);" class="btn-camera w-50 ml-1 text-dark text-center"
-                                type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <a href="javascript:void(0);" class="btn-camera w-50 ml-1 text-dark text-center" class="close" data-dismiss="modal" aria-label="Close">
                                 <i class="fal fa-times mr-1"></i> Đóng
                             </a>
                         </div>
@@ -213,6 +212,7 @@
 
         .camera-stream {
             border: 2px solid red;
+            max-height: calc(100vh - 220px);
         }
 
         .btn-camera {
@@ -256,11 +256,6 @@
     </style>
 
     <script>
-        $('#myModal').on('hidden.bs.modal', function (e) {
-            clearPhoto();
-        })
-
-
         // camera stream video element
         let camera_stream = document.querySelector('.camera-stream');
 
@@ -283,7 +278,6 @@
         let stream = null;
 
         function capture(p_data_img = null) {
-
             constraints.video = {
                 facingMode: shouldFaceUser ? 'user' : 'environment'
             }
@@ -305,14 +299,25 @@
         function stopCamera() {
             if (null != stream) {
                 var track = stream.getTracks()[0];
-
                 track.stop();
                 stream.load();
-
                 stream = null;
             }
         }
 
+        function clearPhoto() {
+            $('#photo').hide();
+            $('.txt-camera').show();
+            $('.camera-stream').hide();
+        }
+
+        
+        function show_camera(p_this) {
+            var v_data_img = p_this.data("img");
+            $('#modal-data-image').val(v_data_img);
+            $('#myModal').modal('show');
+            capture();
+        }
 
         flipBtn.addEventListener('click', function () {
             if (stream == null) return
@@ -324,12 +329,6 @@
             shouldFaceUser = !shouldFaceUser;
             capture();
         })
-
-        function clearPhoto() {
-            $('#photo').hide();
-            $('.txt-camera').show();
-            $('.camera-stream').hide();
-        }
 
         $(".capture-camera").on("click", function (e) {
             // Elements for taking the snapshot
@@ -360,34 +359,33 @@
             }
         });
 
-        function show_camera(p_this) {
-            var v_data_img = p_this.data("img");
-            $('#modal-data-image').val(v_data_img);
-            $('#myModal').modal('show');
-            capture();
-        }
+        $('#myModal').on('hidden.bs.modal', function (e) {
+            clearPhoto();
+        })
 
         $(".open-camera").on("click", function (e) {
 
             let elem = $(this);
 
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var latitude = position.coords.latitude;
-                    var longitude = position.coords.longitude;
+            show_camera(elem);
 
-                    console.log("Vị trí hiện tại của bạn là:", latitude, longitude);
+            // if (navigator.geolocation) {
+            //     navigator.geolocation.getCurrentPosition(function (position) {
+            //         var latitude = position.coords.latitude;
+            //         var longitude = position.coords.longitude;
 
-                    show_camera(elem);
+            //         console.log("Vị trí hiện tại của bạn là:", latitude, longitude);
 
-                }, function (error) {
-                    if (error.code === error.PERMISSION_DENIED) {
-                        alert("Vui lòng bật định vị để sử dụng tính năng này!");
-                    }
-                });
-            } else {
-                alert("Trình duyệt của bạn không hỗ trợ định vị geolocation.")
-            }
+            //         show_camera(elem);
+
+            //     }, function (error) {
+            //         if (error.code === error.PERMISSION_DENIED) {
+            //             alert("Vui lòng bật định vị để sử dụng tính năng này!");
+            //         }
+            //     });
+            // } else {
+            //     alert("Trình duyệt của bạn không hỗ trợ định vị geolocation.")
+            // }
         });
     </script>
 </body>
