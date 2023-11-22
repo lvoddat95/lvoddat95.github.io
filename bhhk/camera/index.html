@@ -57,7 +57,7 @@
 
                         <div>
                             <p id="camera_status" style="display: none;"></p>
-                            <div id="my_camera" class="position-relative"></div>
+                            <div id="webcam" class="position-relative"></div>
                             <canvas id="canvas" style="display:none;"></canvas>
                         </div>
 
@@ -209,11 +209,13 @@
             text-align: center;
             background-color: #e6e6e6;
         }
-        #my_camera{
+
+        #webcam {
             width: 100% !important;
             height: auto !important;
         }
-        #my_camera video {
+
+        #webcam video {
             border: 2px solid red;
             transform: none !important;
             width: 100% !important;
@@ -261,18 +263,17 @@
     </style>
 
     <script>
-
         Webcam.set({
             width: 320,
-			height: 240,
-			// dest_width: 640,
-			// dest_height: 480,
-			image_format: 'jpeg',
-			jpeg_quality: 90
+            height: 240,
+            // dest_width: 640,
+            // dest_height: 480,
+            image_format: 'jpeg',
+            jpeg_quality: 90
         });
 
-        Webcam.attach('#my_camera');
-        
+        Webcam.attach('#webcam');
+
         // Sự kiện load camera
         Webcam.on('load', function () {
             $('#camera_status').show().text('Camera đang tải...');
@@ -284,55 +285,60 @@
         });
 
         Webcam.on('error', function (err) {
-            console.log('library error:' +err);
+            console.log('library error:' + err);
         });
 
         // Chụp ảnh
         function take_snapshot() {
             let v_id_anh = $('#modal-data-image').val();
-            
+
             const video = document.querySelector('video');
             const canvas = document.querySelector('#canvas');
             let context = canvas.getContext('2d');
 
             const height = video.videoHeight;
             const width = video.videoWidth;
-            
+
             if (width && height) {
                 canvas.width = width;
                 canvas.height = height;
                 context.drawImage(video, 0, 0, width, height);
                 var data = canvas.toDataURL('image/png');
 
-                $('#my_camera').append('<img id="photo" src="' + data + '"/>');
-                $('#'+v_id_anh).show();
-                $('#'+v_id_anh).find('img').attr('src', data);
-                $('#'+v_id_anh).find('input').val(data);
+                $('#webcam').append('<img id="photo" src="' + data + '"/>');
+                $('#' + v_id_anh).show();
+                $('#' + v_id_anh).find('img').attr('src', data);
+                $('#' + v_id_anh).find('input').val(data);
             }
         }
 
-         // Bước 3: Hàm lật camera
-         function flip_camera() {
-            Webcam.reset();
-            Webcam.flip();
-            Webcam.attach('#my_camera');
+        // Hàm chuyển đổi camera
+        function flipCamera() {
+            Webcam.list((cameras) => {
+                if (cameras.length > 1) {
+                    currentCameraIndex = (currentCameraIndex + 1) % cameras.length;
+                    const selectedCamera = cameras[currentCameraIndex];
+
+                    Webcam.reset();
+                    Webcam.attach('#webcam', null, null, null, selectedCamera);
+                }
+            });
         }
 
-        // Bước 4: Hàm dừng camera
+        // Hàm dừng camera
         function stop_camera() {
-            console.log(Webcam)
             Webcam.reset();
         }
 
         // Reset ảnh chụp
         function clear_camera() {
             $('#modal-data-image').val("");
-            if($('#photo').length > 0) {
+            if ($('#photo').length > 0) {
                 $('#photo').remove();
             }
             stop_camera();
         }
-        
+
         // Sự kiện đóng modal
         $('#myModal').on('hidden.bs.modal', function (e) {
             clear_camera();
@@ -342,7 +348,7 @@
         $(".open-camera").on("click", function (e) {
             $('#myModal').modal('show');
             $('#modal-data-image').val($(this).data('img'));
-            Webcam.attach('#my_camera');
+            Webcam.attach('#webcam');
         });
     </script>
 
