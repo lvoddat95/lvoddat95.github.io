@@ -62,16 +62,16 @@
                         </div>
 
                         <div class="m-2">
-                            <a href="javascript:void(take_snapshot())" class="capture-camera btn-camera text-primary">
+                            <a href="javascript:void(take_snapshot());" class="capture-camera btn-camera text-primary">
                                 <i class="fa fa-camera mr-1"></i>
                                 <span>Chụp ảnh</span>
                             </a>
                         </div>
 
                         <div class="m-2 d-flex align-items-center">
-                            <button class="flip-camera btn-camera w-50 mr-1">
+                            <a href="javascript:void(flip_camera());" class="flip-camera btn-camera w-50 mr-1">
                                 <i class="fa fa-undo mr-1 text-orange"></i>
-                                <span>Chuyển Cam</span></button>
+                                <span>Chuyển Cam</span></a>
                             <a href="javascript:void(0);" class="btn-camera w-50 ml-1 text-dark text-center"
                                 type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <i class="fal fa-times mr-1"></i> Đóng
@@ -261,6 +261,7 @@
     </style>
 
     <script>
+
         Webcam.set({
             width: 320,
 			height: 240,
@@ -269,6 +270,7 @@
 			image_format: 'jpeg',
 			jpeg_quality: 90
         });
+
         Webcam.attach('#my_camera');
         
         // Sự kiện load camera
@@ -309,12 +311,26 @@
             }
         }
 
+         // Bước 3: Hàm lật camera
+         function flip_camera() {
+            Webcam.reset();
+            Webcam.flip();
+            Webcam.attach('#my_camera');
+        }
+
+        // Bước 4: Hàm dừng camera
+        function stop_camera() {
+            console.log(Webcam)
+            Webcam.reset();
+        }
+
         // Reset ảnh chụp
         function clear_camera() {
             $('#modal-data-image').val("");
             if($('#photo').length > 0) {
                 $('#photo').remove();
             }
+            stop_camera();
         }
         
         // Sự kiện đóng modal
@@ -326,6 +342,7 @@
         $(".open-camera").on("click", function (e) {
             $('#myModal').modal('show');
             $('#modal-data-image').val($(this).data('img'));
+            Webcam.attach('#my_camera');
         });
     </script>
 
