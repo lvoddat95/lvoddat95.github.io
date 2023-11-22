@@ -301,6 +301,19 @@
                 });
         }
 
+        // Stop Camera
+        function stopCamera() {
+            if (null != stream) {
+                var track = stream.getTracks()[0];
+
+                track.stop();
+                stream.load();
+
+                stream = null;
+            }
+        }
+
+
         flipBtn.addEventListener('click', function () {
             if (stream == null) return
             // we need to flip, stop everything
