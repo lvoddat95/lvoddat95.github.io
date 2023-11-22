@@ -44,25 +44,28 @@
 
 
         <div id="myModal" class="modal bd-modal" tabindex="-1" role="dialog" data-backdrop="static">
-            <div class="modal-dialog  modal-sm">
-
+            <div style="
+            background: #fff;
+            height: 100%;
+            position: relative;
+        ">
                 <div class="view-text position-relative text-center">
                     <h3 class="mb-0">Nhấp vào nút bên dưới để chụp ảnh</h3>
                 </div>
-
-                <div class="modal-content rounded-0">
+                <div class="rounded-0">
                     <div class="camera ">
 
                         <input type="hidden" id="modal-data-image" value="">
 
                         <div class="position-relative">
                             <p class="txt-camera m-2">Đang mở Camera...</p>
-                            <video class="camera-stream p1 w-100" style="display: none;" muted autoplay playsinline></video>
+                            <video class="camera-stream p1 w-100" style="display: none;" muted autoplay
+                                playsinline></video>
                             <canvas id="canvas" style="display:none"></canvas>
                             <img id="photo" src="" alt="" style="display:none">
                         </div>
 
-                        <div class="m-2" style=" margin-top: -69px !important;  position: relative;z-index: 1; ">
+                        <div class="m-2" style="  ">
                             <a href="javascript:void(0);" class="capture-camera btn-camera text-primary">
                                 <i class="fa fa-camera mr-1"></i>
                                 <span>Chụp ảnh</span>
@@ -74,7 +77,8 @@
                                 <i class="fa fa-undo mr-1 text-orange"></i>
                                 <span>Chuyển Cam</span></a>
 
-                            <a href="javascript:void(0);" class="btn-camera w-50 ml-1 text-dark text-center" class="close" data-dismiss="modal" aria-label="Close">
+                            <a href="javascript:void(0);" class="btn-camera w-50 ml-1 text-dark text-center"
+                                class="close" data-dismiss="modal" aria-label="Close">
                                 <i class="fal fa-times mr-1"></i> Đóng
                             </a>
                         </div>
@@ -311,7 +315,7 @@
             $('.camera-stream').hide();
         }
 
-        
+
         function show_camera(p_this) {
             var v_data_img = p_this.data("img");
             $('#modal-data-image').val(v_data_img);
@@ -339,6 +343,8 @@
 
             const height = video.videoHeight;
             const width = video.videoWidth;
+
+            console.log(height, width);
 
             if (width && height) {
                 canvas.width = width;
